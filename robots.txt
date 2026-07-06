@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tfqys680-jpg.github.io/shukatsu-site/sitemap.xml
