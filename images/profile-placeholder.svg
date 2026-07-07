@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="運営者プロフィール写真（差し替え予定）">
-  <rect width="200" height="200" fill="#e4ede8"/>
-  <circle cx="100" cy="78" r="38" fill="#1f4a38"/>
-  <path d="M30 200c0-42 32-68 70-68s70 26 70 68z" fill="#1f4a38"/>
-  <text x="100" y="188" text-anchor="middle" font-size="14" fill="#ffffff" font-family="sans-serif">写真差し替え予定</text>
-</svg>

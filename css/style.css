@@ -84,7 +84,10 @@ a:hover { color: var(--green-soft); }
 
 /* ---------- ヒーロー ---------- */
 .hero {
-  background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-darker) 100%);
+  background:
+    linear-gradient(160deg, rgba(31, 74, 56, .78) 0%, rgba(22, 53, 41, .88) 100%),
+    url("../images/hero.webp") center bottom / cover no-repeat,
+    var(--green-darker);
   color: var(--white);
   padding: 56px 0 60px;
   text-align: center;
