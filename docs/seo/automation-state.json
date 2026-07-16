@@ -1,0 +1,20 @@
+{
+  "timezone": "Asia/Tokyo",
+  "last_run": "2026-07-11",
+  "last_new_article": "2026-07-11 /parent-shukatsu/questions/",
+  "last_major_update": "2026-07-11 /articles/article11.html",
+  "last_monthly_review": null,
+  "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
+  "last_semiannual_ymyl_review": null,
+  "completed_tasks": [
+    "2026-07-11 初回: site-audit/管理ファイル一式/親の終活ハブ/article11チェックリスト化/30項目記事/PDF2種/定期プロンプト"
+  ],
+  "pending_review_tasks": [
+    "article15・07・10の法務系記述への一次情報URL付与（半期YMYLレビュー時）",
+    "30項目記事の延命治療項目の医療職レビュー（推奨）"
+  ],
+  "blocked_tasks": [
+    "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
+    "著者実名・経歴の掲載（運営者の意向確認が必要）"
+  ]
+}
