@@ -1,0 +1,17 @@
+リンク元,リンク先,種別,アンカー方針
+/,/parent-shukatsu/,トップ→ハブ,カテゴリカード「親の終活」
+/,/ending-note/family-story/,トップ→柱,体験談バナー+記事一覧
+/,/articles/article11.html,トップ→柱,記事一覧+カテゴリカード
+/parent-shukatsu/,/ending-note/family-story/,ハブ→柱,実体験から読む導線
+/parent-shukatsu/,/parent-shukatsu/questions/,ハブ→柱,最初に読む記事
+/parent-shukatsu/,/articles/article05.html,ハブ→記事,親が嫌がる場合
+/parent-shukatsu/,/articles/article11.html,ハブ→柱,全体チェックリスト
+/parent-shukatsu/,/articles/article12.html;/articles/article15.html;/articles/article06.html,ハブ→記事,状況別
+/parent-shukatsu/questions/,/parent-shukatsu/,柱→ハブ,パンくず+関連
+/parent-shukatsu/questions/,/articles/article05.html,柱→記事,切り出し方が先の人向け
+/parent-shukatsu/questions/,/articles/article02.html;/articles/article06.html;/articles/article13.html;/articles/article15.html,柱→記事,項目の深掘り先
+/articles/article11.html,/parent-shukatsu/,柱→ハブ,親の終活の入口
+/articles/article11.html,/parent-shukatsu/questions/,柱→柱,親に聞く30項目
+/articles/article11.html,downloads/shukatsu-checklist.pdf,柱→PDF,印刷用チェックリスト
+/ending-note/family-story/,/parent-shukatsu/,柱→ハブ,目的別ガイドに追加
+既存記事間リンク,（article01〜15相互）,既存,2026-07-11時点で整備済み・変更なし
