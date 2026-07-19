@@ -2,13 +2,14 @@
   "timezone": "Asia/Tokyo",
   "last_run": "2026-07-16",
   "last_new_article": "2026-07-11 /parent-shukatsu/questions/",
-  "last_major_update": "2026-07-11 /articles/article11.html",
+  "last_major_update": "2026-07-19 /articles/article12.html",
   "last_monthly_review": "2026-07-16",
   "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
   "last_semiannual_ymyl_review": null,
   "completed_tasks": [
     "2026-07-11 初回: site-audit/管理ファイル一式/親の終活ハブ/article11チェックリスト化/30項目記事/PDF2種/定期プロンプト",
-    "2026-07-16 月次レビュー実施（親の終活クラスタ内部リンク・ハブ導線・title/meta description重複・カニバリ・孤立ページを確認、問題なし）+ サイト健全性チェック（tools/check-site.js全通過、canonical/robots/noindex/画像alt/PDF・DOCXリンクを個別確認、問題なし）"
+    "2026-07-16 月次レビュー実施（親の終活クラスタ内部リンク・ハブ導線・title/meta description重複・カニバリ・孤立ページを確認、問題なし）+ サイト健全性チェック（tools/check-site.js全通過、canonical/robots/noindex/画像alt/PDF・DOCXリンクを個別確認、問題なし）",
+    "2026-07-19 臨時: SC未登録6件を精査（要対応はarticle12のみ）→ article12を部屋別チェックリスト+8週間プラン+PDFへ大幅改修（編集カレンダー2026-10後半タスクの前倒し）+ SCサイトマップ再送信（検出22ページ）"
   ],
   "pending_review_tasks": [
     "article15・07・10の法務系記述への一次情報URL付与（半期YMYLレビュー時）",
