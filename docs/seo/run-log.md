@@ -38,3 +38,24 @@
 - 阻害要因: なし（Search Consoleの実データが存在しないためデータ起点の分析のみ一部実施不可。記事コンテンツの安全な変更対象が今回は存在しなかった）
 - PR: ドラフトPRを作成（管理ファイル更新のみ）
 - 次回予定: 2026-07-27週の article09（無料エンディングノートPDF/Word版追加）・article14（お墓記事の秋彼岸向け更新）に着手予定。半期YMYLレビューも状況を見て早期着手を検討
+
+## 2026-07-19（臨時・手動実行：Search Console改善対応）
+
+- 実行日時: 2026-07-19 午前 JST（運営者依頼による臨時実行。週次ルーチンとは別）
+- ブランチ: claude/seo-article12-2026-07-19（ドラフトPR運用）
+- きっかけ: Search Console「ページのインデックス登録」レポート（最終更新2026-07-10）の確認依頼
+- SC調査結果（未登録6件の内訳）:
+  - noindex除外×2: /tag/沖縄/ ほか → 前所有者WordPress時代の残骸（最終クロール2025年2月）。現在404。対応不要
+  - リダイレクト×1: https://www.shukatsu-guide.jp/ → www→apexの301で正常。対応不要
+  - 代替ページ(canonical)×1: /index.html → canonicalで「/」に統合済みで正常。対応不要
+  - クロール済み-未登録×2: http://版トップ（https版が登録済みで対応不要）と **/articles/article12.html（要改善と判断）**
+- 実施: article12（生前整理）を大幅改修（編集カレンダー2026-10後半の「部屋別リスト+8週間計画」タスクを前倒し）
+  - 冒頭結論ボックス・部屋別チェックリスト6エリア・品目別の手放し方表（家電リサイクル4品目注意含む）・8週間モデルプラン表・親の生前整理の会話例・失敗5つ・業者依頼の注意（一般廃棄物処理業の許可確認・国民生活センター出典リンク・見積もり確認項目）・FAQ6問を追加
+  - BreadcrumbList/FAQPage構造化データ追加、dateModified 2026-07-19、title/description刷新（URL変更なし）
+  - 4レンズ検証（禁止表現/事実/日本語/検索意図）を実施し、断定表現の緩和・係り受け修正・老前整理の定義補足など17件中15件を反映（不採用2件=架空事例の追加提案・資格記載への疑義は運営者確認事項へ）
+  - 印刷用PDF新規作成: downloads/seizen-seiri-checklist.pdf（ソース tools/pdf/seizen-seiri-checklist.html、A4・2ページ・生成確認済み）
+  - 導線: トップ/体験談LP/親の終活ハブの記事一覧アンカーを新タイトルへ、article12→hub/30項目/article05リンク追加
+  - sitemap.xml: article12のlastmodを2026-07-19へ。SCでサイトマップ再送信済み（検出20→22ページに増加）
+  - 管理ファイル: content-inventory/keyword-map/internal-link-map/editorial-calendar 更新（PR#1マージ済みに伴うPR中→公開の状態反映含む）
+- テスト結果: node tools/check-site.js → 後述PR本文参照
+- 次回予定: PRマージ後にSearch ConsoleでサイトマップTB再送信・article12のインデックス登録リクエスト。/parent-shukatsu/ と /parent-shukatsu/questions/ は公開済みのため即日リクエスト
