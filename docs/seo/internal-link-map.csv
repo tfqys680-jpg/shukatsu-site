@@ -16,4 +16,12 @@
 /ending-note/family-story/,/parent-shukatsu/,柱→ハブ,目的別ガイドに追加
 /articles/article12.html,downloads/seizen-seiri-checklist.pdf,柱→PDF,部屋別チェックリスト+8週間プランPDF
 /articles/article12.html,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html,柱→ハブ/柱,親の生前整理セクションから
-既存記事間リンク,（article01〜15相互）,既存,2026-07-11時点で整備済み・変更なし
+/,/articles/article16.html,トップ→記事,全記事一覧
+/parent-shukatsu/,/articles/article16.html,ハブ→記事,記事一覧
+/articles/article16.html,/articles/article05.html;/articles/article11.html;/articles/article02.html;/parent-shukatsu/questions/,記事→記事/柱,切り出し方・チェックリスト・書き方・30項目
+/articles/article05.html,/articles/article16.html,記事→記事,関連記事（相互リンク）
+/,/articles/article17.html,トップ→記事,全記事一覧
+/parent-shukatsu/,/articles/article17.html,ハブ→記事,状況別（親が亡くなった直後）+記事一覧
+/articles/article17.html,/articles/article15.html;/articles/article11.html;/articles/article02.html,記事→記事/柱,相続手続き・チェックリスト・書き方
+/articles/article15.html,/articles/article17.html,記事→記事,関連記事（相互リンク）
+既存記事間リンク,（article01〜17相互）,既存,2026-07-20時点で整備済み
