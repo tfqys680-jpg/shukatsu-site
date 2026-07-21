@@ -25,3 +25,8 @@
 /articles/article17.html,/articles/article15.html;/articles/article11.html;/articles/article02.html,記事→記事/柱,相続手続き・チェックリスト・書き方
 /articles/article15.html,/articles/article17.html,記事→記事,関連記事（相互リンク）
 既存記事間リンク,（article01〜17相互）,既存,2026-07-20時点で整備済み
+/,/ihin-kaitori/,トップ→LP,全記事一覧
+/parent-shukatsu/,/ihin-kaitori/,ハブ→LP,記事一覧
+/articles/article12.html,/ihin-kaitori/,記事→LP,関連記事（生前整理から）
+/ihin-kaitori/,/articles/article12.html;/articles/article11.html;/articles/article15.html;/parent-shukatsu/,LP→記事/ハブ,本文中・関連記事欄
+既存記事間リンク,（article01〜17・ihin-kaitori含め2026-07-21時点で整備済み）,既存,2026-07-21時点で整備済み

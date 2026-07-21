@@ -1,5 +1,21 @@
 # 実行ログ（run-log）
 
+## 2026-07-21（臨時・運営者からのチャット依頼：Pollet LPの公開）
+
+- 実行日時: 2026-07-21 JST（PR #5レビュー後、運営者から「公開してください」と依頼）
+- ブランチ: claude/pollet-lp-2026-07-20（PR #5に追加コミット）
+- 対応:
+  - `drafts/ihin-kaitori/index.html` を `/ihin-kaitori/index.html` へ移動し、相対パス（`../../` → `../`）を修正
+  - `<meta name="robots" content="noindex">` を削除
+  - `datePublished`/`dateModified`/本文の公開日表記を実際の公開日 2026-07-21 に更新
+  - `sitemap.xml` へ追加（lastmod 2026-07-21）
+  - 内部リンクを追加: トップページ全記事一覧、親の終活ハブの記事一覧、article12（生前整理）の関連記事欄から、それぞれ`/ihin-kaitori/`へ
+  - 管理ファイル更新: content-inventory.csv（状態を「下書き」→「公開」に更新）、internal-link-map.csv（新規リンク行を追加）
+  - ページ末尾のTODOコメントを、公開後も残る作業（アフィリエイト承認後のリンク差し替え、キャンペーン条件の反映）だけに整理
+- **重要**: Polletのアフィリエイトは引き続き審査中のため、CTAボタン3か所は現時点でもPollet公式サイト（`https://pollet.tech/lp`）への直リンクのまま。**このままでは当サイトにアフィリエイト収益は発生しない。** 承認後、正式なトラッキングURLをいただき次第、差し替えが必要
+- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 28, internal links checked: 734）
+- 次回予定: Polletのアフィリエイト審査が承認され次第、トラッキングURLへの差し替えを実施
+
 ## 2026-07-20（臨時・運営者からのチャット依頼 その3：新規アフィリエイトLPの下書き）
 
 - 実行日時: 2026-07-20 JST（PR #4マージ後の、別件のチャット依頼）
