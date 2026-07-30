@@ -27,6 +27,11 @@
 <meta property="og:image" content="https://shukatsu-guide.jp/images/ogp.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/style.css">
+<style>
+/* トップページ専用（親の終活への副CTA） */
+.btn-outline{display:inline-block;margin-top:14px;padding:14px 28px;border:2px solid rgba(255,255,255,.7);border-radius:999px;color:var(--white);text-decoration:none;font-weight:700;font-size:16px;}
+.btn-outline:hover{background:rgba(255,255,255,.12);color:var(--white);}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,8 +120,10 @@
   <div class="container">
     <p class="badge-line">執筆・監修：終活カウンセラー1級</p>
     <h1>終活カウンセラー1級が、<br>あなたと家族の「もしも」に寄り添います</h1>
-    <p class="hero-lead">エンディングノートの書き方から、遺言書、デジタル遺品の整理まで。はじめての終活を、資格を持つ専門カウンセラーがやさしく案内します。</p>
-    <a class="btn-cta" href="articles/article02.html">エンディングノートの書き方を見る<span class="small">項目別の記入例つき・無料で読めます</span></a>
+    <p class="hero-lead">エンディングノートの書き方から、親の終活の進め方、遺言書、デジタル遺品の整理まで。はじめての終活を、資格を持つ専門カウンセラーがやさしく案内します。</p>
+    <a class="btn-cta" href="articles/article02.html" data-cta="hero_howto">エンディングノートの書き方を見る<span class="small">項目別の記入例つき・無料で読めます</span></a>
+    <br>
+    <a class="btn-outline" href="parent-shukatsu/" data-cta="hero_parent">親の終活から始めたい方はこちら</a>
     <div class="scroll-cue" aria-hidden="true">SCROLL<span class="scroll-cue-line"></span></div>
   </div>
 </section>
@@ -124,7 +131,7 @@
 <!-- 体験談LPへの導線 -->
 <section style="padding:30px 0 0;">
   <div class="container">
-    <a href="ending-note/family-story/" style="display:block;max-width:720px;margin:0 auto;background:var(--white);border:2px solid var(--green-deep);border-radius:12px;padding:20px 22px;text-decoration:none;box-shadow:var(--shadow);">
+    <a href="ending-note/family-story/" data-cta="hero_family_story" style="display:block;max-width:720px;margin:0 auto;background:var(--white);border:2px solid var(--green-deep);border-radius:12px;padding:20px 22px;text-decoration:none;box-shadow:var(--shadow);">
       <span style="display:inline-block;background:var(--green-deep);color:#f4d78a;font-size:12px;font-weight:800;border-radius:999px;padding:3px 12px;margin-bottom:8px;">運営者の実体験</span>
       <span style="display:block;color:var(--green-deep);font-weight:800;font-size:18px;line-height:1.7;">親が突然亡くなった日、家族は何もわかりませんでした。</span>
       <span style="display:block;color:var(--ink-soft);font-size:14px;margin-top:6px;">エンディングノートが必要な理由を、実体験からお話しします →</span>
@@ -170,25 +177,25 @@
     <h2 class="section-title">カテゴリから探す</h2>
     <p class="section-sub">気になるテーマからお読みください。すべての記事を終活カウンセラー1級が執筆・監修しています。</p>
     <div class="card-grid">
-      <a class="cat-card" href="parent-shukatsu/">
+      <a class="cat-card" href="parent-shukatsu/" data-cta="category_parent">
         <div class="cat-icon" aria-hidden="true">👨‍👩‍👧</div>
         <h3>親の終活</h3>
         <p>何から始める？聞いておくこと30項目、切り出し方、状況別の進め方。</p>
         <span class="more">ガイドを見る →</span>
       </a>
-      <a class="cat-card" href="articles/article01.html">
+      <a class="cat-card" href="articles/article01.html" data-cta="category_ending_note">
         <div class="cat-icon" aria-hidden="true">📔</div>
         <h3>エンディングノート</h3>
         <p>基礎知識から書き方、おすすめの選び方まで。終活の第一歩はここから。</p>
         <span class="more">記事を読む →</span>
       </a>
-      <a class="cat-card" href="articles/article07.html">
+      <a class="cat-card" href="articles/article07.html" data-cta="category_will">
         <div class="cat-icon" aria-hidden="true">📜</div>
         <h3>遺言</h3>
         <p>自筆証書と公正証書の違い、費用、専門家の選び方をわかりやすく解説。</p>
         <span class="more">記事を読む →</span>
       </a>
-      <a class="cat-card" href="articles/article06.html">
+      <a class="cat-card" href="articles/article06.html" data-cta="category_digital">
         <div class="cat-icon" aria-hidden="true">📱</div>
         <h3>デジタル遺品</h3>
         <p>スマホ・パスワード・サブスク。見落としがちなデジタルの終活を整理。</p>
@@ -317,7 +324,7 @@
     <h2>まずは1冊、<br>エンディングノートから始めませんか？</h2>
     <p>終活は「家族への思いやり」の形です。難しく考えず、書けるところから少しずつ。あなたに合った1冊選びを、終活カウンセラー1級がお手伝いします。</p>
     <!-- AFFILIATE: ここに○○(エンディングノート案件)のリンクコードを貼る（CTA遷移先は当面比較記事） -->
-    <a class="btn-cta" href="articles/article08.html">おすすめエンディングノート10選を見る<span class="small">終活カウンセラー1級が徹底比較</span></a>
+    <a class="btn-cta" href="articles/article08.html" data-cta="final_compare">おすすめエンディングノート10選を見る<span class="small">終活カウンセラー1級が徹底比較</span></a>
   </div>
 </section>
 
@@ -338,5 +345,12 @@
 
 <button class="to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
 <script src="js/main.js"></script>
+<script>
+document.addEventListener("click", function (e) {
+  var a = e.target.closest("a[data-cta]");
+  if (!a || typeof gtag !== "function") return;
+  gtag("event", "lp_cta_click", { cta_label: a.getAttribute("data-cta"), page_path: location.pathname });
+});
+</script>
 </body>
 </html>
