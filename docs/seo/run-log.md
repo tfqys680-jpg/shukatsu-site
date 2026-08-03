@@ -1,5 +1,28 @@
 # 実行ログ（run-log）
 
+## 2026-08-03（週次・定期実行）
+
+- 実行日時: 2026-08-03 09:12 JST
+- ブランチ: claude/seo-weekly-2026-07-27（前回PR #6に追加コミット。article09は同PRの「次回予定」に残っていた同一タスクのため、新規ブランチ・新規PRは作らず既存PRを更新）
+- 事前確認: git status（クリーン）／origin/main最新化／docs/seo配下の管理ファイル一式／既存ブランチ・オープンPRを確認（PR #6: claude/seo-weekly-2026-07-27＝article09タスク残存、PR #7: claude/lp-top-page-improvements-2026-07-31＝トップページ改善で別件のため対象外）
+- 判定: 編集カレンダーの2026-08-03〜07週分（30項目記事）は2026-07-11の初回実行で前倒し完了済みのため対象外。優先順位（本プロンプト3章「4. 公開予定を過ぎている記事」）に従い、PR #6に残っていた期限超過タスクのarticle09（無料EN記事へ独自PDF/Word版追加）を今回実施。前回大幅更新（2026-07-27 article14）から14日未経過のため、隔週の別記事大幅更新は対象外
+- 実施した作業:
+  - `tools/pdf/free-ending-note.html` を新規作成: 自社オリジナルの記入式エンディングノート（1.基本情報／2.財産・お金／3.医療・介護の希望／4.葬儀・お墓の希望／5.デジタル情報／6.家族へのメッセージ／見直し記録の7セクション。暗証番号・パスワード等は書かない注意書き、専門家相談の目安を明記）。市販品や他社コンテンツは転用せず、article02（書き方ガイド）の項目分類を参考に独自作成
+  - ヘッドレスChromium（`/opt/pw-browsers/chromium-1194`）で `downloads/free-ending-note.pdf` を生成（A4・5ページ）。`tools/build-pdf.ps1`はWindows Chrome前提でこの実行環境（Linux）では動作しないため、同等のヘッドレス印刷コマンドを直接実行
+  - docxスキル（`docx` npmライブラリ、スクラッチパッドに一時インストールして生成）で `downloads/free-ending-note.docx` を新規作成。PDF版と同一内容をWord形式で用意
+  - `articles/article09.html` を更新: 「無料版エンディングノートの入手方法」セクションに、当サイトオリジナルの無料エンディングノート（PDF/Word、会員登録・メールアドレス入力不要）のダウンロード導線を追加。まとめセクションにも1文追加。dateModified/最終更新日を2026-08-03へ更新
+  - 管理ファイル更新: content-inventory.csv／keyword-map.csv（article09の最終実質更新日を2026-08-03へ）、internal-link-map.csv（article09→PDF/DOCX、article09→article02の行を追加）、editorial-calendar.csv（2026-07-27〜31週のarticle09行を完了に更新）、sitemap.xml（article09のlastmod更新）
+- 変更したURL: https://shukatsu-guide.jp/articles/article09.html（本文にダウンロード導線セクションを追加。検索意図・title・meta descriptionは変更なし）
+- 作成ファイル: `tools/pdf/free-ending-note.html`、`downloads/free-ending-note.pdf`、`downloads/free-ending-note.docx`
+- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 29, internal links checked: 752）
+- PDF/DOCX確認:
+  - PDF: ヘッドレスChromiumのスクリーンショットで1ページ目のレイアウト・日本語表示（IPAGothicで代替表示）を目視確認。PDF本体は5ページ生成を確認（内部の`/Count 5`）
+  - DOCX: python-docxでテキスト構造（86段落・9テーブル、想定どおりの見出し順）を確認し、docx-jsで生成したXML各パーツ（document.xml等）がすべて整形式であることをXMLパーサーで確認。**ただしこの実行環境ではLibreOffice（soffice）headless変換が機能せず**（`.docx`だけでなく単純な`.txt`ファイルの変換すら"source file could not be loaded"で失敗する環境側の制約。トリビアルなdocxでも同様に失敗することを確認済み）、PDF化しての見た目の目視確認はできなかった
+- YMYLレビュー待ち: 変更なし（既存のarticle15/article07/article10/article17/30項目記事の項目のまま。article09は低YMYL区分のため今回のレビュー対象外）
+- 阻害要因: この実行環境ではWindows向けPDFビルドスクリプト（tools/build-pdf.ps1）とLibreOffice headless変換が動作しないため、代替手段（ヘッドレスChromium直接実行、python-docxでの構造検証）で対応した。次回、Windows環境またはLibreOffice headless変換が正常に動く環境でPDF/DOCXの最終的な見た目を再確認することを推奨
+- 次回予定: 2026-08-10週のarticle05（親への切り出し方を拒否・NG例まで拡張）に着手予定
+- PR: 既存のPR #6（claude/seo-weekly-2026-07-27）へ追加コミットし、本文を更新
+
 ## 2026-07-27（週次・定期実行）
 
 - 実行日時: 2026-07-27 09:15 JST
