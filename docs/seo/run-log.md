@@ -20,7 +20,61 @@
 - YMYLレビュー待ち: article18のNISA・暗号資産・相続の記述（税理士または司法書士。ymyl-review-queue.mdに登録済み）
 - 阻害要因: 公的機関・Apple・Google・金融機関の全ドメインへの直接WebFetchがブロックされ、検索結果経由の確認に留まった（source-policy.mdに明記）。運営者ご本人による参考情報URLの原文確認を推奨
 - 次回予定: 週次定期実行は従来どおり（次回はarticle05の大幅更新を予定）。本記事は公開2〜4週間後にインデックス状況を確認予定
-- 特記事項: 本ブランチはmain基点のため、週次PR #6（article09/14の変更・同名管理ファイルの更新を含む）とは独立。両PRのマージ順によってはrun-log.md等でコンフリクトが発生し得る（PR #6を先にマージ推奨）
+- 特記事項: 本ブランチはmain基点のため、週次PR #6（article09/14の変更・同名管理ファイルの更新を含む）とは独立。運営者の指示によりPR #6を先にマージし、本ブランチへmainを取り込んで管理ファイルのコンフリクトを解消した（2026-08-04）
+
+## 2026-08-03（週次・定期実行）
+
+- 実行日時: 2026-08-03 09:12 JST
+- ブランチ: claude/seo-weekly-2026-07-27（前回PR #6に追加コミット。article09は同PRの「次回予定」に残っていた同一タスクのため、新規ブランチ・新規PRは作らず既存PRを更新）
+- 事前確認: git status（クリーン）／origin/main最新化／docs/seo配下の管理ファイル一式／既存ブランチ・オープンPRを確認（PR #6: claude/seo-weekly-2026-07-27＝article09タスク残存、PR #7: claude/lp-top-page-improvements-2026-07-31＝トップページ改善で別件のため対象外）
+- 判定: 編集カレンダーの2026-08-03〜07週分（30項目記事）は2026-07-11の初回実行で前倒し完了済みのため対象外。優先順位（本プロンプト3章「4. 公開予定を過ぎている記事」）に従い、PR #6に残っていた期限超過タスクのarticle09（無料EN記事へ独自PDF/Word版追加）を今回実施。前回大幅更新（2026-07-27 article14）から14日未経過のため、隔週の別記事大幅更新は対象外
+- 実施した作業:
+  - `tools/pdf/free-ending-note.html` を新規作成: 自社オリジナルの記入式エンディングノート（1.基本情報／2.財産・お金／3.医療・介護の希望／4.葬儀・お墓の希望／5.デジタル情報／6.家族へのメッセージ／見直し記録の7セクション。暗証番号・パスワード等は書かない注意書き、専門家相談の目安を明記）。市販品や他社コンテンツは転用せず、article02（書き方ガイド）の項目分類を参考に独自作成
+  - ヘッドレスChromium（`/opt/pw-browsers/chromium-1194`）で `downloads/free-ending-note.pdf` を生成（A4・5ページ）。`tools/build-pdf.ps1`はWindows Chrome前提でこの実行環境（Linux）では動作しないため、同等のヘッドレス印刷コマンドを直接実行
+  - docxスキル（`docx` npmライブラリ、スクラッチパッドに一時インストールして生成）で `downloads/free-ending-note.docx` を新規作成。PDF版と同一内容をWord形式で用意
+  - `articles/article09.html` を更新: 「無料版エンディングノートの入手方法」セクションに、当サイトオリジナルの無料エンディングノート（PDF/Word、会員登録・メールアドレス入力不要）のダウンロード導線を追加。まとめセクションにも1文追加。dateModified/最終更新日を2026-08-03へ更新
+  - 管理ファイル更新: content-inventory.csv／keyword-map.csv（article09の最終実質更新日を2026-08-03へ）、internal-link-map.csv（article09→PDF/DOCX、article09→article02の行を追加）、editorial-calendar.csv（2026-07-27〜31週のarticle09行を完了に更新）、sitemap.xml（article09のlastmod更新）
+- 変更したURL: https://shukatsu-guide.jp/articles/article09.html（本文にダウンロード導線セクションを追加。検索意図・title・meta descriptionは変更なし）
+- 作成ファイル: `tools/pdf/free-ending-note.html`、`downloads/free-ending-note.pdf`、`downloads/free-ending-note.docx`
+- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 29, internal links checked: 752）
+- PDF/DOCX確認:
+  - PDF: ヘッドレスChromiumのスクリーンショットで1ページ目のレイアウト・日本語表示（IPAGothicで代替表示）を目視確認。PDF本体は5ページ生成を確認（内部の`/Count 5`）
+  - DOCX: python-docxでテキスト構造（86段落・9テーブル、想定どおりの見出し順）を確認し、docx-jsで生成したXML各パーツ（document.xml等）がすべて整形式であることをXMLパーサーで確認。**ただしこの実行環境ではLibreOffice（soffice）headless変換が機能せず**（`.docx`だけでなく単純な`.txt`ファイルの変換すら"source file could not be loaded"で失敗する環境側の制約。トリビアルなdocxでも同様に失敗することを確認済み）、PDF化しての見た目の目視確認はできなかった
+- YMYLレビュー待ち: 変更なし（既存のarticle15/article07/article10/article17/30項目記事の項目のまま。article09は低YMYL区分のため今回のレビュー対象外）
+- 阻害要因: この実行環境ではWindows向けPDFビルドスクリプト（tools/build-pdf.ps1）とLibreOffice headless変換が動作しないため、代替手段（ヘッドレスChromium直接実行、python-docxでの構造検証）で対応した。次回、Windows環境またはLibreOffice headless変換が正常に動く環境でPDF/DOCXの最終的な見た目を再確認することを推奨
+- 次回予定: 2026-08-10週のarticle05（親への切り出し方を拒否・NG例まで拡張）に着手予定
+- PR: 既存のPR #6（claude/seo-weekly-2026-07-27）へ追加コミットし、本文を更新
+
+## 2026-07-27（週次・定期実行）
+
+- 実行日時: 2026-07-27 09:15 JST
+- ブランチ: claude/seo-weekly-2026-07-27（ドラフトPR運用）
+- 事前確認: git status（クリーン）／origin/main最新化（0c6b8fc）／CLAUDE.md（リポジトリに存在せず）／docs/seo配下の管理ファイル一式／既存ブランチ・オープンPRを確認（オープンPRなし、claude/pollet-lp-2026-07-20とclaude/seo-weekly-2026-07-20はマージ済みブランチとして残存のみ、重複作業なし）
+- 判定: 編集カレンダーの2026-07-27〜31週分は「article09 PDF/Word版追加（大幅更新）」「article14 秋彼岸向け更新」の2タスク。1回の実行では大幅更新・記事更新をあわせて大量に行わないという原則と、季節需要（6〜10週間後＝2026年9月上旬〜10月上旬に敬老の日9/21・秋のお彼岸9/23が該当）を優先する順序（本プロンプト3章の優先順位5番）にもとづき、季節性の高いarticle14を今回実施。article09は次回に持ち越し
+- 実施した作業:
+  - article14.html（お墓の終活）を更新:
+    - 改葬許可の法的根拠を明記（墓地、埋葬等に関する法律第5条：改葬には市町村長の許可が必要、申請先は焼骨が現に存する地の市区町村）
+    - 「秋のお彼岸は、家族で話す好機」セクションを新設。2026年の秋分の日（9月23日・水）と、敬老の日（9/21）に挟まれた9/22が「国民の休日」で休日となり9/19〜23が連休になる旨（国立天文台の暦要項発表・複数報道で確認）を紹介し、状況別（承継者あり/なし/遠方）の考え方・会話例3パターン・「お彼岸に確認しておきたいことシート」（印刷せず本文チェックリストとして掲載）を追加
+    - 「費用とトラブルを避けるために知っておきたいこと」セクションを新設。国民生活センターの相談件数推移（2021年度969件→2023年度1,148件、3〜4割が離檀料・改葬関連）、離檀料に法的基準がない点、宗派相違トラブル例、相談先（消費者ホットライン188・国民生活センター、法律問題は弁護士司法書士）を追加。具体的な費用相場（墓石撤去・永代供養等）は信頼できる一次情報が見つからなかったため数値を記載せず、「複数社の書面見積もりで比較する」案内にとどめた（未確認の価格を記載しない方針を遵守）
+    - FAQ（4問）とFAQPage JSON-LD、BreadcrumbList JSON-LDを新規追加。冒頭に結論box・できるようになることboxを追加。関連記事に親の終活ガイド・article05を追加
+    - dateModified/最終更新日を2026-07-27へ更新（本文を伴う実質更新）
+  - parent-shukatsu/index.html（親の終活ハブ）: 記事一覧にarticle14を追加、状況別ケースに「実家のお墓が気になる場合」カードを新設しarticle14へリンク
+  - sitemap.xml: article14・parent-shukatsu/のlastmodを2026-07-27へ更新
+  - 管理ファイル更新: docs/seo/keyword-map.csv、docs/seo/content-inventory.csv、docs/seo/internal-link-map.csv、docs/seo/editorial-calendar.csv（該当タスクを完了に更新）、docs/seo/source-policy.md（新規一次情報3件を台帳へ追加）
+- 変更したURL: https://shukatsu-guide.jp/articles/article14.html（本文追加・構造化データ追加）／https://shukatsu-guide.jp/parent-shukatsu/（内部リンク追加）
+- 検索意図: 「墓じまい」「永代供養」「樹木葬」（既存の主意図は維持）に加え、秋のお彼岸を機に家族で話し合う読者の意図をカバー
+- 内部リンク: 親の終活ハブ⇄article14を新規に相互整備。article14→article05（切り出し方）を追加
+- 技術変更: BreadcrumbList・FAQPage JSON-LDを新規追加（他記事と同じ形式でDOM↔JSON-LD一致を確認）
+- 参考情報:
+  - 国立天文台「令和8年（2026）暦要項」（秋分の日9/23、9/19〜23の連休。確認日2026-07-27）
+  - 墓地、埋葬等に関する法律第5条（厚生労働省法令等データベース。確認日2026-07-27）
+  - 国民生活センター「墓・葬儀サービス（各種相談の件数や傾向）」（確認日2026-07-27）
+  - いずれも直接WebFetchはブロックされたため、複数の検索クエリで再現性を確認する方法で裏取りした（詳細はsource-policy.md参照）
+- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 28, internal links checked: 748）
+- PR: ドラフトPRを作成
+- YMYLレビュー待ち: 変更なし（既存キューを継続。article14自体は「中（行政手続・消費者トラブル）」区分で従来どおり「将来推奨」、緊急の専門家レビュー登録は不要と判断）
+- 阻害要因: 墓石撤去・永代供養・樹木葬などの具体的な費用相場について、信頼できる一次情報（公的統計等）が見つからなかったため、本文には数値を記載せず「複数社見積もり」の案内にとどめた。編集カレンダーの「費用」項目は手続き面（改葬許可の法的根拠）とトラブル対応面（相談先）のみ充足し、具体的な金額の記載は今後一次情報が得られ次第の課題として残る
+- 次回予定: 2026-07-27〜31週の残タスクであるarticle09（無料エンディングノートPDF/Word版追加）に着手予定
 
 ## 2026-07-21（臨時・運営者からのチャット依頼：Pollet LPの公開）
 
