@@ -31,7 +31,7 @@
 - 対応（データに依存しない範囲の改善に限定）:
   - トップページの主要CTA・カテゴリカード4種・体験談LPバナー・クロージングCTAに`data-cta`属性とGA4イベント計測（`lp_cta_click`）を追加。`/ihin-kaitori/`・`/ending-note/family-story/`で既に使われている実装パターンを流用し、次回Analyticsを確認できる状態になった際に導線ごとのクリック傾向を把握できるようにした
   - ヒーローのリード文に「親の終活の進め方」を明記し、`docs/seo/seo-strategy.md`が定める最優先クラスタ「親の終活」への副CTA（`/parent-shukatsu/`）をヒーロー内に追加。既存のエンディングノートCTAは変更せず併記
-- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 28, internal links checked: 735）
+- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（作業時点: HTML files 28・内部リンク735件／PR #6マージ後にmainを取り込んで再検証: HTML files 29・内部リンク753件、いずれも全通過）
 - 運営者への確認事項（PR本文にも記載）:
   1. Search Console「検索パフォーマンス」・GA4レポートのスクリーンショットまたはCSVをチャットへ貼っていただくか、Google Driveコネクタを有効化してエクスポートを共有いただければ、実データに基づく分析・改善に着手できる
   2. トップページの「よく読まれている記事」ランキング（article08/01/02固定）は実データ未確認のため今回変更していない。実データが得られ次第、見直しを推奨
