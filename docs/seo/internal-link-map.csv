@@ -30,3 +30,8 @@
 /articles/article12.html,/ihin-kaitori/,記事→LP,関連記事（生前整理から）
 /ihin-kaitori/,/articles/article12.html;/articles/article11.html;/articles/article15.html;/parent-shukatsu/,LP→記事/ハブ,本文中・関連記事欄
 既存記事間リンク,（article01〜17・ihin-kaitori含め2026-07-21時点で整備済み）,既存,2026-07-21時点で整備済み
+/,/articles/article18.html,トップ→記事,全記事一覧
+/parent-shukatsu/,/articles/article18.html,ハブ→記事,記事一覧
+/articles/article06.html,/articles/article18.html,記事→記事,お金に関わるもの・もしもの設定・関連記事欄（相互リンク）
+/articles/article15.html,/articles/article18.html,記事→記事,相続財産の調査（デジタル遺産の探し方）・関連記事欄（相互リンク）
+/articles/article18.html,/articles/article06.html;/articles/article02.html;/articles/article04.html;/articles/article07.html;/articles/article08.html;/articles/article10.html;/articles/article15.html,記事→記事,遺品整理・書き方・書いてはいけないこと・遺言種類・EN比較(CTA A)・専門家相談(CTA B)・相続手続き
