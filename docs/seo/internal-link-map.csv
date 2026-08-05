@@ -34,3 +34,8 @@
 /articles/article14.html,/articles/article05.html;/parent-shukatsu/,記事→記事/ハブ,秋のお彼岸の会話例・関連記事欄から
 /articles/article09.html,downloads/free-ending-note.pdf;downloads/free-ending-note.docx,記事→PDF/DOCX,無料版入手方法セクションの自社ダウンロード導線
 /articles/article09.html,/articles/article02.html,記事→記事,無料エンディングノート記入例への誘導（新設ダウンロード導線内）
+/,/articles/article18.html,トップ→記事,全記事一覧
+/parent-shukatsu/,/articles/article18.html,ハブ→記事,記事一覧
+/articles/article06.html,/articles/article18.html,記事→記事,お金に関わるもの・もしもの設定・関連記事欄（相互リンク）
+/articles/article15.html,/articles/article18.html,記事→記事,相続財産の調査（デジタル遺産の探し方）・関連記事欄（相互リンク）
+/articles/article18.html,/articles/article06.html;/articles/article02.html;/articles/article04.html;/articles/article07.html;/articles/article08.html;/articles/article10.html;/articles/article15.html,記事→記事,遺品整理・書き方・書いてはいけないこと・遺言種類・EN比較(CTA A)・専門家相談(CTA B)・相続手続き
