@@ -23,4 +23,11 @@
 | article15 | 相続放棄3か月/準確定申告4か月/相続税10か月/相続登記義務化 | 既存記事執筆時の一般知識ベース。**次回半期YMYLレビューで一次情報URLを付与すること**（裁判所・国税庁・法務局） | 未 |
 | article12・生前整理PDF | 家庭の不用品の収集運搬には市区町村の一般廃棄物処理業の許可（または委託）が必要／「無料回収」等の追加料金トラブル／複数社見積もり推奨 | 国民生活センター発表（2022-11-02） https://www.kokusen.go.jp/news/data/n-20221102_1.html | 2026-07-19 |
 | article12・生前整理PDF | 消費者ホットライン188（最寄りの消費生活センター案内） | 消費者庁の周知番号（一般知識。国民生活センター上記ページでも案内） | 2026-07-19 |
+| /column/will-for-ordinary-families/ | 自筆証書遺言書保管制度：原本は死亡後50年・画像データ150年保管／紛失・改ざん防止／家庭裁判所の検認が不要／**制度は遺言書の有効性を保証しない** | 法務省「遺言書保管制度とは？」 https://www.moj.go.jp/MINJI/01.html （制度総合案内 https://www.moj.go.jp/MINJI/minji03_00051.html ） | 2026-08-10 |
+| /column/will-for-ordinary-families/ | 申請先は住所地・本籍地・所有不動産所在地の管轄保管所（2通目以降は最初の保管所）／遺言者本人のみ・代理/郵送不可・予約必須／必要書類（住民票の写し・顔写真付き本人確認書類） | 法務省「遺言者の手続」 https://www.moj.go.jp/MINJI/02.html | 2026-08-10 |
+| /column/will-for-ordinary-families/ | 様式：A4・余白（上5mm/下10mm/左20mm/右5mm）・片面のみ・ページ番号・ホチキス不可・封筒不要／財産目録はPC作成可（全ページ署名押印） | 法務省「遺言書の様式等」 https://www.moj.go.jp/MINJI/03.html | 2026-08-10 |
+| /column/will-for-ordinary-families/ | 手数料：保管の申請 3,900円/1通、閲覧（モニター）1,400円・（原本）1,700円、遺言書情報証明書 1,400円/通、遺言書保管事実証明書 800円/通、収入印紙納付／撤回・変更届出は無料 | 法務省「手数料」 https://www.moj.go.jp/MINJI/09.html | 2026-08-10 |
+| /column/will-for-ordinary-families/ | 通知：指定者通知（最大3名）・関係遺言書保管通知 | 法務省「通知について」 https://www.moj.go.jp/MINJI/10.html | 2026-08-10 |
+| /column/will-for-ordinary-families/ | 参考（民間メディア・**数値の根拠に不使用**）J:COM相続そうだんのセミナーレポート。同記事は「相続トラブルの8割近くが5,000万円以下」と記載しているが、**当サイト本文には採用していない** | https://www.jcom.co.jp/service/so-zoku/column/025-seminar-report-will.html | 2026-08-10 |
+| /column/will-for-ordinary-families/ | 上記の「遺産額が小さい家庭でももめる」旨の数値は**未確認のため本文に不記載**。一次情報は裁判所「司法統計年報 3 家事編」の遺産分割事件（認容・調停成立）遺産価額別の表。2026-08-10にPDF取得を試みたが、**テキスト抽出では数値のみで日本語の表題・行ラベルが取れず表の特定に至らず**（要目視確認）。年報一覧 https://www.courts.go.jp/toukei_siryou/shihotokei_nenpo/index.html ／令和6年家事編 https://www.courts.go.jp/saikosai/vc-files/saikosai/toukei/toukei-pdf-12787.pdf | 裁判所（司法統計年報） | 未（2026-08-10に調査・特定できず） |
 | article12 | 家電リサイクル法対象4品目（エアコン・テレビ・冷蔵庫/冷凍庫・洗濯機/衣類乾燥機）は自治体の粗大ごみに出せない | 家電リサイクル法の一般知識（経済産業省・環境省所管）。個別の引き渡し方法・費用は断定せず自治体・店舗へ誘導 | 2026-07-19 |
