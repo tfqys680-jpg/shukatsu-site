@@ -22,11 +22,36 @@ let checkedLinks = 0;
 const relOf = f => path.relative(ROOT, f).split(path.sep).join("/");
 const isSitePage = rel => !rel.startsWith("tools/") && !rel.startsWith("docs/") && !rel.startsWith("drafts/");
 
+// 法務コピーの回帰防止（2026-08-10 Codex P2レビュー対応）
+const prohibitedLegalClaims = [
+  "相続税がかからないご家庭でも、財産を誰にどう渡すかという話し合い（遺産分割協議）は必要になります",
+  "全員の署名・押印が必要な話し合い",
+  "財産を渡す意思を法的な形で残せるのは遺言書",
+  "財産の分け方はエンディングノートやメモでは法的効力がありません。遺言書が必要です",
+  "財産の分け方など、法的な意思表示が必要なことは別途遺言書が必要です",
+  "財産の分け方など法的に有効な意思表示をしたい場合は、遺言書の作成が必要です",
+  "法的な効力を持たせたい場合は、遺言書の作成をご検討ください",
+  "法的に決めたいことは遺言書へ"
+];
+const requiredLegalCopy = {
+  "column/will-for-ordinary-families/index.html": [
+    "遺産分割協議が不要なこともあります",
+    "生前贈与、死因贈与、信託"
+  ]
+};
+
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, "utf8");
   const dir = path.dirname(file);
   const rel = relOf(file);
-  if (rel.startsWith("tools/") || rel.startsWith("docs/")) continue; // PDFソース等は対象外
+
+  for (const claim of prohibitedLegalClaims) {
+    if (html.includes(claim)) errors.push(`${rel}: misleading legal claim returned: ${claim}`);
+  }
+  if (rel.startsWith("tools/") || rel.startsWith("docs/")) continue; // PDFソース等はリンク・構造検査の対象外
+  for (const required of requiredLegalCopy[rel] || []) {
+    if (!html.includes(required)) errors.push(`${rel}: required legal qualification missing: ${required}`);
+  }
 
   // collect ids in this file
   const ids = new Set();
