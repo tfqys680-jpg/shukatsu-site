@@ -42,6 +42,50 @@
 })();
 
 
+// クリック計測（2026-08-12 追加）
+// GA4のgtagが読み込まれている場合のみ発火する。gtagがない環境では何もしない。
+// 従来は一部ページのインラインスクリプトに同じCTA計測を重複記述していたが、
+// 全ページで js/main.js を読み込んでいるためここへ集約した。
+(function () {
+  "use strict";
+
+  // 1) サイト内CTAのクリック計測（data-cta属性を付けたリンクが対象）
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-cta]");
+    if (!a || typeof gtag !== "function") return;
+    gtag("event", "lp_cta_click", {
+      cta_label: a.getAttribute("data-cta"),
+      page_path: location.pathname
+    });
+  });
+
+  // 2) アフィリエイトリンクのクリック計測
+  // リンク側への属性追加は不要（もしも経由リンクを自動検出する）ため、
+  // 今後アフィリエイトリンクを追加しても計測漏れが起きない。
+  // ※Pollet（/ihin-kaitori/）のCTAはdata-cta付きで上記1)が計測するため、ここでは対象外
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href*="af.moshimo.com"]');
+    if (!a || typeof gtag !== "function") return;
+
+    // 遷移先の判定: 楽天用リンクにはrakutenクラスが付く。念のためURL側でも判定する
+    var href = a.getAttribute("href") || "";
+    var shop = "amazon";
+    if (a.classList.contains("rakuten")) shop = "rakuten";
+    else if (decodeURIComponent(href).indexOf("rakuten.co.jp") > -1) shop = "rakuten";
+
+    // 商品名: 各リンクは商品ブロック（.product-box）内にあり、その見出しが商品名
+    var box = a.closest(".product-box");
+    var heading = box && box.querySelector("h3");
+
+    gtag("event", "affiliate_click", {
+      shop: shop,
+      product: heading ? heading.textContent.trim() : "(unknown)",
+      page_path: location.pathname
+    });
+  });
+})();
+
+
 // スクロール演出（2026-07-11 追加）
 // JSが無効な環境・prefers-reduced-motion 環境では何もしない（全文が通常表示される）
 (function () {

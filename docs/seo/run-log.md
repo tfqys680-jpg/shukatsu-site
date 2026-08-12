@@ -1,5 +1,37 @@
 # 実行ログ（run-log）
 
+## 2026-08-12（臨時・運営者からのチャット依頼 その2：アフィリエイトのクリック計測）
+
+- 実行日時: 2026-08-12 JST（PR #21マージ後、運営者から「進めてください」との依頼）
+- ブランチ: claude/affiliate-click-tracking-2026-08-12（新規ドラフトPR運用）
+- 前提: Google Search Console / Google Analytics への接続手段は引き続きこのセッションに存在しない。実データ分析はできないため、コードから検証できる改善を継続
+- 判定: 全29公開ページの外部リンクを監査したところ、**サイトの収益源であるアフィリエイトリンク30本（もしも経由 af.moshimo.com）にクリック計測が一切設定されていない**ことを検出。どのページ・どの商品が実際にクリックされているかを把握できない状態だったため、これを最優先で対応
+  - 内訳: article08（10商品×Amazon/楽天＝20本）、article09（2本）、article16（2本）、article17（2本）
+  - Pollet（/ihin-kaitori/）のCTAは既に`data-cta`付きで`lp_cta_click`が計測しているため今回の対象外（二重計測を避ける）
+- 実施した作業:
+  - `js/main.js` にクリック計測を集約（全29ページで読み込み済みのため、HTML側の変更なしに全ページへ適用される）
+    - **アフィリエイトクリック計測（新規）**: `af.moshimo.com`へのリンクを自動検出し`affiliate_click`イベントを送信。パラメータは `shop`（amazon / rakuten）・`product`（商品ブロック`.product-box`の見出しから取得）・`page_path`。**リンク側への属性追加が不要な自動検出方式**にしたため、今後アフィリエイトリンクを追加しても計測漏れが起きない
+    - **CTA計測の共通化（重複解消）**: 従来 index.html / ending-note/family-story/ / ihin-kaitori/ の3ページに同一のインラインスクリプトを重複記述していた`lp_cta_click`計測を`js/main.js`へ移動し、3ページのインラインブロックを削除。今後CTAを設置するページで計測を書き忘れる事故を防ぐ
+  - 変更ファイル: `js/main.js`（計測を追加）、`index.html`・`ending-note/family-story/index.html`・`ihin-kaitori/index.html`（重複インラインを削除）
+- 変更したURL: なし（表示内容・本文・title・meta descriptionの変更は一切なし。計測コードのみ）
+- 検索意図: 変更なし
+- 内部リンク: 変更なし
+- 技術変更: GA4イベント`affiliate_click`を新規追加。`lp_cta_click`をmain.jsへ集約
+- PDF/DOCX変更: なし
+- 参考情報: 新規の法制度・統計・固有名詞の追加なし
+- テスト結果:
+  - `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 33, internal links checked: 947）
+  - `js/main.js` の構文チェック（node vm）→ OK
+  - **ヘッドレスChromium（Playwright）で実ページを開き、実際にクリックして`dataLayer`へ送信されるイベントを検証**（11項目すべてOK / NG 0件）
+    - CTA計測: トップ3種（ヒーロー・親の終活・体験談バナー）／Pollet LP／体験談LP の5パターンで`lp_cta_click`が発火し、インライン削除後も動作することを確認
+    - アフィリエイト計測: article08のAmazon・楽天両方、article09・16・17で`affiliate_click`が発火し、`shop`と`product`が正しく取得できることを確認。例: `{"shop":"rakuten","product":"1. 一番わかりやすいエンディングノート（リベラル社）"}`
+    - 二重発火チェック: Pollet CTAのクリックで発火するイベントが`lp_cta_click`の1件のみであることを確認
+- Search Console分析: データなし（`docs/seo/sc-data/`が引き続き未配置。SC/Analyticsへの接続手段もこのセッションにないため）
+- YMYLレビュー待ち: 変更なし（計測コードのみで本文の記述は変更していない）
+- 未解決事項: 計測が実際にGA4へ届いているかは、マージ・デプロイ後にGA4の「リアルタイム」または「イベント」レポートで`affiliate_click`・`lp_cta_click`を運営者にご確認いただく必要がある
+- 次回予定: GA4に`affiliate_click`のデータが蓄積されたら、どの記事・どの商品が実際にクリックされているかを踏まえて収益記事（article08/09）の構成・CTA配置を見直す。実データ（SC/Analytics）が共有されれば、そちらに基づく改善を優先する
+- PR: ドラフトPRを作成
+
 ## 2026-08-12（臨時・運営者からのチャット依頼：テクニカルSEO改善の継続）
 
 - 実行日時: 2026-08-12 JST（PR #6・#7のマージ完了後、運営者から「続きをお願いいたします」との依頼）
