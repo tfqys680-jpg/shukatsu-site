@@ -31,14 +31,52 @@ const prohibitedLegalClaims = [
   "財産の分け方など、法的な意思表示が必要なことは別途遺言書が必要です",
   "財産の分け方など法的に有効な意思表示をしたい場合は、遺言書の作成が必要です",
   "法的な効力を持たせたい場合は、遺言書の作成をご検討ください",
-  "法的に決めたいことは遺言書へ"
+  "法的に決めたいことは遺言書へ",
+  "財産の分け方に関する希望は、エンディングノートに書いても法的効力はありません",
+  "相続に関わる内容は遺言書の作成や",
+  "エンディングノート自体に法的効力はないため、財産を渡す意思は遺言書で示す",
+  "財産の分け方など法的な意思表示が必要なものは遺言書と専門家の領分です",
+  "資産の場所はエンディングノート、分け方は遺言書"
 ];
 const requiredLegalCopy = {
+  "articles/article01.html": [
+    "それだけでは通常、財産を移す法的効力は生じません",
+    "生前贈与、死因贈与、信託"
+  ],
+  "articles/article02.html": [
+    "通常、財産を移す法的効力は生じません",
+    "生前贈与、死因贈与、信託"
+  ],
+  "articles/article04.html": [
+    "通常、財産を移す法的効力は生じません",
+    "生前贈与、死因贈与、信託"
+  ],
+  "articles/article18.html": [
+    "それだけでは通常",
+    "生前贈与、死因贈与、信託",
+    "目的に合う法的な方法"
+  ],
+  "column/ai-shukatsu-first-step/index.html": [
+    "生前贈与、死因贈与、信託",
+    "目的に合う方法を専門家と検討"
+  ],
   "column/will-for-ordinary-families/index.html": [
     "遺産分割協議が不要なこともあります",
     "生前贈与、死因贈与、信託"
+  ],
+  "column/legacy-giving-basics/index.html": [
+    "遺言だけが唯一の方法ではありません",
+    "通常、財産を移す法的効力は生じません"
   ]
 };
+
+const legalTextSegments = html => html
+  .replace(/<\/(?:p|li|tr|h[1-6]|summary|div)>/gi, "$&\n")
+  .replace(/<[^>]+>/g, " ")
+  .replace(/&(?:amp|nbsp|quot|#39);/g, " ")
+  .split(/[。！？\n]/)
+  .map(segment => segment.replace(/\s+/g, " ").trim())
+  .filter(Boolean);
 
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, "utf8");
@@ -47,6 +85,13 @@ for (const file of htmlFiles) {
 
   for (const claim of prohibitedLegalClaims) {
     if (html.includes(claim)) errors.push(`${rel}: misleading legal claim returned: ${claim}`);
+  }
+  for (const segment of legalTextSegments(html)) {
+    const deniesLegalEffect = /法的(?:な)?効力\s*(?:は|が)?\s*(?:ありません|ない|なし)/.test(segment);
+    const hasQualification = /原則|通常|それだけ|だけでは|書いただけ|財産を移す/.test(segment);
+    if (segment.includes("エンディングノート") && deniesLegalEffect && !hasQualification) {
+      errors.push(`${rel}: unqualified ending-note legal-effect claim: ${segment.slice(0, 140)}`);
+    }
   }
   if (rel.startsWith("tools/") || rel.startsWith("docs/")) continue; // PDFソース等はリンク・構造検査の対象外
   for (const required of requiredLegalCopy[rel] || []) {
