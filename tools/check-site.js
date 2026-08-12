@@ -187,11 +187,17 @@ for (const [t, files] of Object.entries(titleMap)) {
 }
 
 // sitemap coverage（drafts/tools/docs は対象外。draftsの混入は検出）
+// 404.html は noindex のエラーページなのでsitemapに載せない（載っていたら逆に検出する）
+const sitemapExempt = new Set(["404.html"]);
 const sitemap = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
 for (const file of htmlFiles) {
   const rel = relOf(file);
   if (rel.startsWith("drafts/")) {
     if (sitemap.includes(rel.replace(/\/index\.html$/, "/"))) errors.push(`sitemap.xml: draft page included: ${rel}`);
+    continue;
+  }
+  if (sitemapExempt.has(rel)) {
+    if (sitemap.includes(`/${rel}<`)) errors.push(`sitemap.xml: noindex page included: ${rel}`);
     continue;
   }
   if (!isSitePage(rel)) continue;
