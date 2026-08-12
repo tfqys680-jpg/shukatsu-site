@@ -34,3 +34,17 @@
 /articles/article14.html,/articles/article05.html;/parent-shukatsu/,記事→記事/ハブ,秋のお彼岸の会話例・関連記事欄から
 /articles/article09.html,downloads/free-ending-note.pdf;downloads/free-ending-note.docx,記事→PDF/DOCX,無料版入手方法セクションの自社ダウンロード導線
 /articles/article09.html,/articles/article02.html,記事→記事,無料エンディングノート記入例への誘導（新設ダウンロード導線内）
+/,/articles/article18.html,トップ→記事,全記事一覧
+/parent-shukatsu/,/articles/article18.html,ハブ→記事,記事一覧
+/articles/article06.html,/articles/article18.html,記事→記事,お金に関わるもの・もしもの設定・関連記事欄（相互リンク）
+/articles/article15.html,/articles/article18.html,記事→記事,相続財産の調査（デジタル遺産の探し方）・関連記事欄（相互リンク）
+/articles/article18.html,/articles/article06.html;/articles/article02.html;/articles/article04.html;/articles/article07.html;/articles/article08.html;/articles/article10.html;/articles/article15.html,記事→記事,遺品整理・書き方・書いてはいけないこと・遺言種類・EN比較(CTA A)・専門家相談(CTA B)・相続手続き
+/articles/article05.html,/parent-shukatsu/questions/;/parent-shukatsu/,記事→柱/ハブ,拒否時のステップ本文（30項目）・関連記事欄（30項目・親の終活ガイド）。keyword-map.csvの内部リンク先「30項目」の未実装分を今回充足
+/column/will-for-ordinary-families/,/articles/article07.html;/articles/article10.html,記事→記事,種類と費用の比較/相談先CTA
+/column/will-for-ordinary-families/,/articles/article01.html;/articles/article02.html;/articles/article06.html;/articles/article11.html;/articles/article12.html;/articles/article15.html;/parent-shukatsu/questions/,記事→記事/柱,ノートとの役割分け・準備の深掘り先
+/articles/article07.html,/column/will-for-ordinary-families/,記事→記事,関連記事（必要性の判断が先の人向け）
+/,/column/will-for-ordinary-families/,トップ→記事,全記事一覧(article07の次)
+/column/ai-shukatsu-first-step/,/articles/article10.html,記事→記事,要確認リストの相談先CTA
+/column/ai-shukatsu-first-step/,/articles/article01.html;/articles/article02.html;/articles/article06.html;/articles/article11.html;/articles/article18.html;/articles/article07.html;/column/will-for-ordinary-families/;/parent-shukatsu/questions/,記事→記事/柱,役割分け・ノート清書・デジタル資産・保管制度と費用の深掘り先
+/column/will-for-ordinary-families/,/column/ai-shukatsu-first-step/,記事→記事,関連記事（AIで下準備したい人向け）
+/,/column/ai-shukatsu-first-step/,トップ→記事,全記事一覧(will-for-ordinary-familiesの次)
