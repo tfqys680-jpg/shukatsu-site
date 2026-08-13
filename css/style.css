@@ -1,24 +1,25 @@
 /* =========================================================
    はじめての終活ガイド 共通スタイル
-   配色: 深緑 (#1f4a38) × 生成り (#f7f2e7)
-   本文17px以上・高コントラスト・スマホ最優先
+   配色: ローズピンク (#b8496f) × ほぼ白のピンク (#fdf6f9)
+   やわらかいパステル基調（白ベース）・本文17px以上・スマホ最優先
+   ※変数名は旧配色（深緑）時代のまま。--green-* が現在はローズ系を指す
    ========================================================= */
 
 :root {
-  --green-deep: #1f4a38;
-  --green-darker: #163529;
-  --green-soft: #2e6350;
-  --green-pale: #e4ede8;
-  --kinari: #f7f2e7;
-  --kinari-deep: #efe6d3;
-  --ink: #23302a;
-  --ink-soft: #4a5750;
+  --green-deep: #b8496f;
+  --green-darker: #9a3a5c;
+  --green-soft: #d488a6;
+  --green-pale: #fae3ec;
+  --kinari: #fdf6f9;
+  --kinari-deep: #fae9f0;
+  --ink: #392f35;
+  --ink-soft: #6e5f66;
   --white: #ffffff;
-  --orange: #e07020;
-  --orange-dark: #c25a10;
+  --orange: #c8611f;
+  --orange-dark: #a94e15;
   --rakuten: #bf0000;
-  --line-color: #d8cfbc;
-  --shadow: 0 2px 10px rgba(31, 74, 56, 0.12);
+  --line-color: #ecd6df;
+  --shadow: 0 2px 10px rgba(184, 73, 111, 0.10);
   --radius: 12px;
   --maxw: 960px;
 }
@@ -57,7 +58,7 @@ a:hover { color: var(--green-soft); }
 }
 .site-title { font-size: 20px; font-weight: 700; line-height: 1.3; }
 .site-title a { color: var(--white); text-decoration: none; }
-.site-title .tagline { display: block; font-size: 11px; font-weight: 400; color: #cfe0d7; }
+.site-title .tagline { display: block; font-size: 11px; font-weight: 400; color: #f3d4e0; }
 
 .global-nav ul { list-style: none; display: flex; gap: 4px; }
 .global-nav a {
@@ -73,7 +74,7 @@ a:hover { color: var(--green-soft); }
   .nav-toggle {
     display: inline-flex; align-items: center; justify-content: center;
     background: var(--green-soft); color: var(--white);
-    border: 1px solid #4a7a67; border-radius: 8px;
+    border: 1px solid #cf7d9c; border-radius: 8px;
     font-size: 14px; font-weight: 700; padding: 8px 14px; cursor: pointer;
   }
   .global-nav { display: none; width: 100%; }
@@ -85,7 +86,7 @@ a:hover { color: var(--green-soft); }
 /* ---------- ヒーロー ---------- */
 .hero {
   background:
-    linear-gradient(160deg, rgba(31, 74, 56, .78) 0%, rgba(22, 53, 41, .88) 100%),
+    linear-gradient(160deg, rgba(184, 73, 111, .78) 0%, rgba(154, 58, 92, .88) 100%),
     url("../images/hero.webp") center bottom / cover no-repeat,
     var(--green-darker);
   color: var(--white);
@@ -96,7 +97,7 @@ a:hover { color: var(--green-soft); }
   font-size: 30px; line-height: 1.5; font-weight: 800;
   letter-spacing: .02em; margin-bottom: 16px;
 }
-.hero .hero-lead { font-size: 17px; color: #dcebe3; max-width: 640px; margin: 0 auto 30px; }
+.hero .hero-lead { font-size: 17px; color: #fbe4ed; max-width: 640px; margin: 0 auto 30px; }
 .hero .badge-line {
   display: inline-block; background: rgba(255,255,255,.14);
   border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
@@ -160,9 +161,9 @@ a:hover { color: var(--green-soft); }
   overflow: hidden; border: 3px solid var(--green-pale);
 }
 .qual-badge {
-  display: inline-block; background: var(--green-deep); color: #f4d78a;
+  display: inline-block; background: var(--green-deep); color: #ffe8b0;
   font-weight: 800; font-size: 15px; letter-spacing: .05em;
-  border: 2px solid #f4d78a; border-radius: 8px;
+  border: 2px solid #ffe8b0; border-radius: 8px;
   padding: 6px 14px; margin-bottom: 10px;
 }
 .profile-card p { font-size: 16px; }
@@ -240,14 +241,14 @@ a:hover { color: var(--green-soft); }
   color: var(--white); text-align: center; padding: 56px 0;
 }
 .closing-cta h2 { font-size: 25px; line-height: 1.6; margin-bottom: 14px; }
-.closing-cta p { color: #dcebe3; max-width: 620px; margin: 0 auto 26px; }
+.closing-cta p { color: #fbe4ed; max-width: 620px; margin: 0 auto 26px; }
 
 /* ---------- フッター ---------- */
-.site-footer { background: var(--green-darker); color: #cfe0d7; padding: 36px 0 90px; font-size: 14px; }
+.site-footer { background: var(--green-darker); color: #f3d4e0; padding: 36px 0 90px; font-size: 14px; }
 .footer-nav { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 22px; justify-content: center; margin-bottom: 18px; }
-.footer-nav a { color: #eaf3ee; }
+.footer-nav a { color: #fbe9f0; }
 .ad-notice { text-align: center; margin-bottom: 10px; }
-.copyright { text-align: center; color: #9db8ac; }
+.copyright { text-align: center; color: #dfa9c0; }
 
 /* ---------- 記事ページ ---------- */
 .article-body { background: var(--white); }
@@ -293,7 +294,7 @@ article li { margin-bottom: 6px; }
 .summary-box h2 { background: none; color: var(--green-deep); padding: 0; margin: 0 0 12px; font-size: 20px; }
 
 .note-box {
-  background: #fdf6ec; border: 1px solid #ecd9b8; border-radius: 10px;
+  background: var(--kinari-deep); border: 1px solid var(--line-color); border-radius: 10px;
   padding: 16px 18px; margin: 22px 0; font-size: 15px;
 }
 .note-box strong { color: var(--orange-dark); }
@@ -363,6 +364,14 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
 .article-list h3 { color: var(--green-deep); font-size: 16px; line-height: 1.6; }
 .article-list p { font-size: 14px; color: var(--ink-soft); margin: 4px 0 0; }
 .article-list .article-date { font-size: 13px; }
+.archive-link { text-align: center; margin: 22px 0 0; }
+.archive-link a {
+  display: inline-block; color: var(--green-deep); font-weight: 700; font-size: 15px;
+  text-decoration: none; background: var(--white); border: 1px solid var(--green-soft);
+  border-radius: 999px; padding: 12px 24px; box-shadow: var(--shadow);
+}
+.archive-link a span { display: block; font-size: 12px; font-weight: 500; color: var(--ink-soft); margin-top: 3px; }
+.archive-link a:hover { border-color: var(--green-deep); }
 .new-badge {
   display: inline-block; background: var(--orange); color: #fff;
   font-size: 12px; font-weight: 700; line-height: 1;
@@ -431,7 +440,7 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
     .article-list a:hover { transform: translateX(6px); }
     .product-box:hover, .cl-group:hover, .reason:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 26px rgba(31, 74, 56, .16);
+      box-shadow: 0 12px 26px rgba(184, 73, 111, .16);
     }
   }
 }
@@ -468,7 +477,7 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
   top: -45%;
   width: 100%;
   height: 45%;
-  background: #f4d78a;
+  background: #ffe8b0;
   border-radius: 2px;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -482,4 +491,4 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
 
 /* ---------- ヘッダーのスクロール反応 ---------- */
 html.js .site-header { transition: box-shadow .3s ease; }
-html.js .site-header.is-scrolled { box-shadow: 0 6px 20px rgba(10, 30, 22, .3); }
+html.js .site-header.is-scrolled { box-shadow: 0 6px 20px rgba(120, 40, 68, .3); }

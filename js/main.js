@@ -42,6 +42,64 @@
 })();
 
 
+// クリック計測（2026-08-12 追加）
+// GA4のgtagが読み込まれている場合のみ発火する。gtagがない環境では何もしない。
+// 従来は一部ページのインラインスクリプトに同じCTA計測を重複記述していたが、
+// 全ページで js/main.js を読み込んでいるためここへ集約した。
+(function () {
+  "use strict";
+
+  // 1) サイト内CTAのクリック計測（data-cta属性を付けたリンクが対象）
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-cta]");
+    if (!a || typeof gtag !== "function") return;
+    gtag("event", "lp_cta_click", {
+      cta_label: a.getAttribute("data-cta"),
+      page_path: location.pathname
+    });
+  });
+
+  // 2) アフィリエイトリンクのクリック計測
+  // リンク側への属性追加は不要（もしも経由リンクを自動検出する）ため、
+  // 今後アフィリエイトリンクを追加しても計測漏れが起きない。
+  // ※Pollet（/ihin-kaitori/）のCTAはdata-cta付きで上記1)が計測するため、ここでは対象外
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href*="af.moshimo.com"]');
+    if (!a || typeof gtag !== "function") return;
+
+    // 遷移先の判定: クラスとURLの両方を使い、未知のショップをAmazon扱いしない
+    var href = a.getAttribute("href") || "";
+    var decodedHref = href;
+    try {
+      decodedHref = decodeURIComponent(href);
+    } catch (_) {
+      // 不正なパーセントエンコードがあっても、クリック遷移と計測を止めない
+    }
+    var shop = "other";
+    if (a.classList.contains("rakuten") || decodedHref.indexOf("rakuten.co.jp") > -1) {
+      shop = "rakuten";
+    } else if (a.classList.contains("amazon") || decodedHref.indexOf("amazon.co.jp") > -1) {
+      shop = "amazon";
+    }
+
+    // 商品ID・商品名はページの見出し文言に依存させず、同じ商品を横断集計できる値を使う
+    var box = a.closest(".product-box");
+    var heading = box && box.querySelector("h3");
+    var placement = heading ? heading.textContent.trim() : "(unknown)";
+    var productId = box && box.getAttribute("data-product-id");
+    var productName = box && box.getAttribute("data-product-name");
+
+    gtag("event", "affiliate_click", {
+      shop: shop,
+      product_id: productId || "(unknown)",
+      product: productName || placement,
+      placement: placement,
+      page_path: location.pathname
+    });
+  });
+})();
+
+
 // スクロール演出（2026-07-11 追加）
 // JSが無効な環境・prefers-reduced-motion 環境では何もしない（全文が通常表示される）
 (function () {
