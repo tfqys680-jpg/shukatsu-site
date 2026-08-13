@@ -43,7 +43,7 @@
 |---|---|
 | robots.txt | Allow all + Sitemap行。noindexなし（全ページ公開意図どおり） |
 | sitemap.xml | 20URL（手動管理）。lastmod付き |
-| 404ページ | **なし（GitHub Pagesデフォルト404）** → 改善候補（404.html） |
+| 404ページ | 404.html あり（noindex・主要導線へのリンク付き）。HTTPステータスは404のまま |
 | リダイレクト | GitHub Pages機能なし。github.io→独自ドメインはPages側で301 |
 | 重複title/description | なし（チェッカーは未検査→本PRでチェック追加） |
 | 孤立ページ | なし（全ページがトップまたは記事から到達可能） |
