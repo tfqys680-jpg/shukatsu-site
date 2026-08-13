@@ -86,7 +86,7 @@ a:hover { color: var(--green-soft); }
 /* ---------- ヒーロー ---------- */
 .hero {
   background:
-    linear-gradient(160deg, rgba(31, 74, 56, .78) 0%, rgba(22, 53, 41, .88) 100%),
+    linear-gradient(160deg, rgba(184, 73, 111, .78) 0%, rgba(154, 58, 92, .88) 100%),
     url("../images/hero.webp") center bottom / cover no-repeat,
     var(--green-darker);
   color: var(--white);
@@ -440,7 +440,7 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
     .article-list a:hover { transform: translateX(6px); }
     .product-box:hover, .cl-group:hover, .reason:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 26px rgba(31, 74, 56, .16);
+      box-shadow: 0 12px 26px rgba(184, 73, 111, .16);
     }
   }
 }
@@ -491,4 +491,4 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
 
 /* ---------- ヘッダーのスクロール反応 ---------- */
 html.js .site-header { transition: box-shadow .3s ease; }
-html.js .site-header.is-scrolled { box-shadow: 0 6px 20px rgba(10, 30, 22, .3); }
+html.js .site-header.is-scrolled { box-shadow: 0 6px 20px rgba(120, 40, 68, .3); }
