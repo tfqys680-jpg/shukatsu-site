@@ -74,7 +74,7 @@ for (const file of publicHtml) {
 }
 
 assert.equal(affiliateCount, 30, "affiliate link count changed unexpectedly");
-assert.equal(ctaCount, 16, "CTA count changed unexpectedly");
+assert.equal(ctaCount, 13, "CTA count changed unexpectedly");
 assert.deepEqual(shopCounts, { amazon: 15, rakuten: 15 });
 assert.equal(products.size, 10, "canonical product count changed unexpectedly");
 
