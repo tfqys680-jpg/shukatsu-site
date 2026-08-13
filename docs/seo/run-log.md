@@ -1,16 +1,25 @@
 # 実行ログ（run-log）
 
+## 2026-08-13（PR #23 最終レビュー対応）
+
+- 最新`main`を取り込み、PR #23の計測変更を統合状態で再検証
+- `affiliate_click`の商品識別を、ページごとの見出しではなく安定した`data-product-id` / `data-product-name`から取得するよう修正
+- 配置ごとの見出しは`placement`として分離し、同一商品を記事横断で集計できるようにした
+- 未知のもしもリンクをAmazon扱いしないよう`shop=other`を追加し、不正なURLエンコードでもクリック処理を止めないようにした
+- もしもリンクの正しい内訳は article08=20本、article09=2本、article16=4本、article17=4本（合計30本）
+- 30本全件、CTA 16本、二重発火、商品ID・商品名の整合を回帰テストで確認
+
 ## 2026-08-12（臨時・運営者からのチャット依頼 その2：アフィリエイトのクリック計測）
 
 - 実行日時: 2026-08-12 JST（PR #21マージ後、運営者から「進めてください」との依頼）
 - ブランチ: claude/affiliate-click-tracking-2026-08-12（新規ドラフトPR運用）
 - 前提: Google Search Console / Google Analytics への接続手段は引き続きこのセッションに存在しない。実データ分析はできないため、コードから検証できる改善を継続
 - 判定: 全29公開ページの外部リンクを監査したところ、**サイトの収益源であるアフィリエイトリンク30本（もしも経由 af.moshimo.com）にクリック計測が一切設定されていない**ことを検出。どのページ・どの商品が実際にクリックされているかを把握できない状態だったため、これを最優先で対応
-  - 内訳: article08（10商品×Amazon/楽天＝20本）、article09（2本）、article16（2本）、article17（2本）
+  - 内訳: article08（10商品×Amazon/楽天＝20本）、article09（2本）、article16（4本）、article17（4本）
   - Pollet（/ihin-kaitori/）のCTAは既に`data-cta`付きで`lp_cta_click`が計測しているため今回の対象外（二重計測を避ける）
 - 実施した作業:
   - `js/main.js` にクリック計測を集約（全29ページで読み込み済みのため、HTML側の変更なしに全ページへ適用される）
-    - **アフィリエイトクリック計測（新規）**: `af.moshimo.com`へのリンクを自動検出し`affiliate_click`イベントを送信。パラメータは `shop`（amazon / rakuten）・`product`（商品ブロック`.product-box`の見出しから取得）・`page_path`。**リンク側への属性追加が不要な自動検出方式**にしたため、今後アフィリエイトリンクを追加しても計測漏れが起きない
+    - **アフィリエイトクリック計測（新規）**: `af.moshimo.com`へのリンクを自動検出し`affiliate_click`イベントを送信。パラメータは `shop`・`product_id`・`product`・`placement`・`page_path`。商品ID・商品名は`.product-box`の明示属性から取得し、同じ商品を記事横断で集計する
     - **CTA計測の共通化（重複解消）**: 従来 index.html / ending-note/family-story/ / ihin-kaitori/ の3ページに同一のインラインスクリプトを重複記述していた`lp_cta_click`計測を`js/main.js`へ移動し、3ページのインラインブロックを削除。今後CTAを設置するページで計測を書き忘れる事故を防ぐ
   - 変更ファイル: `js/main.js`（計測を追加）、`index.html`・`ending-note/family-story/index.html`・`ihin-kaitori/index.html`（重複インラインを削除）
 - 変更したURL: なし（表示内容・本文・title・meta descriptionの変更は一切なし。計測コードのみ）

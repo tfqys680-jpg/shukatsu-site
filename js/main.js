@@ -67,19 +67,33 @@
     var a = e.target.closest('a[href*="af.moshimo.com"]');
     if (!a || typeof gtag !== "function") return;
 
-    // 遷移先の判定: 楽天用リンクにはrakutenクラスが付く。念のためURL側でも判定する
+    // 遷移先の判定: クラスとURLの両方を使い、未知のショップをAmazon扱いしない
     var href = a.getAttribute("href") || "";
-    var shop = "amazon";
-    if (a.classList.contains("rakuten")) shop = "rakuten";
-    else if (decodeURIComponent(href).indexOf("rakuten.co.jp") > -1) shop = "rakuten";
+    var decodedHref = href;
+    try {
+      decodedHref = decodeURIComponent(href);
+    } catch (_) {
+      // 不正なパーセントエンコードがあっても、クリック遷移と計測を止めない
+    }
+    var shop = "other";
+    if (a.classList.contains("rakuten") || decodedHref.indexOf("rakuten.co.jp") > -1) {
+      shop = "rakuten";
+    } else if (a.classList.contains("amazon") || decodedHref.indexOf("amazon.co.jp") > -1) {
+      shop = "amazon";
+    }
 
-    // 商品名: 各リンクは商品ブロック（.product-box）内にあり、その見出しが商品名
+    // 商品ID・商品名はページの見出し文言に依存させず、同じ商品を横断集計できる値を使う
     var box = a.closest(".product-box");
     var heading = box && box.querySelector("h3");
+    var placement = heading ? heading.textContent.trim() : "(unknown)";
+    var productId = box && box.getAttribute("data-product-id");
+    var productName = box && box.getAttribute("data-product-name");
 
     gtag("event", "affiliate_click", {
       shop: shop,
-      product: heading ? heading.textContent.trim() : "(unknown)",
+      product_id: productId || "(unknown)",
+      product: productName || placement,
+      placement: placement,
       page_path: location.pathname
     });
   });
