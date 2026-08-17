@@ -51,4 +51,5 @@
 /column/obon-family-planning-talk/,/parent-shukatsu/questions/;/articles/article05.html;/articles/article01.html;/column/will-for-ordinary-families/;/column/ai-shukatsu-first-step/;/articles/article11.html,記事→記事/柱,関連記事欄
 /,/parent-shukatsu/siblings/,トップ→記事,新着記事+全記事一覧
 /parent-shukatsu/,/parent-shukatsu/siblings/,ハブ→記事,記事一覧+状況別（兄弟姉妹がいる場合）+FAQ Q3
-/parent-shukatsu/siblings/,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html;/articles/article11.html;/articles/article15.html,記事→ハブ/柱/記事,大原則本文・状況別ケース・関連記事欄（2026-08-17新設。article05→本記事の逆方向リンクは次回内部リンク整備時に検討）
+/parent-shukatsu/siblings/,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html;/articles/article11.html;/articles/article15.html,記事→ハブ/柱/記事,大原則本文・状況別ケース・関連記事欄（2026-08-17新設）
+/articles/article05.html,/parent-shukatsu/siblings/,記事→記事,拒否パターン5（きょうだい不一致型）本文・関連記事欄（相互リンク。dateModifiedは軽微なリンク追加のため据え置き）
