@@ -34,7 +34,12 @@
   - `docs/seo/source-policy.md`: お盆記事の出典5件（国税庁タックスアンサー2件・法務省・民間2件）を台帳へ転記、本記事の「新規一次情報なし」を明記
   - `docs/seo/run-log.md`: 2026-08-10〜08-14の遡及記録セクションを新設
 - 次回予定: 2026-08-24週の一人暮らしの親の終活チェックリスト（新規、/parent-shukatsu/living-alone/）に着手予定
-- PR: ドラフトPRを作成
+- PR: ドラフトPRを作成（PR #32）
+
+### 2026-08-19 追記（同PRへの追加コミット・運営者のご指示による）
+
+- 未参照だった旧アイキャッチ画像 `images/column-legacy-giving-basics.webp` を削除（上記「2026-08-10〜08-14」セクションの残課題を解消）。削除前に参照が`-v2.webp`の3か所のみであることを全文検索で確認済み
+- **PR #32 は2026-08-19時点で未マージ**（オープン・ドラフト・mergeable_state=clean・レビューコメントなし）。本番反映はmainへのマージ時にGitHub Pagesが自動デプロイするため、マージの実行は運営者のご判断に委ねている（定期実行プロンプトでも「デフォルトブランチへ直接マージしない」と定めているため、自動運用側からは実行しない）
 
 ## 2026-08-10〜08-14（遡及記録：定期実行の記録外で反映された変更のまとめ）
 
@@ -55,7 +60,7 @@
   - `content-inventory.csv`・`keyword-map.csv`・`internal-link-map.csv`: **未更新**（削除済みの`/ihin-kaitori/`が「公開」のまま残存、`legacy-giving-basics`・`obon-family-planning-talk`の行が欠落）→ 2026-08-17の実行で是正
   - `run-log.md`・`automation-state.json`: **未更新** → 本セクションで遡及記録
   - `source-policy.md`のお盆記事分（在ページには出典5件を明記済み）だけ台帳へ未転記だったため、2026-08-17に追記
-- 残課題: `images/column-legacy-giving-basics.webp`（v2への差し替えで未参照になった旧画像）がリポジトリに残存。削除するかは運営者のご判断待ち（動作・表示に影響はなし）
+- 残課題（2026-08-19に解消）: `images/column-legacy-giving-basics.webp`（v2への差し替えで未参照になった旧画像）がリポジトリに残存していた。2026-08-19に運営者のご指示で削除（削除前に、参照が`-v2.webp`の3か所（og:image・JSON-LD image・本文img）のみであることをHTML/CSS/JS/XML/CSV全文検索で確認済み。git履歴には残るため復元可能）
 - 再発防止の提案: 運営者からの直接依頼で変更を行う場合も、同じ`docs/seo/`の管理ファイル（特に`run-log.md`・`content-inventory.csv`・`internal-link-map.csv`）を同時に更新する運用に統一することを推奨する
 
 ## 2026-08-13（PR #23 最終レビュー対応）
