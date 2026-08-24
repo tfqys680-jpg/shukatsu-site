@@ -48,3 +48,6 @@
 /column/ai-shukatsu-first-step/,/articles/article01.html;/articles/article02.html;/articles/article06.html;/articles/article11.html;/articles/article18.html;/articles/article07.html;/column/will-for-ordinary-families/;/parent-shukatsu/questions/,記事→記事/柱,役割分け・ノート清書・デジタル資産・保管制度と費用の深掘り先
 /column/will-for-ordinary-families/,/column/ai-shukatsu-first-step/,記事→記事,関連記事（AIで下準備したい人向け）
 /,/column/ai-shukatsu-first-step/,トップ→記事,全記事一覧(will-for-ordinary-familiesの次)
+/,/parent-shukatsu/living-alone/,トップ→記事,新着記事(先頭)+全記事一覧(30項目の次)
+/parent-shukatsu/,/parent-shukatsu/living-alone/,ハブ→記事,状況別（一人暮らしの親の場合）+記事一覧
+/parent-shukatsu/living-alone/,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html;/articles/article11.html;/articles/article16.html;/ending-note/family-story/,記事→ハブ/柱/記事,本文中の深掘りリンク・関連記事欄
