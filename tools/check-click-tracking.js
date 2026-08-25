@@ -73,10 +73,10 @@ for (const file of publicHtml) {
   }
 }
 
-assert.equal(affiliateCount, 30, "affiliate link count changed unexpectedly");
+assert.equal(affiliateCount, 34, "affiliate link count changed unexpectedly");
 assert.equal(ctaCount, 13, "CTA count changed unexpectedly");
-assert.deepEqual(shopCounts, { amazon: 15, rakuten: 15 });
-assert.equal(products.size, 10, "canonical product count changed unexpectedly");
+assert.deepEqual(shopCounts, { amazon: 19, rakuten: 15 });
+assert.equal(products.size, 12, "canonical product count changed unexpectedly");
 
 // main.jsを依存ライブラリなしで実行し、イベントの漏れ・二重発火・例外を確認する。
 const clickHandlers = [];
