@@ -1,5 +1,17 @@
 # 実行ログ（run-log）
 
+## 2026-08-31（週次・終活にかかる費用）
+
+- ブランチ: claude/seo-weekly-2026-08-31
+- 判定: 編集カレンダー2026-08-31〜09-04週の未着手タスク「終活にかかる費用」を実施。既存の葬儀・お墓・遺言記事とは検索意図を分離し、「終活の費用を総額で決めつけず、項目・優先順位・見積もりをどう整理するか」を入口とした
+- 実施: /cost/ を新設。費用を葬儀・供養、書類・専門家、住まい・持ち物、暮らしの備え、予備費・立替の5分類で整理し、優先順位、見積もりチェックリスト、印刷用の費用整理シート、失敗例、専門家への相談の境界線、FAQを追加。葬儀・供養・遺言などの深い論点は既存記事へリンクして重複を避けた
+- 出典・YMYL対応: 総額・民間相場は掲載せず、法務省の自筆証書遺言書保管申請1通3,900円のみを確認日付きで記載。国民生活センターの葬儀サービス注意喚起と日本公証人連合会の手数料案内へリンク。相続・税務・契約の個別判断は扱わず専門家へ誘導し、ymyl-review-queue.mdに将来推奨として登録
+- 導線・管理: トップの新着記事・全記事一覧、親の終活ハブの状況別カード・記事一覧、sitemap、content-inventory、keyword-map、internal-link-map、editorial-calendar、automation-state、source-policyを更新。更新したトップ・ハブの最終実質更新日とsitemapのlastmodも2026-08-31へ同期
+- Search Consoleデータ分析: docs/seo/sc-data/ にCSVがなく、表示回数・CTR・順位の数値分析はデータ不足として未実施
+- テスト結果: node tools/check-site.js → ALL CHECKS PASSED（HTML files: 37、internal links checked: 1115）／node tools/check-click-tracking.js → PASSED（public HTML: 33、affiliate links: 34、CTAs: 13、products: 12）／git diff --check → PASS
+- 次回予定: 2026-09-07〜11週「終活の相談先比較」。隔週の大幅更新候補であるarticle11は、本PRのレビュー・公開判断後に優先して検討する
+
+
 ## 2026-08-25（更新日メタデータの同期・PR #34のレビュー指摘対応）
 
 - PR #34 は 2026-08-25T07:13:57Z にマージ済み（main=`8e58ad9`）。**無出典の法的断定は本番から解消された**（living-alone・questions とも0件を確認）
