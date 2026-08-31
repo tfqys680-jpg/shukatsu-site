@@ -56,3 +56,6 @@
 /,/parent-shukatsu/living-alone/,トップ→記事,新着記事(先頭)+全記事一覧(30項目の次)
 /parent-shukatsu/,/parent-shukatsu/living-alone/,ハブ→記事,状況別（一人暮らしの親の場合）+記事一覧
 /parent-shukatsu/living-alone/,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html;/articles/article11.html;/articles/article16.html;/ending-note/family-story/,記事→ハブ/柱/記事,本文中の深掘りリンク・関連記事欄
+/,/cost/,トップ→記事,新着記事(先頭)+全記事一覧(30項目の次)
+/parent-shukatsu/,/cost/,ハブ→記事,状況別（費用が心配な場合）+記事一覧
+/cost/,/articles/article11.html;/articles/article13.html;/articles/article14.html;/articles/article07.html;/parent-shukatsu/siblings/,記事→柱/記事,本文中の費用別の深掘りリンク・関連記事欄
