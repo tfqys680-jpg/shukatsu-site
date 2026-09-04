@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<!-- 下書き（公開待ち）運用中。公開時の手順:
+  (1) images/column-parent-care-without-burnout.webp（1200x675）を配置し、目視確認（顔・手指・個人情報・書類・ロゴ・透かし）を済ませる
+  (2) このディレクトリを drafts/ から column/parent-care-without-burnout/ へ移動する（相対パスは同じ階層数のため変更不要）
+  (3) 上の noindex メタとこのコメントを削除する
+  (4) 公開日を確定し、下の Article JSON-LD に "datePublished" / "dateModified" を追加、本文の article-meta と「この記事について」の日付を更新する
+  (5) sitemap.xml へ https://shukatsu-guide.jp/column/parent-care-without-burnout/ を追記する
+  (6) index.html の新着記事・全記事一覧へ追加する
+  (7) docs/seo の content-inventory / keyword-map / editorial-calendar / internal-link-map / ymyl-review-queue の状態を「公開」へ更新する
+  (8) node tools/check-site.js を通す -->
+<link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16">
+<link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../../images/favicon.png">
+<link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7NS8ZH6WL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M7NS8ZH6WL');
+</script>
+<title>親の介護で共倒れしないために｜家族会議・費用・相談先の準備5ステップ｜はじめての終活ガイド</title>
+<meta name="description" content="親の介護を家族だけで抱え込まないために、本人の意思を尊重しながら、家族会議、介護費用、相談先、仕事との両立、遠距離で支える方法を5ステップで解説します。">
+<link rel="canonical" href="https://shukatsu-guide.jp/column/parent-care-without-burnout/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="親の介護で共倒れしないために｜家族会議・費用・相談先の準備5ステップ">
+<meta property="og:description" content="本人の意思を尊重しながら、家族会議、介護費用、相談先、仕事との両立、遠距離で支える方法を5ステップで解説します。">
+<meta property="og:url" content="https://shukatsu-guide.jp/column/parent-care-without-burnout/">
+<meta property="og:site_name" content="はじめての終活ガイド">
+<meta property="og:image" content="https://shukatsu-guide.jp/images/column-parent-care-without-burnout.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "親の介護で共倒れしないために｜家族会議・費用・相談先の準備5ステップ",
+  "description": "親の介護を家族だけで抱え込まないために、本人の意思を尊重しながら、家族会議、介護費用、相談先、仕事との両立、遠距離で支える方法を5ステップで解説します。",
+  "author": { "@type": "Person", "name": "はじめての終活ガイド運営者", "jobTitle": "終活カウンセラー1級" },
+  "publisher": { "@type": "Organization", "name": "はじめての終活ガイド" },
+  "image": "https://shukatsu-guide.jp/images/column-parent-care-without-burnout.webp",
+  "mainEntityOfPage": "https://shukatsu-guide.jp/column/parent-care-without-burnout/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://shukatsu-guide.jp/" },
+    { "@type": "ListItem", "position": 2, "name": "親の介護で共倒れしないために", "item": "https://shukatsu-guide.jp/column/parent-care-without-burnout/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "親が介護の話を嫌がります。家族だけで相談できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "最初の情報収集として、家族が地域包括支援センターへ相談することは検討できます。ただし、暮らしや利用するサービスを決める段階では本人を話し合いから外さず、理解しやすい言葉と複数の選択肢で本人の意思を確認することが大切です。話し合いの進め方に迷うときは、窓口に相談の仕方から聞いてみてください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "介護費用は必ず親のお金から払うべきですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "「介護費用は親のお金から出す」という考え方は資金計画のひとつであり、法律で決まった一律のルールではありません。本人の同意を得て親の生活を維持できる資金計画を作り、家族が援助する場合は金額・期間・記録の方法を話し合っておくと、あとの行き違いを防げます。贈与・扶養・相続への影響は税理士などの専門家に確認してください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "離れて暮らしていても介護はできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "可能です。地域包括支援センター、ケアマネジャー、訪問・通所サービス、自治体の見守りなどを組み合わせ、離れて暮らす家族は連絡調整・情報整理・費用の確認などを担当する方法があります。すべてを自分の身体介護で担うことだけが介護ではありません。" }
+    }
+  ]
+}
+</script>
+<style>
+/* 本記事専用（アイキャッチ・5ステップ・分担リスト・費用表・チェックリスト） */
+.eyecatch { border-radius: 10px; margin: 0 0 24px; }
+.step-list { counter-reset: st; list-style: none; margin: 0 0 10px; padding: 0; }
+.step-list > li { counter-increment: st; background: var(--white); border: 1px solid var(--line-color); border-left: 6px solid var(--green-deep); border-radius: 10px; padding: 18px 20px 14px; margin: 0 0 16px; box-shadow: var(--shadow); }
+.step-list > li h3 { border: none; padding: 0; margin: 0 0 8px; color: var(--green-deep); font-size: 18px; }
+.step-list > li h3::before { content: "STEP" counter(st); display: inline-block; background: var(--green-deep); color: #fff; border-radius: 6px; font-size: 13px; line-height: 1.7; padding: 1px 9px; margin-right: 9px; vertical-align: 2px; }
+.task-list { list-style: none; margin: 0 0 10px; padding: 0; }
+.task-list li { background: var(--white); border: 1px solid var(--line-color); border-radius: 8px; padding: 12px 14px 12px 38px; margin: 0 0 10px; font-size: 15.5px; position: relative; }
+.task-list li::before { content: "○"; position: absolute; left: 12px; top: 11px; color: var(--green-deep); font-weight: 800; font-size: 15px; }
+.checklist { list-style: none; margin: 0 0 10px; padding: 0; }
+.checklist li { padding: 7px 0 7px 30px; position: relative; font-size: 16px; border-bottom: 1px dashed var(--green-pale); }
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before { content: ""; position: absolute; left: 4px; top: 13px; width: 14px; height: 14px; border: 2px solid var(--green-soft); border-radius: 3px; }
+.src-list { margin: 0 0 10px 1.2em; }
+.src-list li { margin-bottom: 8px; font-size: 15.5px; overflow-wrap: anywhere; }
+</style>
+</head>
+<body class="article-body">
+
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title"><a href="../../index.html">はじめての終活ガイド<span class="tagline">終活カウンセラー1級が執筆・監修</span></a></p>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav">メニュー</button>
+    <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+      <ul>
+        <li><a href="../../index.html">ホーム</a></li>
+        <li><a href="../../index.html#articles">記事一覧</a></li>
+        <li><a href="../../about.html">運営者情報</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <ol>
+    <li><a href="../../index.html">ホーム</a></li>
+    <li>親の介護で共倒れしないために</li>
+  </ol>
+</div>
+
+<main class="article-container">
+<article>
+  <p class="pr-label">※本サイトはアフィリエイト広告を利用しています。</p>
+  <p class="author-line">執筆・監修：終活カウンセラー1級</p>
+  <p class="article-meta">公開日：未定（下書き・公開前レビュー中）</p>
+
+  <h1>親の介護で共倒れしないために｜家族会議・費用・相談先の準備5ステップ</h1>
+
+  <img class="eyecatch" src="../../images/column-parent-care-without-burnout.webp" alt="親の介護について明るいリビングで穏やかに話し合う親子" width="1200" height="675" fetchpriority="high" decoding="async">
+
+  <p class="lead">親のもの忘れが増えた、実家の片づけが進まない、通院や買い物の付き添いが必要になった——。介護は、ある日突然始まるとは限りません。小さな変化に気づきながらも、「まだ大丈夫」「本人が嫌がるから」と話を先送りしているうちに、家族の負担が急に重くなることがあります。大切なのは、子どもがすべてを背負うことでも、親の希望をそのまますべて引き受けることでもありません。<strong>本人の意思を尊重しながら、家族ができること・できないことを整理し、地域や専門職の力を借りる準備</strong>です。この記事では、その準備を家族会議・介護費用・相談先・仕事との両立・遠距離での支え方に分けて、今日から始められる5ステップにまとめました。</p>
+
+  <div class="note-box"><strong>はじめにご注意：</strong>本記事は、運営者（終活カウンセラー1級）が記事末尾に挙げた厚生労働省・法務省・全国銀行協会などの公的な案内や報道を読んだうえでの<strong>個人の感想・整理</strong>であり、医療・介護・法律・税務のアドバイスではありません。もの忘れなどの症状の診断は医療機関に、介護保険の利用や負担額はお住まいの市区町村・地域包括支援センターに、後見制度・信託・贈与・相続などの個別の判断は司法書士・弁護士・税理士などの専門家にご確認ください。</div>
+
+  <nav class="toc" aria-label="目次">
+    <p class="toc-title">目次</p>
+    <ol>
+      <li><a href="#sec1">きっかけ：「共倒れを防ぐ介護」が話題に</a></li>
+      <li><a href="#sec2">親の変化を記録し、早めに相談する</a></li>
+      <li><a href="#sec3">家族会議では「できないこと」も共有する</a></li>
+      <li><a href="#sec4">介護費用の全体像を把握する</a></li>
+      <li><a href="#sec5">「間接介護」で外部支援をつなぐ</a></li>
+      <li><a href="#sec6">今日から始める5ステップ</a></li>
+      <li><a href="#sec7">要点チェックリスト</a></li>
+      <li><a href="#sec8">よくある質問</a></li>
+      <li><a href="#sec9">まとめ</a></li>
+      <li><a href="#sec10">出典・参考</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="sec1">きっかけ：「共倒れを防ぐ介護」が話題に</h2>
+  <p>女性セブンプラスは2026年8月28日、専門家の解説として「親の介護の新常識」を紹介する記事を配信しました。親の状態と家族の介護力を把握すること、公的・民間サービスを活用して家族は調整役にまわる「間接介護」という考え方などが取り上げられ、あわせて「介護費用は親のお金から出す」「介護する側だけで話し合い、親の希望を聞くのは最後」という進め方も専門家の見解として紹介されています（記事末尾の出典参照）。</p>
+  <p>共倒れを防ぐために家族の対応力を先に把握しておくという方向性は、私の相談経験からも納得できるものです。一方で、「親の希望を聞くのは最後」「費用は親のお金から」を<strong>どの家庭にも当てはまる一律のルールのように受け取ってしまうと、本人の気持ちや家計の実情と合わないことがあります</strong>。そこで本記事では、この報道をきっかけとしつつ、<strong>本人の意思決定を支えることと、家族が無理なく続けられることを両立させる</strong>形に整理し直して、準備の手順をご紹介します。</p>
+
+  <h2 id="sec2">親の変化を記録し、早めに相談する</h2>
+  <h3>気になる出来事を日付とともに残す</h3>
+  <p>同じ物を何度も買う、薬の飲み忘れが増える、支払いを滞納する、道に迷う、転びやすくなる——。こうした生活上の変化に気づいたら、まず記録することから始めます。一度の失敗だけで「認知症になった」と決めつける必要はありません。<strong>「いつ・どこで・何が起きたか」を日付とともに残しておく</strong>と、あとで相談窓口や医療機関に状況を伝えるとき、具体的で伝わりやすくなります。症状の診断は医療機関の領域ですので、家族の役割は判定ではなく記録と共有だと考えてください。</p>
+  <p>離れて暮らす親の場合は、帰省や電話のたびに気づいたことを同じメモに足していくだけでも十分です。何を確認しておくとよいかは、<a href="../../parent-shukatsu/questions/">親が元気なうちに聞いておくこと30項目</a>が参考になります。</p>
+  <h3>地域包括支援センターへ相談する</h3>
+  <p>「どこに相談すればいいか分からない」ときの最初の窓口が、<strong>地域包括支援センター</strong>です。厚生労働省の案内によれば、地域包括支援センターは市町村が設置主体となり、高齢者の総合相談、権利擁護、介護予防の支援などを担う地域の中核機関として全国に設置されています。本人の居住地を担当するセンターに、家族から相談することもできます。</p>
+  <p>認知症が心配な場合も、まずここで相談すれば、認知症疾患医療センターなどの専門機関や医療機関への橋渡しを含めて、地域の支援につないでもらえます（厚生労働省の認知症施策の案内参照）。「介護が始まってから」ではなく、「気になり始めたら」が相談のタイミングです。一人暮らしの親の見守りについては、<a href="../../parent-shukatsu/living-alone/">一人暮らしの親の終活チェックリスト</a>で詳しく整理しています。</p>
+
+  <h2 id="sec3">家族会議では「できないこと」も共有する</h2>
+  <h3>一人の主介護者へ集中させない</h3>
+  <p>介護を「誰がやるか」の一言で決めようとすると、たいてい特定の一人に負担が集中します。まず、介護を次のような作業に分けてみてください。</p>
+  <ul class="task-list">
+    <li>通院への同行</li>
+    <li>買い物や食事などの生活支援</li>
+    <li>ケアマネジャー・サービス事業者との連絡</li>
+    <li>費用・書類の管理</li>
+    <li>緊急時の駆けつけ対応</li>
+    <li>定期的な訪問や電話</li>
+  </ul>
+  <p>距離、仕事、健康状態、育児、家計の事情は家族ごとに違います。全員が同じ量を負担するより、<strong>作業ごとに担当者と代替者を決めて、「できないこと」も含めて共有する</strong>方が現実的で長続きします。きょうだいでの分担の決め方や費用の記録方法は、<a href="../../parent-shukatsu/siblings/">親の終活を兄弟姉妹で進める役割分担の記事</a>で詳しく紹介しています。</p>
+  <h3>本人を話し合いから排除しない</h3>
+  <p>冒頭で触れた報道では「介護する側だけで話し合い、親の希望を聞くのは最後」という進め方が紹介されていました。家族が対応可能な範囲を先に整理しておくこと自体は有効ですが、<strong>本記事では、本人の意思を後回しにしてよいという意味には受け取らないことをおすすめします</strong>。厚生労働省の「認知症の人の日常生活・社会生活における意思決定支援ガイドライン」も、認知症の人が自らの意思に基づいた日常生活・社会生活を送れるよう支援することを基本としています（記事末尾の出典参照）。</p>
+  <p>実際の進め方としては、「同居か施設か」のような二択を迫るのではなく、訪問介護、通所サービス、見守り、配食、短期入所など、<strong>家族が実行できると確認した選択肢を複数示して、本人と一緒に選ぶ</strong>形が話し合いを進めやすくします。話の切り出し方に迷う場合は、<a href="../../column/obon-family-planning-talk/">家族で終活の話を始める方法の記事</a>の「決める場ではなく聞く場にする」という考え方がそのまま使えます。</p>
+
+  <h2 id="sec4">介護費用の全体像を把握する</h2>
+  <h3>親の収入・資産・生活費を整理する</h3>
+  <p>費用の話は、金額の多い少ないよりも「何がどこにあるか分からない」ことが混乱のもとになります。年金、預貯金、保険、住居費、医療費などを、<strong>本人の同意を得て</strong>一覧にすることから始めてください。</p>
+  <p>報道で紹介されていた「介護費用は親のお金から出す」という考え方は、子世代の生活と老後資金を守るうえで合理的な場合が多い設計です。ただし、これは法律上の一律のルールではありませんし、<strong>家族だからといって親名義の口座から自由にお金を引き出せるわけでもありません</strong>。親の生活を維持できる資金計画を本人と一緒に作り、家族が援助する場合は金額・期間・記録の方法を決めておく、というのが現実的な進め方です。</p>
+  <h3>代理人カードだけですべて解決するわけではない</h3>
+  <p>「代理人カードを作っておけば安心」と言われることがありますが、代理人カードや代理人届の条件・利用範囲は金融機関ごとに異なります。<strong>本人の判断能力が十分なうちに、取引のある金融機関へ確認しておく</strong>ことが第一歩です。全国銀行協会も、預金者本人の意思確認ができない場合の預金の引き出しについて案内資料を公表しており、対応は一律ではなく、まず取引銀行に相談することが前提とされています（記事末尾の出典参照）。</p>
+  <p>本人の判断能力の低下に備える制度としては、任意後見・法定後見（成年後見制度）や信託などがあります。それぞれ仕組みも費用も異なるため、検討する場合は法務省の案内などで概要を確認したうえで、司法書士・弁護士などの専門家に違いを確認してください。<strong>家族が本人のキャッシュカードや暗証番号を無断で使う方法は、トラブルのもとになるためおすすめできません</strong>。</p>
+  <h3>介護保険と保険外費用を分けて考える</h3>
+  <p>介護サービス情報公表システム（厚生労働省）の解説によれば、介護保険サービスを利用した場合の利用者負担は原則として費用の1割で、一定以上の所得がある場合は2割または3割です。また、施設サービスでは、この自己負担分とは別に、居住費・食費・日常生活費の負担も必要になります。</p>
+  <div class="tbl-wrap">
+    <table class="cmp">
+      <thead>
+        <tr><th>区分</th><th>内容の例</th><th>確認先</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="pname">介護保険の対象</td>
+          <td>訪問介護・通所介護・短期入所などのサービス利用料（原則1割、所得により2〜3割負担）</td>
+          <td>ケアマネジャー・市区町村・介護サービス情報公表システム</td>
+        </tr>
+        <tr>
+          <td class="pname">保険外の費用</td>
+          <td>施設の居住費・食費、日用品、おむつ代、交通費、配食や見守りなどの保険外サービス</td>
+          <td>各事業者・施設の料金表</td>
+        </tr>
+        <tr>
+          <td class="pname">家族側の出費</td>
+          <td>帰省の交通費、通信費、立て替え分</td>
+          <td>家族で記録方法を決めて共有</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>負担割合や軽減制度の適用は、本人の所得や世帯の状況によって変わります。具体的な金額は、ケアマネジャーや市区町村の窓口で試算してもらってください。ここで大切なのは正確な金額を当てることではなく、<strong>「保険の内側」と「保険の外側」を分けて考える癖をつける</strong>ことです。</p>
+
+  <h2 id="sec5">「間接介護」で外部支援をつなぐ</h2>
+  <p>家族の役割は、必ずしも自分の手で身体介護を続けることではありません。報道で紹介されていた「間接介護」——公的・民間サービスが動ける環境を家族が整えるという考え方——は、遠距離の家族や仕事を持つ家族にとって特に現実的です。遠方に住んでいても、ケアマネジャーとの連絡、サービスの比較検討、予定の共有、費用の確認、緊急連絡網の整備はできます。<strong>専門職や地域サービスが力を発揮できる環境をつくることも、立派な介護</strong>です。</p>
+  <p>また、介護を理由に仕事を辞める決断を急がないでください。介護休業、介護休暇、所定外労働（残業）の制限、短時間勤務などの両立支援制度が法律で定められており、厚生労働省が介護休業制度の特設サイトで案内しています。まずは勤務先の制度を確認し、使えるものを使ってから先のことを考えても遅くありません。</p>
+
+  <h2 id="sec6">今日から始める5ステップ</h2>
+  <ol class="step-list">
+    <li>
+      <h3>親の生活上の変化を、事実として記録する</h3>
+      <p>「いつ・どこで・何が起きたか」を日付入りでメモします。決めつけず、事実だけを残すのがコツです。</p>
+    </li>
+    <li>
+      <h3>本人の居住地を担当する地域包括支援センターを調べる</h3>
+      <p>市区町村のサイトや電話で担当センターと連絡先を確認し、家族で共有します。相談はまだ先でも、連絡先を知っているだけで安心感が違います。</p>
+    </li>
+    <li>
+      <h3>家族ごとの「できること・できないこと」を書き出す</h3>
+      <p>通院同行・連絡係・費用管理・緊急対応などの作業に分け、担当者と代替者を決めます。「できないこと」の共有も同じくらい大切です。</p>
+    </li>
+    <li>
+      <h3>本人の同意を得て、収入・資産・生活費を整理する</h3>
+      <p>年金・預貯金・保険・固定費を一覧にします。金額を問い詰めるのではなく、「どこに何があるか」から始めます。</p>
+    </li>
+    <li>
+      <h3>本人と選択肢を話し合い、見直す日を決める</h3>
+      <p>家族が実行できる選択肢を複数示して、本人の希望を聞きながら一緒に決めます。一度で決めきらず、次に見直す時期（半年後、次の帰省時など）も決めておきます。</p>
+    </li>
+  </ol>
+
+  <h2 id="sec7">要点チェックリスト</h2>
+  <ul class="checklist">
+    <li>気になる出来事を日付入りで記録した</li>
+    <li>地域包括支援センターの連絡先を確認した</li>
+    <li>家族の役割と対応できない範囲を共有した</li>
+    <li>本人の意思を確認できる話し合いの場を設けた</li>
+    <li>親の収入・資産・固定費を本人と整理した</li>
+    <li>介護保険の負担と保険外の費用を分けて考えた</li>
+    <li>金融機関の代理手続（代理人カード等）の条件を確認した</li>
+    <li>勤務先の介護休業・介護休暇など両立支援制度を確認した</li>
+    <li>緊急時の連絡先・連絡順を家族で共有した</li>
+  </ul>
+
+  <h2 id="sec8">よくある質問</h2>
+  <div class="faq-list">
+    <details>
+      <summary>Q1. 親が介護の話を嫌がります。家族だけで相談できますか？</summary>
+      <p class="faq-a">最初の情報収集として、家族が地域包括支援センターへ相談することは検討できます。ただし、暮らしや利用するサービスを決める段階では本人を話し合いから外さず、理解しやすい言葉と複数の選択肢で本人の意思を確認することが大切です。話し合いの進め方に迷うときは、窓口に相談の仕方から聞いてみてください。</p>
+    </details>
+    <details>
+      <summary>Q2. 介護費用は必ず親のお金から払うべきですか？</summary>
+      <p class="faq-a">「介護費用は親のお金から出す」という考え方は資金計画のひとつであり、法律で決まった一律のルールではありません。本人の同意を得て親の生活を維持できる資金計画を作り、家族が援助する場合は金額・期間・記録の方法を話し合っておくと、あとの行き違いを防げます。贈与・扶養・相続への影響は税理士などの専門家に確認してください。</p>
+    </details>
+    <details>
+      <summary>Q3. 離れて暮らしていても介護はできますか？</summary>
+      <p class="faq-a">可能です。地域包括支援センター、ケアマネジャー、訪問・通所サービス、自治体の見守りなどを組み合わせ、離れて暮らす家族は連絡調整・情報整理・費用の確認などを担当する方法があります。すべてを自分の身体介護で担うことだけが介護ではありません。</p>
+    </details>
+  </div>
+
+  <div class="summary-box" id="sec9">
+    <h2>まとめ</h2>
+    <ul>
+      <li>親の変化は決めつけず、日付入りの記録にして早めに地域包括支援センターへ相談する</li>
+      <li>家族会議では「できること」だけでなく「できないこと」も共有し、一人に負担を集中させない</li>
+      <li>本人を話し合いから排除しない。実行できる選択肢を複数示して、本人の意思を確認しながら決める</li>
+      <li>介護費用は本人の同意を得て全体像を整理し、「親のお金から出す」を一律のルールと思い込まない。代理手続や後見・信託は条件を確認し専門家へ</li>
+      <li>身体介護だけが介護ではない。「間接介護」で外部支援をつなぎ、仕事は両立支援制度を確認してから考える</li>
+    </ul>
+  </div>
+
+  <h2>まずは「1枚の整理」から始めませんか</h2>
+  <p>親の介護について、今すぐ結論を出す必要はありません。まずは家族それぞれの「できること・できないこと」と、親が大切にしたい暮らしを1枚に整理することから始めてみてください。終活全体の進め方と印刷して使えるチェックリストは、次の記事にまとめています。</p>
+  <p style="text-align:center; margin:24px 0;">
+    <a class="btn-cta" href="../../articles/article11.html">親の介護・終活準備チェックリストを見る<span class="small">終活チェックリスト完全版（印刷用PDF付き）</span></a>
+  </p>
+
+  <h2 id="sec10">出典・参考</h2>
+  <p>本記事の作成にあたり、次の情報を確認しました（いずれも2026年9月4日確認）。出典の文章・画像の転載は行わず、事実確認のために利用しています。制度の内容や負担割合は変更されることがありますので、利用の前に必ず最新の案内をご確認ください。</p>
+  <ul class="src-list">
+    <li><a href="https://j7p.jp/179434" target="_blank" rel="noopener noreferrer">女性セブンプラス「《専門家が解説》親の介護の新常識『介護費用は親のお金から出す』『介護する側だけで話し合い親の希望を聞くのは最後』 共倒れを防ぐための『間接介護』も重要」（2026年8月28日）</a>——本記事のきっかけとなった報道。「間接介護」などの考え方（本記事では一律のルールとしては採用せず、本人の意思確認と併せて整理）</li>
+    <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/index.html" target="_blank" rel="noopener noreferrer">厚生労働省「地域包括ケアシステム」</a>——地域包括支援センターの設置主体（市町村）と役割（総合相談・権利擁護・介護予防支援等）、設置数</li>
+    <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000076236_00006.html" target="_blank" rel="noopener noreferrer">厚生労働省「主な認知症施策について」</a>——認知症疾患医療センターの整備など、認知症に関する相談・医療体制の施策</li>
+    <li><a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-12300000-Roukenkyoku/0000212396.pdf" target="_blank" rel="noopener noreferrer">厚生労働省「認知症の人の日常生活・社会生活における意思決定支援ガイドライン」（平成30年6月）</a>——本人の意思に基づいた生活を支援するという基本的考え方</li>
+    <li><a href="https://www.kaigokensaku.mhlw.go.jp/commentary/fee.html" target="_blank" rel="noopener noreferrer">介護サービス情報公表システム「サービスにかかる利用料」</a>——利用者負担は原則1割（一定以上の所得の場合は2割または3割）、施設サービスの居住費・食費等の負担</li>
+    <li><a href="https://www.zenginkyo.or.jp/news/2020/n032601/" target="_blank" rel="noopener noreferrer">全国銀行協会「預金者ご本人の意思確認ができない場合における預金の引出しに関するご案内資料の作成について」（2020年3月）</a>——本人の意思確認ができない場合の預金の取り扱いは一律ではなく、まず取引銀行へ相談するという考え方</li>
+    <li><a href="https://www.moj.go.jp/MINJI/minji95.html" target="_blank" rel="noopener noreferrer">法務省「成年後見制度・成年後見登記制度」</a>——任意後見・法定後見（成年後見制度）の公的な案内</li>
+    <li><a href="https://www.mhlw.go.jp/seisakunitsuite/bunya/koyou_roudou/koyoukintou/ryouritsu/kaigo/index.html" target="_blank" rel="noopener noreferrer">厚生労働省「介護休業制度」特設サイト</a>——介護休業・介護休暇・所定外労働の制限・短時間勤務などの両立支援制度</li>
+  </ul>
+
+  <h2>この記事について</h2>
+  <p>執筆・監修：はじめての終活ガイド運営者（終活カウンセラー1級）。<strong>本記事は、運営者が上記の公的機関の案内や報道を読んだうえでの個人の感想・整理であり、医療・介護・法律・税務の個別の判断を行うものではありません。</strong>専門家（医師・司法書士・税理士等）による監修は受けていません。症状の診断は医療機関へ、介護保険の利用・負担額はお住まいの市区町村や地域包括支援センターへ、後見制度・信託・贈与・扶養・相続に関わる判断は司法書士・弁護士・税理士などの専門家にご相談ください。</p>
+  <ul>
+    <li>公開日：未定（下書き・公開前レビュー中）</li>
+    <li><a href="../../about.html">運営者情報を見る</a></li>
+    <li><a href="../../disclaimer.html">免責事項・広告掲載について</a></li>
+  </ul>
+
+  <section class="related">
+    <h2>あわせて読みたい関連記事</h2>
+    <ul>
+      <li><a href="../../parent-shukatsu/questions/">親が元気なうちに聞いておくこと30項目｜会話例・印刷用シート付き</a></li>
+      <li><a href="../../parent-shukatsu/siblings/">親の終活、兄弟姉妹とどう役割分担する？揉めないための決め方</a></li>
+      <li><a href="../../parent-shukatsu/living-alone/">一人暮らしの親の終活チェックリスト｜見守り・合鍵・孤立防止</a></li>
+      <li><a href="../../column/obon-family-planning-talk/">お盆に家族で終活の話を始める方法｜決めずに整理する7つの質問</a></li>
+      <li><a href="../../articles/article05.html">親にエンディングノートを書いてもらうには?切り出し方のコツ</a></li>
+      <li><a href="../../articles/article11.html">終活チェックリスト完全版｜何から始める？優先順位と印刷用PDF</a></li>
+    </ul>
+  </section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-nav">
+      <li><a href="../../about.html">運営者情報</a></li>
+      <li><a href="../../privacy.html">プライバシーポリシー</a></li>
+      <li><a href="../../disclaimer.html">免責事項・広告掲載について</a></li>
+    </ul>
+    <p class="ad-notice">※本サイトはアフィリエイト広告を利用しています。Amazonのアソシエイトとして、当メディアは適格販売により収入を得ています。</p>
+    <p class="copyright">&copy; <span class="js-year">2026</span> はじめての終活ガイド</p>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
+<script src="../../js/main.js"></script>
+</body>
+</html>
