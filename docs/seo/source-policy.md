@@ -90,3 +90,16 @@
 
 - `/column/will-for-ordinary-families/`: 2026年6月24日公布の遺言・成年後見制度改正を確認。自筆証書遺言などの押印要件は公布から1年以内の施行予定であるため、現行方式を変更せず、施行前説明であることと法務省の最新案内への確認導線を追記。出典: 法務省 https://www.moj.go.jp/MINJI/minji07_00410.html
 - `article15`: 2026年中に亡くなった方を対象とする国税庁「相続税の申告のしかた（令和8年分用）」（2026-07-01公開）への導線を追記。期限の根拠は引き続きタックスアンサーNo.4205。 https://www.nta.go.jp/publication/pamph/sozoku/shikata-sozoku2026/index.htm
+
+
+## 2026-09-06 下書き: /where-to-ask/
+
+- 記事の役割は、終活で悩み別に最初の相談窓口を選ぶための入口に限定。専門職の業務範囲の詳細比較は既存のarticle10へ、介護の具体的な準備は下書きの `/column/parent-care-without-burnout/` へ分離した。
+- 地域包括支援センターについては、厚生労働省「地域包括ケアシステム」および介護サービス情報公表システムで、市町村が設置する高齢者の総合相談等の窓口であることを確認。設置数・地域別サービス内容・利用条件は本文に記載しない。
+  - https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/index.html
+  - https://www.kaigokensaku.mhlw.go.jp/publish_seikatsu/
+- 契約・料金・事業者との行き違いについては、消費者庁の「消費者ホットライン」で、188が身近な消費生活相談窓口の案内につながる番号であることを確認。個別の契約が取り消せるか、期限、費用は本文で判断しない。
+  - https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/
+- 法制度・相談機関の案内については、法テラスの情報提供業務が法制度と相談機関・団体等の情報を提供するものであることを確認。個別の法的結論、専門職の業務範囲、利用要件・相談費用は本文で断定しない。
+  - https://www.houterasu.or.jp/site/about-houterasu/jouhouteikyou.html
+- 上記の公式情報は2026-09-06に確認。公開前に各窓口の受付条件・連絡先・制度改定の有無を再確認し、個別の介護・契約・相続・遺言の判断は担当窓口または専門家への確認を促す。
