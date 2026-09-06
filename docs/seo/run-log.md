@@ -494,4 +494,5 @@
 - 棲み分け: article10の士業比較、PR #36の終活費用、`/column/parent-care-without-burnout/` の介護準備とは扱う範囲を分離。業務範囲・制度適用・費用・契約の結論は書かず、公式情報・担当窓口・専門家への確認を案内。
 - 出典・YMYL対応: 厚生労働省（地域包括支援センター）、消費者庁（188）、法テラス（情報提供業務）の公式ページを2026-09-06に確認。source-policy.mdとymyl-review-queue.mdへ記録。
 - 導線: 本文と関連記事欄からarticle10、親に聞く30項目、兄弟姉妹での分担、終活チェックリスト完全版へリンク。#36の状態に依存する費用記事へのリンクは追加しない。
-- 残作業: リポジトリの検証スクリプトを実行できる環境で、`node tools/check-site.js`、`node tools/check-click-tracking.js`、`git diff --check` を確認する。#36の公開判断後、必要ならトップ・親の終活ハブへの導線を競合なく追加する。
+- テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 38、internal links checked: 1150）／`node tools/check-click-tracking.js` → PASSED（public HTML: 34、affiliate links: 34、CTAs: 13、products: 12）／`git diff --check origin/main...HEAD` → PASS。
+- 残作業: #36の公開判断後、必要ならトップ・親の終活ハブへの導線を競合なく追加する。
