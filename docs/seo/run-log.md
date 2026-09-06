@@ -485,3 +485,13 @@
   - 管理ファイル: content-inventory/keyword-map/internal-link-map/editorial-calendar 更新（PR#1マージ済みに伴うPR中→公開の状態反映含む）
 - テスト結果: node tools/check-site.js → 後述PR本文参照
 - 次回予定: PRマージ後にSearch ConsoleでサイトマップTB再送信・article12のインデックス登録リクエスト。/parent-shukatsu/ と /parent-shukatsu/questions/ は公開済みのため即日リクエスト
+
+
+## 2026-09-06（週次・終活の相談先比較 / Draft PR #39）
+
+- 判定: 編集カレンダー2026-09-07〜11週の「終活の相談先比較」に、最新mainから独立したDraft PR #39として着手。未反映のPR #36（/cost/）とはブランチ・本文とも分離し、相互リンクやトップ/ハブ更新をこの時点では行わない。
+- 実施: `/where-to-ask/` を新設。検索意図を「終活で何をどこに相談すればよいか分からない」とし、悩みを「介護・暮らし」「契約・料金」「相続・遺言などの法的手続き」「家族での準備」に分けて、最初の窓口を選ぶ入口記事に限定。
+- 棲み分け: article10の士業比較、PR #36の終活費用、`/column/parent-care-without-burnout/` の介護準備とは扱う範囲を分離。業務範囲・制度適用・費用・契約の結論は書かず、公式情報・担当窓口・専門家への確認を案内。
+- 出典・YMYL対応: 厚生労働省（地域包括支援センター）、消費者庁（188）、法テラス（情報提供業務）の公式ページを2026-09-06に確認。source-policy.mdとymyl-review-queue.mdへ記録。
+- 導線: 本文と関連記事欄からarticle10、親に聞く30項目、兄弟姉妹での分担、終活チェックリスト完全版へリンク。#36の状態に依存する費用記事へのリンクは追加しない。
+- 残作業: リポジトリの検証スクリプトを実行できる環境で、`node tools/check-site.js`、`node tools/check-click-tracking.js`、`git diff --check` を確認する。#36の公開判断後、必要ならトップ・親の終活ハブへの導線を競合なく追加する。
