@@ -1,5 +1,35 @@
 # 実行ログ（run-log）
 
+## 2026-09-07（週次・定期実行）
+
+- 実行日時: 2026-09-07 09:08 JST（Asia/Tokyo。無人の定期実行）
+- ブランチ: claude/seo-weekly-2026-09-07（新規ドラフトPR運用）
+- 事前確認: git status（クリーン）／origin/main最新化（f63e5bf）／CLAUDE.md（リポジトリに存在せず）／docs/seo配下の管理ファイル一式／既存ブランチ・オープンPRを確認
+- **判定**: 編集カレンダーの2026-09-07〜11週分（終活の相談先比較）は、本ルーチンとは別のセッション（GitHub上は`codex/seo-weekly-2026-09-07`ブランチ）が実装し、PR #39として2026-09-06にmainへ既にマージ済み（`/where-to-ask/`公開、main=f63e5bf）であることを確認した。重複作業・重複PR作成は行っていない。PR #39のフォローアップとしてPR #40（記録同期・sitemap不備の修正）が別セッションにより既にオープン・クリーン状態で存在していたため、これも重複させず対象外とした
+- **今回の主要対応（優先順位4「公開予定を過ぎている記事」に該当）**: 前々回タスク（2026-08-31〜09-04週「終活にかかる費用」）のドラフトPR #36が、mainがPR #38・#39で先に進んだ結果`mergeable_state=dirty`（マージ不可）のまま約1週間停滞していたことを検出。`/cost/`はmain未反映のままだったため、最新main（f63e5bf）から本ブランチを作成し、PR #36の3コミット（記事本体・run-log記録・重複防止確認）をマージして`/cost/`をmainへ統合。衝突した6ファイル（editorial-calendar.csv／internal-link-map.csv／keyword-map.csv／source-policy.md／ymyl-review-queue.md／sitemap.xml）は、両ブランチの記録を両方保持する形で解消した（PR #36は本ブランチへ統合した旨をコメントしクローズ予定）
+- **孤立ページの検出と是正（本プロンプト4章の週次確認項目）**: 統合作業の過程で、PR #39でmainへマージ済みの`/where-to-ask/`が、トップページ・親の終活ハブのどこからもリンクされていない孤立ページ（sitemap経由でのみ到達可能）であることを検出した。是正内容:
+  - トップページ「新着記事」（最新3本を公開日順に`where-to-ask`→`cost`→`living-alone`へ更新し、`siblings`を繰り下げ）・「全記事一覧」に`/where-to-ask/`を追加
+  - 親の終活ハブに新規ケースカード「相談先に迷う場合」を追加し`/where-to-ask/`へリンク、記事一覧にも追加
+  - `/where-to-ask/`の本文（sec5。当初「公開後の費用整理の記事を参照できるよう、別途の内部リンク追加を予定しています」という記事自身のプレースホルダー文だった箇所）を`/cost/`への実リンクに置き換え、関連記事欄にも`/cost/`を追加
+  - `/cost/`の関連記事欄に`/where-to-ask/`への逆リンクを追加し、両記事を相互リンク化
+  - sitemap.xmlの`/`・`/parent-shukatsu/`のlastmodを2026-09-07へ更新
+  - 手動での孤立ページ全件走査（全HTMLファイルのhrefを集計し、参照ゼロのページを検出するNodeスクリプト）を実施し、`tools/pdf/*.html`（PDF生成用ソースで意図的に非公開）・`404.html`（意図的に非リンク）以外に新たな孤立ページがないことを確認
+- **管理ファイルの誤字も検出・修正**: PR #36・PR #39の双方に、ファイル末尾で改行ではなく文字列リテラル`\n`（バックスラッシュ+n）が混入していた箇所を、`internal-link-map.csv`・`content-inventory.csv`・`sitemap.xml`の計3ファイルで発見し実改行に修正した（PR #40が`sitemap.xml`の同種の不備を別途修正中だが、コンフリクトを避けるため対象ファイルを分けて対応。`docs/seo/source-policy.md`のテーブル構造も、コンフリクト解消時に/cost/分の出典行を正しい表内の位置へ整理した）
+- 管理ファイル更新: `content-inventory.csv`（`/where-to-ask/`を「公開」へ、`/`・`/parent-shukatsu/`・`/cost/`の最終実質更新日を同期）、`keyword-map.csv`（`/where-to-ask/`・`/cost/`の内部リンク元/先を実態に合わせて更新）、`internal-link-map.csv`（トップ・ハブ→`/where-to-ask/`、`/cost/`⇄`/where-to-ask/`の行を追加）、`editorial-calendar.csv`（2026-08-31〜09-04週・2026-09-07〜11週を完了に更新）、`ymyl-review-queue.md`（`/where-to-ask/`を公開済みとして記録）、`source-policy.md`（/cost/の出典2件を表内の正しい位置へ）
+- 変更したURL: `https://shukatsu-guide.jp/`（新着記事・全記事一覧）／`https://shukatsu-guide.jp/parent-shukatsu/`（状況別ケース・記事一覧）／`https://shukatsu-guide.jp/cost/`（関連記事欄に1件追加。本文・title・descriptionは変更なし）／`https://shukatsu-guide.jp/where-to-ask/`（本文1文の置き換え・関連記事欄に1件追加）
+- 検索意図: 変更なし（内部リンク整備のみ。新規記事なし）
+- 技術変更: なし（構造化データの変更なし）
+- PDF/DOCX変更: なし
+- テスト結果: `node tools/check-site.js` → **ALL CHECKS PASSED**（HTML files: 39、internal links checked: 1191）／`node tools/check-click-tracking.js` → **PASSED**（public HTML: 35、affiliate links: 34、CTAs: 13、products: 12）／robots.txt・noindex（drafts/以外に混入なし）・PDF/DOCXリンク（downloads/配下5件すべて実在）を個別確認
+- Search Console分析: `docs/seo/sc-data/` が引き続き未配置のためデータなし
+- 季節需要（6〜10週間後＝2026-10-19頃〜2026-11-16頃）確認: 該当する新規性の高い季節イベントなし。この期間の編集カレンダータスク（2026-10前半・10後半）は既に計画済み
+- 編集カレンダー確認: 次回未着手タスクは2026-09-14〜18（親の終活記事群の内部リンク/title/導入一斉調整。新規記事なし週）
+- YMYLレビュー待ち: 変更なし（`/where-to-ask/`は公開済み・専門家レビュー未実施として登録済み。既存項目は継続）
+- 阻害要因: なし
+- 見送った項目: 隔週の大幅更新（前回2026-08-10 article05から28日経過し、優先順位1位のarticle11＝終活チェックリスト完全版が対象）は、本ブランチだけで複数ファイルにまたがる統合・孤立ページ是正を行ったため、同一実行でさらに大幅更新まで行うと品質検証が手薄になると判断し見送った。次回実行で最優先として着手する
+- 次回予定: article11（終活チェックリスト完全版）の隔週大幅更新に最優先で着手。あわせて編集カレンダー2026-09-14〜18週（親の終活記事群の内部リンク・title・導入文の一斉調整）も対象
+- PR: ドラフトPRを作成（PR #36は本ブランチへ統合済みのためクローズ予定）
+
 ## 2026-08-31（週次・定期実行の再発火・重複防止確認）
 
 - 起動時確認で、本日の編集カレンダー該当タスク「終活にかかる費用」は既にドラフトPR #36（branch: `claude/seo-weekly-2026-08-31`、直下の「2026-08-31（週次・終活にかかる費用）」エントリ）で実装・記録済みであることを確認した。PR #36 のbaseは現在のmain（`a24e8f9`）と一致しており（mergeable_state: clean）、rebaseの必要なし
