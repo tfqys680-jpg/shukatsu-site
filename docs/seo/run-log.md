@@ -1,5 +1,43 @@
 # 実行ログ（run-log）
 
+## 2026-09-14（週次・定期実行）
+
+- 実行日時: 2026-09-14 09:07 JST（Asia/Tokyo。無人の定期実行）
+- ブランチ: claude/seo-weekly-2026-09-14（新規ドラフトPR運用）
+- 事前確認: git status（クリーン）／origin/main最新化（f63e5bf）／CLAUDE.md（リポジトリに存在せず）／docs/seo配下の管理ファイル一式／既存ブランチ・オープンPRを確認
+  - オープンPR #40（`codex/fix-pr39-review-followup`）: PR #39マージ後の記録同期のみで、本セッションの対象と重複なし
+  - オープンPR #41（`claude/seo-weekly-2026-09-07`）: 前々週タスク（費用記事PR #36）のmain統合と、`/where-to-ask/`がトップ・親の終活ハブいずれからもリンクされていない孤立ページである点の是正に対応中（本セッション終了時点で未マージ）。同PR本文に「次回実行では編集カレンダー2026-09-14〜18週も対象とする」と記載があったが、実際の差分は費用記事の統合と孤立ページ是正のみで、本タスク（親の終活記事群の内部リンク・title・導入文の一斉調整）そのものには未着手であることを確認したため、重複作業とはみなさず本セッションで実施した。ただし`/where-to-ask/`への内部リンク追加はPR #41の対応範囲と完全に重複するため、本セッションでは行わなかった
+- ドリフト確認: 2026-09-05のPR #38（相続・遺言の出典を2026年版へ更新）、2026-09-06のPR #39（`/where-to-ask/`新設）がいずれも本自動運用のrun-log/automation-state.jsonへの記録なし、または一部のみの記録でmainへ反映されていたことを確認。PR #38は当該PR内で管理ファイルも同期済みだったため実害なし。PR #39は`content-inventory.csv`・`keyword-map.csv`の状態欄が「Draft PR #39（未公開）」のまま更新されておらず、実際は公開済みという記載ズレがあったため今回是正した（詳細は「管理ファイル更新」参照）
+- 判定: 編集カレンダー2026-09-14〜18週分は「親の終活記事群の内部リンク・title・導入文・関連記事の一斉調整」（整備、新規記事なし週）。新規記事・大幅更新は対象外。優先順位（本プロンプト3章）に照らし、まず1番の「サイト全体の障害・孤立ページ」を機械的に再点検した上で、本来のタスクである内部リンク・関連記事の調整に着手した
+- 実施した作業:
+  - **title・meta description・canonical・重複チェック**: 全38ページのtitle/description/canonicalを機械比較し、重複なしを確認（現状維持のため変更なし）。`node tools/check-site.js`のtitle重複・H1欠落/重複チェックもあわせて全通過
+  - **孤立ページの再点検**: 全HTMLのhrefを機械的に集計し、内部リンクの入次数を確認。`tools/pdf/*.html`（PDF生成用ソース、意図的に非公開）・`404.html`（意図的に非リンク）・`drafts/parent-care-without-burnout/`（下書き・noindex）を除くと、`/where-to-ask/`のみが孤立ページであることを確認。この是正はPR #41が対応中のため、重複を避けて本セッションでは対応しなかった
+  - **親の終活クラスタの内部リンク・関連記事を監査し、公開時期の違いで生じていた相互参照の欠落6件を是正**（本文の主旨・検索意図・見出し構成は変更せず、リンク追加のみ）:
+    1. `parent-shukatsu/index.html`（ハブ）のFAQ Q3で「兄弟姉妹での役割分担の記事」という文言がリンクになっていなかった誤りを`siblings/`へのリンクに修正
+    2. `parent-shukatsu/questions/index.html`（30項目、2026-07-11公開＝siblings/living-alone公開より前）の本文（兄弟姉妹との共有）と関連記事欄に、`siblings/`・`living-alone/`への内部リンクを新規追加
+    3. `parent-shukatsu/siblings/index.html`と`parent-shukatsu/living-alone/index.html`（ともに2026年8月公開、相互参照なし）を関連記事欄で相互リンク化。あわせてliving-alone側の「よくある失敗パターン」（兄弟姉妹間で情報共有していない）からsiblingsへ、FAQ Q3（切り出し方の会話例）からarticle05へ、それぞれ本文中に直接リンクを追加
+    4. `articles/article16.html`（親の運転免許返納）と`parent-shukatsu/living-alone/index.html`を相互リンク化。「いきなりの運転中止がかえって外出機会・孤立を招きうる」という両記事共通の論点を本文に1文追加したうえでリンクした
+  - いずれも軽微なリンク追加であり本文の実質的な内容・検索意図は変更していないため、各記事のdateModified・最終実質更新日は据え置いた（2026-08-17実行時と同じ方針）
+  - **管理ファイルの是正**:
+    - `content-inventory.csv`・`keyword-map.csv`の`/where-to-ask/`の状態欄「Draft PR #39（未公開）」を「公開」へ修正（PR #39は2026-09-06にmain統合済み）。あわせて孤立ページである旨とPR #41で是正中である旨を注記
+    - `content-inventory.csv`・`keyword-map.csv`・`internal-link-map.csv`・`sitemap.xml`の末尾に混入していた、改行ではなく文字列リテラル`\n`が残っていた誤字を実改行へ修正（`git show`で確認したところ、いずれも本来の改行ではなくバックスラッシュ+nの2文字が実際に書き込まれていた）。PR #41が`sitemap.xml`等について同種の修正を別ブランチで進めているため、マージ順序によっては軽微な再コンフリクトが起こり得る旨をPR本文に記載した
+    - `internal-link-map.csv`・`keyword-map.csv`に、上記4件の新規内部リンクと、ハブが従来から`siblings/`・`living-alone/`・article14/16/17/18へリンクしていたにもかかわらず反映されていなかった記載漏れをあわせて追加・是正
+    - `editorial-calendar.csv`の2026-09-14〜18週分を完了に更新
+- 変更したURL: `https://shukatsu-guide.jp/parent-shukatsu/`（FAQ Q3のリンク修正）／`https://shukatsu-guide.jp/parent-shukatsu/questions/`（本文・関連記事欄へのリンク追加）／`https://shukatsu-guide.jp/parent-shukatsu/siblings/`（関連記事欄へのリンク追加）／`https://shukatsu-guide.jp/parent-shukatsu/living-alone/`（本文2箇所・関連記事欄へのリンク追加）／`https://shukatsu-guide.jp/articles/article16.html`（本文1箇所・関連記事欄へのリンク追加）。いずれもtitle・meta description・検索意図・URLの変更はなし
+- 検索意図: 変更なし（内部リンク整備のみ）
+- 内部リンク: 上記「実施した作業」参照
+- 技術変更: なし（構造化データの追加・変更はなし。FAQ本文へのリンク追加箇所は、対応するFAQPage JSON-LDの`text`と表示テキストが完全一致する形で追加し、DOM↔JSON-LD不一致が生じないことを`node tools/check-site.js`で確認）
+- PDF、DOCX変更: なし。既存のPDF/DOCXリンク5件（`downloads/`配下）はすべて実在することを個別確認
+- 参考情報: 新規の法制度・統計・固有名詞の追加なし（既存記事間の内部リンク整備のみのため、source-policy.mdへの新規追加なし）
+- テスト結果: `node tools/check-site.js` → **ALL CHECKS PASSED**（HTML files: 38、internal links checked: 1161）／`node tools/check-click-tracking.js` → **PASSED**（public HTML: 34、affiliate links: 34、CTAs: 13、products: 12）／画像alt欠落なし・PDF/DOCXリンク切れなし・canonical/meta description重複なし・robots.txt正常・drafts以外へのnoindex混入なしを個別確認。孤立ページの機械的全件走査で新たな孤立ページがないことを確認（`/where-to-ask/`のみ既知・PR #41対応中）
+- Search Console分析: `docs/seo/sc-data/`が引き続き未配置のためデータなし。表示回数・CTR・掲載順位・前月比較は「データ不足」として記録し、数値の推測は行っていない
+- 季節需要（6〜10週間後＝2026-10-26頃〜2026-11-23頃）確認: 該当する強い季節需要イベントは年末年始・帰省（editorial-calendar.csv上、2026-11前半・12月前半に既に計画済み）程度で、この時間軸に新規性の高い季節記事の追加着手は今回不要と判断
+- 編集カレンダー確認: 次回未着手タスクは2026-09-28〜10-02（article06をデジタル終活チェックリストへ改修、大幅更新）。前回大幅更新（2026-08-10 article05）から35日経過し隔週の大幅更新基準を超過しているため、次回実行では優先順位1位のarticle11（終活チェックリスト完全版、直近の大幅更新は2026-08-10）の大幅更新に最優先で着手することを推奨する
+- YMYLレビュー待ち: 既存項目（article18/15/07/10/17/30項目記事延命治療項目/医療系分野未公開）に加え、`/where-to-ask/`（相談窓口・制度案内の専門家レビュー未実施）をpending_review_tasksへ追加
+- 阻害要因: なし。PR #41が未マージのため`/where-to-ask/`の孤立ページ状態は本PRの範囲では未解消（重複を避けるため意図的に対象外とした）。運営者にはPR #41を先にご確認・マージいただくことを推奨する
+- 次回予定: 編集カレンダー2026-09-28〜10-02週（article06のデジタル終活チェックリスト化）に着手予定。あわせて隔週大幅更新が大きく超過しているarticle11の改修を優先度高く検討する。PR #40・#41のマージ状況次第で、mainへの追従・コンフリクト解消が必要になる可能性がある
+- PR: ドラフトPRを作成
+
 ## 2026-08-25（更新日メタデータの同期・PR #34のレビュー指摘対応）
 
 - PR #34 は 2026-08-25T07:13:57Z にマージ済み（main=`8e58ad9`）。**無出典の法的断定は本番から解消された**（living-alone・questions とも0件を確認）
