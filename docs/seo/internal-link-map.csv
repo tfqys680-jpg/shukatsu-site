@@ -57,4 +57,9 @@
 /parent-shukatsu/,/parent-shukatsu/living-alone/,ハブ→記事,状況別（一人暮らしの親の場合）+記事一覧
 /parent-shukatsu/living-alone/,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html;/articles/article11.html;/articles/article16.html;/ending-note/family-story/,記事→ハブ/柱/記事,本文中の深掘りリンク・関連記事欄
 /column/parent-care-without-burnout/,/parent-shukatsu/questions/;/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/;/column/obon-family-planning-talk/;/articles/article05.html;/articles/article11.html,記事→柱/記事,本文の深掘りリンク・関連記事欄・CTA(article11)。現在はdrafts/で下書き（公開時にトップ新着・全記事一覧からのリンクを追加）
-/where-to-ask/,/articles/article10.html;/parent-shukatsu/questions/;/parent-shukatsu/siblings/;/articles/article11.html,記事→記事/柱,本文の悩み別分岐・相談前メモ・家族の役割・関連記事欄（Draft PR #39。#36とは相互リンクなし）\n
+/where-to-ask/,/articles/article10.html;/parent-shukatsu/questions/;/parent-shukatsu/siblings/;/articles/article11.html;/cost/,記事→記事/柱,本文の悩み別分岐・相談前メモ・家族の役割・費用整理への誘導・関連記事欄
+/,/cost/,トップ→記事,新着記事+全記事一覧
+/parent-shukatsu/,/cost/,ハブ→記事,状況別（費用が心配な場合）+記事一覧
+/cost/,/articles/article11.html;/articles/article13.html;/articles/article14.html;/articles/article07.html;/parent-shukatsu/siblings/;/where-to-ask/,記事→柱/記事,本文中の費用別の深掘りリンク・関連記事欄（相談先記事と相互リンク。2026-09-07追加）
+/,/where-to-ask/,トップ→記事,新着記事+全記事一覧（2026-09-07追加。PR #39マージ後の孤立ページ是正）
+/parent-shukatsu/,/where-to-ask/,ハブ→記事,状況別（相談先に迷う場合）+記事一覧（2026-09-07追加。PR #39マージ後の孤立ページ是正）
