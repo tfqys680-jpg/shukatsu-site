@@ -72,8 +72,8 @@
 | /drafts/parent-care-without-burnout/ | 成年後見制度（法定後見・任意後見）・成年後見登記制度の公的案内（本文では制度の存在の言及にとどめ、要件・費用は記載せず専門家へ誘導） | 法務省「成年後見制度・成年後見登記制度」 https://www.moj.go.jp/MINJI/minji95.html | 2026-09-04 |
 | /drafts/parent-care-without-burnout/ | 介護休業・介護休暇・所定外労働の制限・短時間勤務等の両立支援制度の存在（日数・要件は記載せず勤務先確認へ誘導） | 厚生労働省「介護休業制度」特設サイト https://www.mhlw.go.jp/seisakunitsuite/bunya/koyou_roudou/koyoukintou/ryouritsu/kaigo/index.html | 2026-09-04 |
 | /drafts/parent-care-without-burnout/ | ニュース引用: 女性セブンプラス「《専門家が解説》親の介護の新常識『介護費用は親のお金から出す』『介護する側だけで話し合い親の希望を聞くのは最後』 共倒れを防ぐための『間接介護』も重要」（2026-08-28・運営者提供URL https://j7p.jp/179434 ）。**本文では「親のお金から」「希望は最後」を一律ルールとして採用せず、報道の紹介として記載** | Yahoo!ニュース配信版のタイトル一致を検索で確認 https://news.yahoo.co.jp/articles/ba094cd46a0d7553955af4edbd3a56b998518a36 | 2026-09-04 |
-| /cost/ | 自筆証書遺言書保管制度の保管申請は遺言書1通につき3,900円。公正証書遺言の手数料は目的の価額等により異なる | 法務省「09 手数料」 https://www.moj.go.jp/MINJI/09.html ／日本公証人連合会「公正証書遺言の作成手数料」 https://www.koshonin.gr.jp/notary/ow02/2-q13 | 2026-08-31 |
-| /cost/ | 葬儀サービスは広告表示額と最終請求が異なる場合があり、見積書の項目・追加費用・複数人での打ち合わせの確認が必要。料金・サービス内容の説明不足に関する相談がある | 国民生活センター「もしもの時に慌てないように！ 葬儀サービスのトラブル」 https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen475.html ／「墓・葬儀サービス（各種相談の件数や傾向）」 https://www.kokusen.go.jp/soudan_topics/data/sougi.html | 2026-08-31 |
+| /cost/ | 自筆証書遺言書保管制度の保管申請は遺言書1通につき3,900円。公正証書遺言の手数料は目的の価額等により異なる | 法務省「09 手数料」 https://www.moj.go.jp/MINJI/09.html ／日本公証人連合会「公正証書遺言の作成手数料」 https://www.koshonin.gr.jp/notary/ow02/2-q13 | 2026-09-14 |
+| /cost/ | 葬儀サービスは広告表示額と最終請求が異なる場合があり、見積書の項目・追加費用・複数人での打ち合わせの確認が必要。料金・サービス内容の説明不足に関する相談がある | 国民生活センター「もしもの時に慌てないように！ 葬儀サービスのトラブル」 https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen475.html ／「墓・葬儀サービス（各種相談の件数や傾向）」 https://www.kokusen.go.jp/soudan_topics/data/sougi.html | 2026-09-14 |
 
 ※ 2026-07-20分の確認は、courts.go.jp・nta.go.jp・moj.go.jp への直接アクセスがブロックされたため、検索結果に含まれる当該公式ページの引用内容とページタイトルの一致を確認する方法で行った。数値（3か月/4か月/10か月/3年以内・10万円以下の過料）は既存記事の記載と一致し、矛盾は見つからなかった。
 
@@ -104,3 +104,8 @@
 - 法制度・相談機関の案内については、法テラスの情報提供業務が法制度と相談機関・団体等の情報を提供するものであることを確認。個別の法的結論、専門職の業務範囲、利用要件・相談費用は本文で断定しない。
   - https://www.houterasu.or.jp/site/about-houterasu/jouhouteikyou.html
 - 上記の公式情報は2026-09-06に確認。公開前に各窓口の受付条件・連絡先・制度改定の有無を再確認し、個別の介護・契約・相続・遺言の判断は担当窓口または専門家への確認を促す。
+
+## 2026-09-14 /cost/ 公開前再確認
+
+- 法務省の保管申請手数料は公式ページの検索結果で確認（原文の直接取得はHTTP 403）。日本公証人連合会および国民生活センターの上記3ページは原文を再確認。記載する金額・案内に変更なし。
+- 消費者ホットライン188の案内は消費者庁の公式ページ https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/ で再確認。

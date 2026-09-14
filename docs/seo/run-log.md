@@ -554,3 +554,12 @@
 - 導線: 本文と関連記事欄からarticle10、親に聞く30項目、兄弟姉妹での分担、終活チェックリスト完全版へリンク。#36の状態に依存する費用記事へのリンクは追加しない。
 - テスト結果: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 38、internal links checked: 1150）／`node tools/check-click-tracking.js` → PASSED（public HTML: 34、affiliate links: 34、CTAs: 13、products: 12）／`git diff --check origin/main...HEAD` → PASS。
 - 残作業: #36の公開判断後、必要ならトップ・親の終活ハブへの導線を競合なく追加する。
+
+## 2026-09-14 PR #40 → #41 統合確認
+
+- 運営者の「必要な分はマージ」指示に基づく公開前確認。PR #40の公開日・YMYL確認記録を保持し、重複する台帳行を統合。
+- `/cost/`は今回の新規公開。下書き作成日2026-08-31と区別し、公開日は2026-09-14で表示・JSON-LD・sitemap・台帳・新着順を同期。
+- `/where-to-ask/`の公開日・最終実質更新日は2026-09-06を保持。今回の相互リンク追加日は実行記録に残し、記事更新日を繰り上げない。
+- トップと親の終活ハブの新着・ケースカード追加は2026-09-14。sitemapと両台帳を同期。
+- 費用記事の一次情報を再確認（source-policy.md参照）。専門家レビュー未実施の扱いは維持。
+- `node tools/check-site.js`・`node tools/check-click-tracking.js`を統合後に再実行。結果はPR本文へ記録。
