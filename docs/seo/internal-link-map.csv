@@ -63,3 +63,8 @@
 /cost/,/articles/article11.html;/articles/article13.html;/articles/article14.html;/articles/article07.html;/parent-shukatsu/siblings/;/where-to-ask/,記事→柱/記事,本文中の費用別の深掘りリンク・関連記事欄（相談先記事と相互リンク。2026-09-07追加）
 /,/where-to-ask/,トップ→記事,新着記事+全記事一覧（2026-09-07追加。PR #39マージ後の孤立ページ是正）
 /parent-shukatsu/,/where-to-ask/,ハブ→記事,状況別（相談先に迷う場合）+記事一覧（2026-09-07追加。PR #39マージ後の孤立ページ是正）
+/parent-shukatsu/,/parent-shukatsu/siblings/,ハブ内→記事,FAQ Q3回答文中の「兄弟姉妹での役割分担の記事」が無リンクだった誤りを修正（2026-09-14週・内部リンク整備）
+/parent-shukatsu/questions/,/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/,柱→記事,本文（兄弟姉妹との共有）・関連記事欄に追加（2026-09-14週・内部リンク整備。siblings/living-alone公開よりquestions公開が先だったため未実装だった分を充足）
+/parent-shukatsu/siblings/,/parent-shukatsu/living-alone/,記事→記事,関連記事欄に追加（2026-09-14週・内部リンク整備。相互リンク化）
+/parent-shukatsu/living-alone/,/parent-shukatsu/siblings/;/articles/article16.html,記事→記事,よくある失敗パターン（兄弟姉妹間の情報共有）本文・FAQ Q3本文・関連記事欄に追加（2026-09-14週・内部リンク整備。siblings/article16との相互リンク化）
+/articles/article16.html,/parent-shukatsu/living-alone/,記事→記事,sec2（いきなりの返納リスク＝孤立リスクとの関連）本文・関連記事欄に追加（2026-09-14週・内部リンク整備。相互リンク化）
