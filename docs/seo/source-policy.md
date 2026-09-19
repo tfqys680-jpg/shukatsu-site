@@ -123,3 +123,20 @@
   - https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/
 - ガイドラインを国の認定・保証制度として扱わず、個別事業者の安全性や返金可能性を断定しない。解約料の有効性、死後事務委任、寄附・遺贈、相続への影響は専門家確認対象とし、記事は drafts/ 配下で noindex・sitemap非掲載のまま公開前レビューを待つ。
 
+### 2026-09-19 PR #43 内容レビュー・追補
+
+- 同ガイドラインの原文を再照合。以下の頁番号は本文の印刷頁番号（PDFビューアの通し頁は1を加える）。
+  - 6頁・脚注2: 医療機関・介護保険施設等が身元保証人等の不在だけを理由に入院・入所を拒むことは不適当とする案内。本文sec5とFAQ1を対象・理由が分かる表現に変更し、個別の受入れの保証と区別した。
+  - 10〜11頁・30〜31頁: 解約方法・解約料・返金の説明。個別条項の有効性や返金額は判断せず、専門家確認対象を維持。
+  - 14〜17頁・18〜20頁: 死後事務・相続人との関係、寄附・遺贈の契約条件化を避ける旨。本人意思・利益相反・個別契約の法的評価は公開前レビュー項目へ整理。
+  - 23〜24頁: 医療同意の権限と本人の意思を伝える支援の区別をsec2に補足。
+  - 29〜30頁: 預託金の区分管理・定期報告に加え、信託による保全の考え方と、分別預金や別法人への管理委託でも破綻時に十分な返還を受けられない可能性を原文・PDF画像で確認。sec4・FAQ2に反映。
+  - 出典: https://www.mhlw.go.jp/content/001262636.pdf
+- 消費者向け資料と概要PDFも再照合。188の相談先案内は消費者庁の現行ページを今回直接確認した。
+  - https://www.mhlw.go.jp/content/000390797.pdf
+  - https://www.mhlw.go.jp/content/001262635.pdf
+  - https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/
+- Yahoo!ニュースのURLは今回取得できず、記事名・日付について作成時の確認記録を維持した。制度記述の根拠には使用していない。
+- Google Search Centralの更新履歴によると、FAQリッチリザルトは2026-05-07から表示終了、2026-06-15に関連ドキュメントを削除。FAQPageは本文との意味の一致を保つため残すが、検索結果でのFAQ拡張表示を期待する施策としては扱わない。
+  - https://developers.google.com/search/updates
+- 下書きのcanonical・og:url・Article/mainEntityOfPage・BreadcrumbListを実ファイルのdrafts/パスへ統一。公開予定URLはSEO台帳に維持し、正式公開時に一括切替する。noindexはアクセス制限ではないため、専門家レビューと実表示確認が完了するまでmainへのマージも保留。
