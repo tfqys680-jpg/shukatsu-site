@@ -20,7 +20,7 @@
 | 記載箇所 | 内容 | 出典 | 確認日 |
 |---|---|---|---|
 | 体験談LP・article11・30項目 | 死亡届は死亡の事実を知った日から7日以内（国外は3か月以内） | 法務省 https://www.moj.go.jp/ONLINE/FAMILYREGISTER/5-4.html | 2026-07-11 |
-| article15 | 相続放棄・限定承認の申述期限は原則3か月以内 | 裁判所「相続の放棄の申述」 https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html | 2026-07-20 |
+| article15・article11 | 相続放棄・限定承認の申述期限は原則3か月以内 | 裁判所「相続の放棄の申述」 https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html | 2026-07-20（article11への転記・再確認: 2026-09-21） |
 | article15 | 準確定申告は相続開始を知った日の翌日から原則4か月以内 | 国税庁タックスアンサーNo.2022 https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm | 2026-07-20 |
 | article15 | 相続税の申告・納付は相続開始を知った日の翌日から原則10か月以内 | 国税庁タックスアンサーNo.4205 https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205.htm | 2026-07-20 |
 | article15 | 相続登記の申請義務化（2024年4月1日施行、正当な理由なく申請を怠ると10万円以下の過料） | 法務省「相続登記の申請義務化について」 https://www.moj.go.jp/MINJI/minji05_00599.html | 2026-07-20 |
@@ -109,3 +109,8 @@
 
 - 法務省の保管申請手数料は公式ページの検索結果で確認（原文の直接取得はHTTP 403）。日本公証人連合会および国民生活センターの上記3ページは原文を再確認。記載する金額・案内に変更なし。
 - 消費者ホットライン188の案内は消費者庁の公式ページ https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/ で再確認。
+
+## 2026-09-21 article11 隔週大幅更新
+
+- 新規の法制度・統計・固有名詞は追加していない。既存article15で確認済みの裁判所「相続の放棄の申述」（相続放棄・限定承認は原則3か月以内）を、STEP1の借金・ローン確認項目へ同一内容のまま転記した（上表参照）。courts.go.jpへの直接アクセスは引き続きブロックされるため、article15確認時（2026-07-20）と同じくページタイトル・記載内容の再現性を検索結果で再確認し、数値（3か月）に変更がないことを確認した。
+- 会話例（家族への声かけ・見直しの誘い方）は一般的な例文であり、実在の相談事例・体験談として記載していない。
