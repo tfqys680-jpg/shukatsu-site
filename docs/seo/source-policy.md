@@ -109,3 +109,8 @@
 
 - 法務省の保管申請手数料は公式ページの検索結果で確認（原文の直接取得はHTTP 403）。日本公証人連合会および国民生活センターの上記3ページは原文を再確認。記載する金額・案内に変更なし。
 - 消費者ホットライン188の案内は消費者庁の公式ページ https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/ で再確認。
+
+## 2026-09-28 article06 デジタル終活チェックリスト化
+
+- 新規の法制度・統計・固有名詞は追加していない。既存article18で確認済み・台帳記載済みのApple「故人アカウント管理連絡先」（https://support.apple.com/ja-jp/102631 ）とGoogle「アカウント無効化管理ツール」（https://support.google.com/accounts/answer/3036546?hl=ja ）を同一URLのまま引用した。support.apple.com・support.google.comへの直接WebFetchは今回も引き続きブロックされたため、検索結果で機能名・ページの実在を再確認する方法（article18と同じ方法）を用いた。
+- チェックリスト化に伴う会話例・失敗例・状況別ケースは一般的な例文であり、実在の相談事例・体験談として記載していない。数値・価格・統計の新規追加はなし。
