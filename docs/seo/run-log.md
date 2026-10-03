@@ -39,6 +39,13 @@
 - 次回予定: 編集カレンダーの次回未着手タスクは2026-10前半（実家の片付けを親と喧嘩せず進める手順、新規、URL未定）。あわせてPR #43・#44のマージ状況次第で、mainへの追従・管理ファイルの統合確認が必要になる可能性がある。2026年10月は四半期ごとのエンディングノート比較記事（article08）の商品確認時期にあたるため、次回以降のいずれかの実行で対応を検討する
 - PR: ドラフトPR #45を作成
 
+### 2026-10-03 追記: PR #45のマージコンフリクト解消
+
+- PR #45監視中に、運営者が別経路でmainへ直接コミット（`135dd21` 2026-10-03 10:07 JST「content: reflect official guidance updates」。article12/article15/ending-note/family-story/living-alone/where-to-askの公式情報反映、sitemap・source-policy・content-inventory同期）をプッシュしたことを検出し、PR #45がmergeable_state=dirty（コンフリクト）に変化
+- `origin/main`を`claude/seo-weekly-2026-09-28`へマージして解消。コンフリクトは`docs/seo/source-policy.md`の1箇所（2026-09-28セクションと2026-10-02セクションの隣接追記）のみで、両セクションをそのまま日付順に保持。article12/article15/content-inventory.csv/sitemap.xmlは自動マージで解決、article06関連の変更内容に競合・欠落なし
+- `node tools/check-site.js`（HTML39件・内部リンク1220件）・`node tools/check-click-tracking.js`（affiliate 34・CTA 13・products 12）とも全通過を確認のうえマージコミットをプッシュ
+- 同時にPR #43・#44も同じmainコミットによりmergeable_state=dirtyへ変化していることを確認（いずれも運営者所有のPRのため、本セッションでは解消せず監視を継続）
+
 ## 2026-09-14（週次・定期実行）
 
 - 実行日時: 2026-09-14 09:07 JST（Asia/Tokyo。無人の定期実行）
