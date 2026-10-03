@@ -109,3 +109,16 @@
 
 - 法務省の保管申請手数料は公式ページの検索結果で確認（原文の直接取得はHTTP 403）。日本公証人連合会および国民生活センターの上記3ページは原文を再確認。記載する金額・案内に変更なし。
 - 消費者ホットライン188の案内は消費者庁の公式ページ https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/ で再確認。
+
+## 2026-10-02 公式情報反映
+
+- article12：インターネット広告を見て訪問を依頼した後の想定外の高額請求等に注意。分析は訪問販売等の業種横断であり、不用品回収だけの統計ではない。
+  - 消費者庁「PIO-NETデータを用いた訪問販売等に関する分析調査報告書」 https://www.caa.go.jp/notice/entry/047579/
+- article15：税務署総合窓口の受付時間は2026年10月1日から原則9時〜15時。受付時間外でも開庁時間内は対応するが、可能な限り受付時間内の来署・電話を案内。
+  - 国税庁 https://www.nta.go.jp/about/introduction/torikumi/madoguchi_jikan/index.htm
+- /parent-shukatsu/living-alone/：高齢者の家庭内転倒予防として、段差・浴室・脱衣所の手すりや滑り止め、床置き・コード・カーペットの見直し等を案内。
+  - 消費者庁 https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20260911/
+- /where-to-ask/：消費者トラブル解決ナビ（FAQ、全国の相談窓口案内、Webフォーム受付のある窓口への申込み）、65歳以上の消費生活相談の傾向、リースバック契約の注意点を反映。
+  - 国民生活センター https://www.kokusen.go.jp/news/data/n-20260914_1.html ／ https://www.consumer.go.jp/pio?id=pio_top
+  - 国民生活センター https://www.kokusen.go.jp/news/data/n-20260916_1.html
+  - 国民生活センター https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen552.html
