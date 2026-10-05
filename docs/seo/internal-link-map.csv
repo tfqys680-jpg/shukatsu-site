@@ -68,3 +68,5 @@
 /parent-shukatsu/siblings/,/parent-shukatsu/living-alone/,記事→記事,関連記事欄に追加（2026-09-14週・内部リンク整備。相互リンク化）
 /parent-shukatsu/living-alone/,/parent-shukatsu/siblings/;/articles/article16.html,記事→記事,よくある失敗パターン（兄弟姉妹間の情報共有）本文・FAQ Q3本文・関連記事欄に追加（2026-09-14週・内部リンク整備。siblings/article16との相互リンク化）
 /articles/article16.html,/parent-shukatsu/living-alone/,記事→記事,sec2（いきなりの返納リスク＝孤立リスクとの関連）本文・関連記事欄に追加（2026-09-14週・内部リンク整備。相互リンク化）
+/parent-shukatsu/jikka-katazuke/,/articles/article12.html;/articles/article05.html;/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/;/where-to-ask/;/parent-shukatsu/,記事→記事,本文・関連記事欄から相互導線（2026-10-05新規）
+/index.html;/parent-shukatsu/;/articles/article12.html,/parent-shukatsu/jikka-katazuke/,記事一覧/ハブ/関連記事→記事,新着導線として追加（2026-10-05）
