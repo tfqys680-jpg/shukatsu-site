@@ -46,6 +46,12 @@
 - `node tools/check-site.js`（HTML39件・内部リンク1220件）・`node tools/check-click-tracking.js`（affiliate 34・CTA 13・products 12）とも全通過を確認のうえマージコミットをプッシュ
 - 同時にPR #43・#44も同じmainコミットによりmergeable_state=dirtyへ変化していることを確認（いずれも運営者所有のPRのため、本セッションでは解消せず監視を継続）
 
+### 2026-10-06 追記: PR #45の2回目のマージコンフリクト解消
+
+- PR #45監視中に、運営者がPR #49（`codex/pre-need-grave-guide-2026-10-06`、生前墓の選び方記事`/column/pre-need-grave-guide/`の新規公開）をmainへマージ（main=`c2cd9e5`）したことを検出し、PR #45が再びmergeable_state=dirtyに変化
+- `origin/main`を`claude/seo-weekly-2026-09-28`へマージして解消。コンフリクトは`docs/seo/automation-state.json`の1箇所のみ（`last_run`/`last_new_article`/`last_major_update`/`last_monthly_review`のヘッダー値と、`completed_tasks`末尾の隣接追記）。mainのPR #49側は古いベース（article06/article11未反映のmain）から直接コミットされていたため`last_major_update`・`last_monthly_review`が2026-08-10時点の値に後退していた。解消方針: `last_major_update`・`last_monthly_review`は本ブランチ（2026-09-28時点の値）を優先して保持し、`last_new_article`・`last_run`はPR #49側のより新しい値（2026-10-06 /column/pre-need-grave-guide/）を採用。`completed_tasks`は両ブランチのエントリを日付順（2026-09-28→2026-10-06）で両方保持し、`pending_review_tasks`の配列自体は自動マージで両エントリとも保持されていることを確認。article14/index.html/sitemap.xml/各CSVは自動マージで解決、article06関連の変更内容に競合・欠落なし
+- `node tools/check-site.js`（HTML40件・内部リンク1256件）・`node tools/check-click-tracking.js`（public HTML 36・affiliate 34・CTA 13・products 12）とも全通過を確認のうえマージコミットをプッシュ
+
 ## 2026-09-14（週次・定期実行）
 
 - 実行日時: 2026-09-14 09:07 JST（Asia/Tokyo。無人の定期実行）
