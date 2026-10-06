@@ -122,3 +122,20 @@
   - 国民生活センター https://www.kokusen.go.jp/news/data/n-20260914_1.html ／ https://www.consumer.go.jp/pio?id=pio_top
   - 国民生活センター https://www.kokusen.go.jp/news/data/n-20260916_1.html
   - 国民生活センター https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen552.html
+
+## 2026-10-06 /column/pre-need-grave-guide/ 出典確認
+
+- 記事化のきっかけはLIMO「生前墓」記事（2026-09-28公開）。本文・構成・画像は転載せず、下記の調査原文と公的情報を確認して、契約前チェックリストを中心に独自作成した。
+  - https://limo.media/articles/-/140310
+- 生前準備への意識は、NEXER Groupとアンカレッジの樹木葬による民間インターネット調査（50歳以上350人、2026-07-01〜07-07）を使用。47.7%・73.7%は公的統計ではなく小規模な民間調査である旨を本文に併記。
+  - https://chofu.keizai.biz/release/617646/
+- 一般墓152.0万円・納骨堂81.5万円・樹木葬71.7万円は、鎌倉新書「第17回 お墓の消費者全国実態調査（2026年）」（2026-01-16〜01-30、購入者1,267人）を使用。平均値は地域・契約条件で変わる目安として表示。
+  - https://www.kamakura-net.co.jp/newstopics/12153/
+- 墓地・墓石など日常礼拝に使う物が原則として相続税の非課税財産である点は、国税庁タックスアンサーNo.4108で確認。投資目的・商品・骨董品として所有するものを除く旨も反映。
+  - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4108.htm
+- 相続税の基礎控除（3,000万円＋600万円×法定相続人の数）は国税庁No.4102で確認。「生前墓を買えば誰でも必ず節税」とする表現は不採用。
+  - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4102.htm
+- 生前購入したお墓の未払代金など非課税財産に関する債務は遺産総額から差し引けない点を国税庁No.4126で確認。
+  - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4126.htm
+- 墓石・墓地の購入費、墓地を借りる費用は葬式費用の控除に含まれない点を国税庁No.4129で確認。
+  - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4129.htm
