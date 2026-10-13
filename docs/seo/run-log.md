@@ -623,3 +623,19 @@
 - YMYL: 税理士レビュー未実施。一次情報と免責を明記し、個別判断は税理士・税務署へ誘導。YMYLレビュー待ちキューへ登録。
 - テスト: 実装後に `node tools/check-site.js`、`node tools/check-click-tracking.js`、`git diff --check`、JSON-LD構文、画像寸法を確認する。
 - 公開: リポジトリ方針に従い、デフォルトブランチへの直接コミット・直接マージは行わずPRで確認待ちとする。
+
+# 2026-10-13 臨時（運営者指示）: 住宅型有料老人ホームの登録制と入居前チェックリスト（下書き）
+
+- 判定: keyword-map・content-inventory・editorial-calendarに「有料老人ホーム」「住宅型」「高齢者住宅」の既存ページなし。介護の下書き `/column/parent-care-without-burnout/`（家族会議・費用・相談先）とは検索意図が異なる（本記事は入居先の制度と契約前確認）ため新規作成。
+- ブランチ: `claude/housing-type-nursing-home-registration-2026-10-13`
+- 新規ファイル: `drafts/housing-type-nursing-home-registration-checklist/index.html`（noindex・sitemap非掲載・公開日未定。datePublished/dateModifiedは公開日確定時に追加）
+- 内容: ニュースの事実（経過表・登録制の対象の方向・未確定事項）、一般的な解説（住宅型の仕組み）、編集部の提案（入居前10項目・家族の3ステップ・会話例）、相談先、チェックリスト、FAQ4件（FAQPage JSON-LDと一致）、CTA（questions）、出典6件。
+- SEO: canonical（公開予定URL）、OGP、Twitter Card、Article/BreadcrumbList/FAQPage JSON-LD。sitemapは下書きのため未追加（check-site.jsがdrafts混入を検出する仕様）。
+- 画像: 運営者指定の生成画像 `housing-type-senior-home-checklist-hero.png`（1672×941）がリポジトリに未配置。代替画像・仮画像は使わず、本文のimgは未挿入。og:image・Article imageは既存命名規則の予定パス `images/column-housing-type-nursing-home-registration-checklist.webp` を指す（公開前に画像配置が必須。手順はページ冒頭コメント）。
+- 内部リンク: 新記事から parent-shukatsu ハブ・living-alone・questions・siblings・cost・where-to-ask へ。被リンクは公開時に追加（下書きへのリンクを公開ページに置かないため）。
+- YMYL: 専門家レビュー未実施。ymyl-review-queueへ登録。法律・医療・税務の断定は追加していない。
+- テスト: `node tools/check-site.js`、`node tools/check-click-tracking.js`、`git diff --check`、PC/モバイル表示確認。
+- 公開: 画像配置と公開前レビューまで下書きのまま。mainへの直接コミット・マージは行わない。
+- 追記（同日）: 運営者がPRブランチへ生成画像（`ChatGPT 画像 2026年10月13日 11_57_34.png`、1672×941 PNG、約2.1MB）をアップロード。指示に従い `images/housing-type-senior-home-checklist-hero.png` へリネームし、既存方式（Pillow・中央フィット・WebP品質82）で `images/column-housing-type-nursing-home-registration-checklist.webp`（1200×675、約77KB）を生成。AVIF・`<picture>` は既存記事で未使用のため作成しない。変換前後を目視確認（文字・ロゴ・個人情報なし、alt と内容が一致）。本文 h1 直後に `width`/`height`/`fetchpriority="high"`（遅延読み込みなし）で挿入。og:image・Article image も同ファイルを指す。
+- 追記（同日）: 運営者指示により元PNG `images/housing-type-senior-home-checklist-hero.png`（約2.1MB）をリポジトリから削除。本文・OGP・構造化データはWebPのみを参照しており影響なし。既存記事と同じく元画像は置かない運用に揃えた。
+- 追記（同日）: 運営者が生成画像の新しい版（`ChatGPT 画像 2026年10月13日 12_42_22.png`、1672×941）をアップロード。前版との差は細部の質感のみで構図・人物・alt対象は同一。最新版として同じ方式でWebP（1200×675、約78KB）を再生成し目視確認。元PNGは運営者指示に従いリポジトリから削除。
