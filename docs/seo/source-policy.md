@@ -139,3 +139,19 @@
   - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4126.htm
 - 墓石・墓地の購入費、墓地を借りる費用は葬式費用の控除に含まれない点を国税庁No.4129で確認。
   - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4129.htm
+
+## 2026-10-13 /drafts/housing-type-nursing-home-registration-checklist/ 出典確認
+
+- 運営者指示による臨時の新規記事。記事案・チェックリスト・FAQ・出典の提供がチャット上で確認できなかったため、運営者の「おすすめで進めて」の指示に基づき、厚生労働省の公表資料で確認できた事実のみで本文を作成した。
+- mhlw.go.jp・guardianship.mhlw.go.jp への直接取得はこの実行環境のネットワーク方針でブロック（CONNECT 403）されたため、mhlw.go.jp に限定した複数の検索クエリで、公式ページ・PDFのタイトルと内容の一致を確認する方法で行った。**公開前に運営者が原文で確認すること**。
+- 検討会の開始（第1回 2025-04-14）・とりまとめ公表（2025-11-05）
+  - 厚生労働省「老健局が実施する検討会等」 https://www.mhlw.go.jp/stf/shingi/indexshingiother_129151.html
+  - とりまとめPDF https://www.mhlw.go.jp/content/12300000/001592426.pdf
+- 法律案の閣議決定（2026-04-03）
+  - 法律案の概要PDF https://www.mhlw.go.jp/content/001685800.pdf ／成年後見制度利用促進ポータル（厚労省）の告知 https://guardianship.mhlw.go.jp/news/notice20260508/
+- 改正法（令和8年法律第51号）の公布（2026-06-25）
+  - 公布通知PDF https://www.mhlw.go.jp/content/001715727.pdf ／法律の概要PDF https://www.mhlw.go.jp/content/001717214.pdf ／介護保険最新情報Vol.1518 https://www.mhlw.go.jp/content/001715668.pdf
+- 登録制の対象を「中重度の要介護者や医療的ケアを要する者等を入居対象とするホーム」とする方向、第9回検討会（2026-09-18）で「登録制の施行に向けた対応」を議論
+  - 第9回資料ページ https://www.mhlw.go.jp/stf/newpage_76302.html ／資料「登録制の施行に向けた対応について（まとめ）」 https://www.mhlw.go.jp/content/12300000/001758070.pdf
+- 不採用（未確定または検索経由で十分に裏取りできないため本文に書かない）: 登録の更新期間、居室面積など検討会で示された基準案の数値、施行日、登録施設介護支援の利用者負担、紹介事業者の認定制度の開始時期。
+- 住宅型有料老人ホームの一般的な説明（介護が必要になった場合は入居者が選んだ外部の介護サービスを利用する形が一般的）は「一般に」の限定付きで記載し、ホームごとに異なる旨を併記。

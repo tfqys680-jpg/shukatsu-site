@@ -71,3 +71,4 @@
 /,/column/pre-need-grave-guide/,トップ→記事,新着記事+全記事一覧
 /articles/article14.html,/column/pre-need-grave-guide/,記事→記事,関連記事欄（生前に供養先を選ぶ人向け）
 /column/pre-need-grave-guide/,/articles/article14.html;/cost/;/articles/article13.html;/articles/article05.html;/parent-shukatsu/questions/;/where-to-ask/,記事→記事/柱,既存墓の選択肢・費用全体・葬儀準備・会話例・親への質問・相談先
+/column/housing-type-nursing-home-registration-checklist/,/parent-shukatsu/;/parent-shukatsu/living-alone/;/parent-shukatsu/questions/;/parent-shukatsu/siblings/;/cost/;/where-to-ask/,記事→ハブ/柱/記事,本文の深掘りリンク（siblings・cost・where-to-ask）・CTA（questions）・関連記事欄。現在はdrafts/で下書き（公開時にトップ新着・全記事一覧・親の終活ハブ・where-to-askから被リンクを追加）
