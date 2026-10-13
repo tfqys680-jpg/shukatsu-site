@@ -636,3 +636,4 @@
 - YMYL: 専門家レビュー未実施。ymyl-review-queueへ登録。法律・医療・税務の断定は追加していない。
 - テスト: `node tools/check-site.js`、`node tools/check-click-tracking.js`、`git diff --check`、PC/モバイル表示確認。
 - 公開: 画像配置と公開前レビューまで下書きのまま。mainへの直接コミット・マージは行わない。
+- 追記（同日）: 運営者がPRブランチへ生成画像（`ChatGPT 画像 2026年10月13日 11_57_34.png`、1672×941 PNG、約2.1MB）をアップロード。指示に従い `images/housing-type-senior-home-checklist-hero.png` へリネームし、既存方式（Pillow・中央フィット・WebP品質82）で `images/column-housing-type-nursing-home-registration-checklist.webp`（1200×675、約77KB）を生成。AVIF・`<picture>` は既存記事で未使用のため作成しない。変換前後を目視確認（文字・ロゴ・個人情報なし、alt と内容が一致）。本文 h1 直後に `width`/`height`/`fetchpriority="high"`（遅延読み込みなし）で挿入。og:image・Article image も同ファイルを指す。
