@@ -638,3 +638,4 @@
 - 公開: 画像配置と公開前レビューまで下書きのまま。mainへの直接コミット・マージは行わない。
 - 追記（同日）: 運営者がPRブランチへ生成画像（`ChatGPT 画像 2026年10月13日 11_57_34.png`、1672×941 PNG、約2.1MB）をアップロード。指示に従い `images/housing-type-senior-home-checklist-hero.png` へリネームし、既存方式（Pillow・中央フィット・WebP品質82）で `images/column-housing-type-nursing-home-registration-checklist.webp`（1200×675、約77KB）を生成。AVIF・`<picture>` は既存記事で未使用のため作成しない。変換前後を目視確認（文字・ロゴ・個人情報なし、alt と内容が一致）。本文 h1 直後に `width`/`height`/`fetchpriority="high"`（遅延読み込みなし）で挿入。og:image・Article image も同ファイルを指す。
 - 追記（同日）: 運営者指示により元PNG `images/housing-type-senior-home-checklist-hero.png`（約2.1MB）をリポジトリから削除。本文・OGP・構造化データはWebPのみを参照しており影響なし。既存記事と同じく元画像は置かない運用に揃えた。
+- 追記（同日）: 運営者が生成画像の新しい版（`ChatGPT 画像 2026年10月13日 12_42_22.png`、1672×941）をアップロード。前版との差は細部の質感のみで構図・人物・alt対象は同一。最新版として同じ方式でWebP（1200×675、約78KB）を再生成し目視確認。元PNGは運営者指示に従いリポジトリから削除。
