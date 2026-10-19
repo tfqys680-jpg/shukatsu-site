@@ -609,6 +609,20 @@
 - `/cost/`初公開日2026-09-14、`/where-to-ask/`公開日・最終実質更新日2026-09-06を保持。現行台帳から古い孤立ページ注記を削除し、トップ・ハブ・費用記事の内部リンクを保持。
 - #41と#42の実行履歴を両方保持し、最新の新規記事は`/cost/`。相談先の公式情報確認済みと専門家レビュー未実施を分けて記録。
 - #42のリンク追加対象5ページのdateModified・sitemap lastmod・最終実質更新日は維持（ハブは#41のケースカード追加日2026-09-14を維持）。
+# 2026-10-06 臨時（運営者指示）: 生前墓の独自記事とアイキャッチ
+
+- 判定: 運営者指定のLIMO記事は、制度改正ニュースではなく、生前に供養先を選ぶ傾向を示す民間調査記事。既存 article14（墓じまい・供養先の選択肢）とは検索意図を分け、「生前墓を契約する前の比較・税務の誤解防止」に限定した新規記事として作成。
+- ブランチ: `codex/pre-need-grave-guide-2026-10-06`
+- 変更URL: `/column/pre-need-grave-guide/`
+- 新規ファイル: `column/pre-need-grave-guide/index.html`、`images/column-pre-need-grave-guide.webp`
+- 内容: 一般墓・納骨堂・樹木葬の2026年平均購入金額、相続税非課税の条件と誤解、未払代金の債務控除不可、契約前7項目、家族会話例、チェックリスト、FAQ3件、CTA、出典。
+- 画像: 画像生成機能で作成したオリジナル写真調画像を1200×675 WebP（約51KB）に最適化。文字・ロゴ・墓石・個人情報なし。本文・OGP・Article構造化データで使用。
+- 内部リンク: トップ新着・全記事一覧、article14から新記事へ。新記事からarticle14、cost、article13、article05、questions、where-to-askへ。
+- SEO: canonical、Article/BreadcrumbList/FAQPage JSON-LD、OGP、width/height、alt、sitemapを追加。管理ファイル（inventory/keyword/internal-link/editorial/source/YMYL）を同期。
+- 出典: 国税庁No.4108/4102/4126/4129、鎌倉新書2026年調査、NEXER Group民間調査を2026-10-06確認。LIMOは記事化のきっかけとしてのみ明記。
+- YMYL: 税理士レビュー未実施。一次情報と免責を明記し、個別判断は税理士・税務署へ誘導。YMYLレビュー待ちキューへ登録。
+- テスト: 実装後に `node tools/check-site.js`、`node tools/check-click-tracking.js`、`git diff --check`、JSON-LD構文、画像寸法を確認する。
+- 公開: リポジトリ方針に従い、デフォルトブランチへの直接コミット・直接マージは行わずPRで確認待ちとする。
 
 
 ## 2026-10-05（週次・実家の片付け新規記事 / Draft PR）
@@ -627,3 +641,14 @@
 - YMYLレビュー待ち: 新規なし（低YMYL）。
 - 阻害要因: 未マージPR(#43/#44/#45/#47)との軽微なコンフリクト可能性。
 - 次回予定: 2026-11前半「帰省前確認シートを30項目記事へ追加」。article11の隔週大幅更新は#44のマージ状況を確認。
+
+## 2026-10-19 PR #48 最新mainとの競合解消
+
+- 対象PR: https://github.com/tfqys680-jpg/shukatsu-site/pull/48 。PR head `48d8195` にmain `c2cd9e5`を統合。
+- 競合3件（automation-state/internal-link-map/run-log）は双方の履歴・リンクを保持して解消。生前墓記事・画像・article14/トップ導線・既存34件のsitemap/lastmodを保持。
+- 実家の片付け記事の本文は初稿と同一。トップ・ハブ・article12からの導線を保持。リンク台帳のリンク元を3行に分け、相談先article10の記録漏れを補完。
+- 未公開状態・初稿の日付仮値・会話例/認知症/溜め込み/不動産案内の公開前判断を台帳とYMYLレビュー待ちへ記録。公開済みの生前墓記事をlast_new_articleに保持。未実施の専門家確認を完了扱いにしない。
+- 他オープンPRとの競合をローカル3-way統合で確認。#45/#50/#51/#52はGitHub差分からテキストツリーを再構成（#51の新規画像は対象外）。推奨順と各PRの前提は `pr48-integration-review.md` 。順序のみでは競合は消えず、各段階で再統合する。
+- 検証: `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS（公開パスHTML37・affiliate34・CTA13・商品12）、`git diff --check` PASS。追加監査でCSV列数/重複、新記事登録/日付、全main HTMLと既存リンク・台帳行・履歴の保持を確認。
+- 実表示/印刷は未検証（Playwright用Chromium実行ファイルなし）。これは表示合格やGitHub CI成功の記録ではない。
+- mainへのマージ・公開は未実施。公開前に根拠・内容レビュー・初公開日を判断して同期する。
