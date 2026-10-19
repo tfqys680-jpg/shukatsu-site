@@ -72,3 +72,7 @@
 /,/column/pre-need-grave-guide/,トップ→記事,新着記事+全記事一覧
 /articles/article14.html,/column/pre-need-grave-guide/,記事→記事,関連記事欄（生前に供養先を選ぶ人向け）
 /column/pre-need-grave-guide/,/articles/article14.html;/cost/;/articles/article13.html;/articles/article05.html;/parent-shukatsu/questions/;/where-to-ask/,記事→記事/柱,既存墓の選択肢・費用全体・葬儀準備・会話例・親への質問・相談先
+/parent-shukatsu/jikka-katazuke/,/articles/article12.html;/articles/article05.html;/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/;/where-to-ask/;/articles/article10.html;/parent-shukatsu/,記事→記事,本文・関連記事欄・相談先への導線（2026-10-05初稿。相互リンクはhub/article12のみ）
+/,/parent-shukatsu/jikka-katazuke/,トップ→記事,新着記事+全記事一覧（PR #48・2026-10-19公開承認）
+/parent-shukatsu/,/parent-shukatsu/jikka-katazuke/,ハブ→記事,記事一覧（PR #48・2026-10-19公開承認）
+/articles/article12.html,/parent-shukatsu/jikka-katazuke/,記事→記事,関連記事（PR #48・2026-10-19公開承認）
