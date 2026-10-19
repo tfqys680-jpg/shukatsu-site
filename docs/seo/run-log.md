@@ -713,3 +713,13 @@
 - 印刷時の表の折返しCSSを既存の実装パターンに沿って追加。実表示・印刷はこの記録時点で未検証。
 - `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
 - GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。
+
+### 2026-10-19 追記: PR #45の3回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、運営者がPR #48（実家の片付け記事 /parent-shukatsu/jikka-katazuke/、生前墓記事との統合・公開承認）をマージ済み（main = `71e9b73`）だったため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/editorial-calendar.csv`: article06行（本ブランチの完了記録）とjikka-katazuke行（main側でPR #48マージにより完了・URL確定）が隣接行で競合。両方の完了情報を保持する形で解消（article06=本ブランチの記述、jikka-katazuke=mainの記述をそのまま採用）。
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article/last_monthly_review）はmain側の新しい値（2026-10-19公開承認・2026-10-05月次レビュー）を採用し、last_major_updateは本ブランチの値（2026-09-28 article06、PR #45未マージのため一時的にmain側の表記が古いarticle05に戻っている旨を注記）を維持。completed_tasksの末尾は、本ブランチの2026-09-28記録・2026-10-06ドリフト確認記録を保持したうえで、main側が別途記録していたjikka-katazuke公開準備・PR #48競合解消・PR #48公開前整備の3件を時系列順に追加し、重複する2026-10-06のpre-need-grave-guide記録はmain側の簡略版を省略（本ブランチ側がPR45マージ経緯を含めた詳細版のため）。
+- 新規ファイル（PR #48分、/parent-shukatsu/jikka-katazuke/の本文・画像・docs/seo/pr48-integration-review.md等）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 41、internal links checked: 1304）、`node tools/check-click-tracking.js` → PASSED（public HTML: 37、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
