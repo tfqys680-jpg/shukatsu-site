@@ -652,3 +652,12 @@
 - 検証: `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS（公開パスHTML37・affiliate34・CTA13・商品12）、`git diff --check` PASS。追加監査でCSV列数/重複、新記事登録/日付、全main HTMLと既存リンク・台帳行・履歴の保持を確認。
 - 実表示/印刷は未検証（Playwright用Chromium実行ファイルなし）。これは表示合格やGitHub CI成功の記録ではない。
 - mainへのマージ・公開は未実施。公開前に根拠・内容レビュー・初公開日を判断して同期する。
+
+## 2026-10-19 PR #48 公開承認と公開前整備
+
+- 運営者の「マージ、本番公開してください」を受領。対象はPR #48。
+- 公開日・実質更新日を2026-10-19に確定し、記事表示・Article・content-inventory・keyword-map・sitemapを同期。トップ新着は片付け記事→生前墓→費用記事の3件。相談先記事の全記事一覧・ハブ導線は保持。
+- 厚生労働省の認知症相談先/意思決定支援紹介と国民生活センターの不用品回収注意の原文を確認し、本文の参考情報とsource-policyへ記録。一般的な提案と出典の範囲を分け、専門家レビュー未実施を本文にも明記。許可・回収方法は自治体で確認する案内を追加。
+- 印刷時の表の折返しCSSを既存の実装パターンに沿って追加。実表示・印刷はこの記録時点で未検証。
+- `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
+- GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。

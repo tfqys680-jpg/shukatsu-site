@@ -139,3 +139,14 @@
   - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4126.htm
 - 墓石・墓地の購入費、墓地を借りる費用は葬式費用の控除に含まれない点を国税庁No.4129で確認。
   - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4129.htm
+
+
+## 2026-10-19 PR #48 公開前の一次情報照合
+
+| 対象 | 確認した範囲 | 原文 | 確認日 |
+|---|---|---|---|
+| /parent-shukatsu/jikka-katazuke/ | 認知症が疑われる際の地域包括支援センター・医療機関等への相談案内。診断や治療助言は追加しない | https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000076236_00003.html | 2026-10-19 |
+| 同上 | 本人の意思に基づく生活を支える意思決定支援。ガイドラインの紹介ページを確認し、PDF全体の専門家レビューとは区別 | https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000076236_00006.html | 2026-10-19 |
+| 同上 | 家庭の不用品回収は自治体の案内・許可業者を確認し、複数社の作業内容・追加料金等を比較。個別契約の有効性・クーリングオフの判断は扱わない | https://www.kokusen.go.jp/news/data/n-20221102_1.html | 2026-10-19 |
+
+上記は原文の事実確認。医療/法務等の専門家による監修・レビューは未実施。運営者のマージ・本番公開の明示承認を受け、一般的な片付け・会話例と相談先案内の範囲で公開する。
