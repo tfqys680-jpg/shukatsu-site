@@ -639,3 +639,40 @@
 - 追記（同日）: 運営者がPRブランチへ生成画像（`ChatGPT 画像 2026年10月13日 11_57_34.png`、1672×941 PNG、約2.1MB）をアップロード。指示に従い `images/housing-type-senior-home-checklist-hero.png` へリネームし、既存方式（Pillow・中央フィット・WebP品質82）で `images/column-housing-type-nursing-home-registration-checklist.webp`（1200×675、約77KB）を生成。AVIF・`<picture>` は既存記事で未使用のため作成しない。変換前後を目視確認（文字・ロゴ・個人情報なし、alt と内容が一致）。本文 h1 直後に `width`/`height`/`fetchpriority="high"`（遅延読み込みなし）で挿入。og:image・Article image も同ファイルを指す。
 - 追記（同日）: 運営者指示により元PNG `images/housing-type-senior-home-checklist-hero.png`（約2.1MB）をリポジトリから削除。本文・OGP・構造化データはWebPのみを参照しており影響なし。既存記事と同じく元画像は置かない運用に揃えた。
 - 追記（同日）: 運営者が生成画像の新しい版（`ChatGPT 画像 2026年10月13日 12_42_22.png`、1672×941）をアップロード。前版との差は細部の質感のみで構図・人物・alt対象は同一。最新版として同じ方式でWebP（1200×675、約78KB）を再生成し目視確認。元PNGは運営者指示に従いリポジトリから削除。
+
+## 2026-10-05（週次・実家の片付け新規記事 / Draft PR）
+
+- 実行日時: 2026-10-05 09:06 JST／ブランチ: claude/seo-weekly-2026-10-05（main 135dd21起点）
+- 事前確認: オープンPR #43（身元保証下書き）・#44（article11大幅更新）・#45（article06デジタル終活）・#47（living-alone 4点統一）を確認。いずれも本タスク（実家の片付け）と対象が異なり重複なし。#45が扱う編集カレンダー2026-09-28週のarticle06は処理せず、そちらに委ねる。
+- 処理したタスク: 編集カレンダー2026-10前半「実家の片付けを親と喧嘩せず進める手順」を新規作成。
+- 作成ファイル: parent-shukatsu/jikka-katazuke/index.html
+- 変更: sitemap.xml、index.html・parent-shukatsu/index.html（新着導線）、articles/article12.html（関連記事）、docs/seo管理ファイル一式
+- 検索意図: 「実家 片付け 親 嫌がる／喧嘩」。article12（生前整理の方法・部屋別リスト）とは分離し、親との進め方・NG行動・会話例に特化。
+- 事実面: 新規の法制度・統計・価格・固有名詞は追加せず。会話例は一般的な例で実在の相談事例ではない。専門家監修の表示なし。
+- 月次レビュー（10月）: title・meta description重複なし（機械確認）。Search Consoleデータ（docs/seo/sc-data/）未配置のためSC分析はデータ不足として未実施。
+- 四半期（10月）エンディングノート比較記事の商品確認: 未実施（阻害要因: 外部サイト確認が必要）。12月前半の更新タスクと合わせて実施予定。
+- 季節確認: 6〜10週後（11月中旬〜12月中旬）は年末年始の帰省需要。既存の「11前半 帰省前確認シート」タスクで対応予定。薄い季節記事は作らない。
+- テスト結果: node tools/check-site.js → ALL CHECKS PASSED（HTML 40、内部リンク1252）／node tools/check-click-tracking.js → PASSED／git diff --check → PASS。実ブラウザでの表示確認は未実施。
+- YMYLレビュー待ち: 新規なし（低YMYL）。
+- 阻害要因: 未マージPR(#43/#44/#45/#47)との軽微なコンフリクト可能性。
+- 次回予定: 2026-11前半「帰省前確認シートを30項目記事へ追加」。article11の隔週大幅更新は#44のマージ状況を確認。
+
+## 2026-10-19 PR #48 最新mainとの競合解消
+
+- 対象PR: https://github.com/tfqys680-jpg/shukatsu-site/pull/48 。PR head `48d8195` にmain `c2cd9e5`を統合。
+- 競合3件（automation-state/internal-link-map/run-log）は双方の履歴・リンクを保持して解消。生前墓記事・画像・article14/トップ導線・既存34件のsitemap/lastmodを保持。
+- 実家の片付け記事の本文は初稿と同一。トップ・ハブ・article12からの導線を保持。リンク台帳のリンク元を3行に分け、相談先article10の記録漏れを補完。
+- 未公開状態・初稿の日付仮値・会話例/認知症/溜め込み/不動産案内の公開前判断を台帳とYMYLレビュー待ちへ記録。公開済みの生前墓記事をlast_new_articleに保持。未実施の専門家確認を完了扱いにしない。
+- 他オープンPRとの競合をローカル3-way統合で確認。#45/#50/#51/#52はGitHub差分からテキストツリーを再構成（#51の新規画像は対象外）。推奨順と各PRの前提は `pr48-integration-review.md` 。順序のみでは競合は消えず、各段階で再統合する。
+- 検証: `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS（公開パスHTML37・affiliate34・CTA13・商品12）、`git diff --check` PASS。追加監査でCSV列数/重複、新記事登録/日付、全main HTMLと既存リンク・台帳行・履歴の保持を確認。
+- 実表示/印刷は未検証（Playwright用Chromium実行ファイルなし）。これは表示合格やGitHub CI成功の記録ではない。
+- mainへのマージ・公開は未実施。公開前に根拠・内容レビュー・初公開日を判断して同期する。
+
+## 2026-10-19 PR #48 公開承認と公開前整備
+
+- 運営者の「マージ、本番公開してください」を受領。対象はPR #48。
+- 公開日・実質更新日を2026-10-19に確定し、記事表示・Article・content-inventory・keyword-map・sitemapを同期。トップ新着は片付け記事→生前墓→費用記事の3件。相談先記事の全記事一覧・ハブ導線は保持。
+- 厚生労働省の認知症相談先/意思決定支援紹介と国民生活センターの不用品回収注意の原文を確認し、本文の参考情報とsource-policyへ記録。一般的な提案と出典の範囲を分け、専門家レビュー未実施を本文にも明記。許可・回収方法は自治体で確認する案内を追加。
+- 印刷時の表の折返しCSSを既存の実装パターンに沿って追加。実表示・印刷はこの記録時点で未検証。
+- `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
+- GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。
