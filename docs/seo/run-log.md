@@ -676,3 +676,12 @@
 - 印刷時の表の折返しCSSを既存の実装パターンに沿って追加。実表示・印刷はこの記録時点で未検証。
 - `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
 - GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。
+
+# 2026-10-22 臨時（運営者指示）: PR #51 住宅型有料老人ホーム記事の公開準備
+
+- 指示: 運営者「おすすめで進めてください」。PR #48公開時の前例に合わせ、公開できる状態まで整備。マージ（本番配信）は運営者の明示承認を得てから行う。
+- 最新main（PR #48: 実家の片付け記事）をPRブランチへマージ。content-inventory・internal-link-map・keyword-map・source-policy・run-logの追記競合は両方の行を残して解消。
+- 内容更新: 第10回検討会（2026-10-09）資料の施行予定（2027年12月）と既存ホームの経過措置（1年間）を、経過表・結論・未確定事項の注記・FAQ Q2・まとめへ「予定」として反映。出典を検討会トップ・第10回・第9回の各ページに整理。
+- 公開準備: drafts/housing-type-nursing-home-registration-checklist/ → column/ へ移動、noindexと下書きコメントを削除、Article JSON-LDにdatePublished/dateModified=2026-10-22（公開予定日）を追加、表示日付を同期、sitemapへ追加。マージ日が10/22から変わる場合は、表示・Article・台帳・sitemap・トップ新着の日付を実日付へ同期してからマージする。
+- 導線: トップ新着（先頭に追加し最古のcost/を外す）・全記事一覧、親の終活ハブ記事一覧、where-to-ask・living-aloneの関連記事欄。リンク追加のみのため各ページのdateModified・lastmodは据え置き。
+- YMYL: 専門家レビュー未実施・将来推奨（ymyl-review-queue・automation-stateに記録）。
