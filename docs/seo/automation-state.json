@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Tokyo",
-  "last_run": "2026-10-19（PR #48の公開承認に伴う公開前整備・検証）",
-  "last_new_article": "2026-10-19 /parent-shukatsu/jikka-katazuke/（運営者がPR #48のマージ・本番公開を明示承認。main統合により配信）",
+  "last_run": "2026-10-22（PR #51の公開: 最新main（PR #53）統合・検証・squash merge）",
+  "last_new_article": "2026-10-22 /column/housing-type-nursing-home-registration-checklist/（運営者がPR #51のマージ・本番公開を明示承認。main統合により配信）",
   "last_major_update": "2026-08-10 /articles/article05.html（編集カレンダー2026-08-10〜14週タスク。親への切り出し方を拒否・NG例まで拡張）",
   "last_monthly_review": "2026-10-05（10月分を機械チェックのみ実施: title/meta description重複なし・新規孤立ページなし。Search Consoleデータ未配置のためSC分析はデータ不足として未実施）",
   "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
@@ -33,7 +33,9 @@
     "2026-10-05 新規記事 /parent-shukatsu/jikka-katazuke/ 公開準備（Draft PR）+ トップ・親の終活ハブ・article12からの導線 + sitemap + 管理ファイル更新",
     "2026-10-19 PR #48競合解消: main c2cd9e5の生前墓記事・内部リンク・台帳・履歴を保持し、実家の片付け記事を統合。公開可否は未決定、マージ・公開は未実施。",
     "2026-10-19 PR #48公開前整備: 運営者の「マージ、本番公開してください」を受け、公開日・Article・台帳・sitemapを10/19へ同期。公的一次情報3件と確認日を本文・出典台帳へ追加し、トップ新着を公開順の3件へ更新。専門家レビュー未実施と実表示/印刷未検証は保持。",
-    "2026-10-22 臨時（運営者指示）: 運営者提供原稿から人生会議（ACP）記事を drafts/advance-care-planning-family-checklist/ に noindex 下書き作成（公開予定 /column/advance-care-planning-family-checklist/）。編集確認表は docs/seo/acp-draft-review.md、出典は source-policy.md へ記録。公開は医療職レビュー完了後。"
+    "2026-10-22 臨時（運営者指示）: 運営者提供原稿から人生会議（ACP）記事を drafts/advance-care-planning-family-checklist/ に noindex 下書き作成（公開予定 /column/advance-care-planning-family-checklist/）。編集確認表は docs/seo/acp-draft-review.md、出典は source-policy.md へ記録。公開は医療職レビュー完了後。",
+    "2026-10-22 PR #51公開準備: 最新main（PR #48）を統合し台帳競合を和集合で解消。第10回検討会（2026-10-09）資料の施行予定2027年12月・経過措置1年を「予定」として本文・FAQ・出典へ反映。drafts/からcolumn/へ移しnoindexを削除、公開予定日2026-10-22で表示・Article・台帳・sitemapを同期。トップ新着（最古のcost/を外す）・全記事一覧・親の終活ハブ・where-to-ask・living-aloneから導線追加（リンク追加のみのため各ページの更新日は据え置き）。マージ・公開は運営者の明示承認待ち。",
+    "2026-10-22 PR #51公開: 運営者の「マージして公開してください」を受け、最新main（PR #53: ACP下書き）を統合し台帳競合を和集合で解消。公開日2026-10-22は承認当日のため変更なし。台帳の状態を「公開」へ更新し、検証後にsquash mergeで配信。専門家レビューは未実施・将来推奨のまま。"
   ],
   "pending_review_tasks": [
     "article18のデジタル遺産の相続記述（NISA死亡時の扱い・暗号資産の課税・遺族の初動）の税理士または司法書士による内容レビュー（未実施）",
@@ -44,12 +46,13 @@
     "/where-to-ask/（終活の相談先比較）の専門家レビューは未実施・将来推奨。公式窓口案内は2026-09-06確認済み（PR #40）。一次情報確認と専門家レビューを区別する。",
     "/column/pre-need-grave-guide/の税務記述（墓地・墓石の非課税、基礎控除、未払代金の債務控除不可、墓地・墓石購入費は葬式費用控除外）の税理士レビュー（未実施）。国税庁一次情報は2026-10-06確認済み。",
     "/parent-shukatsu/jikka-katazuke/（PR #48）: 専門家レビューは未実施・将来推奨。2026-10-19に一次情報の原文照合・本文出典追加と運営者の公開承認を記録。診断・契約・処分権限の判断は行わない。",
-    "/drafts/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビュー（必須・未実施）。法律部分（医療同意書・遺言書・任意後見契約の比較表）は司法書士/弁護士推奨。確認箇所は docs/seo/acp-draft-review.md。公開まで noindex 下書き。"
+    "/drafts/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビュー（必須・未実施）。法律部分（医療同意書・遺言書・任意後見契約の比較表）は司法書士/弁護士推奨。確認箇所は docs/seo/acp-draft-review.md。公開まで noindex 下書き。",
+    "/column/housing-type-nursing-home-registration-checklist/（PR #51）: 契約・前払金・退去条件・医療的ケアに触れる箇所の弁護士・介護実務者レビューは未実施・将来推奨。厚労省資料は2026-10-22に検索経由で確認（直接取得はこの環境でブロック）。政令・省令の公布時に施行日・対象範囲を再確認する。"
   ],
   "blocked_tasks": [
     "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
     "著者実名・経歴の掲載（運営者の意向確認が必要）",
     "2026-10 四半期エンディングノート比較記事(article08)の商品確認: 販売状況・価格の確認には外部サイト参照が必要で今回未実施。編集カレンダー2026-12前半の2027年版更新と合わせて実施予定",
-    "未マージPR #43/#44/#45/#47/#50/#51/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。"
+    "未マージPR #43/#44/#45/#47/#50/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。"
   ]
 }
