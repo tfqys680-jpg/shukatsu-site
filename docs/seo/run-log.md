@@ -709,3 +709,10 @@
 - 指摘（P2）: 比較表の「医療同意書」行が出典（がん情報サービス「手術（外科治療） もっと詳しく」）の範囲を超えて、個別の医療行為一般・同意書への署名まで一般化している。台帳にも「署名する」と記録されている。
 - 対応: この環境から ganjoho.jp へ接続できず原文は未照合。指摘が正しくても誤りでも成り立つよう、表の行を「医療同意書（手術の同意書など）」「手術などについて、説明を受けて理解・納得したうえで同意したことを確認する」へ限定し、手術以外は医療機関へ確認する一文を追加。参考資料の説明、source-policy・acp-draft-review の台帳も同じ範囲に修正し、署名の記述の有無は運営者の原文再確認待ちと記録。
 - 下書き（noindex）のまま。公開状態の変更なし。
+
+## 2026-10-22 ACP記事の公開（運営者指示）
+
+- 運営者が「医療職レビュー済み、公開して」と指示。drafts/advance-care-planning-family-checklist/ を column/advance-care-planning-family-checklist/ へ移動し、noindexと下書きコメントを削除。公開日・最終更新日・参考情報確認日を2026-10-22に設定（Article JSON-LD・article-meta・この記事について）。
+- 導線: トップ新着（先頭に追加し最古の生前墓記事を外す）・全記事一覧・親の終活ハブ記事一覧。sitemap追加。
+- 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / acp-draft-review / automation-state を更新。
+- 公開直前確認: 2027年度介護報酬改定は基本的な視点（案）の段階で未決定（検索で確認）。本文の記述と矛盾なし。
