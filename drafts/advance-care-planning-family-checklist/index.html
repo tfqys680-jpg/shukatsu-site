@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<!-- 下書き（公開待ち）運用中。ACP/延命治療は docs/seo/ymyl-review-queue.md で「医療職レビュー完了まで公開しない」対象。公開時の手順:
+  (1) 医療職によるレビュー（docs/seo/acp-draft-review.md の人手確認一覧）を完了し、記録する
+  (2) このディレクトリを drafts/ から column/advance-care-planning-family-checklist/ へ移動する（相対パスは同じ階層数のため変更不要）
+  (3) 上の noindex メタとこのコメントを削除する
+  (4) 公開日を確定し、下の Article JSON-LD に "datePublished" / "dateModified" を追加、本文の article-meta と「この記事について」の日付を更新する
+  (5) 2027年度介護報酬改定の議論が進んでいないか、公開直前に厚生労働省の資料を再確認する
+  (6) sitemap.xml へ https://shukatsu-guide.jp/column/advance-care-planning-family-checklist/ を追記する
+  (7) index.html の新着記事・全記事一覧、parent-shukatsu/index.html へ追加する
+  (8) docs/seo の content-inventory / keyword-map / editorial-calendar / internal-link-map / ymyl-review-queue の状態を「公開」へ更新する
+  (9) node tools/check-site.js を通す -->
+<link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16">
+<link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../../images/favicon.png">
+<link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7NS8ZH6WL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M7NS8ZH6WL');
+</script>
+<title>人生会議（ACP）は何を話す？家族で共有したい7つのこと｜はじめての終活ガイド</title>
+<meta name="description" content="人生会議（ACP）で家族と共有したい価値観、医療・介護の希望、代理で意思を伝える人、記録・見直し方法を公的資料に基づいて解説します。">
+<link rel="canonical" href="https://shukatsu-guide.jp/column/advance-care-planning-family-checklist/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人生会議（ACP）は何を話す？家族で共有したい7つのこと">
+<meta property="og:description" content="人生会議（ACP）で家族と共有したい価値観、医療・介護の希望、代理で意思を伝える人、記録・見直し方法を公的資料に基づいて解説します。">
+<meta property="og:url" content="https://shukatsu-guide.jp/column/advance-care-planning-family-checklist/">
+<meta property="og:site_name" content="はじめての終活ガイド">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "人生会議（ACP）は何を話す？家族で共有したい7つのこと",
+  "description": "人生会議（ACP）で家族と共有したい価値観、医療・介護の希望、代理で意思を伝える人、記録・見直し方法を公的資料に基づいて解説します。",
+  "author": { "@type": "Person", "name": "はじめての終活ガイド運営者", "jobTitle": "終活カウンセラー1級" },
+  "publisher": { "@type": "Organization", "name": "はじめての終活ガイド" },
+  "mainEntityOfPage": "https://shukatsu-guide.jp/column/advance-care-planning-family-checklist/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://shukatsu-guide.jp/" },
+    { "@type": "ListItem", "position": 2, "name": "人生会議（ACP）は何を話す？", "item": "https://shukatsu-guide.jp/column/advance-care-planning-family-checklist/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "人生会議は、一度ですべて決める必要がありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "一度ですべて決める必要はありません。本人が話せることから共有し、気持ちや状況が変わったら、繰り返し話し合って見直せます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "話し合う相手は家族だけですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "家族に限らず、本人が信頼する友人などとも話せます。医療・介護の希望は、主治医や医療・ケアチームとも共有しましょう。" }
+    },
+    {
+      "@type": "Question",
+      "name": "ACPのメモは医療同意書の代わりになりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ACPのメモと医療同意書は目的が異なります。メモだけで個別の医療行為への同意が済むとは考えず、主治医・医療機関に確認してください。" }
+    }
+  ]
+}
+</script>
+<style>
+/* 本記事専用（7項目カード・チェックリスト・出典リスト） */
+.topic-list { counter-reset: tp; list-style: none; margin: 0 0 10px; padding: 0; }
+.topic-list > li { counter-increment: tp; background: var(--white); border: 1px solid var(--line-color); border-left: 6px solid var(--green-deep); border-radius: 10px; padding: 18px 20px 14px; margin: 0 0 16px; box-shadow: var(--shadow); }
+.topic-list > li h3 { border: none; padding: 0; margin: 0 0 10px; color: var(--green-deep); font-size: 18px; }
+.topic-list > li h3::before { content: counter(tp); display: inline-block; background: var(--green-deep); color: #fff; border-radius: 6px; font-size: 13px; line-height: 1.7; padding: 1px 9px; margin-right: 9px; vertical-align: 2px; }
+.topic-list .topic-label { font-weight: 700; color: var(--green-deep); margin: 12px 0 4px; }
+.topic-list .talk { background: var(--green-pale); border-radius: 8px; padding: 10px 14px; margin: 0 0 8px; }
+.checklist { list-style: none; margin: 0 0 10px; padding: 0; }
+.checklist li { padding: 7px 0 7px 30px; position: relative; font-size: 16px; border-bottom: 1px dashed var(--green-pale); }
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before { content: ""; position: absolute; left: 4px; top: 13px; width: 14px; height: 14px; border: 2px solid var(--green-soft); border-radius: 3px; }
+.src-list { margin: 0 0 10px 1.2em; }
+.src-list li { margin-bottom: 8px; font-size: 15.5px; overflow-wrap: anywhere; }
+@media print { .topic-list > li { box-shadow: none; break-inside: avoid; } table.cmp th { white-space: normal; } }
+</style>
+</head>
+<body class="article-body">
+
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title"><a href="../../index.html">はじめての終活ガイド<span class="tagline">終活カウンセラー1級が執筆・監修</span></a></p>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav">メニュー</button>
+    <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+      <ul>
+        <li><a href="../../index.html">ホーム</a></li>
+        <li><a href="../../index.html#articles">記事一覧</a></li>
+        <li><a href="../../about.html">運営者情報</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <ol>
+    <li><a href="../../index.html">ホーム</a></li>
+    <li>人生会議（ACP）は何を話す？</li>
+  </ol>
+</div>
+
+<main class="article-container">
+<article>
+  <p class="pr-label">※本サイトはアフィリエイト広告を利用しています。</p>
+  <p class="author-line">執筆：終活カウンセラー1級（専門家の監修は受けていません）</p>
+  <p class="article-meta">公開日：未定（下書き・公開前レビュー中）</p>
+
+  <h1>人生会議（ACP）は何を話す？家族で共有したい7つのこと</h1>
+
+  <p class="lead">人生会議（ACP）では、大切にしていることや、これからの暮らし、医療・介護についての希望を共有します。<strong>一度ですべてを決めなくて大丈夫です。中心にあるのは本人の気持ちであり、その気持ちは変わってよいものです。</strong></p>
+  <p>親と話す場合も、自分の希望を家族に伝える場合も、まずは「今、何を大切にしているか」から始めてみませんか。この記事では、公的資料の考え方を踏まえ、家族で話すきっかけになる7項目を紹介します。</p>
+
+  <div class="note-box"><strong>はじめにご注意：</strong>本記事は一般的な情報提供であり、医療・法律・介護の個別の助言ではありません。運営者は終活カウンセラー1級の資格を持つ個人で、医師・看護師・弁護士などの専門職ではなく、本記事は専門家の監修を受けていません。個別の判断は、主治医・医療機関、地域包括支援センター、市区町村の窓口、弁護士・司法書士などの専門家へご相談ください。</div>
+
+  <nav class="toc" aria-label="目次">
+    <p class="toc-title">目次</p>
+    <ol>
+      <li><a href="#sec1">人生会議（ACP）とは</a></li>
+      <li><a href="#sec2">家族で共有したい7つのこと</a></li>
+      <li><a href="#sec3">印刷用チェックリスト</a></li>
+      <li><a href="#sec4">話し合いの進め方</a></li>
+      <li><a href="#sec5">記録の残し方と見直しのタイミング</a></li>
+      <li><a href="#sec6">ACPのメモと遺言書・任意後見契約・医療同意書の違い</a></li>
+      <li><a href="#sec7">公的資料・相談先の紹介</a></li>
+      <li><a href="#sec8">よくある質問</a></li>
+      <li><a href="#sec9">まとめ</a></li>
+      <li><a href="#sec10">参考資料</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="sec1">人生会議（ACP）とは</h2>
+  <p>ACPは「アドバンス・ケア・プランニング」の略で、「人生会議」はその愛称です。厚生労働省は、将来の医療やケアについて前もって考え、家族等や医療・ケアチームと繰り返し話し合い、共有する取り組みと説明しています。（<a href="https://www.mhlw.go.jp/stf/newpage_02783.html" target="_blank" rel="noopener noreferrer">厚生労働省「『人生会議』してみませんか」</a>より）</p>
+  <p>話題は、延命治療を受けるかどうかだけではありません。「何を大切に生きたいか」「どのように過ごしたいか」も含まれます。厚生労働省のライブラリーでも、価値観や生き方を周囲に伝えることが紹介されています。（<a href="https://www.mhlw.go.jp/acp-jinseikaigi/library/" target="_blank" rel="noopener noreferrer">厚生労働省「人生会議」ライブラリー</a>より）</p>
+  <p>基本となるのは、十分な説明と話し合いを踏まえた本人の意思決定です。医療・ケアチームとは、医師や看護師、介護に関わる専門職などのチームを指します。（<a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf" target="_blank" rel="noopener noreferrer">厚生労働省ガイドライン</a>より）</p>
+
+  <h2 id="sec2">家族で共有したい7つのこと</h2>
+  <p>以下の7項目と会話例は、公的資料を踏まえて運営者が整理した提案です。厚生労働省が定めた必須項目ではありません。運営者としては、本人が話したい項目から、少しずつ共有することをおすすめします。</p>
+
+  <ol class="topic-list">
+    <li>
+      <h3>大切にしている価値観</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>「家族と会う時間」「自分で選べること」「好きなことを続けること」など、大切なものは人それぞれです。希望の理由まで聞いておくと、状況が変わったときにも、本人の思いを理解する手がかりになります。</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「毎日の暮らしで、これからも大切にしたいことは何かな。私は、好きな音楽を聴く時間を持ちたいと思っているよ」</p>
+      <p class="topic-label">注意点</p>
+      <p>家族にとっての幸せを、そのまま本人の希望に当てはめないようにしましょう。「家族に迷惑をかけたくない」という言葉が出たら、どのような心配があるのか、本人が話せる範囲で聞いてみてください。</p>
+    </li>
+    <li>
+      <h3>過ごしたい場所・暮らし方</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>「自宅がよい」という希望にも、慣れた部屋で過ごしたい、ペットと一緒にいたいなど、さまざまな理由が考えられます。場所と、その場所でかなえたい暮らしを分けて聞くと、相談する際に希望を伝えやすくなります。</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「もし暮らしに手助けが必要になったら、どんな場所で過ごしたい？　その場所で続けたいことも聞かせてもらえるかな」</p>
+      <p class="topic-label">注意点</p>
+      <p>この段階で実現を約束する必要はありません。体調、住まいの環境、利用できる支援などを医療・介護の専門職と確認し、その都度考えていきましょう。</p>
+    </li>
+    <li>
+      <h3>医療についての今の考え</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>治療名への賛否だけでは、本人が何を望み、何を心配しているのかが伝わりにくい場合があります。「病状をどのように知りたいか」「治療で期待すること」「つらさについて相談したいこと」も話題にできます。</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「治療が必要になったとき、先生にどんなことを説明してもらいたい？　今、気になっていることはあるかな」</p>
+      <p class="topic-label">注意点</p>
+      <p>分からない治療について、その場で受ける・受けないを決めなくても大丈夫です。具体的な判断は、病状に応じた説明を受け、主治医・医療チームと相談してください。厚生労働省のガイドラインでも、医療・ケアの内容は医学的な妥当性と適切性を踏まえて慎重に判断するとしています。（<a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf" target="_blank" rel="noopener noreferrer">厚生労働省ガイドライン</a>より）</p>
+    </li>
+    <li>
+      <h3>介護についての希望</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>介護については、住む場所だけでなく、食事、入浴、外出、人との交流など、日々の過ごし方も話してみましょう。「自分で続けたいこと」と「手伝ってほしいこと」を聞くと、支援について相談するきっかけになります。</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「生活の手助けが必要になったら、自分で続けたいことは何かな。どんな手助けなら受け入れやすそう？」</p>
+      <p class="topic-label">注意点</p>
+      <p>特定の家族がすべてを担う前提で話を進めないようにしましょう。本人の希望と家族ができることをそれぞれ確認し、サービスの利用条件や費用は地域包括支援センター、市区町村の窓口などに相談してください。</p>
+    </li>
+    <li>
+      <h3>代わりに意思を伝えてほしい人</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>本人が自分の気持ちを伝えにくくなった場合に、これまでの言葉や価値観を医療・ケアチームへ伝えてほしい人を考えておきます。厚生労働省の解説編でも、本人の意思を推定する人を含め、日頃から話し合う重要性が示されています。（<a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197722.pdf" target="_blank" rel="noopener noreferrer">厚生労働省ガイドライン解説編</a>より）</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「自分の気持ちを伝えにくいとき、これまで話したことを先生に伝えてほしい人はいる？　お願いしたいことを、その人とも話してみようか」</p>
+      <p class="topic-label">注意点</p>
+      <p>「家族だから」「長男・長女だから」と決めつけず、本人が信頼する人を考えます。名前を書けばあらゆる医療同意を代行できる、と考えず、役割は医療機関に確認してください。相手の意向も確かめましょう。</p>
+    </li>
+    <li>
+      <h3>かかりつけ医・医療機関の情報</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>相談先が分かるよう、普段通っている医療機関名、診療科、連絡先を整理しておくと便利です。運営者としては、お薬手帳の置き場所や、利用中の介護サービスの連絡先も一緒に確認することをおすすめします。</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「普段相談している病院や先生を、分かるようにしておいてもいいかな。どこまで家族に共有してよいかも教えてね」</p>
+      <p class="topic-label">注意点</p>
+      <p>病歴や薬の情報は、本人が共有したい範囲を確認して扱いましょう。医療情報ネット（ナビイ）では医療機関や薬局を検索できますが、個別の受診や対応の可否は医療機関に確かめてください。（<a href="https://www.iryou.teikyouseido.mhlw.go.jp/" target="_blank" rel="noopener noreferrer">医療情報ネット</a>より）</p>
+    </li>
+    <li>
+      <h3>記録の置き場所と見直し時期</h3>
+      <p class="topic-label">なぜ共有するとよいか</p>
+      <p>記録を残しても、必要な人が所在を知らないと共有につながりません。紙のノート、スマートフォンなど、本人が使いやすい方法を選び、誰に、どの部分を見てもらうかも話しておきましょう。</p>
+      <p class="topic-label">会話例</p>
+      <p class="talk">「今日の話を、今の気持ちとしてメモしておいてもいい？　どこに置いて、次はいつ読み返そうか」</p>
+      <p class="topic-label">注意点</p>
+      <p>記録への同意を確かめ、家族が書く場合は本人の言葉と家族の考えを分けてください。「まだ分からない」「今は話したくない」も、そのまま残して構いません。</p>
+    </li>
+  </ol>
+
+  <h2 id="sec3">印刷用チェックリスト</h2>
+  <p>運営者作成の、話し合いを振り返るためのチェックリストです。すべてを埋める必要はありません。</p>
+  <ul class="checklist">
+    <li>大切にしている価値観や、続けたいことを共有した</li>
+    <li>過ごしたい場所と、その場所で望む暮らし方を話した</li>
+    <li>医療についての今の考えや、医師に聞きたいことを整理した</li>
+    <li>介護で続けたいこと、手伝ってほしいことを話した</li>
+    <li>代わりに意思を伝えてほしい人と、その役割を話した</li>
+    <li>かかりつけ医・医療機関などの情報を、本人が望む範囲で共有した</li>
+    <li>記録の置き場所、共有する相手、次に見直す機会を確認した</li>
+  </ul>
+  <p>親への質問を広く考えたい方は、<a href="../../parent-shukatsu/questions/">親が元気なうちに聞いておくこと30項目｜会話例・印刷用シート付き</a>も参考にしてください。</p>
+
+  <h2 id="sec4">話し合いの進め方</h2>
+  <p>運営者としては、本人の体調と気持ちに余裕があるときに、「今日は少し話せそう？」と確かめて始めることをおすすめします。話したくない様子なら、その日はやめても大丈夫です。厚生労働省のリーフレットも、知りたくない、考えたくない人への配慮を求めています。（<a href="https://www.mhlw.go.jp/content/10802000/000536088.pdf" target="_blank" rel="noopener noreferrer">厚生労働省リーフレット</a>より）</p>
+  <p>最初から家族全員を集めず、本人が安心して話せる相手と始める方法もあります。親に尋ねるなら、子ども自身の考えを先に少し話し、「答えを決めてほしいわけではなく、今の気持ちを聞きたい」と伝えてみましょう。</p>
+  <p>話を聞くときは、すぐに説得したり結論を出したりせず、「そう思うのは、どんなことが気になるから？」と理由を聞いてみてください。意見が違っても、家族の多数決でまとめないことが大切です。</p>
+  <p>治療や介護の具体的な話になったら、本人の希望を主治医、看護師、担当のケアマネジャーなどにも伝えましょう。家族だけでは分からない点を整理し、説明を受けながら話し合いを続けます。</p>
+
+  <h2 id="sec5">記録の残し方と見直しのタイミング</h2>
+  <p>厚生労働省のガイドラインは、話し合った内容をその都度文書にまとめるとしています。また、同省のWebマガジンでは、決まった書式は不要で、ノートやスマートフォンへの記録でもよいと紹介されています。（<a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf" target="_blank" rel="noopener noreferrer">ガイドライン</a>、<a href="https://www.mhlw.go.jp/web_magazine/feature/20260601.html" target="_blank" rel="noopener noreferrer">厚生労働省Webマガジン</a>より）</p>
+  <p>運営者としては、次の内容を簡潔に残すことをおすすめします。</p>
+  <ul>
+    <li>話した日、参加した人、記録した人</li>
+    <li>本人の今の希望と、その理由</li>
+    <li>迷っていること、専門職に確認したいこと</li>
+    <li>共有してよい相手、保管場所、次に見直す機会</li>
+  </ul>
+  <p>厚生労働省の「人生会議（ACP）普及・啓発リーフレット」には、大切なことや信頼できる人を考える問いと、話し合いの進め方が示されています。<strong>このリーフレットは、希望を書き込む専用の記録様式ではありません。</strong>問いを参考に、使いやすいノートなどへ記録できます。（<a href="https://www.mhlw.go.jp/content/10802000/000536088.pdf" target="_blank" rel="noopener noreferrer">リーフレット</a>より）</p>
+  <p>見直しは、気持ちが変わったときのほか、体調の変化、入退院、引っ越し、支援する人の変更などを機会にしてはいかがでしょうか。これらは運営者からの提案です。書き直した日を入れ、共有済みの相手にも変更を伝えましょう。</p>
+  <p>ノートへの書き方は、<a href="../../articles/article02.html">エンディングノートの書き方完全ガイド｜手順と項目別の記入例つき</a>でも紹介しています。</p>
+
+  <h2 id="sec6">ACPのメモと遺言書・任意後見契約・医療同意書の違い</h2>
+  <p>次の表は、目的を理解するための一般的な整理です。個々の書類の有効性や法的な扱いを判断するものではありません。</p>
+  <div class="tbl-wrap">
+    <table class="cmp">
+      <thead>
+        <tr><th>種類</th><th>主な目的</th><th>確認しておきたいこと</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="pname">ACPのメモ</td>
+          <td>価値観、医療・ケアの希望、話し合いの経過を共有する</td>
+          <td>記録だけで希望する対応が必ず実施されるとは限りません。医療・ケアチームと共有します</td>
+        </tr>
+        <tr>
+          <td class="pname">遺言書</td>
+          <td>死後の財産の分け方などについて意思を残す</td>
+          <td>形式や内容に関するルールがあります。具体的な作成は法律の専門家に相談します</td>
+        </tr>
+        <tr>
+          <td class="pname">任意後見契約</td>
+          <td>将来、判断が難しくなった場合に備え、任せる事務と相手を契約で定める</td>
+          <td>公正証書による契約などの手続きがあります。ACPのメモとは別に確認します</td>
+        </tr>
+        <tr>
+          <td class="pname">医療同意書</td>
+          <td>個別の医療行為について、説明を受けて同意したことを確認する</td>
+          <td>対象となる行為や書類の内容を、医療機関に確認します</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>遺言書の説明は<a href="https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf" target="_blank" rel="noopener noreferrer">横浜市瀬谷区の資料「10 遺言書」</a>、任意後見契約は<a href="https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/" target="_blank" rel="noopener noreferrer">厚生労働省「成年後見はやわかり」</a>、医療同意書は手術同意の説明がある<a href="https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html" target="_blank" rel="noopener noreferrer">国立がん研究センター「がん情報サービス」</a>を参考にしています。</p>
+  <p>ACPのメモを、これらの書類と同じものとして扱わないようにしましょう。法律に関する詳細は弁護士・司法書士などの専門家や公的窓口へ、医療上の扱いは主治医・医療機関へ確認してください。</p>
+  <p>エンディングノートと遺言書の違いは、<a href="../../articles/article01.html">エンディングノートとは？遺言書との違いを終活カウンセラーが解説</a>で詳しく整理しています。</p>
+
+  <h2 id="sec7">公的資料・相談先の紹介</h2>
+  <p>厚生労働省の「『人生会議』してみませんか」は、基本的な考え方を確認するときに使えます。「人生会議」ライブラリーには動画やマンガなどがあり、家族で話すきっかけを探す際の参考になります。（<a href="https://www.mhlw.go.jp/stf/newpage_02783.html" target="_blank" rel="noopener noreferrer">厚生労働省の案内</a>、<a href="https://www.mhlw.go.jp/acp-jinseikaigi/library/" target="_blank" rel="noopener noreferrer">ライブラリー</a>）</p>
+  <p>公的な議論としては、2026年9月3日の介護給付費分科会で、2027年度介護報酬改定に向けた議題が扱われ、ACPの普及についても意見が出ています。これは検討段階の議論であり、この議事録から制度変更の決定を示すことはできません。（<a href="https://www.mhlw.go.jp/content/12204500/001759653.pdf" target="_blank" rel="noopener noreferrer">厚生労働省・第264回議事録、PDF本文10頁</a>より）</p>
+  <p>相談先は、内容に合わせて選びましょう。</p>
+  <ul>
+    <li><strong>医療の希望・治療の説明</strong>：主治医・医療機関。医療機関を探す際は<a href="https://www.iryou.teikyouseido.mhlw.go.jp/" target="_blank" rel="noopener noreferrer">医療情報ネット（ナビイ）</a>も利用できます。</li>
+    <li><strong>高齢の親の暮らし・介護</strong>：地域包括支援センター。高齢者の総合相談などを担う窓口です。（<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/" target="_blank" rel="noopener noreferrer">厚生労働省「地域包括ケアシステム」</a>より）</li>
+    <li><strong>介護保険の手続き・地域の窓口探し</strong>：市区町村の担当窓口。</li>
+    <li><strong>遺言書・任意後見契約など</strong>：弁護士・司法書士などの専門家、公的な法律相談窓口。</li>
+  </ul>
+  <p>悩み別の窓口の選び方は、<a href="../../where-to-ask/">終活の相談先はどこ？悩み別に最初の窓口を選ぶ方法</a>にまとめています。</p>
+
+  <h2 id="sec8">よくある質問</h2>
+  <div class="faq-list">
+    <details>
+      <summary>Q1. 人生会議は、一度ですべて決める必要がありますか？</summary>
+      <p class="faq-a">一度ですべて決める必要はありません。本人が話せることから共有し、気持ちや状況が変わったら、繰り返し話し合って見直せます。</p>
+    </details>
+    <details>
+      <summary>Q2. 話し合う相手は家族だけですか？</summary>
+      <p class="faq-a">家族に限らず、本人が信頼する友人などとも話せます。医療・介護の希望は、主治医や医療・ケアチームとも共有しましょう。</p>
+    </details>
+    <details>
+      <summary>Q3. ACPのメモは医療同意書の代わりになりますか？</summary>
+      <p class="faq-a">ACPのメモと医療同意書は目的が異なります。メモだけで個別の医療行為への同意が済むとは考えず、主治医・医療機関に確認してください。</p>
+    </details>
+  </div>
+  <p>FAQの根拠：<a href="https://www.mhlw.go.jp/content/10802000/000536088.pdf" target="_blank" rel="noopener noreferrer">厚生労働省リーフレット</a>、<a href="https://www.mhlw.go.jp/web_magazine/feature/20260601.html" target="_blank" rel="noopener noreferrer">厚生労働省Webマガジン</a>、<a href="https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html" target="_blank" rel="noopener noreferrer">国立がん研究センターの手術同意の説明</a>。</p>
+
+  <div class="summary-box" id="sec9">
+    <h2>まとめ</h2>
+    <p>人生会議は、本人の大切なことを知り、その時々の医療・介護について一緒に考えていくための話し合いです。</p>
+    <p>運営者としては、7項目のうち話しやすい一つから始めることをおすすめします。答えが出ない日があっても、気持ちが変わっても大丈夫です。本人のペースを尊重し、必要に応じて医療・介護の専門職と相談しながら続けていきましょう。</p>
+  </div>
+
+  <h2 id="sec10">参考資料</h2>
+  <p>以下の資料の閲覧日は、すべて2026年10月22日です。出典の文章・画像の転載は行わず、事実確認のために利用しています。制度や案内は変更されることがありますので、最新の情報をご確認ください。</p>
+  <ul class="src-list">
+    <li><a href="https://www.mhlw.go.jp/stf/newpage_76591.html" target="_blank" rel="noopener noreferrer">厚生労働省「令和8年9月3日　第264回 社会保障審議会介護給付費分科会（議事録）」</a>（<a href="https://www.mhlw.go.jp/content/12204500/001759653.pdf" target="_blank" rel="noopener noreferrer">議事録PDF</a>）——開催日、2027年度介護報酬改定に向けた議題。PDF本文10頁のACPの普及に関する参考人の発言（改定の決定事項としては扱っていません）</li>
+    <li><a href="https://www.mhlw.go.jp/stf/newpage_02783.html" target="_blank" rel="noopener noreferrer">厚生労働省「『人生会議』してみませんか」</a>——ACPの定義、本人の意思決定を基本とする考え方</li>
+    <li><a href="https://www.mhlw.go.jp/acp-jinseikaigi/library/" target="_blank" rel="noopener noreferrer">厚生労働省「『人生会議』ライブラリー」（人生会議ポータルサイト）</a>——価値観や生き方を伝えること、話し合った内容を変更できることを紹介するマンガ・動画</li>
+    <li><a href="https://www.iryou.teikyouseido.mhlw.go.jp/" target="_blank" rel="noopener noreferrer">厚生労働省「医療情報ネット（ナビイ）」</a>——病院、診療所、薬局などの検索機能</li>
+    <li><a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf" target="_blank" rel="noopener noreferrer">厚生労働省「人生の最終段階における医療・ケアの決定プロセスに関するガイドライン」（平成30年3月改訂）</a>——本人の意思決定、医学的な検討、繰り返す話し合い、文書による記録</li>
+    <li><a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197722.pdf" target="_blank" rel="noopener noreferrer">厚生労働省「同ガイドライン 解説編」</a>——本人の価値観の共有、意思を推定する人と医療・ケアチームの話し合い</li>
+    <li><a href="https://www.mhlw.go.jp/content/10802000/000536088.pdf" target="_blank" rel="noopener noreferrer">厚生労働省「人生会議（ACP）普及・啓発リーフレット」</a>——話し合いの問いと進め方、意思の変化、話したくない人への配慮</li>
+    <li><a href="https://www.mhlw.go.jp/web_magazine/feature/20260601.html" target="_blank" rel="noopener noreferrer">厚生労働省Webマガジン「自分らしく生きるための『人生会議』」</a>——家族以外の信頼する人との対話、ノートやスマートフォンによる記録</li>
+    <li><a href="https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/" target="_blank" rel="noopener noreferrer">厚生労働省「成年後見はやわかり／任意後見制度とは」</a>——任意後見契約の基本的な目的、公正証書による契約</li>
+    <li><a href="https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf" target="_blank" rel="noopener noreferrer">横浜市瀬谷区「10 遺言書」（エンディングノート関連ガイドブック 冊子15〜16頁）</a>——遺言書で扱う財産の分割等、作成形式のルール、専門家への相談案内</li>
+    <li><a href="https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html" target="_blank" rel="noopener noreferrer">国立がん研究センター がん情報サービス「手術（外科治療） もっと詳しく」</a>——説明を受け、理解・納得した場合に同意書へ署名するという説明</li>
+    <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/" target="_blank" rel="noopener noreferrer">厚生労働省「地域包括ケアシステム」</a>——地域包括支援センターの総合相談等の役割</li>
+  </ul>
+
+  <h2>この記事について</h2>
+  <p>執筆：はじめての終活ガイド運営者（終活カウンセラー1級）。<strong>本記事は一般的な情報提供であり、医療・法律・介護の個別の助言ではありません。</strong>運営者は医師・看護師・弁護士などの専門職ではなく、本記事は専門家の監修を受けていません。個別の判断は、主治医・医療機関、地域包括支援センター、市区町村の窓口、弁護士・司法書士などの専門家へご相談ください。</p>
+  <ul>
+    <li>公開日：未定（下書き・公開前レビュー中）</li>
+    <li><a href="../../about.html">運営者情報を見る</a></li>
+    <li><a href="../../disclaimer.html">免責事項・広告掲載について</a></li>
+  </ul>
+
+  <section class="related">
+    <h2>あわせて読みたい関連記事</h2>
+    <ul>
+      <li><a href="../../parent-shukatsu/questions/">親が元気なうちに聞いておくこと30項目｜会話例・印刷用シート付き</a></li>
+      <li><a href="../../articles/article02.html">エンディングノートの書き方完全ガイド｜手順と項目別の記入例つき</a></li>
+      <li><a href="../../articles/article01.html">エンディングノートとは？遺言書との違いを終活カウンセラーが解説</a></li>
+      <li><a href="../../where-to-ask/">終活の相談先はどこ？悩み別に最初の窓口を選ぶ方法</a></li>
+      <li><a href="../../articles/article05.html">親にエンディングノートを書いてもらうには?切り出し方のコツ</a></li>
+    </ul>
+  </section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-nav">
+      <li><a href="../../about.html">運営者情報</a></li>
+      <li><a href="../../privacy.html">プライバシーポリシー</a></li>
+      <li><a href="../../disclaimer.html">免責事項・広告掲載について</a></li>
+    </ul>
+    <p class="ad-notice">※本サイトはアフィリエイト広告を利用しています。Amazonのアソシエイトとして、当メディアは適格販売により収入を得ています。</p>
+    <p class="copyright">&copy; <span class="js-year">2026</span> はじめての終活ガイド</p>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
+<script src="../../js/main.js"></script>
+</body>
+</html>

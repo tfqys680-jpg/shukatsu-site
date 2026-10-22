@@ -661,3 +661,13 @@
 - 印刷時の表の折返しCSSを既存の実装パターンに沿って追加。実表示・印刷はこの記録時点で未検証。
 - `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
 - GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。
+
+## 2026-10-22 臨時（運営者指示）: 人生会議（ACP）記事の下書き化
+
+- 運営者がチャットで原稿（スラッグ advance-care-planning-family-checklist・description・本文・FAQ JSON-LD・出典・編集確認用の表）を提供。
+- ymyl-review-queue.md の「ACP/延命治療記事は医療職レビュー完了まで公開しない」に従い、`drafts/advance-care-planning-family-checklist/index.html` に noindex 下書きとして作成。sitemap・トップ・ハブへは未追加。公開予定URLは `/column/advance-care-planning-family-checklist/`。
+- 本文は原稿どおり。`【内部リンク：…】` を実リンク（/parent-shukatsu/questions/・/articles/article02.html・/articles/article01.html）へ置換し、相談先の節に /where-to-ask/ を追加。FAQはDOMとJSON-LDを同一文にし、表記はQ1.〜にそろえた。アイキャッチ画像なし（OGPはsummaryカード）。
+- 編集確認用の3表（主張と出典・人手確認箇所・確認できなかったこと）は本文から外し `docs/seo/acp-draft-review.md` へ移した。出典台帳は source-policy.md に追記。
+- 管理ファイル: content-inventory / keyword-map / internal-link-map / editorial-calendar（2027-03タスクを一部下書き作成済みへ）/ ymyl-review-queue / automation-state を更新。
+- YMYLレビュー待ち: 医療職（必須）、法律部分は司法書士/弁護士推奨。専門家レビューは未実施。
+- 次回: 医療職レビュー後に公開手順（HTML冒頭コメント）を実施。公開直前に2027年度介護報酬改定の議論の進捗を再確認。
