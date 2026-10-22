@@ -165,7 +165,7 @@
 | /drafts/advance-care-planning-family-checklist/ | 家族以外の信頼する人との対話・ノートやスマートフォンでの記録 | 厚生労働省Webマガジン https://www.mhlw.go.jp/web_magazine/feature/20260601.html | 2026-10-22 |
 | /drafts/advance-care-planning-family-checklist/ | 任意後見契約の目的・公正証書による契約 | 厚生労働省「成年後見はやわかり」 https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/ | 2026-10-22 |
 | /drafts/advance-care-planning-family-checklist/ | 遺言書で扱う財産の分割等・作成形式のルール | 横浜市瀬谷区「10 遺言書」 https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 手術について説明を受け理解・納得した場合に同意書へ署名する | 国立がん研究センター がん情報サービス https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 手術について説明を受け、理解・納得したうえで同意する（2026-10-22 PR #53 Codexレビューで「原文は手術への同意の説明で、同意書・署名や手術以外への一般化は書かれていない」と指摘。この環境から原文を開けず未照合のため、本文は手術の同意に限定した表現へ修正済み。同意書・署名の記述の有無は運営者が原文で再確認する） | 国立がん研究センター がん情報サービス https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html | 2026-10-22 |
 | /drafts/advance-care-planning-family-checklist/ | 医療機関・薬局の検索機能 | 医療情報ネット（ナビイ） https://www.iryou.teikyouseido.mhlw.go.jp/ | 2026-10-22 |
 | /drafts/advance-care-planning-family-checklist/ | 地域包括支援センターの総合相談等の役割 | 厚生労働省「地域包括ケアシステム」 https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/ | 2026-10-22 |
 | /drafts/advance-care-planning-family-checklist/ | 2026-09-03の介護給付費分科会で2027年度介護報酬改定に向けた議題・ACP普及に関する参考人発言（決定事項としては扱わない） | 厚生労働省 第264回介護給付費分科会 https://www.mhlw.go.jp/stf/newpage_76591.html ・議事録PDF本文10頁 https://www.mhlw.go.jp/content/12204500/001759653.pdf | 2026-10-22 |
