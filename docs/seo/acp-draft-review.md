@@ -22,7 +22,7 @@
 | 確認したリーフレットには問いと進め方があり、専用の記入欄はない | https://www.mhlw.go.jp/content/10802000/000536088.pdf | 2026-10-22 |
 | 遺言書は財産の分割等を扱い、形式に関するルールがある | https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf（冊子15〜16頁） | 2026-10-22 |
 | 任意後見契約は、将来任せる事務等を公正証書によって定める | https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/ | 2026-10-22 |
-| 手術同意書は、説明を理解し納得した場合に署名するものとして説明されている | https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html | 2026-10-22 |
+| 手術について、説明を受けて理解・納得したうえで同意するものとして説明されている（2026-10-22 PR #53 Codexレビューで「原文は手術への同意の説明で、同意書・署名や手術以外への一般化は書かれていない」と指摘。この環境から原文を開けず未照合のため、本文は手術の同意に限定した表現へ修正済み。同意書・署名の記述の有無は運営者が原文で再確認する） | https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html | 2026-10-22 |
 | ナビイでは医療機関・薬局等を検索できる | https://www.iryou.teikyouseido.mhlw.go.jp/ | 2026-10-22 |
 | 地域包括支援センターは高齢者の総合相談等を担う | https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/ | 2026-10-22 |
 | 2026年9月3日に2027年度介護報酬改定に向けた議題が扱われ、ACP普及について意見が出た | https://www.mhlw.go.jp/stf/newpage_76591.html 、https://www.mhlw.go.jp/content/12204500/001759653.pdf（本文10頁） | 2026-10-22 |
