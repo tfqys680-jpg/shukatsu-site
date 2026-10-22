@@ -76,6 +76,7 @@
 /,/parent-shukatsu/jikka-katazuke/,トップ→記事,新着記事+全記事一覧（PR #48・2026-10-19公開承認）
 /parent-shukatsu/,/parent-shukatsu/jikka-katazuke/,ハブ→記事,記事一覧（PR #48・2026-10-19公開承認）
 /articles/article12.html,/parent-shukatsu/jikka-katazuke/,記事→記事,関連記事（PR #48・2026-10-19公開承認）
+/column/advance-care-planning-family-checklist/,/parent-shukatsu/questions/;/articles/article02.html;/articles/article01.html;/where-to-ask/;/articles/article05.html,記事→柱/記事,本文の深掘りリンク（原稿の内部リンク指定3件+相談先）・関連記事欄。現在はdrafts/で下書き（公開時にトップ新着・全記事一覧・親の終活ハブからのリンクを追加）
 /,/column/housing-type-nursing-home-registration-checklist/,トップ→記事,新着記事+全記事一覧
 /parent-shukatsu/,/column/housing-type-nursing-home-registration-checklist/,ハブ→記事,記事一覧
 /where-to-ask/,/column/housing-type-nursing-home-registration-checklist/,記事→記事,関連記事欄（介護・住まいの相談先から入居前確認へ）

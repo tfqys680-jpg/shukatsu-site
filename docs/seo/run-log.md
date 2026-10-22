@@ -677,6 +677,16 @@
 - `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
 - GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。
 
+## 2026-10-22 臨時（運営者指示）: 人生会議（ACP）記事の下書き化
+
+- 運営者がチャットで原稿（スラッグ advance-care-planning-family-checklist・description・本文・FAQ JSON-LD・出典・編集確認用の表）を提供。
+- ymyl-review-queue.md の「ACP/延命治療記事は医療職レビュー完了まで公開しない」に従い、`drafts/advance-care-planning-family-checklist/index.html` に noindex 下書きとして作成。sitemap・トップ・ハブへは未追加。公開予定URLは `/column/advance-care-planning-family-checklist/`。
+- 本文は原稿どおり。`【内部リンク：…】` を実リンク（/parent-shukatsu/questions/・/articles/article02.html・/articles/article01.html）へ置換し、相談先の節に /where-to-ask/ を追加。FAQはDOMとJSON-LDを同一文にし、表記はQ1.〜にそろえた。アイキャッチは同日追加（運営者提供ZIPの2026-10-20生成画像を1200x675 WebP化、目視確認済み。下記参照）。
+- 編集確認用の3表（主張と出典・人手確認箇所・確認できなかったこと）は本文から外し `docs/seo/acp-draft-review.md` へ移した。出典台帳は source-policy.md に追記。
+- 管理ファイル: content-inventory / keyword-map / internal-link-map / editorial-calendar（2027-03タスクを一部下書き作成済みへ）/ ymyl-review-queue / automation-state を更新。
+- YMYLレビュー待ち: 医療職（必須）、法律部分は司法書士/弁護士推奨。専門家レビューは未実施。
+- 次回: 医療職レビュー後に公開手順（HTML冒頭コメント）を実施。公開直前に2027年度介護報酬改定の議論の進捗を再確認。
+- 追記（同日・運営者指示「必要な画像を使って、マージしてください」）: 運営者提供ZIP（shukatsu-generated-images-20261009-22、12枚・掲載なし）を全数目視し、ACPの「家族＋医療・ケアチームで話す」内容に合う 2026-10-20 分（sha256 284a3226…）を選定。`images/column-advance-care-planning-family-checklist.webp`（1200x675）に変換し、本文・OGP・Article JSON-LDに設定。文字化け・人物の崩れがないことを目視確認。PR #53 はマージするが、noindex下書きのまま（sitemap・トップ・ハブ未掲載）で、医療職レビュー完了まで公開しない方針は維持。他の11枚は対応記事未確認のため未使用。
 # 2026-10-22 臨時（運営者指示）: PR #51 住宅型有料老人ホーム記事の公開準備
 
 - 指示: 運営者「おすすめで進めてください」。PR #48公開時の前例に合わせ、公開できる状態まで整備。マージ（本番配信）は運営者の明示承認を得てから行う。
@@ -685,3 +695,10 @@
 - 公開準備: drafts/housing-type-nursing-home-registration-checklist/ → column/ へ移動、noindexと下書きコメントを削除、Article JSON-LDにdatePublished/dateModified=2026-10-22（公開予定日）を追加、表示日付を同期、sitemapへ追加。マージ日が10/22から変わる場合は、表示・Article・台帳・sitemap・トップ新着の日付を実日付へ同期してからマージする。
 - 導線: トップ新着（先頭に追加し最古のcost/を外す）・全記事一覧、親の終活ハブ記事一覧、where-to-ask・living-aloneの関連記事欄。リンク追加のみのため各ページのdateModified・lastmodは据え置き。
 - YMYL: 専門家レビュー未実施・将来推奨（ymyl-review-queue・automation-stateに記録）。
+
+# 2026-10-22 PR #51 公開（運営者承認）
+
+- 運営者が「マージして公開してください」と明示承認（21:14 JST時点で公開予定日2026-10-22と同日のため日付の再同期は不要）。
+- 最新main（PR #53: 人生会議・ACPの下書き）をPRブランチへマージ。internal-link-map・run-log・source-policy・automation-stateの追記競合は両方の記録を残して解消。PR #53の下書き（drafts/・noindex）には手を加えていない。
+- 台帳（content-inventory・keyword-map・editorial-calendar・ymyl-review-queue・automation-state）の状態を「公開準備完了・マージ承認待ち」から「公開」へ更新。
+- 検証後、PR #51をsquash mergeで配信（元PNGをmain履歴に入れないため）。専門家レビューは未実施・将来推奨。
