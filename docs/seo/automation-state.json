@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Tokyo",
-  "last_run": "2026-10-22（PR #51の公開: 最新main（PR #53）統合・検証・squash merge）",
+  "last_run": "2026-10-23（運営者指示: 成年後見制度の相談先記事を最新main（459b077）へ統合しDraft PR作成。マージ・公開は未実施）",
   "last_new_article": "2026-10-22 /column/advance-care-planning-family-checklist/（運営者が医療職レビュー済みと報告し公開を指示）",
   "last_major_update": "2026-08-10 /articles/article05.html（編集カレンダー2026-08-10〜14週タスク。親への切り出し方を拒否・NG例まで拡張）",
   "last_monthly_review": "2026-10-05（10月分を機械チェックのみ実施: title/meta description重複なし・新規孤立ページなし。Search Consoleデータ未配置のためSC分析はデータ不足として未実施）",
@@ -48,12 +48,14 @@
     "/column/pre-need-grave-guide/の税務記述（墓地・墓石の非課税、基礎控除、未払代金の債務控除不可、墓地・墓石購入費は葬式費用控除外）の税理士レビュー（未実施）。国税庁一次情報は2026-10-06確認済み。",
     "/parent-shukatsu/jikka-katazuke/（PR #48）: 専門家レビューは未実施・将来推奨。2026-10-19に一次情報の原文照合・本文出典追加と運営者の公開承認を記録。診断・契約・処分権限の判断は行わない。",
     "/column/housing-type-nursing-home-registration-checklist/（PR #51）: 契約・前払金・退去条件・医療的ケアに触れる箇所の弁護士・介護実務者レビューは未実施・将来推奨。厚労省資料は2026-10-22に検索経由で確認（直接取得はこの環境でブロック）。政令・省令の公布時に施行日・対象範囲を再確認する。",
-    "/column/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビューは運営者報告により完了（2026-10-22、記録はリポジトリ外）。法律部分の司法書士/弁護士レビューは将来推奨・未実施。がん情報サービス原文の同意書・署名記述の再確認は運営者待ち。"
+    "/column/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビューは運営者報告により完了（2026-10-22、記録はリポジトリ外）。法律部分の司法書士/弁護士レビューは将来推奨・未実施。がん情報サービス原文の同意書・署名記述の再確認は運営者待ち。",
+    "/column/adult-guardianship-municipal-support-guide/（Draft PR・未公開）: 運営者の確認待ち。公開前に一次情報の原文確認（検索経由のみで照合）と専門家レビュー（弁護士/司法書士・推奨・未実施）。公開日を確定したら記事表示・Article・sitemap・content-inventory・keyword-map・トップ新着の日付を同期する。"
   ],
   "blocked_tasks": [
     "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
     "著者実名・経歴の掲載（運営者の意向確認が必要）",
     "2026-10 四半期エンディングノート比較記事(article08)の商品確認: 販売状況・価格の確認には外部サイト参照が必要で今回未実施。編集カレンダー2026-12前半の2027年版更新と合わせて実施予定",
-    "未マージPR #43/#44/#45/#47/#50/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。"
+    "未マージPR #43/#44/#45/#47/#50/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。",
+    "成年後見記事のアイキャッチ: 指定元画像 public/images/shukatsu/adult-guardianship-municipal-consultation-hero.png が未配置（リポジトリにpublic/なし）。配置・目視確認（文字・ロゴ・個人情報なし）の後にWebP生成とhero/og:image/Article imageの設定が必要。代替画像は使用しない。"
   ]
 }

@@ -350,7 +350,8 @@ table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: no
 .btn-affiliate.rakuten { background: var(--rakuten); box-shadow: 0 3px 0 #8f0000; }
 
 /* ---------- パンくず ---------- */
-.breadcrumb { font-size: 13px; color: var(--ink-soft); padding: 14px 0 0; }
+/* 左右の余白は .container の padding を使う（ショートハンドで上書きするとスマホで画面端に接する） */
+.breadcrumb { font-size: 13px; color: var(--ink-soft); padding-top: 14px; }
 .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; }
 .breadcrumb li + li::before { content: "›"; margin: 0 6px; color: var(--ink-soft); }
 

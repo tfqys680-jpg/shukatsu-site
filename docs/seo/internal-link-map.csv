@@ -83,3 +83,8 @@
 /parent-shukatsu/living-alone/,/column/housing-type-nursing-home-registration-checklist/,記事→記事,関連記事欄（一人暮らしの親の住まいの選択肢）
 /,/column/advance-care-planning-family-checklist/,トップ→記事,新着記事・全記事一覧
 /parent-shukatsu/,/column/advance-care-planning-family-checklist/,ハブ→記事,記事一覧
+/column/adult-guardianship-municipal-support-guide/,/where-to-ask/;/parent-shukatsu/questions/;/parent-shukatsu/siblings/;/articles/article05.html;/parent-shukatsu/living-alone/;/cost/;/articles/article04.html;/column/advance-care-planning-family-checklist/;/parent-shukatsu/jikka-katazuke/;/articles/article11.html,記事→記事/柱,本文（相談先・手順・会話例・状況別）・CTA(questions)・関連記事欄（Draft PR・未公開）
+/,/column/adult-guardianship-municipal-support-guide/,トップ→記事,新着記事(先頭・最古の実家の片付けを外す)+全記事一覧(where-to-askの次)（未公開・公開時に日付同期）
+/parent-shukatsu/,/column/adult-guardianship-municipal-support-guide/,ハブ→記事,状況別（親の判断能力やお金の管理が心配な場合）+記事一覧(where-to-askの次)
+/where-to-ask/,/column/adult-guardianship-municipal-support-guide/,記事→記事,sec3「法的な手続きや家族間の利害がある」本文・関連記事欄（相互リンク。軽微なリンク追加のためdateModified・lastmod据え置き）
+/parent-shukatsu/living-alone/,/column/adult-guardianship-municipal-support-guide/,記事→記事,sec8相談の境界線（物忘れや判断力の変化）本文（軽微なリンク追加のためdateModified・lastmod据え置き）
