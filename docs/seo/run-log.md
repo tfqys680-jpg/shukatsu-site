@@ -778,3 +778,13 @@
 - 導線: トップ新着（先頭に追加し最古の生前墓記事を外す）・全記事一覧・親の終活ハブ記事一覧。sitemap追加。
 - 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / acp-draft-review / automation-state を更新。
 - 公開直前確認: 2027年度介護報酬改定は基本的な視点（案）の段階で未決定（検索で確認）。本文の記述と矛盾なし。
+
+### 2026-10-23 追記: PR #45の4回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`71e9b73`→`459b077`）にPR #51（住宅型有料老人ホームの登録制記事 /column/housing-type-nursing-home-registration-checklist/）とPR #53/#54/#56（人生会議(ACP)家族共有チェックリスト記事 /column/advance-care-planning-family-checklist/、Codexレビュー対応含む）がマージされていたため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-22 ACP記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値（article06・9月分月次レビューの経緯を含む注記つき）を維持。completed_tasksの末尾は、本ブランチが既に保持していた2026-09-28〜2026-10-19の記録を維持したうえで、main側が新たに記録していた2026-10-22のACP下書き作成・PR #51公開準備・PR #51公開・ACP記事公開の4件を時系列順に追加。
+  - `docs/seo/run-log.md`: 本ブランチの「2026-10-19 PR #45の3回目のマージコンフリクト解消」セクションとmain側の「2026-10-22」以降の複数セクション（ACP下書き化・PR #51公開準備/公開・Codexレビュー対応・ACP記事公開）が同じ見出し階層で隣接しており衝突。両者を時系列順にそのまま連結して解消（本文の変更は行っていない）。
+- 新規ファイル（PR #51/#53/#56分、/column/housing-type-nursing-home-registration-checklist/・/column/advance-care-planning-family-checklist/の本文・画像・docs/seo/acp-draft-review.md等）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 43、internal links checked: 1383）、`node tools/check-click-tracking.js` → PASSED（public HTML: 39、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
