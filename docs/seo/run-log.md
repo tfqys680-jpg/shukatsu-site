@@ -706,6 +706,8 @@
 
 ## 2026-10-22 PR #53 マージ後のCodexレビュー対応（ACP下書き）
 
+> 以下は当時の対応履歴。同意書・署名の記述に関する事実認定と再確認待ちは、2026-10-23の原文照合で訂正・解消（本ファイル末尾、acp-draft-review.md参照）。
+
 - 指摘（P2）: 比較表の「医療同意書」行が出典（がん情報サービス「手術（外科治療） もっと詳しく」）の範囲を超えて、個別の医療行為一般・同意書への署名まで一般化している。台帳にも「署名する」と記録されている。
 - 対応: この環境から ganjoho.jp へ接続できず原文は未照合。指摘が正しくても誤りでも成り立つよう、表の行を「医療同意書（手術の同意書など）」「手術などについて、説明を受けて理解・納得したうえで同意したことを確認する」へ限定し、手術以外は医療機関へ確認する一文を追加。参考資料の説明、source-policy・acp-draft-review の台帳も同じ範囲に修正し、署名の記述の有無は運営者の原文再確認待ちと記録。
 - 下書き（noindex）のまま。公開状態の変更なし。
@@ -716,3 +718,13 @@
 - 導線: トップ新着（先頭に追加し最古の生前墓記事を外す）・全記事一覧・親の終活ハブ記事一覧。sitemap追加。
 - 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / acp-draft-review / automation-state を更新。
 - 公開直前確認: 2027年度介護報酬改定は基本的な視点（案）の段階で未決定（検索で確認）。本文の記述と矛盾なし。
+
+## 2026-10-23 ACP記事の原文照合・出典記録訂正（レビュー用PR）
+
+- 対象: PR #56で公開された `/column/advance-care-planning-family-checklist/`。基準main: `459b0771643b2c4c253f1df886285a2f2c67b8da`。
+- 国立がん研究センター「手術（外科治療） もっと詳しく」のページ本文を取得し、5節・1）・（4）で、説明を十分に理解・納得した患者本人が手術の同意書へサインする記述を確認。出典URL・該当見出し・原文の短い抜粋・取得日2026-10-23・ページ表示の更新日2024-10-15をacp-draft-review.mdに記録。
+- PR #53のP2指摘のうち、同意書や署名の記述がないという事実認定を訂正。手術以外の医療行為全般へ一般化しないという趣旨は維持。PR #54当時のアクセス制限・未照合と、今回の確認結果を区別して残した。
+- 本文判断: 比較表・出典説明・参考資料・FAQ/FAQPageは手術の例と個別の医療機関への確認案内にとどまり、今回の照合では追加修正不要。HTML、公開日、dateModified、参考情報確認日の表示、sitemap lastmod（2026-10-22）は変更していない。他の出典を今回再確認したとは記録しない。
+- 管理記録6件を更新: acp-draft-review / source-policy / ymyl-review-queue / editorial-calendar / automation-state / run-log。出典台帳等の現行URLをcolumnへ統一し、原文の再確認待ちを解消。医療職レビュー完了の運営者報告（2026-10-22、詳細は運営者保管）と法律レビュー未実施・将来推奨の記録を保持。未確認の氏名・資格・監修情報は追加しない。
+- 検証: `node tools/check-site.js` ALL CHECKS PASSED（HTML 43件・内部リンク1,367件）。`node tools/check-click-tracking.js` PASSED。CSV4台帳の列数、content-inventory/keyword-mapの公開URL単一行、canonical・og:url・robots・Article日付・sitemapのURLとlastmod・トップ/ハブ導線・旧下書き不在を確認。公開URLはHTTP 200で、取得HTMLと基準mainのHTMLがバイト単位で一致。本文変更がないことも確認。`git diff --check` PASS。
+- マージ・本番への追加反映は行わない。管理記録の訂正PRとしてレビュー結果の確認を待つ。

@@ -166,24 +166,26 @@
 
 上記は原文の事実確認。医療/法務等の専門家による監修・レビューは未実施。運営者のマージ・本番公開の明示承認を受け、一般的な片付け・会話例と相談先案内の範囲で公開する。
 
-## 2026-10-22 下書き: /drafts/advance-care-planning-family-checklist/（人生会議・ACP）
+## /column/advance-care-planning-family-checklist/（人生会議・ACP、2026-10-22公開）
 
 - 原稿・出典は運営者が提供。下表の確認日は運営者の原稿に記録された閲覧日（2026-10-22）で、HTML化の作業では出典本文を再照合していない。開けなかったURL（法務省・政府広報オンライン等5件）は本文に不使用（docs/seo/acp-draft-review.md 参照）。
+- 2026-10-23追記: 国立がん研究センターの手術同意の原文のみ本作業で取得・再照合し、下表の当該行を更新。PR #53の「同意書・署名への言及がない」という事実認定を訂正し、原文の再確認待ちは解消した。手術以外へ一般化しない方針は維持。詳細・指摘へのリンクは `acp-draft-review.md` の2026-10-23記録参照。
+- 公開状態: PR #56で公開済み。医療職レビュー完了は2026-10-22の運営者報告に基づく既存記録を保持し、今回の原文照合とは区別する。
 
 | 記載箇所 | 内容 | 出典 | 確認日 |
 |---|---|---|---|
-| /drafts/advance-care-planning-family-checklist/ | ACPの定義・本人の意思決定を基本とする考え方 | 厚生労働省「『人生会議』してみませんか」 https://www.mhlw.go.jp/stf/newpage_02783.html | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 価値観や生き方を伝えること・話し合った内容は変更できること | 厚生労働省「人生会議」ライブラリー https://www.mhlw.go.jp/acp-jinseikaigi/library/ | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 本人の意思決定・医学的な検討・繰り返す話し合い・文書による記録 | 厚生労働省「人生の最終段階における医療・ケアの決定プロセスに関するガイドライン」 https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 本人の価値観の共有・意思を推定する人と医療・ケアチームの話し合い | 同ガイドライン解説編 https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197722.pdf | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 話し合いの問いと進め方・意思の変化・話したくない人への配慮。専用の記入様式ではない | 厚生労働省「人生会議（ACP）普及・啓発リーフレット」 https://www.mhlw.go.jp/content/10802000/000536088.pdf | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 家族以外の信頼する人との対話・ノートやスマートフォンでの記録 | 厚生労働省Webマガジン https://www.mhlw.go.jp/web_magazine/feature/20260601.html | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 任意後見契約の目的・公正証書による契約 | 厚生労働省「成年後見はやわかり」 https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/ | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 遺言書で扱う財産の分割等・作成形式のルール | 横浜市瀬谷区「10 遺言書」 https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 手術について説明を受け、理解・納得したうえで同意する（2026-10-22 PR #53 Codexレビューで「原文は手術への同意の説明で、同意書・署名や手術以外への一般化は書かれていない」と指摘。この環境から原文を開けず未照合のため、本文は手術の同意に限定した表現へ修正済み。同意書・署名の記述の有無は運営者が原文で再確認する） | 国立がん研究センター がん情報サービス https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 医療機関・薬局の検索機能 | 医療情報ネット（ナビイ） https://www.iryou.teikyouseido.mhlw.go.jp/ | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 地域包括支援センターの総合相談等の役割 | 厚生労働省「地域包括ケアシステム」 https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/ | 2026-10-22 |
-| /drafts/advance-care-planning-family-checklist/ | 2026-09-03の介護給付費分科会で2027年度介護報酬改定に向けた議題・ACP普及に関する参考人発言（決定事項としては扱わない） | 厚生労働省 第264回介護給付費分科会 https://www.mhlw.go.jp/stf/newpage_76591.html ・議事録PDF本文10頁 https://www.mhlw.go.jp/content/12204500/001759653.pdf | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | ACPの定義・本人の意思決定を基本とする考え方 | 厚生労働省「『人生会議』してみませんか」 https://www.mhlw.go.jp/stf/newpage_02783.html | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 価値観や生き方を伝えること・話し合った内容は変更できること | 厚生労働省「人生会議」ライブラリー https://www.mhlw.go.jp/acp-jinseikaigi/library/ | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 本人の意思決定・医学的な検討・繰り返す話し合い・文書による記録 | 厚生労働省「人生の最終段階における医療・ケアの決定プロセスに関するガイドライン」 https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 本人の価値観の共有・意思を推定する人と医療・ケアチームの話し合い | 同ガイドライン解説編 https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197722.pdf | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 話し合いの問いと進め方・意思の変化・話したくない人への配慮。専用の記入様式ではない | 厚生労働省「人生会議（ACP）普及・啓発リーフレット」 https://www.mhlw.go.jp/content/10802000/000536088.pdf | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 家族以外の信頼する人との対話・ノートやスマートフォンでの記録 | 厚生労働省Webマガジン https://www.mhlw.go.jp/web_magazine/feature/20260601.html | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 任意後見契約の目的・公正証書による契約 | 厚生労働省「成年後見はやわかり」 https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/ | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 遺言書で扱う財産の分割等・作成形式のルール | 横浜市瀬谷区「10 遺言書」 https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | がんの手術について、患者本人が説明を十分に理解し納得した場合に手術の同意書へサインする記載を原文で確認。手術以外を含む医療行為全般への一般化の根拠にはしない。旧Codex指摘の「同意書・署名の記述がない」という部分を訂正し、再確認待ちを解消 | 国立がん研究センター がん情報サービス「手術（外科治療） もっと詳しく」 https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html （第5節「1）治療法（手術）の決定」の（4）、ページ更新・確認日2024-10-15） | 2026-10-23（原文照合） |
+| /column/advance-care-planning-family-checklist/ | 医療機関・薬局の検索機能 | 医療情報ネット（ナビイ） https://www.iryou.teikyouseido.mhlw.go.jp/ | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 地域包括支援センターの総合相談等の役割 | 厚生労働省「地域包括ケアシステム」 https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/ | 2026-10-22 |
+| /column/advance-care-planning-family-checklist/ | 2026-09-03の介護給付費分科会で2027年度介護報酬改定に向けた議題・ACP普及に関する参考人発言（決定事項としては扱わない） | 厚生労働省 第264回介護給付費分科会 https://www.mhlw.go.jp/stf/newpage_76591.html ・議事録PDF本文10頁 https://www.mhlw.go.jp/content/12204500/001759653.pdf | 2026-10-22 |
 ## 2026-10-22 /column/housing-type-nursing-home-registration-checklist/ 公開準備時の再確認
 
 - mhlw.go.jp への直接取得は引き続きこの実行環境でブロック（CONNECT 403）。mhlw.go.jp に限定した検索で、公式ページ・PDFのタイトルと内容の一致を確認した。
