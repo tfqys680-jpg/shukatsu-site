@@ -145,6 +145,21 @@
 - 墓石・墓地の購入費、墓地を借りる費用は葬式費用の控除に含まれない点を国税庁No.4129で確認。
   - https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4129.htm
 
+## 2026-10-13 /drafts/housing-type-nursing-home-registration-checklist/ 出典確認
+
+- 運営者指示による臨時の新規記事。記事案・チェックリスト・FAQ・出典の提供がチャット上で確認できなかったため、運営者の「おすすめで進めて」の指示に基づき、厚生労働省の公表資料で確認できた事実のみで本文を作成した。
+- mhlw.go.jp・guardianship.mhlw.go.jp への直接取得はこの実行環境のネットワーク方針でブロック（CONNECT 403）されたため、mhlw.go.jp に限定した複数の検索クエリで、公式ページ・PDFのタイトルと内容の一致を確認する方法で行った。**公開前に運営者が原文で確認すること**。
+- 検討会の開始（第1回 2025-04-14）・とりまとめ公表（2025-11-05）
+  - 厚生労働省「老健局が実施する検討会等」 https://www.mhlw.go.jp/stf/shingi/indexshingiother_129151.html
+  - とりまとめPDF https://www.mhlw.go.jp/content/12300000/001592426.pdf
+- 法律案の閣議決定（2026-04-03）
+  - 法律案の概要PDF https://www.mhlw.go.jp/content/001685800.pdf ／成年後見制度利用促進ポータル（厚労省）の告知 https://guardianship.mhlw.go.jp/news/notice20260508/
+- 改正法（令和8年法律第51号）の公布（2026-06-25）
+  - 公布通知PDF https://www.mhlw.go.jp/content/001715727.pdf ／法律の概要PDF https://www.mhlw.go.jp/content/001717214.pdf ／介護保険最新情報Vol.1518 https://www.mhlw.go.jp/content/001715668.pdf
+- 登録制の対象を「中重度の要介護者や医療的ケアを要する者等を入居対象とするホーム」とする方向、第9回検討会（2026-09-18）で「登録制の施行に向けた対応」を議論
+  - 第9回資料ページ https://www.mhlw.go.jp/stf/newpage_76302.html ／資料「登録制の施行に向けた対応について（まとめ）」 https://www.mhlw.go.jp/content/12300000/001758070.pdf
+- 不採用（未確定または検索経由で十分に裏取りできないため本文に書かない）: 登録の更新期間、居室面積など検討会で示された基準案の数値、施行日、登録施設介護支援の利用者負担、紹介事業者の認定制度の開始時期。
+- 住宅型有料老人ホームの一般的な説明（介護が必要になった場合は入居者が選んだ外部の介護サービスを利用する形が一般的）は「一般に」の限定付きで記載し、ホームごとに異なる旨を併記。
 
 ## 2026-10-19 PR #48 公開前の一次情報照合
 
@@ -155,3 +170,30 @@
 | 同上 | 家庭の不用品回収は自治体の案内・許可業者を確認し、複数社の作業内容・追加料金等を比較。個別契約の有効性・クーリングオフの判断は扱わない | https://www.kokusen.go.jp/news/data/n-20221102_1.html | 2026-10-19 |
 
 上記は原文の事実確認。医療/法務等の専門家による監修・レビューは未実施。運営者のマージ・本番公開の明示承認を受け、一般的な片付け・会話例と相談先案内の範囲で公開する。
+
+## 2026-10-22 下書き: /drafts/advance-care-planning-family-checklist/（人生会議・ACP）
+
+- 原稿・出典は運営者が提供。下表の確認日は運営者の原稿に記録された閲覧日（2026-10-22）で、HTML化の作業では出典本文を再照合していない。開けなかったURL（法務省・政府広報オンライン等5件）は本文に不使用（docs/seo/acp-draft-review.md 参照）。
+
+| 記載箇所 | 内容 | 出典 | 確認日 |
+|---|---|---|---|
+| /drafts/advance-care-planning-family-checklist/ | ACPの定義・本人の意思決定を基本とする考え方 | 厚生労働省「『人生会議』してみませんか」 https://www.mhlw.go.jp/stf/newpage_02783.html | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 価値観や生き方を伝えること・話し合った内容は変更できること | 厚生労働省「人生会議」ライブラリー https://www.mhlw.go.jp/acp-jinseikaigi/library/ | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 本人の意思決定・医学的な検討・繰り返す話し合い・文書による記録 | 厚生労働省「人生の最終段階における医療・ケアの決定プロセスに関するガイドライン」 https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 本人の価値観の共有・意思を推定する人と医療・ケアチームの話し合い | 同ガイドライン解説編 https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197722.pdf | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 話し合いの問いと進め方・意思の変化・話したくない人への配慮。専用の記入様式ではない | 厚生労働省「人生会議（ACP）普及・啓発リーフレット」 https://www.mhlw.go.jp/content/10802000/000536088.pdf | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 家族以外の信頼する人との対話・ノートやスマートフォンでの記録 | 厚生労働省Webマガジン https://www.mhlw.go.jp/web_magazine/feature/20260601.html | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 任意後見契約の目的・公正証書による契約 | 厚生労働省「成年後見はやわかり」 https://guardianship.mhlw.go.jp/personal/type/optional_guardianship/ | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 遺言書で扱う財産の分割等・作成形式のルール | 横浜市瀬谷区「10 遺言書」 https://www.city.yokohama.lg.jp/seya/kenko-iryo-fukushi/fukushi_kaigo/koreisha_kaigo/torikumi/kourei18.files/0006_20220510.pdf | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 手術について説明を受け、理解・納得したうえで同意する（2026-10-22 PR #53 Codexレビューで「原文は手術への同意の説明で、同意書・署名や手術以外への一般化は書かれていない」と指摘。この環境から原文を開けず未照合のため、本文は手術の同意に限定した表現へ修正済み。同意書・署名の記述の有無は運営者が原文で再確認する） | 国立がん研究センター がん情報サービス https://ganjoho.jp/public/dia_tre/treatment/operation/ope02.html | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 医療機関・薬局の検索機能 | 医療情報ネット（ナビイ） https://www.iryou.teikyouseido.mhlw.go.jp/ | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 地域包括支援センターの総合相談等の役割 | 厚生労働省「地域包括ケアシステム」 https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/ | 2026-10-22 |
+| /drafts/advance-care-planning-family-checklist/ | 2026-09-03の介護給付費分科会で2027年度介護報酬改定に向けた議題・ACP普及に関する参考人発言（決定事項としては扱わない） | 厚生労働省 第264回介護給付費分科会 https://www.mhlw.go.jp/stf/newpage_76591.html ・議事録PDF本文10頁 https://www.mhlw.go.jp/content/12204500/001759653.pdf | 2026-10-22 |
+## 2026-10-22 /column/housing-type-nursing-home-registration-checklist/ 公開準備時の再確認
+
+- mhlw.go.jp への直接取得は引き続きこの実行環境でブロック（CONNECT 403）。mhlw.go.jp に限定した検索で、公式ページ・PDFのタイトルと内容の一致を確認した。
+- 第10回検討会（2026-10-09）の資料1「登録制の施行に向けた対応について（まとめ）」で、登録制の施行を令和9年（2027年）12月、既存ホームの移行の経過措置期間を1年間（令和10年12月終了）とする予定が示されていることを確認。本文では「予定」とし、正式には政令・省令で定められる旨を併記。
+  - 第10回資料ページ https://www.mhlw.go.jp/stf/newpage_76664.html ／資料1 https://www.mhlw.go.jp/content/12300000/001758070.pdf
+  - 検討会トップページ https://www.mhlw.go.jp/stf/newpage_56898.html
+- 訂正: 2026-10-13の記録で資料「登録制の施行に向けた対応について（まとめ）」(001758070.pdf) を第9回資料と並べて記載したが、同資料は第10回（2026-10-09）の資料1。
+- 業界紙が報じた「政省令は年内改正予定」「認知症自立度III以上等も対象」は一次資料で確認できていないため本文に記載しない。
