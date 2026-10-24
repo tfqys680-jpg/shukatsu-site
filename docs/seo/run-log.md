@@ -716,3 +716,15 @@
 - 導線: トップ新着（先頭に追加し最古の生前墓記事を外す）・全記事一覧・親の終活ハブ記事一覧。sitemap追加。
 - 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / acp-draft-review / automation-state を更新。
 - 公開直前確認: 2027年度介護報酬改定は基本的な視点（案）の段階で未決定（検索で確認）。本文の記述と矛盾なし。
+
+## 2026-10-24 臨時（運営者指示）: 小規模多機能型居宅介護記事の下書き化
+
+- 運営者がZIP（article-draft.txt・実装指示・生成画像）を提供。原稿の記事状態「未公開原稿。制度・医療の人手確認後に公開判断」と下書き運用の方法（ymyl-review-queue.md）に従い、`drafts/small-scale-multifunctional-care-family-checklist/index.html` に noindex 下書きとして作成。sitemap・トップ・ハブへは未追加。公開予定URLは `/column/small-scale-multifunctional-care-family-checklist/`。
+- 同一検索意図の既存ページなし（keyword-map・全HTMLを確認）。新設と判断。
+- 本文は原稿どおり。ニュースの事実／一般的な解説／編集部の提案を区分ラベルで分け、2027年度報酬改定は検討段階として扱った。内部リンクは公開済みの介護・医療・相談先の記事（questions・siblings・ACP・where-to-ask・living-alone・有料老人ホーム登録制・cost・ハブ）に限定。
+- 画像: 運営者提供の1672×941 PNGから `images/column-small-scale-multifunctional-care-family-checklist.webp`（1200×675）と `-800w.webp`（800×450）を作成し、本文（srcset/sizes・width/height・fetchpriority=high）・OGP・Article JSON-LDに設定。元PNGはリポジトリに入れていない。目視確認済み。
+- 出典4件は2026-10-24に原文確認（source-policy.md）。確認箇所の表は docs/seo/small-scale-care-draft-review.md。
+- テスト: `node tools/check-site.js` 全通過。
+- コミット・PR・公開は未実施（運営者の確認待ち）。
+- YMYLレビュー待ち: 法務・制度（介護保険の料金・利用条件・ケアマネ変更）、医療（医療対応・看多機との違い・夜間体制）。税務解説なし。
+- 次回: 人手確認と運営者の公開承認後に、HTML冒頭コメントの公開手順を実施。公開直前に介護給付費分科会の議論の進捗を再確認。

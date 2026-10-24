@@ -36,7 +36,8 @@
     "2026-10-22 臨時（運営者指示）: 運営者提供原稿から人生会議（ACP）記事を drafts/advance-care-planning-family-checklist/ に noindex 下書き作成（公開予定 /column/advance-care-planning-family-checklist/）。編集確認表は docs/seo/acp-draft-review.md、出典は source-policy.md へ記録。公開は医療職レビュー完了後。",
     "2026-10-22 PR #51公開準備: 最新main（PR #48）を統合し台帳競合を和集合で解消。第10回検討会（2026-10-09）資料の施行予定2027年12月・経過措置1年を「予定」として本文・FAQ・出典へ反映。drafts/からcolumn/へ移しnoindexを削除、公開予定日2026-10-22で表示・Article・台帳・sitemapを同期。トップ新着（最古のcost/を外す）・全記事一覧・親の終活ハブ・where-to-ask・living-aloneから導線追加（リンク追加のみのため各ページの更新日は据え置き）。マージ・公開は運営者の明示承認待ち。",
     "2026-10-22 PR #51公開: 運営者の「マージして公開してください」を受け、最新main（PR #53: ACP下書き）を統合し台帳競合を和集合で解消。公開日2026-10-22は承認当日のため変更なし。台帳の状態を「公開」へ更新し、検証後にsquash mergeで配信。専門家レビューは未実施・将来推奨のまま。",
-    "2026-10-22 ACP記事公開: /column/advance-care-planning-family-checklist/。運営者の「医療職レビュー済み、公開して」に基づきdraftsから移動・noindex削除・トップ/ハブ/sitemap/台帳を更新。"
+    "2026-10-22 ACP記事公開: /column/advance-care-planning-family-checklist/。運営者の「医療職レビュー済み、公開して」に基づきdraftsから移動・noindex削除・トップ/ハブ/sitemap/台帳を更新。",
+    "2026-10-24 臨時（運営者指示）: 運営者提供ZIPの原稿から小規模多機能型居宅介護の記事を drafts/small-scale-multifunctional-care-family-checklist/ に noindex 下書き作成（公開予定 /column/small-scale-multifunctional-care-family-checklist/）。アイキャッチ2サイズをWebP化。確認表は docs/seo/small-scale-care-draft-review.md、出典は source-policy.md へ記録。公開は法務・制度／医療の人手確認後。"
   ],
   "pending_review_tasks": [
     "article18のデジタル遺産の相続記述（NISA死亡時の扱い・暗号資産の課税・遺族の初動）の税理士または司法書士による内容レビュー（未実施）",
@@ -48,7 +49,8 @@
     "/column/pre-need-grave-guide/の税務記述（墓地・墓石の非課税、基礎控除、未払代金の債務控除不可、墓地・墓石購入費は葬式費用控除外）の税理士レビュー（未実施）。国税庁一次情報は2026-10-06確認済み。",
     "/parent-shukatsu/jikka-katazuke/（PR #48）: 専門家レビューは未実施・将来推奨。2026-10-19に一次情報の原文照合・本文出典追加と運営者の公開承認を記録。診断・契約・処分権限の判断は行わない。",
     "/column/housing-type-nursing-home-registration-checklist/（PR #51）: 契約・前払金・退去条件・医療的ケアに触れる箇所の弁護士・介護実務者レビューは未実施・将来推奨。厚労省資料は2026-10-22に検索経由で確認（直接取得はこの環境でブロック）。政令・省令の公布時に施行日・対象範囲を再確認する。",
-    "/column/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビューは運営者報告により完了（2026-10-22、記録はリポジトリ外）。法律部分の司法書士/弁護士レビューは将来推奨・未実施。がん情報サービス原文の同意書・署名記述の再確認は運営者待ち。"
+    "/column/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビューは運営者報告により完了（2026-10-22、記録はリポジトリ外）。法律部分の司法書士/弁護士レビューは将来推奨・未実施。がん情報サービス原文の同意書・署名記述の再確認は運営者待ち。",
+    "/drafts/small-scale-multifunctional-care-family-checklist/（小規模多機能型居宅介護）: 法務・制度（2027年度改定の検討段階の扱い・月単位の報酬と別途費用・ケアマネ変更・利用対象）と医療（医療対応・看多機との違い・夜間体制）の人手確認（未実施）。確認箇所は docs/seo/small-scale-care-draft-review.md。公開まで noindex 下書き。"
   ],
   "blocked_tasks": [
     "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
