@@ -717,6 +717,33 @@
 - 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / acp-draft-review / automation-state を更新。
 - 公開直前確認: 2027年度介護報酬改定は基本的な視点（案）の段階で未決定（検索で確認）。本文の記述と矛盾なし。
 
+## 2026-10-22 臨時（運営者指示）: 成年後見制度の相談先記事（作業ツリー・未コミット）
+
+- 指示: 記事案「成年後見制度はどこに相談する？市町村長申立て・費用助成を確認する手順」、推奨slug、画像パス（public/images/shukatsu/adult-guardianship-municipal-consultation-hero.png）を受領。公開・デプロイ・コミット・プッシュ・PR作成・マージは行わず、作業ツリーの変更を保持して確認待ちとする指示。
+- ブランチ: なし（main起点 71e9b73 の作業ツリーに未コミットで保持）。
+- 作成ファイル: column/adult-guardianship-municipal-support-guide/index.html（column/pre-need-grave-guide/ の構成・CSSを踏襲）。
+- 変更: index.html（新着の先頭に追加し最古のcost/を削除、全記事一覧に追加）、parent-shukatsu/index.html（状況別カード・記事一覧）、where-to-ask/index.html（sec3本文・関連記事欄）、parent-shukatsu/living-alone/index.html（sec8本文）、sitemap.xml（新URL追加、/ と /parent-shukatsu/ のlastmod）、docs/seo（content-inventory・keyword-map・internal-link-map・editorial-calendar・source-policy・ymyl-review-queue・automation-state・本ファイル）。where-to-ask・living-aloneは軽微なリンク追加のためdateModified・lastmod据え置き。
+- 検索意図: 「成年後見制度 相談先」。既存ページに同じ検索意図の記事なし（where-to-askは終活全般の相談先、living-aloneは見守り）。未マージPR #43（身元保証サービスの契約前チェックリスト・drafts）とも意図が異なるため重複なし。2026-11予定のおひとりさま終活記事を作るときは、法定後見の相談先は本記事へリンクして重複させない。
+- 内容: ニュースの事実（厚労省2026-10-21の第24回成年後見制度利用促進専門家会議 開催案内＝会議予定。制度改正・助成拡大の決定とは書かない）、すでに公布された改正法（令和8年法律第45号・成年後見部分は施行日未定）、全国共通の制度（申立先・申立人・費用・候補者・取下げ・報酬）、市町村長申立て、成年後見制度利用支援事業、自治体ごとの差（類型のみ。自治体名と金額は本文に書かない）、確認手順8ステップ、質問チェックリスト、会話例（一般例と明記）、失敗例、状況別、専門家の境界線、FAQ6問、出典。著者は既存表記（運営者・終活カウンセラー1級）のみで、専門職による監修は受けていないと明記。
+- 画像: 指定パスにファイルなし（リポジトリにpublic/ディレクトリ自体がない）。指示どおり代替画像の生成・外部取得はせず、アイキャッチ・og:image・Articleのimageは未設定（HTMLコメントで明記）。
+- 出典確認: source-policy.md の2026-10-22節。公式サイトへ直接アクセスできず、複数の検索で照合。原文の目視確認は未実施。
+- テスト結果: `node tools/check-site.js` ALL CHECKS PASSED（HTML 42・内部リンク1,342）／`node tools/check-click-tracking.js` PASSED（公開パスHTML 38・affiliate 34・CTA 13・商品12）／`git diff --check` PASS／CSV列数一致（7・16・4・6列）／automation-state.json構文OK／Python html.parserでタグ対応・ID重複・見出し階層の飛びなし。
+- 表示確認（ローカルサーバー＋Playwright Chromium）: 新記事・トップ・ハブ・where-to-ask・living-aloneを1280/390/375/320pxで確認。横スクロールなし、同一オリジンの404なし、CLS 0、FAQ 6問の開閉、パンくず、CTA遷移先200、内部リンク14件すべて200、外部リンク14件はtarget="_blank" rel="noopener noreferrer"。印刷はA4で13ページ、ヘッダー等非表示・表の折返しを確認。外部リンク先の到達性とGoogleタグの読み込みは、実行環境のネットワーク制限のため未確認。
+- YMYLレビュー待ち: ymyl-review-queue.md に登録（弁護士または司法書士・未実施）。
+- 阻害要因: アイキャッチ元画像の未配置。公式サイトの原文を直接閲覧できない環境。
+- 次回予定: 運営者の確認後、画像配置→WebP生成・hero/OGP設定、公開日を確定して表示・Article・sitemap・台帳・トップ新着を同期、ブランチを作成してコミット・PR。
+
+## 2026-10-23 運営者指示「残課題をおすすめで進めて」: 最新mainへ統合・Draft PR作成
+
+- 判断: 指定画像（public/images/shukatsu/adult-guardianship-municipal-consultation-hero.png）は引き続き未配置のため、代替画像は使わず、マージ・公開はしない。作業ツリーのままでは失われるおそれがあるため、ブランチへコミット・プッシュしてDraft PRで確認待ちにする。
+- ブランチ: claude/loving-archimedes-tu5x85（main 459b077 起点）。2026-10-22の作業はmain 71e9b73起点の未コミット変更だったため、PR #51（住宅型有料老人ホーム）・ACP記事の公開後のmainへ載せ直した。
+- 統合で変えた点: トップ新着は「成年後見→ACP→住宅型有料老人ホーム」の3本とし、最古の実家の片付けを外した。where-to-askの関連記事欄は住宅型有料老人ホームの次に追加。sitemapの / と /parent-shukatsu/ のlastmodは2026-10-22（新着・ハブの変更日）。台帳は既存行を保持して行を追加。
+- 記事の追加変更: 状況別「親がまだ元気で、将来に備えたい場合」と関連記事欄に、公開済みのACP記事（/column/advance-care-planning-family-checklist/）へのリンクを追加。ACP記事は医療職レビュー済みと報告されているため、逆リンクは追加していない。
+- 再確認（2026-10-23）: 第24回成年後見制度利用促進専門家会議の日時・議題は検索で確認できず、改正法（令和8年法律第45号）の成年後見部分の施行期日を定める政令も確認できないため、本文は変更なし（source-policy.md 2026-10-23追記）。
+- サイト全体の修正: css/style.css の `.breadcrumb` が `padding: 14px 0 0` で `.container` の左右余白を打ち消し、スマホでパンくずが画面端に接していたため `padding-top: 14px` に変更。sitemap掲載38ページを1280/390/320pxで確認し、パンくずの開始位置がヘッダーのサイト名と一致（PC 178px・スマホ 18px）。
+- 既存の別不具合（今回は修正せず別タスクとして提案）: articles/article12.html の表2つが `.tbl-wrap` で囲まれておらず、390/320pxでページ全体が横スクロールする（scrollWidth 578px）。CSS修正の前後で同じ挙動。
+- テスト結果: `node tools/check-site.js` ALL CHECKS PASSED（HTML 44・内部リンク1,423）／`node tools/check-click-tracking.js` PASSED（公開パスHTML 40・affiliate 34・CTA 13・商品12）／`git diff --check` PASS。Playwrightで新記事・トップ・ハブ・where-to-ask・living-aloneを1280/390/375/320pxで確認（横スクロールなし・同一オリジン404なし・CLS 0・FAQ 6問開閉・CTA/内部リンク15件すべて200・外部リンク14件はnoopener noreferrer）。外部リンク先の到達性は実行環境のネットワーク制限で未確認。
+- 公開前に必要なこと: アイキャッチ画像の配置と目視確認・WebP生成・hero/og:image/Article imageの設定、一次情報の原文確認、可能なら弁護士または司法書士のレビュー、公開日の確定と表示・Article・sitemap・台帳・トップ新着の日付同期。
 ## 2026-10-23 article12 スマホ幅のページ横スクロール修正（表をスクロール枠で囲む）
 
 - 事象: `articles/article12.html` がスマホ幅でページ全体ごと横スクロールしていた。Playwright（Chromium）の計測で `document.documentElement.scrollWidth` が320px幅・390px幅とも578（ページが258px／188px横に動く）。1280pxでは発生なし。
