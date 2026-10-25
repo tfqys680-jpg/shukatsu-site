@@ -744,3 +744,14 @@
 - 既存の別不具合（今回は修正せず別タスクとして提案）: articles/article12.html の表2つが `.tbl-wrap` で囲まれておらず、390/320pxでページ全体が横スクロールする（scrollWidth 578px）。CSS修正の前後で同じ挙動。
 - テスト結果: `node tools/check-site.js` ALL CHECKS PASSED（HTML 44・内部リンク1,423）／`node tools/check-click-tracking.js` PASSED（公開パスHTML 40・affiliate 34・CTA 13・商品12）／`git diff --check` PASS。Playwrightで新記事・トップ・ハブ・where-to-ask・living-aloneを1280/390/375/320pxで確認（横スクロールなし・同一オリジン404なし・CLS 0・FAQ 6問開閉・CTA/内部リンク15件すべて200・外部リンク14件はnoopener noreferrer）。外部リンク先の到達性は実行環境のネットワーク制限で未確認。
 - 公開前に必要なこと: アイキャッチ画像の配置と目視確認・WebP生成・hero/og:image/Article imageの設定、一次情報の原文確認、可能なら弁護士または司法書士のレビュー、公開日の確定と表示・Article・sitemap・台帳・トップ新着の日付同期。
+## 2026-10-23 article12 スマホ幅のページ横スクロール修正（表をスクロール枠で囲む）
+
+- 事象: `articles/article12.html` がスマホ幅でページ全体ごと横スクロールしていた。Playwright（Chromium）の計測で `document.documentElement.scrollWidth` が320px幅・390px幅とも578（ページが258px／188px横に動く）。1280pxでは発生なし。
+- 原因: `css/style.css` の `table.cmp` は `min-width: 560px`。他記事は表を `.tbl-wrap`（`overflow-x: auto`）で囲んでいるが、article12の2表（ステップ3「品目の例／向いている手放し方／注意点」、8週間モデルプラン）だけ枠がなく、表がページ幅を押し広げていた。変更前のmain（459b077）でも再現する既存の不具合。
+- 対応: 2表を `<div class="tbl-wrap" role="region" aria-label="…" tabindex="0">` で囲んだ（aria-label「品目別の手放し方と注意点」「8週間モデルプランの週ごとのやることと目安」）。role／aria-label／tabindex はcolumn記事の `.table-scroll` 枠と同じ付け方。HTMLの差分は開閉divの4行のみ。
+- 据え置き: 本文・表の中身・PDFダウンロードリンク・表示日付・Article JSON-LDのdateModified（2026-10-02）・sitemapのlastmod。レイアウトのみの修正のため日付は更新しない。
+- 印刷: 本ページとcss/style.cssに `@media print` はないため、jikka-katazukeのような `.tbl-wrap { overflow: visible; }` の上書きは追加しない。印刷メディアのエミュレーション（幅718px＝A4相当）で2表とも枠の切れなし（scrollWidth 682＝clientWidth 682）。A4のPDF出力でも3列とも欠けずに印字されることを目視確認。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML 43・内部リンク1,367）／`node tools/check-click-tracking.js` → PASSED（public HTML 39・affiliate 34・CTA 13・商品12）／`git diff --check` → PASS。
+- 実表示（Playwright／Chromium、ローカル配信）: 320px・390px・1280pxでscrollWidth＝画面幅、ページの横スクロール量0。表は枠内でスクロール（枠幅284／354px・表560px）。1280pxは枠幅724pxで枠内スクロールも不要。スマホ端末エミュレーションでもレイアウト幅が578→320／390に戻る。Tabで枠にフォーカスでき、→キーで枠内がスクロールする。各幅のスクリーンショットで表示崩れなしを目視確認。sitemap掲載の全37ページを390pxで計測し、ページ単位の横スクロールは修正後0件（修正前はarticle12のみ）。
+- ブランチ: claude/happy-maxwell-j6ba65（main 459b077起点）
+- PR: ドラフトPRを作成
