@@ -799,3 +799,35 @@
 - 実表示（Playwright／Chromium、ローカル配信）: 320px・390px・1280pxでscrollWidth＝画面幅、ページの横スクロール量0。表は枠内でスクロール（枠幅284／354px・表560px）。1280pxは枠幅724pxで枠内スクロールも不要。スマホ端末エミュレーションでもレイアウト幅が578→320／390に戻る。Tabで枠にフォーカスでき、→キーで枠内がスクロールする。各幅のスクリーンショットで表示崩れなしを目視確認。sitemap掲載の全37ページを390pxで計測し、ページ単位の横スクロールは修正後0件（修正前はarticle12のみ）。
 - ブランチ: claude/happy-maxwell-j6ba65（main 459b077起点）
 - PR: ドラフトPRを作成
+
+## 2026-10-26 住まいの終活記事の下書き作成（運営者指示）
+
+- 運営者提供ZIP（article-draft.txt・image-details.txt・生成画像PNG）を原稿として使用。本文の未提供部分はなく、原稿にない事実の補完はしていない。
+- 重複確認: keyword-map・全HTMLを「空き家／名義／相続登記／住まいのエンディングノート」で走査。/parent-shukatsu/jikka-katazuke/ は片付けの進め方（sec9で不動産は専門家へ誘導のみ）で検索意図が異なるため、更新ではなく新設とした。
+- 配置: 既存の下書き運用（drafts/・noindex・sitemap非掲載・datePublished/dateModifiedなし・公開日「未定」）に合わせ drafts/family-home-future-plan-checklist/ に作成。canonical/og:urlは公開予定URL /column/family-home-future-plan-checklist/。トップ・ハブ・jikka-katazuke・sitemapは公開時に更新するため未変更。
+- 画像: 元PNG 1672×941（2,130,246 B）を中央で1672×940（16:9）にクロップし、images/column-family-home-future-plan-checklist.webp（1600×900）・-1200.webp（1200×675）・-800.webp（800×450）をWebP q80で作成。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"（lazyなし）は既存記事の方式に準拠。og:imageは1600×900。元PNGはリポジトリに追加しない（既存運用どおり）。人物・手指・書類・ロゴ・個人情報を目視確認（文字・ロゴ・個人情報なし）。
+- 一次情報: 掛川市・国交省2件・法務省（相続登記）・法務省資料（共有物の変更）をWebFetchで原文確認（source-policy.md 2026-10-26節）。原稿の「2026年10月20日に案内」は掛川市ページの更新日のため「2026年10月20日更新のページで」と表現を調整。
+- 検証: node tools/check-site.js／node tools/check-click-tracking.js／git diff --check、Playwrightで320/390/1280px表示・画像読み込み・横スクロールを確認（結果は作業報告に記載）。
+- コミット・プッシュ・PRは未実施（運営者の確認待ち）。
+
+## 2026-10-26 住まいの終活記事の公開（運営者指示）
+
+- 運営者が「マージして公開してください」と指示。drafts/family-home-future-plan-checklist/ を column/family-home-future-plan-checklist/ へ移動し、noindexと下書きコメントを削除。公開日・最終更新日・参考情報確認日を2026-10-26に設定（Article JSON-LD・article-meta・この記事について）。
+- 導線: トップ新着（先頭に追加し最古の実家の片付け記事を外す）・全記事一覧・親の終活ハブ記事一覧・jikka-katazukeの関連記事。sitemap追加。トップ・ハブ・jikka-katazukeの日付はリンク追加のみのため据え置き（過去の公開時の運用に準拠）。
+- 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / source-policy / automation-state を公開状態へ更新。
+- 司法書士レビューは未実施・将来推奨。掛川市のセミナー（2026-11-18開催）は公開時点で開催前。開催後は【ニュースの事実】の表現（開催予定→開催済み）を見直す。
+
+## 2026-10-26 自宅での看取り記事の掲載準備（運営者指示）
+
+- 2026-10-23に下書き（drafts/home-end-of-life-care-checklist/）を作成。運営者の記事案本文は未受領のため、指定構成（見出し・役割比較表・7項目・チェックリスト・FAQ3件・CTA・出典・注意書き）で一般解説を独自に作成。厚生労働省サイトに作成環境から接続できず、2026-10-19資料の原文は未確認（ニュース欄は資料の存在と「審議中の案で制度決定ではない」旨のみ）。
+- 2026-10-26、運営者指示「未掲載分があれば掲載してください」。最新main（PR #61まで）を基に再作成し、追記競合は両方の行を残して解消。
+- 画像: 当初の2026-10-20生成画像はACP記事（2026-10-22公開）のアイキャッチ・OGPと同一だったため、ZIP内で未使用の2026-10-09生成画像（sha256 ac854181…）へ差し替え（1200x675 WebP q80・70,070 B、目視で文字・人物の崩れなし）。人物に看護師の服装がないため、altは指定文の「訪問看護師」を「専門職」に変更（運営者確認待ち）。
+- 掲載: column/home-end-of-life-care-checklist/ へ移動、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-26（公開予定日。マージ日が変わる場合は表示・Article・台帳・sitemap・トップ新着を同期）。sitemap追加、トップ新着（先頭に追加し最古の住宅型有料老人ホーム記事を外す）・全記事一覧、親の終活ハブ、ACP・where-to-ask・30項目の関連記事欄、本文からACP記事へのリンク。リンク追加のみのページの日付は据え置き。
+- 検証: node tools/check-site.js／node tools/check-click-tracking.js／git diff --check、Playwrightで390/1280px表示を確認。
+- コミット・プッシュ・PRは未実施。医療職レビュー未実施・厚労省資料原文未確認のため、マージ前に運営者判断が必要。
+
+## 2026-10-26 自宅での看取り記事の公開（運営者指示）
+
+- 運営者が「マージして公開してください」と明示承認。18:41 JST時点で公開予定日2026-10-26と同日のため日付の再同期は不要。最新main（8c750d7）から変更なし。
+- 台帳（content-inventory・keyword-map・editorial-calendar・ymyl-review-queue・source-policy）を「公開」へ更新。元PNGはリポジトリに入れない（squash merge）。
+- 未了: 医療職レビュー、厚労省2026-10-19資料の原文照合（ニュース欄の要約追記）、alt変更（訪問看護師→専門職）の運営者確認。
