@@ -831,3 +831,12 @@
 - 運営者が「マージして公開してください」と明示承認。18:41 JST時点で公開予定日2026-10-26と同日のため日付の再同期は不要。最新main（8c750d7）から変更なし。
 - 台帳（content-inventory・keyword-map・editorial-calendar・ymyl-review-queue・source-policy）を「公開」へ更新。元PNGはリポジトリに入れない（squash merge）。
 - 未了: 医療職レビュー、厚労省2026-10-19資料の原文照合（ニュース欄の要約追記）、alt変更（訪問看護師→専門職）の運営者確認。
+
+### 2026-10-26 追記: PR #45の5回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`bf48240`→`45636cf`）に住まいの終活「実家を空き家にしないために」記事（/column/family-home-future-plan-checklist/）と自宅での看取りの確認事項記事（/column/home-end-of-life-care-checklist/）が新規公開されていたため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合1件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-26 住まいの終活記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値（article06・9月分月次レビューの経緯を含む注記つき）を維持。completed_tasksの末尾は、本ブランチが既に保持していた2026-09-28〜2026-10-22の記録を維持したうえで、main側が新たに記録していた2026-10-26の住まいの終活記事公開を追加。あわせて、前回（4回目）のマージで取り込んだarticle12のスクロール修正（main `1e6452c`）がcompleted_tasksに未記録だったため、run-log.mdの記録を要約して追記した。
+- 新規ファイル（family-home-future-plan-checklist・home-end-of-life-care-checklistの本文・画像）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 45、internal links checked: 1466）、`node tools/check-click-tracking.js` → PASSED（public HTML: 41、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
