@@ -87,3 +87,9 @@
 /,/column/family-home-future-plan-checklist/,トップ→記事,新着記事+全記事一覧（2026-10-26公開）
 /parent-shukatsu/,/column/family-home-future-plan-checklist/,ハブ→記事,記事一覧（2026-10-26公開）
 /parent-shukatsu/jikka-katazuke/,/column/family-home-future-plan-checklist/,記事→記事,関連記事（相互リンク。軽微なリンク追加のためdateModified据え置き）
+/column/home-end-of-life-care-checklist/,/column/advance-care-planning-family-checklist/;/parent-shukatsu/questions/;/where-to-ask/;/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/;/articles/article11.html;/cost/,記事→柱/記事,本文の深掘りリンク（30項目#sec3・where-to-ask#sec2・siblings）・CTA(30項目)・関連記事欄
+/,/column/home-end-of-life-care-checklist/,トップ→記事,新着記事+全記事一覧（2026-10-26公開準備）
+/parent-shukatsu/,/column/home-end-of-life-care-checklist/,ハブ→記事,記事一覧（2026-10-26公開準備）
+/column/advance-care-planning-family-checklist/,/column/home-end-of-life-care-checklist/,記事→記事,関連記事（ACPの次に在宅での看取りの準備を知りたい人向け）
+/where-to-ask/,/column/home-end-of-life-care-checklist/,記事→記事,関連記事（在宅療養・看取りの相談先を探す人向け）
+/parent-shukatsu/questions/,/column/home-end-of-life-care-checklist/,記事→記事,関連記事（医療の希望を聞いたあとの在宅での準備）
