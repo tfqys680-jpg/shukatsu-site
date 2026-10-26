@@ -728,3 +728,20 @@
 - 実表示（Playwright／Chromium、ローカル配信）: 320px・390px・1280pxでscrollWidth＝画面幅、ページの横スクロール量0。表は枠内でスクロール（枠幅284／354px・表560px）。1280pxは枠幅724pxで枠内スクロールも不要。スマホ端末エミュレーションでもレイアウト幅が578→320／390に戻る。Tabで枠にフォーカスでき、→キーで枠内がスクロールする。各幅のスクリーンショットで表示崩れなしを目視確認。sitemap掲載の全37ページを390pxで計測し、ページ単位の横スクロールは修正後0件（修正前はarticle12のみ）。
 - ブランチ: claude/happy-maxwell-j6ba65（main 459b077起点）
 - PR: ドラフトPRを作成
+
+## 2026-10-26 住まいの終活記事の下書き作成（運営者指示）
+
+- 運営者提供ZIP（article-draft.txt・image-details.txt・生成画像PNG）を原稿として使用。本文の未提供部分はなく、原稿にない事実の補完はしていない。
+- 重複確認: keyword-map・全HTMLを「空き家／名義／相続登記／住まいのエンディングノート」で走査。/parent-shukatsu/jikka-katazuke/ は片付けの進め方（sec9で不動産は専門家へ誘導のみ）で検索意図が異なるため、更新ではなく新設とした。
+- 配置: 既存の下書き運用（drafts/・noindex・sitemap非掲載・datePublished/dateModifiedなし・公開日「未定」）に合わせ drafts/family-home-future-plan-checklist/ に作成。canonical/og:urlは公開予定URL /column/family-home-future-plan-checklist/。トップ・ハブ・jikka-katazuke・sitemapは公開時に更新するため未変更。
+- 画像: 元PNG 1672×941（2,130,246 B）を中央で1672×940（16:9）にクロップし、images/column-family-home-future-plan-checklist.webp（1600×900）・-1200.webp（1200×675）・-800.webp（800×450）をWebP q80で作成。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"（lazyなし）は既存記事の方式に準拠。og:imageは1600×900。元PNGはリポジトリに追加しない（既存運用どおり）。人物・手指・書類・ロゴ・個人情報を目視確認（文字・ロゴ・個人情報なし）。
+- 一次情報: 掛川市・国交省2件・法務省（相続登記）・法務省資料（共有物の変更）をWebFetchで原文確認（source-policy.md 2026-10-26節）。原稿の「2026年10月20日に案内」は掛川市ページの更新日のため「2026年10月20日更新のページで」と表現を調整。
+- 検証: node tools/check-site.js／node tools/check-click-tracking.js／git diff --check、Playwrightで320/390/1280px表示・画像読み込み・横スクロールを確認（結果は作業報告に記載）。
+- コミット・プッシュ・PRは未実施（運営者の確認待ち）。
+
+## 2026-10-26 住まいの終活記事の公開（運営者指示）
+
+- 運営者が「マージして公開してください」と指示。drafts/family-home-future-plan-checklist/ を column/family-home-future-plan-checklist/ へ移動し、noindexと下書きコメントを削除。公開日・最終更新日・参考情報確認日を2026-10-26に設定（Article JSON-LD・article-meta・この記事について）。
+- 導線: トップ新着（先頭に追加し最古の実家の片付け記事を外す）・全記事一覧・親の終活ハブ記事一覧・jikka-katazukeの関連記事。sitemap追加。トップ・ハブ・jikka-katazukeの日付はリンク追加のみのため据え置き（過去の公開時の運用に準拠）。
+- 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / source-policy / automation-state を公開状態へ更新。
+- 司法書士レビューは未実施・将来推奨。掛川市のセミナー（2026-11-18開催）は公開時点で開催前。開催後は【ニュースの事実】の表現（開催予定→開催済み）を見直す。

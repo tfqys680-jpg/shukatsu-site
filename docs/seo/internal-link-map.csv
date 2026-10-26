@@ -83,3 +83,7 @@
 /parent-shukatsu/living-alone/,/column/housing-type-nursing-home-registration-checklist/,記事→記事,関連記事欄（一人暮らしの親の住まいの選択肢）
 /,/column/advance-care-planning-family-checklist/,トップ→記事,新着記事・全記事一覧
 /parent-shukatsu/,/column/advance-care-planning-family-checklist/,ハブ→記事,記事一覧
+/column/family-home-future-plan-checklist/,/parent-shukatsu/jikka-katazuke/;/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/;/articles/article15.html;/where-to-ask/;/parent-shukatsu/,記事→記事/ハブ,冒頭の読み方（片付け記事との役割分け）・CTA（相談先）・関連記事欄。2026-10-26公開
+/,/column/family-home-future-plan-checklist/,トップ→記事,新着記事+全記事一覧（2026-10-26公開）
+/parent-shukatsu/,/column/family-home-future-plan-checklist/,ハブ→記事,記事一覧（2026-10-26公開）
+/parent-shukatsu/jikka-katazuke/,/column/family-home-future-plan-checklist/,記事→記事,関連記事（相互リンク。軽微なリンク追加のためdateModified据え置き）
