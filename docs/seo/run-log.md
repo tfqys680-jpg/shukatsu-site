@@ -850,3 +850,13 @@
 - 導線: トップ新着（先頭に追加し最古のACP記事を外す）・全記事一覧、親の終活ハブ記事一覧、住宅型有料老人ホーム記事・自宅での看取り記事の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-27）。
 - 検証: node tools/check-site.js（HTML46件・内部リンク1491件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、Playwrightで1280/375/320px（横スクロールなし・画像404なし・srcset選択・H1=1）。
 - 未了: 出典2件の原文照合、専門家レビュー（ymyl-review-queue.md登録済み）。
+
+### 2026-10-27 追記: PR #45の6回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`45636cf`→`0111454`）に介護施設の食費・居住費 負担限度額認定の申請前チェック記事（/column/care-facility-food-housing-cost-application-checklist/）が新規公開されていたため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-27 負担限度額認定記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値を維持。completed_tasksの末尾は、本ブランチが既に保持していた記録を維持したうえで、main側が新たに記録していた2026-10-27の負担限度額認定記事公開を追加。
+  - `docs/seo/run-log.md`: 本ブランチの「2026-10-26 PR #45の5回目のマージコンフリクト解消」セクションとmain側の「2026-10-27 負担限度額認定の申請前チェック記事の作成・公開」セクションが隣接しており衝突。両者を時系列順にそのまま連結して解消（本文の変更は行っていない）。
+- 新規ファイル（care-facility-food-housing-cost-application-checklistの本文・画像）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 46、internal links checked: 1507）、`node tools/check-click-tracking.js` → PASSED（public HTML: 42、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
