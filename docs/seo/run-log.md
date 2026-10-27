@@ -760,3 +760,13 @@
 - 運営者が「マージして公開してください」と明示承認。18:41 JST時点で公開予定日2026-10-26と同日のため日付の再同期は不要。最新main（8c750d7）から変更なし。
 - 台帳（content-inventory・keyword-map・editorial-calendar・ymyl-review-queue・source-policy）を「公開」へ更新。元PNGはリポジトリに入れない（squash merge）。
 - 未了: 医療職レビュー、厚労省2026-10-19資料の原文照合（ニュース欄の要約追記）、alt変更（訪問看護師→専門職）の運営者確認。
+
+## 2026-10-27 負担限度額認定の申請前チェック記事の作成・公開（運営者指示）
+
+- ブランチ: claude/care-facility-cost-application-2026-10-27。運営者が公開・デプロイ・コミット・プッシュ・PR作成・マージを明示指示（ZIP同梱のclaude-code-prompt.txtには「公開等は行わず確認待ちで停止」とあったが、チャットでの運営者の直接指示を優先）。
+- 原稿: 運営者提供ZIP（article-draft.txt・image-details.txt・生成画像PNG）。description・導入・H2/H3・相談メモ・チェックリスト・FAQ3件・CTA・出典を原稿から実装し、原稿にない制度説明は補完していない。読み方の凡例（【ニュースの事実】【資料の内容】【現行制度の説明】【本記事の提案】）を追加。#sec6の「照会所要日数を個人の審査完了日数として案内しないでください」（編集者向けの文）は読者向けに「個人の審査完了日数ではありません。結果が出る時期は申請先に確認」と言い換えた。
+- 重複確認: 全HTML・keyword-mapを「負担限度額／補足給付／居住費／食費」で走査。公開記事で同一検索意図のものはなし（住宅型有料老人ホーム記事は費用内訳に触れるのみ、drafts/parent-care-without-burnout/は未公開の介護負担記事）。新設とした。
+- 画像: 元PNG 1672×941（1,981,630 B）をImageOps.fitで1600×900へ中央クロップ・縮小し、images/column-care-facility-food-housing-cost-application-checklist.webp（1600×900・78,354 B）・-1200.webp（1200×675・54,128 B）・-800.webp（800×450・31,248 B）をWebP q80で作成（既存方式。AVIFは既存運用になく作成せず）。元PNGはリポジトリに入れない（public/は本リポジトリの配信構成にないため）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。OGP/JSON-LDにも使用し1.91:1クロップで人物の頭部が切れないことを確認。目視で手指・表情に崩れなし、紙面・ノート・フォルダーに読める文字・個人情報・ロゴなし。
+- 導線: トップ新着（先頭に追加し最古のACP記事を外す）・全記事一覧、親の終活ハブ記事一覧、住宅型有料老人ホーム記事・自宅での看取り記事の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-27）。
+- 検証: node tools/check-site.js（HTML46件・内部リンク1491件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、Playwrightで1280/375/320px（横スクロールなし・画像404なし・srcset選択・H1=1）。
+- 未了: 出典2件の原文照合、専門家レビュー（ymyl-review-queue.md登録済み）。
