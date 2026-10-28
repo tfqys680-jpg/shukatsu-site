@@ -780,3 +780,12 @@
 - 画像: 元PNG 1672×941（2,020,552 B）をImageOps.fitで1600×900へ（縦0.5px相当の中央クロップ）、WebP q80で images/column-end-of-life-local-support-consultation-checklist.webp（1600×900・76,946 B）・-1200.webp（1200×675・51,516 B）・-800.webp（800×450・28,746 B）。元PNGはリポジトリに入れない（public/ は本リポジトリの配信構成にない）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「画像はイメージです。実在の窓口・相談員・利用者の写真ではありません」を表示。目視で文字・ロゴ・個人情報なし、ノートは無地、フォルダーは閉じた状態。
 - 検証: node tools/check-site.js（HTML47件・内部リンク1524件 全通過）、node tools/check-click-tracking.js（通過）、Playwrightで1280/390/320px（横スクロールなし・画像404なし・JSON-LD 3種パース可・表は320pxでも3列収まる）。
 - 未了: 専門家レビュー（法務・医療・税務）、運営者による公開判断。
+
+## 2026-10-28 身寄りがない人の終活支援記事の公開（運営者指示）
+
+- 運営者が「マージ・公開して」と明示指示（ymyl-review-queue の下書き運用方針より運営者判断を優先。専門家レビューは未実施のまま）。
+- drafts/ から column/end-of-life-local-support-consultation-checklist/ へ移動、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-28（指示当日）、本文の公開日表示を更新。ACP記事への相対リンクを column 内の書式（../）へ。
+- 導線: トップ新着（先頭に追加し最古の住まいの終活記事を外す）・全記事一覧、where-to-ask の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-28）。親の終活ハブは本人向け記事のため今回は追加せず。
+- 検証: node tools/check-site.js（HTML47件・内部リンク1526件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check。
+- 未了: 専門家レビュー（法務・医療・税務）。
+- 運営者指示「専門家レビューはないので、参考程度にご覧ください。のような表現に」により、冒頭注意書きと「この記事について」に専門家レビュー未実施・参考程度である旨を明記。
