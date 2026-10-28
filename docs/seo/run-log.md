@@ -770,3 +770,13 @@
 - 導線: トップ新着（先頭に追加し最古のACP記事を外す）・全記事一覧、親の終活ハブ記事一覧、住宅型有料老人ホーム記事・自宅での看取り記事の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-27）。
 - 検証: node tools/check-site.js（HTML46件・内部リンク1491件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、Playwrightで1280/375/320px（横スクロールなし・画像404なし・srcset選択・H1=1）。
 - 未了: 出典2件の原文照合、専門家レビュー（ymyl-review-queue.md登録済み）。
+
+## 2026-10-28 身寄りがない人の終活支援記事の下書き作成（運営者指示）
+
+- 対象: tfqys680-jpg/shukatsu-site（main 0111454 から作業。ブランチ作成・コミット・プッシュ・PRは運営者指示により未実施）。
+- 原稿: 運営者提供ZIP（article-draft.txt・image-details.txt・claude-code-prompt.txt・生成画像PNG）。description・導入・H2/H3・場面別表・チェックリスト7項目・FAQ3件・CTA・出典5件を実装。【ニュースの事実】【一般的な整理】【一般的な解説】【本記事の提案】を表示し、日付（9/30更新・10/1開始・原稿作成10/28）を凡例で区別。
+- 公開状態: ymyl-review-queue.md の「身元保証・死後事務はレビュー完了まで公開しない（下書き運用）」方針と運営者の「公開しない」指示により、/drafts/end-of-life-local-support-consultation-checklist/ に noindex 下書きとして作成。datePublished/dateModifiedは付けず「公開日：未定」。sitemap・トップ・ハブ・既存記事からのリンクは公開時まで追加しない（canonical/OGPは公開予定URL）。
+- 重複確認: 全HTMLを「身寄り／死後事務／終身サポート／身元保証／終活情報登録」で走査し、公開記事に同一検索意図なし。未マージの codex/draft-mimoto-hosho-keiyaku-checklist（身元保証契約の下書き）と編集カレンダー2026-11後半「おひとりさまの終活チェックリスト」は関連するため公開時に役割分担を判断。
+- 画像: 元PNG 1672×941（2,020,552 B）をImageOps.fitで1600×900へ（縦0.5px相当の中央クロップ）、WebP q80で images/column-end-of-life-local-support-consultation-checklist.webp（1600×900・76,946 B）・-1200.webp（1200×675・51,516 B）・-800.webp（800×450・28,746 B）。元PNGはリポジトリに入れない（public/ は本リポジトリの配信構成にない）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「画像はイメージです。実在の窓口・相談員・利用者の写真ではありません」を表示。目視で文字・ロゴ・個人情報なし、ノートは無地、フォルダーは閉じた状態。
+- 検証: node tools/check-site.js（HTML47件・内部リンク1524件 全通過）、node tools/check-click-tracking.js（通過）、Playwrightで1280/390/320px（横スクロールなし・画像404なし・JSON-LD 3種パース可・表は320pxでも3列収まる）。
+- 未了: 専門家レビュー（法務・医療・税務）、運営者による公開判断。

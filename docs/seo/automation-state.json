@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Tokyo",
-  "last_run": "2026-10-27（負担限度額認定の申請前チェック記事を運営者原稿から作成し、運営者の明示指示により公開）",
+  "last_run": "2026-10-28（身寄りがない人の終活支援記事を運営者原稿から drafts/ にnoindex下書き作成。公開・コミットは未実施）",
   "last_new_article": "2026-10-27 /column/care-facility-food-housing-cost-application-checklist/（運営者が公開・マージを明示指示）",
   "last_major_update": "2026-08-10 /articles/article05.html（編集カレンダー2026-08-10〜14週タスク。親への切り出し方を拒否・NG例まで拡張）",
   "last_monthly_review": "2026-10-05（10月分を機械チェックのみ実施: title/meta description重複なし・新規孤立ページなし。Search Consoleデータ未配置のためSC分析はデータ不足として未実施）",
@@ -38,7 +38,8 @@
     "2026-10-22 PR #51公開: 運営者の「マージして公開してください」を受け、最新main（PR #53: ACP下書き）を統合し台帳競合を和集合で解消。公開日2026-10-22は承認当日のため変更なし。台帳の状態を「公開」へ更新し、検証後にsquash mergeで配信。専門家レビューは未実施・将来推奨のまま。",
     "2026-10-22 ACP記事公開: /column/advance-care-planning-family-checklist/。運営者の「医療職レビュー済み、公開して」に基づきdraftsから移動・noindex削除・トップ/ハブ/sitemap/台帳を更新。",
     "2026-10-26 住まいの終活記事公開: /column/family-home-future-plan-checklist/。運営者原稿から作成し、一次情報（掛川市・国交省2件・法務省）を原文確認。drafts経由でcolumnへ移動・noindex削除・トップ/ハブ/jikka-katazuke/sitemap/台帳を更新。",
-    "2026-10-27 負担限度額認定記事公開: /column/care-facility-food-housing-cost-application-checklist/。運営者原稿から作成し、トップ/ハブ/関連2記事/sitemap/台帳を更新。出典原文は作成環境から未照合。"
+    "2026-10-27 負担限度額認定記事公開: /column/care-facility-food-housing-cost-application-checklist/。運営者原稿から作成し、トップ/ハブ/関連2記事/sitemap/台帳を更新。出典原文は作成環境から未照合。",
+    "2026-10-28 臨時（運営者指示）: 運営者原稿から身寄りがない人の終活支援記事を /drafts/end-of-life-local-support-consultation-checklist/ に noindex 下書き作成（公開予定 /column/end-of-life-local-support-consultation-checklist/）。奈良市3ページ等の原文を確認しsource-policy.mdへ記録。公開は専門家レビューと運営者承認の後。"
   ],
   "pending_review_tasks": [
     "article18のデジタル遺産の相続記述（NISA死亡時の扱い・暗号資産の課税・遺族の初動）の税理士または司法書士による内容レビュー（未実施）",
