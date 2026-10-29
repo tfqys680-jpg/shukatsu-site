@@ -41,3 +41,13 @@ Fusion、Projects、Review Maxの契約・利用可否・有効化は別途ア�
 - 記事本文・一次資料・専門家レビューの状態を確認。機械検証成功を事実照合済みと扱わない。
 - 公開状態、dateModified、sitemap、content-inventory、keyword-mapの変更理由と整合性を確認。
 - UI変更は320px/375px/390pxで確認。
+
+## 各AIからの入口
+
+- Codex: ルートの `AGENTS.md` → `CLAUDE.md` と本書。
+- Claude Code: ルートの `CLAUDE.md` → 本書。
+- Copilot: `.github/copilot-instructions.md` → 本書。
+
+最新mainを作業環境に取り込み、新しいセッションで開始する。継続中のセッションでは変更した入口と本書を明示的に再読込する。
+リポジトリとコマンド実行環境にアクセスできるCodex/Claude Codeが対象。通常のチャットだけで自動実行される設定ではない。
+入口ファイルを配置したことと、各クライアントで新規セッションの自動読込を実測したことは区別して報告する。
