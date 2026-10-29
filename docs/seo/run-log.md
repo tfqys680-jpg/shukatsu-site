@@ -789,3 +789,15 @@
 - 検証: node tools/check-site.js（HTML47件・内部リンク1526件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check。
 - 未了: 専門家レビュー（法務・医療・税務）。
 - 運営者指示「専門家レビューはないので、参考程度にご覧ください。のような表現に」により、冒頭注意書きと「この記事について」に専門家レビュー未実施・参考程度である旨を明記。
+
+## 2026-10-28 負担限度額認定記事の一次資料照合（運営者指示）
+
+- 実行日：2026-10-28（Asia/Tokyo）。ブランチ：`codex/verify-care-cost-sources-20261028`。公開PR #64の記事を対象に、厚労省Vol.1550と新宿区の案内の原文を確認した。
+- 起点：main `0111454c873eeb8618f0a4b85084917a1b28a831`。作業中にPR #65がマージされたため、最新main `8ae4255d23f18323a4e2b7b0c805e7d0accea772`へrebase。source-policy・ymyl-review-queue・automation-stateの競合は、本件の訂正と別記事の追加記録を両方保持して解消した。
+- 対象URL：https://shukatsu-guide.jp/column/care-facility-food-housing-cost-application-checklist/ 。公開HTMLと照合開始時・追従後mainの対象HTMLはバイト単位で一致。導入・全9節・相談メモ・チェックリスト・FAQ3問（JSON-LD含む）・結び・記事についての説明を照合した。
+- 原文：https://www.mhlw.go.jp/content/001763099.pdf ／ https://www.city.shinjuku.lg.jp/fukushi/kaigo05_000101.html 。公式URLから直接取得し、厚労省の10/26付事務連絡、9/29付資料、既存の負担軽減策・添付省略・照会日数、新宿区の8/1更新表示・対象と要件・提出書類を確認。PDFの事務連絡・照会日数表・添付簡素化は目視でも確認した。
+- 変更：`docs/seo/source-policy.md`へ記述別の判定、原文のページ・見出し、補足条件と本文への追記要否、専門家確認事項を記録。「原文未照合」を2026-10-28実施済みへ訂正し、`ymyl-review-queue.md`・`automation-state.json`を同期。本ログを含む管理ファイル4件のみ変更し、新規記事・ファイルは作成していない。
+- 本文の判断：2資料と掲載本文に、本文修正を要する明確な齟齬は見つからなかった。必要な限定・申請先確認が既にあるため、本文・FAQPage・記事日付・sitemap・内部リンク・画像は変更しない。詳細な申請条件に拡張する場合の追加確認はsource-policyに記録した。
+- 検証（最新main追従後）：`node tools/check-site.js` 全通過（HTML47件・内部リンク1526件）、`node tools/check-click-tracking.js` 通過（公開HTML43件）、`git diff --check origin/main` 通過。JSON構文、対象外の台帳記録・PR #65の追加内容の保持、競合マーカーなし、公開HTMLと対象ファイルの同一性も確認。表示変更がないためブラウザでの再検証は行っていない。
+- 未了：専門家レビュー（制度・個別適用・申請先・添付省略・適用開始/更新/提示、代理・同意、所得・非課税の定義）。**一次資料の原文照合と専門家レビューを別作業として扱い、監修済み・専門家確認完了には変更しない。**
+- PRとして提案。マージ・本番への反映は未実施。次回は専門家の確認者・対象・日付・指摘内容が得られた時点で、原文照合の記録とは分けて追記する。
