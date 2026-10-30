@@ -768,6 +768,8 @@
 
 ## 2026-10-22 PR #53 マージ後のCodexレビュー対応（ACP下書き）
 
+> 以下は当時の対応履歴。同意書・署名の記述に関する事実認定と再確認待ちは、2026-10-23の原文照合で訂正・解消（本ファイル末尾、acp-draft-review.md参照）。
+
 - 指摘（P2）: 比較表の「医療同意書」行が出典（がん情報サービス「手術（外科治療） もっと詳しく」）の範囲を超えて、個別の医療行為一般・同意書への署名まで一般化している。台帳にも「署名する」と記録されている。
 - 対応: この環境から ganjoho.jp へ接続できず原文は未照合。指摘が正しくても誤りでも成り立つよう、表の行を「医療同意書（手術の同意書など）」「手術などについて、説明を受けて理解・納得したうえで同意したことを確認する」へ限定し、手術以外は医療機関へ確認する一文を追加。参考資料の説明、source-policy・acp-draft-review の台帳も同じ範囲に修正し、署名の記述の有無は運営者の原文再確認待ちと記録。
 - 下書き（noindex）のまま。公開状態の変更なし。
@@ -788,6 +790,17 @@
 - 新規ファイル（PR #51/#53/#56分、/column/housing-type-nursing-home-registration-checklist/・/column/advance-care-planning-family-checklist/の本文・画像・docs/seo/acp-draft-review.md等）はクリーンに統合。
 - 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 43、internal links checked: 1383）、`node tools/check-click-tracking.js` → PASSED（public HTML: 39、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
 - マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
+
+## 2026-10-23 ACP記事の原文照合・出典記録訂正（レビュー用PR）
+
+- 対象: PR #56で公開された `/column/advance-care-planning-family-checklist/`。基準main: `459b0771643b2c4c253f1df886285a2f2c67b8da`。
+- 国立がん研究センター「手術（外科治療） もっと詳しく」のページ本文を取得し、5節・1）・（4）で、説明を十分に理解・納得した患者本人が手術の同意書へサインする記述を確認。出典URL・該当見出し・原文の短い抜粋・取得日2026-10-23・ページ表示の更新日2024-10-15をacp-draft-review.mdに記録。
+- PR #53のP2指摘のうち、同意書や署名の記述がないという事実認定を訂正。手術以外の医療行為全般へ一般化しないという趣旨は維持。PR #54当時のアクセス制限・未照合と、今回の確認結果を区別して残した。
+- 本文判断: 比較表・出典説明・参考資料・FAQ/FAQPageは手術の例と個別の医療機関への確認案内にとどまり、今回の照合では追加修正不要。HTML、公開日、dateModified、参考情報確認日の表示、sitemap lastmod（2026-10-22）は変更していない。他の出典を今回再確認したとは記録しない。
+- 管理記録6件を更新: acp-draft-review / source-policy / ymyl-review-queue / editorial-calendar / automation-state / run-log。出典台帳等の現行URLをcolumnへ統一し、原文の再確認待ちを解消。医療職レビュー完了の運営者報告（2026-10-22、詳細は運営者保管）と法律レビュー未実施・将来推奨の記録を保持。未確認の氏名・資格・監修情報は追加しない。
+- 検証: `node tools/check-site.js` ALL CHECKS PASSED（HTML 43件・内部リンク1,367件）。`node tools/check-click-tracking.js` PASSED。CSV4台帳の列数、content-inventory/keyword-mapの公開URL単一行、canonical・og:url・robots・Article日付・sitemapのURLとlastmod・トップ/ハブ導線・旧下書き不在を確認。公開URLはHTTP 200で、取得HTMLと基準mainのHTMLがバイト単位で一致。本文変更がないことも確認。`git diff --check` PASS。
+- マージ・本番への追加反映は行わない。管理記録の訂正PRとしてレビュー結果の確認を待つ。
+
 ## 2026-10-23 article12 スマホ幅のページ横スクロール修正（表をスクロール枠で囲む）
 
 - 事象: `articles/article12.html` がスマホ幅でページ全体ごと横スクロールしていた。Playwright（Chromium）の計測で `document.documentElement.scrollWidth` が320px幅・390px幅とも578（ページが258px／188px横に動く）。1280pxでは発生なし。
@@ -860,3 +873,59 @@
 - 新規ファイル（care-facility-food-housing-cost-application-checklistの本文・画像）はクリーンに統合。
 - 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 46、internal links checked: 1507）、`node tools/check-click-tracking.js` → PASSED（public HTML: 42、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
 - マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
+
+## 2026-10-28 身寄りがない人の終活支援記事の下書き作成（運営者指示）
+
+- 対象: tfqys680-jpg/shukatsu-site（main 0111454 から作業。ブランチ作成・コミット・プッシュ・PRは運営者指示により未実施）。
+- 原稿: 運営者提供ZIP（article-draft.txt・image-details.txt・claude-code-prompt.txt・生成画像PNG）。description・導入・H2/H3・場面別表・チェックリスト7項目・FAQ3件・CTA・出典5件を実装。【ニュースの事実】【一般的な整理】【一般的な解説】【本記事の提案】を表示し、日付（9/30更新・10/1開始・原稿作成10/28）を凡例で区別。
+- 公開状態: ymyl-review-queue.md の「身元保証・死後事務はレビュー完了まで公開しない（下書き運用）」方針と運営者の「公開しない」指示により、/drafts/end-of-life-local-support-consultation-checklist/ に noindex 下書きとして作成。datePublished/dateModifiedは付けず「公開日：未定」。sitemap・トップ・ハブ・既存記事からのリンクは公開時まで追加しない（canonical/OGPは公開予定URL）。
+- 重複確認: 全HTMLを「身寄り／死後事務／終身サポート／身元保証／終活情報登録」で走査し、公開記事に同一検索意図なし。未マージの codex/draft-mimoto-hosho-keiyaku-checklist（身元保証契約の下書き）と編集カレンダー2026-11後半「おひとりさまの終活チェックリスト」は関連するため公開時に役割分担を判断。
+- 画像: 元PNG 1672×941（2,020,552 B）をImageOps.fitで1600×900へ（縦0.5px相当の中央クロップ）、WebP q80で images/column-end-of-life-local-support-consultation-checklist.webp（1600×900・76,946 B）・-1200.webp（1200×675・51,516 B）・-800.webp（800×450・28,746 B）。元PNGはリポジトリに入れない（public/ は本リポジトリの配信構成にない）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「画像はイメージです。実在の窓口・相談員・利用者の写真ではありません」を表示。目視で文字・ロゴ・個人情報なし、ノートは無地、フォルダーは閉じた状態。
+- 検証: node tools/check-site.js（HTML47件・内部リンク1524件 全通過）、node tools/check-click-tracking.js（通過）、Playwrightで1280/390/320px（横スクロールなし・画像404なし・JSON-LD 3種パース可・表は320pxでも3列収まる）。
+- 未了: 専門家レビュー（法務・医療・税務）、運営者による公開判断。
+
+## 2026-10-28 身寄りがない人の終活支援記事の公開（運営者指示）
+
+- 運営者が「マージ・公開して」と明示指示（ymyl-review-queue の下書き運用方針より運営者判断を優先。専門家レビューは未実施のまま）。
+- drafts/ から column/end-of-life-local-support-consultation-checklist/ へ移動、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-28（指示当日）、本文の公開日表示を更新。ACP記事への相対リンクを column 内の書式（../）へ。
+- 導線: トップ新着（先頭に追加し最古の住まいの終活記事を外す）・全記事一覧、where-to-ask の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-28）。親の終活ハブは本人向け記事のため今回は追加せず。
+- 検証: node tools/check-site.js（HTML47件・内部リンク1526件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check。
+- 未了: 専門家レビュー（法務・医療・税務）。
+- 運営者指示「専門家レビューはないので、参考程度にご覧ください。のような表現に」により、冒頭注意書きと「この記事について」に専門家レビュー未実施・参考程度である旨を明記。
+
+## 2026-10-28 負担限度額認定記事の一次資料照合（運営者指示）
+
+- 実行日：2026-10-28（Asia/Tokyo）。ブランチ：`codex/verify-care-cost-sources-20261028`。公開PR #64の記事を対象に、厚労省Vol.1550と新宿区の案内の原文を確認した。
+- 起点：main `0111454c873eeb8618f0a4b85084917a1b28a831`。作業中にPR #65がマージされたため、最新main `8ae4255d23f18323a4e2b7b0c805e7d0accea772`へrebase。source-policy・ymyl-review-queue・automation-stateの競合は、本件の訂正と別記事の追加記録を両方保持して解消した。
+- 対象URL：https://shukatsu-guide.jp/column/care-facility-food-housing-cost-application-checklist/ 。公開HTMLと照合開始時・追従後mainの対象HTMLはバイト単位で一致。導入・全9節・相談メモ・チェックリスト・FAQ3問（JSON-LD含む）・結び・記事についての説明を照合した。
+- 原文：https://www.mhlw.go.jp/content/001763099.pdf ／ https://www.city.shinjuku.lg.jp/fukushi/kaigo05_000101.html 。公式URLから直接取得し、厚労省の10/26付事務連絡、9/29付資料、既存の負担軽減策・添付省略・照会日数、新宿区の8/1更新表示・対象と要件・提出書類を確認。PDFの事務連絡・照会日数表・添付簡素化は目視でも確認した。
+- 変更：`docs/seo/source-policy.md`へ記述別の判定、原文のページ・見出し、補足条件と本文への追記要否、専門家確認事項を記録。「原文未照合」を2026-10-28実施済みへ訂正し、`ymyl-review-queue.md`・`automation-state.json`を同期。本ログを含む管理ファイル4件のみ変更し、新規記事・ファイルは作成していない。
+- 本文の判断：2資料と掲載本文に、本文修正を要する明確な齟齬は見つからなかった。必要な限定・申請先確認が既にあるため、本文・FAQPage・記事日付・sitemap・内部リンク・画像は変更しない。詳細な申請条件に拡張する場合の追加確認はsource-policyに記録した。
+- 検証（最新main追従後）：`node tools/check-site.js` 全通過（HTML47件・内部リンク1526件）、`node tools/check-click-tracking.js` 通過（公開HTML43件）、`git diff --check origin/main` 通過。JSON構文、対象外の台帳記録・PR #65の追加内容の保持、競合マーカーなし、公開HTMLと対象ファイルの同一性も確認。表示変更がないためブラウザでの再検証は行っていない。
+- 未了：専門家レビュー（制度・個別適用・申請先・添付省略・適用開始/更新/提示、代理・同意、所得・非課税の定義）。**一次資料の原文照合と専門家レビューを別作業として扱い、監修済み・専門家確認完了には変更しない。**
+- PRとして提案。マージ・本番への反映は未実施。次回は専門家の確認者・対象・日付・指摘内容が得られた時点で、原文照合の記録とは分けて追記する。
+
+## 2026-10-30 海産物の電話勧誘・送り付け記事の下書き作成（運営者指示・未公開）
+
+- 実行日：2026-10-30（Asia/Tokyo）。ローカル作業ブランチ：`claude/draft-seafood-telephone-sales-20261030`（起点 main `1a090cf`）。運営者指示によりコミット・プッシュ・PR作成・マージ・公開は未実施（確認待ち）。
+- 原稿：運営者提供ZIPの article-draft.txt（2026-10-30作成）。drafts/seafood-telephone-sales-family-checklist/ に noindex 下書きとして作成（公開予定URL /column/seafood-telephone-sales-family-checklist/）。canonical/OGPは公開予定URL。Article JSON-LD に datePublished/dateModified を入れず、本文は「公開日：未定（下書き・公開前レビュー中）」。sitemap・トップ新着・全記事一覧・ハブ・where-to-ask は未変更（公開時に追加）。
+- 重複確認：全HTMLを「送り付け／電話勧誘／勧誘／詐欺／クーリング／188」で走査。where-to-ask・cost・article12/14・住宅型有料老人ホーム記事に188や勧誘への言及はあるが、同一検索意図の記事なし。リモートブランチにも同テーマなし。
+- 出典：国民生活センター2026-10-28公表ページ、消費者庁Q&A、国民生活センター「クーリング・オフ」、消費者庁「消費者ホットライン」を2026-10-30にWebFetchで原文確認（source-policy.md）。原稿からの追記・補正は source-policy.md に記録。
+- 画像：元PNG 1672×941（2,145,009 B、運営者提供ZIP public/images/shukatsu/seafood-telephone-sales-family-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-seafood-telephone-sales-family-checklist.webp（1600×900・101,952 B）・-1200.webp（1200×675・68,912 B）・-800.webp（800×450・38,690 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「実在の人物・相談事例・被害事例の写真ではありません」。目視で文字・ロゴ・宛名ラベル・個人情報なし、手指・表情に破綻なし、ノート無地、荷物は無地で未開封、スマートフォンは伏せた状態。背景の写真立てに小さな人物像あり（判別不能）。
+- 検証：node tools/check-site.js（HTML48件・内部リンク1560件 全通過）、node tools/check-click-tracking.js（通過）、Playwrightで1280/390/375/320px（横スクロールなし・画像/リソース404なし・JSエラーなし・表はスクロールなしで3列収まる・JSON-LD 3種パース可・パンくず/CTA/canonical/noindex確認）、OGP想定クロップ（1.91:1・2:1・1:1）で両者の顔が切れないことを確認。
+- 未了：専門家レビュー（法務：契約成立・電話勧誘販売の該当性・クーリング・オフ条件・送り付けと誤配の区別・返金請求）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
+
+## 2026-10-30 海産物の電話勧誘・送り付け記事の公開（運営者指示）
+
+- 運営者が「公開して」と明示指示（専門家レビューは未実施のまま。冒頭注意書き・「この記事について」に参考程度・レビュー未実施を明記済み）。
+- drafts/ から column/seafood-telephone-sales-family-checklist/ へ移動（相対パスは同階層のため変更なし）、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-30（指示当日）、本文の公開日表示を更新。
+- 導線: トップ新着（先頭に追加し最古の看取り記事を外す）・全記事一覧、where-to-ask の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-30）。親の終活ハブは今回追加せず（ハブのカード構成は変更しない）。
+- 検証: node tools/check-site.js（HTML48件・内部リンク1562件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、共通ハーネス（コミット後に実行）。
+- 未了: 専門家レビュー（法務）、10/28報告書PDFの確認。
+
+## 2026-10-30 ACP出典記録訂正ブランチの最新main統合
+
+- 対象: `codex/acp-source-verification-20261023`（2026-10-23の出典記録訂正。未PR）を最新main（`14aaedb`）へ追従させるため、別ブランチ `claude/acp-source-verification-merge` でmainをマージ。元ブランチは書き換えていない。
+- 競合3件（run-log / automation-state / ymyl-review-queue）は和集合で解消。ACP記事の行・保留タスクは10-23訂正版（手術同意書の署名記述を照合済み）を採用し、main側の他記事の記録はすべて保持。
+- 記事HTML・公開日・dateModified・sitemapは変更なし。医療職レビューは既存記録どおり「運営者報告により完了（2026-10-22、記録はリポジトリ外）」のまま。
+- 検証: `node tools/check-site.js`、`node tools/check-click-tracking.js`、共通ハーネス。マージ・公開は運営者の判断待ち。
