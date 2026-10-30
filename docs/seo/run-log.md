@@ -801,3 +801,21 @@
 - 検証（最新main追従後）：`node tools/check-site.js` 全通過（HTML47件・内部リンク1526件）、`node tools/check-click-tracking.js` 通過（公開HTML43件）、`git diff --check origin/main` 通過。JSON構文、対象外の台帳記録・PR #65の追加内容の保持、競合マーカーなし、公開HTMLと対象ファイルの同一性も確認。表示変更がないためブラウザでの再検証は行っていない。
 - 未了：専門家レビュー（制度・個別適用・申請先・添付省略・適用開始/更新/提示、代理・同意、所得・非課税の定義）。**一次資料の原文照合と専門家レビューを別作業として扱い、監修済み・専門家確認完了には変更しない。**
 - PRとして提案。マージ・本番への反映は未実施。次回は専門家の確認者・対象・日付・指摘内容が得られた時点で、原文照合の記録とは分けて追記する。
+
+## 2026-10-30 海産物の電話勧誘・送り付け記事の下書き作成（運営者指示・未公開）
+
+- 実行日：2026-10-30（Asia/Tokyo）。ローカル作業ブランチ：`claude/draft-seafood-telephone-sales-20261030`（起点 main `1a090cf`）。運営者指示によりコミット・プッシュ・PR作成・マージ・公開は未実施（確認待ち）。
+- 原稿：運営者提供ZIPの article-draft.txt（2026-10-30作成）。drafts/seafood-telephone-sales-family-checklist/ に noindex 下書きとして作成（公開予定URL /column/seafood-telephone-sales-family-checklist/）。canonical/OGPは公開予定URL。Article JSON-LD に datePublished/dateModified を入れず、本文は「公開日：未定（下書き・公開前レビュー中）」。sitemap・トップ新着・全記事一覧・ハブ・where-to-ask は未変更（公開時に追加）。
+- 重複確認：全HTMLを「送り付け／電話勧誘／勧誘／詐欺／クーリング／188」で走査。where-to-ask・cost・article12/14・住宅型有料老人ホーム記事に188や勧誘への言及はあるが、同一検索意図の記事なし。リモートブランチにも同テーマなし。
+- 出典：国民生活センター2026-10-28公表ページ、消費者庁Q&A、国民生活センター「クーリング・オフ」、消費者庁「消費者ホットライン」を2026-10-30にWebFetchで原文確認（source-policy.md）。原稿からの追記・補正は source-policy.md に記録。
+- 画像：元PNG 1672×941（2,145,009 B、運営者提供ZIP public/images/shukatsu/seafood-telephone-sales-family-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-seafood-telephone-sales-family-checklist.webp（1600×900・101,952 B）・-1200.webp（1200×675・68,912 B）・-800.webp（800×450・38,690 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「実在の人物・相談事例・被害事例の写真ではありません」。目視で文字・ロゴ・宛名ラベル・個人情報なし、手指・表情に破綻なし、ノート無地、荷物は無地で未開封、スマートフォンは伏せた状態。背景の写真立てに小さな人物像あり（判別不能）。
+- 検証：node tools/check-site.js（HTML48件・内部リンク1560件 全通過）、node tools/check-click-tracking.js（通過）、Playwrightで1280/390/375/320px（横スクロールなし・画像/リソース404なし・JSエラーなし・表はスクロールなしで3列収まる・JSON-LD 3種パース可・パンくず/CTA/canonical/noindex確認）、OGP想定クロップ（1.91:1・2:1・1:1）で両者の顔が切れないことを確認。
+- 未了：専門家レビュー（法務：契約成立・電話勧誘販売の該当性・クーリング・オフ条件・送り付けと誤配の区別・返金請求）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
+
+## 2026-10-30 海産物の電話勧誘・送り付け記事の公開（運営者指示）
+
+- 運営者が「公開して」と明示指示（専門家レビューは未実施のまま。冒頭注意書き・「この記事について」に参考程度・レビュー未実施を明記済み）。
+- drafts/ から column/seafood-telephone-sales-family-checklist/ へ移動（相対パスは同階層のため変更なし）、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-30（指示当日）、本文の公開日表示を更新。
+- 導線: トップ新着（先頭に追加し最古の看取り記事を外す）・全記事一覧、where-to-ask の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-30）。親の終活ハブは今回追加せず（ハブのカード構成は変更しない）。
+- 検証: node tools/check-site.js（HTML48件・内部リンク1562件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、共通ハーネス（コミット後に実行）。
+- 未了: 専門家レビュー（法務）、10/28報告書PDFの確認。
