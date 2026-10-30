@@ -929,3 +929,13 @@
 - 競合3件（run-log / automation-state / ymyl-review-queue）は和集合で解消。ACP記事の行・保留タスクは10-23訂正版（手術同意書の署名記述を照合済み）を採用し、main側の他記事の記録はすべて保持。
 - 記事HTML・公開日・dateModified・sitemapは変更なし。医療職レビューは既存記録どおり「運営者報告により完了（2026-10-22、記録はリポジトリ外）」のまま。
 - 検証: `node tools/check-site.js`、`node tools/check-click-tracking.js`、共通ハーネス。マージ・公開は運営者の判断待ち。
+
+### 2026-10-30 追記: PR #45の7回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`0111454`→`01c996c`）に新規記事2本（身寄りがない人の終活支援 /column/end-of-life-local-support-consultation-checklist/、海産物の電話勧誘・送り付け /column/seafood-telephone-sales-family-checklist/）、ACP出典記録訂正、負担限度額認定記事の原文照合、エージェントレビュー用の共有検証ハーネス（.github/workflows/agent-review-harness.yml・tools/agent-harness/・AGENTS.md・CLAUDE.md等）が追加されていたため。あわせて、コンテナ再起動によりローカルが一時的にハーネス指定のデフォルト作業ブランチ（claude/dreamy-noether-z82pfc）へ戻っていたため、`git checkout claude/seo-weekly-2026-09-28` で本来の作業ブランチに復帰してから対応した。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-30 海産物の電話勧誘記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値を維持。completed_tasksの末尾は、本ブランチが既に保持していた記録を維持したうえで、main側が新たに記録していたACP出典記録訂正（2026-10-23）・身寄りがない人の終活支援記事公開（2026-10-28）・負担限度額認定記事の原文照合（2026-10-28）の3件を時系列順に追加（海産物記事の下書き作成・公開の2件は運営者判断待ちの作業中エントリのためcompleted_tasksへは転記せず、run-log.md側の記録のみ保持）。
+  - `docs/seo/run-log.md`: 本ブランチの「2026-10-23 PR #45の4回目のマージコンフリクト解消」「2026-10-27 PR #45の6回目のマージコンフリクト解消」の各セクションと、main側の複数セクション（ACP原文照合・article12修正に続く各新記事の下書き/公開・ACP出典記録訂正ブランチのmain統合）が同じ見出し階層で隣接しており衝突。両者を時系列順にそのまま連結して解消（本文の変更は行っていない）。
+- 新規ファイル（end-of-life-local-support-consultation-checklist・seafood-telephone-sales-family-checklistの本文・画像、エージェントレビュー用の共有検証ハーネス一式）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 48、internal links checked: 1578）、`node tools/check-click-tracking.js` → PASSED（public HTML: 44、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
