@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Tokyo",
-  "last_run": "2026-10-22（PR #51の公開: 最新main（PR #53）統合・検証・squash merge）",
-  "last_new_article": "2026-10-22 /column/advance-care-planning-family-checklist/（運営者が医療職レビュー済みと報告し公開を指示）",
+  "last_run": "2026-10-30（臨時：海産物の電話勧誘・送り付け記事を下書き作成し、運営者指示で同日公開）",
+  "last_new_article": "2026-10-30 /column/seafood-telephone-sales-family-checklist/（運営者が「公開して」と明示指示）",
   "last_major_update": "2026-08-10 /articles/article05.html（編集カレンダー2026-08-10〜14週タスク。親への切り出し方を拒否・NG例まで拡張）",
   "last_monthly_review": "2026-10-05（10月分を機械チェックのみ実施: title/meta description重複なし・新規孤立ページなし。Search Consoleデータ未配置のためSC分析はデータ不足として未実施）",
   "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
@@ -37,7 +37,12 @@
     "2026-10-22 PR #51公開準備: 最新main（PR #48）を統合し台帳競合を和集合で解消。第10回検討会（2026-10-09）資料の施行予定2027年12月・経過措置1年を「予定」として本文・FAQ・出典へ反映。drafts/からcolumn/へ移しnoindexを削除、公開予定日2026-10-22で表示・Article・台帳・sitemapを同期。トップ新着（最古のcost/を外す）・全記事一覧・親の終活ハブ・where-to-ask・living-aloneから導線追加（リンク追加のみのため各ページの更新日は据え置き）。マージ・公開は運営者の明示承認待ち。",
     "2026-10-22 PR #51公開: 運営者の「マージして公開してください」を受け、最新main（PR #53: ACP下書き）を統合し台帳競合を和集合で解消。公開日2026-10-22は承認当日のため変更なし。台帳の状態を「公開」へ更新し、検証後にsquash mergeで配信。専門家レビューは未実施・将来推奨のまま。",
     "2026-10-22 ACP記事公開: /column/advance-care-planning-family-checklist/。運営者の「医療職レビュー済み、公開して」に基づきdraftsから移動・noindex削除・トップ/ハブ/sitemap/台帳を更新。",
-    "2026-10-23 ACP出典記録訂正: 国立がん研究センター原文で手術同意書への署名記述を確認。旧Codex指摘の一部と再確認待ちを訂正し管理記録を公開状態へ同期。本文・公開日・dateModifiedは変更不要と判断。変更はPRで提示しマージ・本番追加反映は保留。"
+    "2026-10-23 ACP出典記録訂正: 国立がん研究センター原文で手術同意書への署名記述を確認。旧Codex指摘の一部と再確認待ちを訂正し管理記録を公開状態へ同期。本文・公開日・dateModifiedは変更不要と判断。変更はPRで提示しマージ・本番追加反映は保留。",
+    "2026-10-26 住まいの終活記事公開: /column/family-home-future-plan-checklist/。運営者原稿から作成し、一次情報（掛川市・国交省2件・法務省）を原文確認。drafts経由でcolumnへ移動・noindex削除・トップ/ハブ/jikka-katazuke/sitemap/台帳を更新。",
+    "2026-10-27 負担限度額認定記事公開: /column/care-facility-food-housing-cost-application-checklist/。運営者原稿から作成し、トップ/ハブ/関連2記事/sitemap/台帳を更新。出典原文は作成環境から未照合。",
+    "2026-10-28 臨時（運営者指示）: 運営者原稿から身寄りがない人の終活支援記事を /drafts/end-of-life-local-support-consultation-checklist/ に noindex 下書き作成（公開予定 /column/end-of-life-local-support-consultation-checklist/）。奈良市3ページ等の原文を確認しsource-policy.mdへ記録。公開は専門家レビューと運営者承認の後。",
+    "2026-10-28 身寄りがない人の終活支援記事公開: /column/end-of-life-local-support-consultation-checklist/。運営者の「マージ・公開して」に基づきdraftsから移動・noindex削除・トップ/where-to-ask/sitemap/台帳を更新。専門家レビューは未実施。",
+    "2026-10-28 負担限度額認定記事の原文照合: 厚労省Vol.1550 PDF・新宿区ページを直接取得し、公開記事全体（最新mainのHTMLと一致）と照合。source-policy.mdに記述別の一致・補足事項・要専門家確認を記録し、原文未照合の状態を訂正。本文修正を要する明確な齟齬は見つからず、記事HTML・更新日は維持。専門家レビューは未実施。"
   ],
   "pending_review_tasks": [
     "article18のデジタル遺産の相続記述（NISA死亡時の扱い・暗号資産の課税・遺族の初動）の税理士または司法書士による内容レビュー（未実施）",
@@ -49,7 +54,10 @@
     "/column/pre-need-grave-guide/の税務記述（墓地・墓石の非課税、基礎控除、未払代金の債務控除不可、墓地・墓石購入費は葬式費用控除外）の税理士レビュー（未実施）。国税庁一次情報は2026-10-06確認済み。",
     "/parent-shukatsu/jikka-katazuke/（PR #48）: 専門家レビューは未実施・将来推奨。2026-10-19に一次情報の原文照合・本文出典追加と運営者の公開承認を記録。診断・契約・処分権限の判断は行わない。",
     "/column/housing-type-nursing-home-registration-checklist/（PR #51）: 契約・前払金・退去条件・医療的ケアに触れる箇所の弁護士・介護実務者レビューは未実施・将来推奨。厚労省資料は2026-10-22に検索経由で確認（直接取得はこの環境でブロック）。政令・省令の公布時に施行日・対象範囲を再確認する。",
-    "/column/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビューは運営者報告により完了（2026-10-22、記録はリポジトリ外）。法律部分の司法書士/弁護士レビューは将来推奨・未実施。がん情報サービス原文の手術同意書への署名記述は2026-10-23に照合済み。旧Codex指摘の事実認定の一部を訂正し再確認待ちを解消（acp-draft-review.md）。本文は変更不要と判断。"
+    "/column/advance-care-planning-family-checklist/（人生会議・ACP）: 医療職レビューは運営者報告により完了（2026-10-22、記録はリポジトリ外）。法律部分の司法書士/弁護士レビューは将来推奨・未実施。がん情報サービス原文の手術同意書への署名記述は2026-10-23に照合済み。旧Codex指摘の事実認定の一部を訂正し再確認待ちを解消（acp-draft-review.md）。本文は変更不要と判断。",
+    "/column/family-home-future-plan-checklist/（住まいの終活・実家を空き家にしない5項目）: 2026-10-26公開（運営者の明示承認）。名義・共有・処分権限・相続登記の期限と経過措置（2027-03-31）の司法書士レビュー、税務記述を追加する場合の税理士確認は未実施・将来推奨。掛川市セミナー（2026-11-18）開催後に本文の時制を見直す。",
+    "/column/care-facility-food-housing-cost-application-checklist/: 制度・個別適用・申請先・添付省略・適用開始/更新/提示・代理同意・所得定義の専門家レビューは未実施。出典2件（厚労省Vol.1550 PDF・新宿区ページ）と公開記事全体の原文照合は2026-10-28実施済み（source-policy.md参照）。専門家レビュー完了とは扱わない。",
+    "/column/seafood-telephone-sales-family-checklist/（海産物の電話勧誘・送り付けの確認メモ）: 2026-10-30公開（運営者の明示指示）。一次資料4件は同日原文確認済み。法務（契約成立・電話勧誘販売の該当性・クーリング・オフ条件・送り付けと誤配の区別・返金請求）の専門家レビューは未実施。10/28報告書PDFは未確認。"
   ],
   "blocked_tasks": [
     "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
