@@ -1,5 +1,57 @@
 # 実行ログ（run-log）
 
+## 2026-09-28（週次・定期実行・隔週大幅更新・9月分月次レビューcatch-up）
+
+- 実行日時: 2026-09-28 09:09 JST（Asia/Tokyo。無人の定期実行）
+- ブランチ: claude/seo-weekly-2026-09-28（新規ドラフトPR運用）
+- 事前確認: git status（クリーン）／origin/main最新化（69aa145）／CLAUDE.md（リポジトリに存在せず）／docs/seo配下の管理ファイル一式／既存ブランチ・オープンPRを確認
+  - オープンPR #43（`codex/draft-mimoto-hosho-keiyaku-checklist`、身元保証サービスの契約前チェックリスト下書き）: 対象記事が異なり、本セッションのタスク（article06）と重複なし
+  - オープンPR #44（`claude/seo-weekly-2026-09-21`、前回2026-09-21実行分。article11の隔週大幅更新。base=main最新でmergeable_state=clean・本セッション時点で未マージ）: 前回実行が編集カレンダーの次回未着手タスク（本タスク=article06）を「今週は対象外」として見送り、優先順位1位のarticle11を先に大幅更新したもの。今回の編集カレンダータスク（article06）とは対象記事が重複しないため、重複作業とはみなさず、mainを起点に新規ブランチで独立して着手した
+  - `claude/seo-weekly-*` の自動運用ブランチはPR #44分（`claude/seo-weekly-2026-09-21`）のみ残存。新規ブランチ名`claude/seo-weekly-2026-09-28`との衝突なし
+- 判定: 編集カレンダーの2026-09-28〜10-02週タスクは「article06をデジタル終活チェックリストへ改修（大幅更新、印刷用一覧表追加）」の1タスク。優先順位（本プロンプト3章）に照らし、サイト全体の障害・重大なYMYL情報の放置は確認されず、公開予定どおりの週のため今回実施。あわせて、9月分の月次レビュー（本プロンプト6章）が9月最初の週次実行(2026-09-07)以降、2026-09-14・2026-09-21（PR #44）のいずれの実行でも未実施だったことを確認したため、今回catch-upで実施した
+- 実施した作業:
+  1. **`articles/article06.html` を全面改修**: タイトルを「デジタル遺品も忘れずに｜パスワード・サブスクの整理方法」から「デジタル終活チェックリスト｜パスワード・サブスク・スマホの整理手順」へ変更し、meta description・OGP・H1・パンくず（DOM・JSON-LD）・Article JSON-LDのheadline/descriptionを新表題へ統一
+     - 既存の4分類（お金/契約/思い出/人間関係）を`<ul class="checklist">`の優先順位付きチェックリストへ再構成（最優先＝お金、次点＝契約、時間があるとき＝思い出・人間関係）
+     - 印刷用デジタル終活チェックシート（`table.cmp`、分類/確認項目/内容・保管場所/確認日の4列・9行）を新設し、編集カレンダー備考の「印刷用一覧表追加」に対応。ヘッダー・フッター・パンくずを非表示にする`@media print`をページ専用styleへ追加（living-alone/article14と同じ実装パターン）
+     - 既存の「今日からできる整理の5ステップ」「パスワードの安全な残し方」は内容を保持しつつ再配置
+     - 本プロンプト11章の必須要素のうち不足していた「会話例」「失敗例」「状況別のケース」「専門家へ相談すべきケース」を新設。会話例・失敗例はいずれも一般的な言い回しの例であり、実在の相談事例・体験談として記載していない
+     - FAQを2問→5問に拡充（デジタル終活の始め方／パスワードの書き方／サブスク解約忘れ／親のデジタル終活／暗号資産・ネット証券の扱い）し、FAQPage JSON-LDをDOMと同期
+     - `dateModified`・記事内表示を2026-09-28へ更新（本文構成を伴う実質更新のため）
+  2. **関連記事アンカーテキストの統一**: 旧タイトル「デジタル遺品も忘れずに｜パスワード・サブスクの整理方法」をそのまま引用していた6ファイル（`index.html`・`parent-shukatsu/index.html`・`articles/article02.html`・`articles/article12.html`・`articles/article15.html`・`articles/article18.html`・`column/ai-shukatsu-first-step/index.html`）のリンクテキストを新タイトルへ更新。本文中の説明的リンクテキスト「デジタル遺品の整理方法の記事」（`articles/article02.html`・`articles/article12.html`・`articles/article18.html`×2・`column/ai-shukatsu-first-step/index.html`・`column/obon-family-planning-talk/index.html`）も「デジタル終活チェックリストの記事」へ更新（URL・リンク先は変更なし）
+  3. **一次情報の再利用**: Apple「故人アカウント管理連絡先」（https://support.apple.com/ja-jp/102631 ）・Google「アカウント無効化管理ツール」（https://support.google.com/accounts/answer/3036546?hl=ja ）は、article18で2026-08-04に検索経由で確認済み・`source-policy.md`台帳に記載済みの同一URLを再利用した。support.apple.com・support.google.comへの直接WebFetchは今回もブロックされたため（`EGRESS_BLOCKED`）、新規の検証は行わず既存の確認記録を踏襲し、`source-policy.md`に本日分の記録を追記した
+  4. **9月分月次レビューのcatch-up**（本プロンプト6章）:
+     - 全39ページの機械的孤立ページ走査を実施し、新たな孤立ページがないことを確認（`tools/pdf/*.html`・`404.html`・`drafts/`を除く）
+     - title・meta description重複チェック（機械比較）: 重複なし
+     - 親の終活クラスタのハブ導線・記事からの戻りリンクを確認: 2026-09-14週の内部リンク整備で是正済みのため、今回の追加是正なし
+     - カニバリゼーション確認: article06の検索意図を「整理方法」から「チェックリスト」へ寄せたが、article18（デジタル資産の相続準備）・article11（終活全体のチェックリスト）とは対象範囲が異なり重複なしを`keyword-map.csv`で確認
+     - Search Consoleデータ分析: `docs/seo/sc-data/`が引き続き未配置のため、表示回数・CTR・掲載順位・11〜30位クエリ・前月比較のいずれも「データ不足」として記録し、数値の推測は行っていない
+  5. **季節需要確認**（6〜10週間後＝2026-11-09頃〜12-07頃）: 年末年始・帰省需要は編集カレンダー2026-11後半・12月前半に既に計画済みで、この時間軸に新規性の高い季節記事の追加着手は不要と判断
+- 変更したURL: `https://shukatsu-guide.jp/articles/article06.html`（title・meta description・本文・FAQ・構造化データを全面改修）。他ページは関連記事リンクのアンカーテキストのみ変更（本文・title・meta descriptionの変更なし）
+- 検索意図: article06は「デジタル遺品 整理」中心から「デジタル終活 チェックリスト」中心へ再定義。既存のarticle18（資産の相続準備）・article11（終活全体）とは検索意図が分離しており、カニバリゼーションなし
+- 内部リンク: 上記2参照。加えてarticle06の本文（状況別ケース・専門家へ相談すべきケース・関連記事欄）から`/parent-shukatsu/living-alone/`・`/where-to-ask/`・`article05.html`・`article15.html`への新規リンクを追加し、`internal-link-map.csv`に行を追加
+- 技術変更: FAQPage JSON-LDを2問→5問に拡充（DOM↔JSON-LD一致を`node tools/check-site.js`で確認）。印刷用チェックシート用に`@media print`をページ専用styleへ追加。BreadcrumbList・Article JSON-LDの構造自体は変更なし（headline/description/dateModifiedのみ更新）
+- PDF、DOCX変更: なし（編集カレンダー備考は「印刷用一覧表追加」のみでPDF化の指定はないため、ページ内の印刷用テーブルに留めた。既存の`downloads/`配下5ファイルは今回変更していない）
+- 参考情報: 新規の法制度・統計・固有名詞の追加なし。既存article18で確認済みのApple/Google公式機能の説明を同一内容で転記（`source-policy.md`参照）
+- テスト結果: `node tools/check-site.js` → **ALL CHECKS PASSED**（HTML files: 39、internal links checked: 1218）／`node tools/check-click-tracking.js` → **PASSED**（public HTML: 35、affiliate links: 34、CTAs: 13、products: 12）／`git diff --check` → PASS。Playwright（グローバルインストール済みパッケージをNODE_PATH経由で参照）でarticle06.htmlをモバイル(390px)・デスクトップ(1280px)で確認し横スクロールなし、FAQ（5問）のDOM開閉動作、印刷用テーブル（9行）の表示を確認。孤立ページの機械的全件走査で新たな孤立ページなし。title・meta description重複なし（機械比較）
+- Search Console分析: `docs/seo/sc-data/`が引き続き未配置のためデータなし。9月分の月次レビュー項目（表示回数があるのにクリックされない記事、11〜30位クエリ、前月比較）はいずれも「データ不足」として記録
+- YMYLレビュー待ち: 変更なし（article06は既存のYMYL区分「中・将来推奨」を維持。新規の法的・金融的な数値主張は追加していない）
+- 阻害要因: なし。PR #44（article11の隔週大幅更新）は本セッション終了時点で未マージのため、`docs/seo/automation-state.json`の`last_major_update`はmainを起点とするこのPRの内容（article06）のみを反映しており、PR #44がマージされた際は改めて統合確認が必要
+- 次回予定: 編集カレンダーの次回未着手タスクは2026-10前半（実家の片付けを親と喧嘩せず進める手順、新規、URL未定）。あわせてPR #43・#44のマージ状況次第で、mainへの追従・管理ファイルの統合確認が必要になる可能性がある。2026年10月は四半期ごとのエンディングノート比較記事（article08）の商品確認時期にあたるため、次回以降のいずれかの実行で対応を検討する
+- PR: ドラフトPR #45を作成
+
+### 2026-10-03 追記: PR #45のマージコンフリクト解消
+
+- PR #45監視中に、運営者が別経路でmainへ直接コミット（`135dd21` 2026-10-03 10:07 JST「content: reflect official guidance updates」。article12/article15/ending-note/family-story/living-alone/where-to-askの公式情報反映、sitemap・source-policy・content-inventory同期）をプッシュしたことを検出し、PR #45がmergeable_state=dirty（コンフリクト）に変化
+- `origin/main`を`claude/seo-weekly-2026-09-28`へマージして解消。コンフリクトは`docs/seo/source-policy.md`の1箇所（2026-09-28セクションと2026-10-02セクションの隣接追記）のみで、両セクションをそのまま日付順に保持。article12/article15/content-inventory.csv/sitemap.xmlは自動マージで解決、article06関連の変更内容に競合・欠落なし
+- `node tools/check-site.js`（HTML39件・内部リンク1220件）・`node tools/check-click-tracking.js`（affiliate 34・CTA 13・products 12）とも全通過を確認のうえマージコミットをプッシュ
+- 同時にPR #43・#44も同じmainコミットによりmergeable_state=dirtyへ変化していることを確認（いずれも運営者所有のPRのため、本セッションでは解消せず監視を継続）
+
+### 2026-10-06 追記: PR #45の2回目のマージコンフリクト解消
+
+- PR #45監視中に、運営者がPR #49（`codex/pre-need-grave-guide-2026-10-06`、生前墓の選び方記事`/column/pre-need-grave-guide/`の新規公開）をmainへマージ（main=`c2cd9e5`）したことを検出し、PR #45が再びmergeable_state=dirtyに変化
+- `origin/main`を`claude/seo-weekly-2026-09-28`へマージして解消。コンフリクトは`docs/seo/automation-state.json`の1箇所のみ（`last_run`/`last_new_article`/`last_major_update`/`last_monthly_review`のヘッダー値と、`completed_tasks`末尾の隣接追記）。mainのPR #49側は古いベース（article06/article11未反映のmain）から直接コミットされていたため`last_major_update`・`last_monthly_review`が2026-08-10時点の値に後退していた。解消方針: `last_major_update`・`last_monthly_review`は本ブランチ（2026-09-28時点の値）を優先して保持し、`last_new_article`・`last_run`はPR #49側のより新しい値（2026-10-06 /column/pre-need-grave-guide/）を採用。`completed_tasks`は両ブランチのエントリを日付順（2026-09-28→2026-10-06）で両方保持し、`pending_review_tasks`の配列自体は自動マージで両エントリとも保持されていることを確認。article14/index.html/sitemap.xml/各CSVは自動マージで解決、article06関連の変更内容に競合・欠落なし
+- `node tools/check-site.js`（HTML40件・内部リンク1256件）・`node tools/check-click-tracking.js`（public HTML 36・affiliate 34・CTA 13・products 12）とも全通過を確認のうえマージコミットをプッシュ
+
 ## 2026-09-14（週次・定期実行）
 
 - 実行日時: 2026-09-14 09:07 JST（Asia/Tokyo。無人の定期実行）
@@ -677,6 +729,16 @@
 - `node tools/check-site.js` PASS（HTML41・内部リンク1,288）、`node tools/check-click-tracking.js` PASS、`git diff --check` PASS。CSV列数/URL一意性、新記事の全日付、新着3件順序を個別確認。
 - GitHub Pagesの配信結果はマージ後に確認する。専門家レビューを実施済みと扱わない。
 
+### 2026-10-19 追記: PR #45の3回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、運営者がPR #48（実家の片付け記事 /parent-shukatsu/jikka-katazuke/、生前墓記事との統合・公開承認）をマージ済み（main = `71e9b73`）だったため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/editorial-calendar.csv`: article06行（本ブランチの完了記録）とjikka-katazuke行（main側でPR #48マージにより完了・URL確定）が隣接行で競合。両方の完了情報を保持する形で解消（article06=本ブランチの記述、jikka-katazuke=mainの記述をそのまま採用）。
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article/last_monthly_review）はmain側の新しい値（2026-10-19公開承認・2026-10-05月次レビュー）を採用し、last_major_updateは本ブランチの値（2026-09-28 article06、PR #45未マージのため一時的にmain側の表記が古いarticle05に戻っている旨を注記）を維持。completed_tasksの末尾は、本ブランチの2026-09-28記録・2026-10-06ドリフト確認記録を保持したうえで、main側が別途記録していたjikka-katazuke公開準備・PR #48競合解消・PR #48公開前整備の3件を時系列順に追加し、重複する2026-10-06のpre-need-grave-guide記録はmain側の簡略版を省略（本ブランチ側がPR45マージ経緯を含めた詳細版のため）。
+- 新規ファイル（PR #48分、/parent-shukatsu/jikka-katazuke/の本文・画像・docs/seo/pr48-integration-review.md等）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 41、internal links checked: 1304）、`node tools/check-click-tracking.js` → PASSED（public HTML: 37、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
+
 ## 2026-10-22 臨時（運営者指示）: 人生会議（ACP）記事の下書き化
 
 - 運営者がチャットで原稿（スラッグ advance-care-planning-family-checklist・description・本文・FAQ JSON-LD・出典・編集確認用の表）を提供。
@@ -718,6 +780,16 @@
 - 導線: トップ新着（先頭に追加し最古の生前墓記事を外す）・全記事一覧・親の終活ハブ記事一覧。sitemap追加。
 - 台帳: content-inventory / keyword-map / internal-link-map / editorial-calendar / ymyl-review-queue / acp-draft-review / automation-state を更新。
 - 公開直前確認: 2027年度介護報酬改定は基本的な視点（案）の段階で未決定（検索で確認）。本文の記述と矛盾なし。
+
+### 2026-10-23 追記: PR #45の4回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`71e9b73`→`459b077`）にPR #51（住宅型有料老人ホームの登録制記事 /column/housing-type-nursing-home-registration-checklist/）とPR #53/#54/#56（人生会議(ACP)家族共有チェックリスト記事 /column/advance-care-planning-family-checklist/、Codexレビュー対応含む）がマージされていたため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-22 ACP記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値（article06・9月分月次レビューの経緯を含む注記つき）を維持。completed_tasksの末尾は、本ブランチが既に保持していた2026-09-28〜2026-10-19の記録を維持したうえで、main側が新たに記録していた2026-10-22のACP下書き作成・PR #51公開準備・PR #51公開・ACP記事公開の4件を時系列順に追加。
+  - `docs/seo/run-log.md`: 本ブランチの「2026-10-19 PR #45の3回目のマージコンフリクト解消」セクションとmain側の「2026-10-22」以降の複数セクション（ACP下書き化・PR #51公開準備/公開・Codexレビュー対応・ACP記事公開）が同じ見出し階層で隣接しており衝突。両者を時系列順にそのまま連結して解消（本文の変更は行っていない）。
+- 新規ファイル（PR #51/#53/#56分、/column/housing-type-nursing-home-registration-checklist/・/column/advance-care-planning-family-checklist/の本文・画像・docs/seo/acp-draft-review.md等）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 43、internal links checked: 1383）、`node tools/check-click-tracking.js` → PASSED（public HTML: 39、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
 
 ## 2026-10-23 ACP記事の原文照合・出典記録訂正（レビュー用PR）
 
@@ -773,6 +845,15 @@
 - 台帳（content-inventory・keyword-map・editorial-calendar・ymyl-review-queue・source-policy）を「公開」へ更新。元PNGはリポジトリに入れない（squash merge）。
 - 未了: 医療職レビュー、厚労省2026-10-19資料の原文照合（ニュース欄の要約追記）、alt変更（訪問看護師→専門職）の運営者確認。
 
+### 2026-10-26 追記: PR #45の5回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`bf48240`→`45636cf`）に住まいの終活「実家を空き家にしないために」記事（/column/family-home-future-plan-checklist/）と自宅での看取りの確認事項記事（/column/home-end-of-life-care-checklist/）が新規公開されていたため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合1件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-26 住まいの終活記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値（article06・9月分月次レビューの経緯を含む注記つき）を維持。completed_tasksの末尾は、本ブランチが既に保持していた2026-09-28〜2026-10-22の記録を維持したうえで、main側が新たに記録していた2026-10-26の住まいの終活記事公開を追加。あわせて、前回（4回目）のマージで取り込んだarticle12のスクロール修正（main `1e6452c`）がcompleted_tasksに未記録だったため、run-log.mdの記録を要約して追記した。
+- 新規ファイル（family-home-future-plan-checklist・home-end-of-life-care-checklistの本文・画像）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 45、internal links checked: 1466）、`node tools/check-click-tracking.js` → PASSED（public HTML: 41、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
+
 ## 2026-10-27 負担限度額認定の申請前チェック記事の作成・公開（運営者指示）
 
 - ブランチ: claude/care-facility-cost-application-2026-10-27。運営者が公開・デプロイ・コミット・プッシュ・PR作成・マージを明示指示（ZIP同梱のclaude-code-prompt.txtには「公開等は行わず確認待ちで停止」とあったが、チャットでの運営者の直接指示を優先）。
@@ -782,6 +863,16 @@
 - 導線: トップ新着（先頭に追加し最古のACP記事を外す）・全記事一覧、親の終活ハブ記事一覧、住宅型有料老人ホーム記事・自宅での看取り記事の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-27）。
 - 検証: node tools/check-site.js（HTML46件・内部リンク1491件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、Playwrightで1280/375/320px（横スクロールなし・画像404なし・srcset選択・H1=1）。
 - 未了: 出典2件の原文照合、専門家レビュー（ymyl-review-queue.md登録済み）。
+
+### 2026-10-27 追記: PR #45の6回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`45636cf`→`0111454`）に介護施設の食費・居住費 負担限度額認定の申請前チェック記事（/column/care-facility-food-housing-cost-application-checklist/）が新規公開されていたため。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-27 負担限度額認定記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値を維持。completed_tasksの末尾は、本ブランチが既に保持していた記録を維持したうえで、main側が新たに記録していた2026-10-27の負担限度額認定記事公開を追加。
+  - `docs/seo/run-log.md`: 本ブランチの「2026-10-26 PR #45の5回目のマージコンフリクト解消」セクションとmain側の「2026-10-27 負担限度額認定の申請前チェック記事の作成・公開」セクションが隣接しており衝突。両者を時系列順にそのまま連結して解消（本文の変更は行っていない）。
+- 新規ファイル（care-facility-food-housing-cost-application-checklistの本文・画像）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 46、internal links checked: 1507）、`node tools/check-click-tracking.js` → PASSED（public HTML: 42、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
 
 ## 2026-10-28 身寄りがない人の終活支援記事の下書き作成（運営者指示）
 
@@ -838,3 +929,13 @@
 - 競合3件（run-log / automation-state / ymyl-review-queue）は和集合で解消。ACP記事の行・保留タスクは10-23訂正版（手術同意書の署名記述を照合済み）を採用し、main側の他記事の記録はすべて保持。
 - 記事HTML・公開日・dateModified・sitemapは変更なし。医療職レビューは既存記録どおり「運営者報告により完了（2026-10-22、記録はリポジトリ外）」のまま。
 - 検証: `node tools/check-site.js`、`node tools/check-click-tracking.js`、共通ハーネス。マージ・公開は運営者の判断待ち。
+
+### 2026-10-30 追記: PR #45の7回目のマージコンフリクト解消
+
+- 検出: 定期チェックインでPR #45のmergeable_stateが`dirty`に変化。origin/mainを確認したところ、main（`0111454`→`01c996c`）に新規記事2本（身寄りがない人の終活支援 /column/end-of-life-local-support-consultation-checklist/、海産物の電話勧誘・送り付け /column/seafood-telephone-sales-family-checklist/）、ACP出典記録訂正、負担限度額認定記事の原文照合、エージェントレビュー用の共有検証ハーネス（.github/workflows/agent-review-harness.yml・tools/agent-harness/・AGENTS.md・CLAUDE.md等）が追加されていたため。あわせて、コンテナ再起動によりローカルが一時的にハーネス指定のデフォルト作業ブランチ（claude/dreamy-noether-z82pfc）へ戻っていたため、`git checkout claude/seo-weekly-2026-09-28` で本来の作業ブランチに復帰してから対応した。
+- 対応: `git fetch origin main && git merge origin/main --no-edit` を実行。競合2件:
+  - `docs/seo/automation-state.json`: ヘッダー項目（last_run/last_new_article）はmain側の新しい値（2026-10-30 海産物の電話勧誘記事公開）を採用し、last_major_update/last_monthly_reviewは本ブランチの値を維持。completed_tasksの末尾は、本ブランチが既に保持していた記録を維持したうえで、main側が新たに記録していたACP出典記録訂正（2026-10-23）・身寄りがない人の終活支援記事公開（2026-10-28）・負担限度額認定記事の原文照合（2026-10-28）の3件を時系列順に追加（海産物記事の下書き作成・公開の2件は運営者判断待ちの作業中エントリのためcompleted_tasksへは転記せず、run-log.md側の記録のみ保持）。
+  - `docs/seo/run-log.md`: 本ブランチの「2026-10-23 PR #45の4回目のマージコンフリクト解消」「2026-10-27 PR #45の6回目のマージコンフリクト解消」の各セクションと、main側の複数セクション（ACP原文照合・article12修正に続く各新記事の下書き/公開・ACP出典記録訂正ブランチのmain統合）が同じ見出し階層で隣接しており衝突。両者を時系列順にそのまま連結して解消（本文の変更は行っていない）。
+- 新規ファイル（end-of-life-local-support-consultation-checklist・seafood-telephone-sales-family-checklistの本文・画像、エージェントレビュー用の共有検証ハーネス一式）はクリーンに統合。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML files: 48、internal links checked: 1578）、`node tools/check-click-tracking.js` → PASSED（public HTML: 44、affiliate 34・CTA 13・products 12）、`git diff --check` → PASS、`node -e "JSON.parse(...)"` でautomation-state.jsonの構文確認。
+- マージ後、GitHub側のmergeable_stateがcleanへ落ち着くことを確認してから監視を再開する。
