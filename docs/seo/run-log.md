@@ -811,3 +811,11 @@
 - 画像：元PNG 1672×941（2,145,009 B、運営者提供ZIP public/images/shukatsu/seafood-telephone-sales-family-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-seafood-telephone-sales-family-checklist.webp（1600×900・101,952 B）・-1200.webp（1200×675・68,912 B）・-800.webp（800×450・38,690 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「実在の人物・相談事例・被害事例の写真ではありません」。目視で文字・ロゴ・宛名ラベル・個人情報なし、手指・表情に破綻なし、ノート無地、荷物は無地で未開封、スマートフォンは伏せた状態。背景の写真立てに小さな人物像あり（判別不能）。
 - 検証：node tools/check-site.js（HTML48件・内部リンク1560件 全通過）、node tools/check-click-tracking.js（通過）、Playwrightで1280/390/375/320px（横スクロールなし・画像/リソース404なし・JSエラーなし・表はスクロールなしで3列収まる・JSON-LD 3種パース可・パンくず/CTA/canonical/noindex確認）、OGP想定クロップ（1.91:1・2:1・1:1）で両者の顔が切れないことを確認。
 - 未了：専門家レビュー（法務：契約成立・電話勧誘販売の該当性・クーリング・オフ条件・送り付けと誤配の区別・返金請求）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
+
+## 2026-10-30 海産物の電話勧誘・送り付け記事の公開（運営者指示）
+
+- 運営者が「公開して」と明示指示（専門家レビューは未実施のまま。冒頭注意書き・「この記事について」に参考程度・レビュー未実施を明記済み）。
+- drafts/ から column/seafood-telephone-sales-family-checklist/ へ移動（相対パスは同階層のため変更なし）、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-30（指示当日）、本文の公開日表示を更新。
+- 導線: トップ新着（先頭に追加し最古の看取り記事を外す）・全記事一覧、where-to-ask の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-30）。親の終活ハブは今回追加せず（ハブのカード構成は変更しない）。
+- 検証: node tools/check-site.js（HTML48件・内部リンク1562件 全通過）、node tools/check-click-tracking.js（通過）、git diff --check、共通ハーネス（コミット後に実行）。
+- 未了: 専門家レビュー（法務）、10/28報告書PDFの確認。
