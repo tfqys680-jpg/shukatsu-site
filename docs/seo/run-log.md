@@ -838,3 +838,12 @@
 - 競合3件（run-log / automation-state / ymyl-review-queue）は和集合で解消。ACP記事の行・保留タスクは10-23訂正版（手術同意書の署名記述を照合済み）を採用し、main側の他記事の記録はすべて保持。
 - 記事HTML・公開日・dateModified・sitemapは変更なし。医療職レビューは既存記録どおり「運営者報告により完了（2026-10-22、記録はリポジトリ外）」のまま。
 - 検証: `node tools/check-site.js`、`node tools/check-click-tracking.js`、共通ハーネス。マージ・公開は運営者の判断待ち。
+
+## 2026-10-31 相続のオンラインサービス終了時の資料保管記事の下書き作成（運営者指示・未公開）
+
+- 実行日：2026-10-31（Asia/Tokyo）。ローカル作業ブランチ：`claude/draft-inheritance-online-service-data-backup-20261031`（起点 main `01c996c`）。運営者指示によりコミット・プッシュ・PR作成・マージ・公開は未実施（確認待ち）。
+- 原稿：運営者提供ZIPの article-draft.txt（編集基準日2026-10-31）。drafts/inheritance-online-service-data-backup/ に noindex 下書きとして作成（公開予定URL /column/inheritance-online-service-data-backup/）。canonical/OGPは公開予定URL。Article JSON-LD に datePublished/dateModified を入れず、本文は「公開日：未定（下書き・公開前レビュー中）」。sitemap・トップ新着・全記事一覧は未変更（公開時に追加。トップの一覧はテキストのみでサムネイルなし）。
+- 重複確認：全HTMLを「エピログ／Inheritech／サービス終了／ダウンロード／相続税の申告」で走査し、keyword-mapと照合。article15（相続手続きの流れ）・article18（デジタル遺産の相続対策）・article06（デジタル遺品）と隣接するが、「相続のオンラインサービス終了時の確認と資料保管」を主意図とする記事はなく新規と判断。リモートブランチにも同テーマなし（オープンPRはAPI権限がなく未確認）。
+- 出典：PR TIMES（2026-08-31発表）、エピログ相続公式サイトの告知、国税庁No.4205を2026-10-31にWebFetchで原文確認（source-policy.md）。原稿からの補正は source-policy.md に記録。
+- 画像：元PNG 1672×941（1,954,726 B、sha256 daca02ac…、運営者提供ZIP public/images/shukatsu/inheritance-online-service-data-backup-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-inheritance-online-service-data-backup.webp（1600×900・79,380 B）・-1200.webp（1200×675・55,112 B）・-800.webp（800×450・31,884 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。AVIF・picture要素は既存運用になく作成せず。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「生成AIで作成したイメージ。実在の利用者・事業者・専門家の写真ではない」。目視で文字・ロゴ・個人情報なし、ノートパソコンは背面のみ、ファイルは閉じた無地、手指・表情に破綻なし。OGP想定クロップ1.91:1・2:1で両者の顔が切れないことを確認（1:1では娘の顔が切れる）。
+- 未了：専門家レビュー（税務・法務）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
