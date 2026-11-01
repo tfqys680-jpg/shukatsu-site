@@ -848,10 +848,10 @@
 - 画像：元PNG 1672×941（1,954,726 B、sha256 daca02ac…、運営者提供ZIP public/images/shukatsu/inheritance-online-service-data-backup-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-inheritance-online-service-data-backup.webp（1600×900・79,380 B）・-1200.webp（1200×675・55,112 B）・-800.webp（800×450・31,884 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。AVIF・picture要素は既存運用になく作成せず。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「生成AIで作成したイメージ。実在の利用者・事業者・専門家の写真ではない」。目視で文字・ロゴ・個人情報なし、ノートパソコンは背面のみ、ファイルは閉じた無地、手指・表情に破綻なし。OGP想定クロップ1.91:1・2:1で両者の顔が切れないことを確認（1:1では娘の顔が切れる）。
 - 未了：専門家レビュー（税務・法務）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
 
-## 2026-10-31 相続のオンラインサービス終了時の資料保管記事の公開（運営者指示）
+## 2026-11-01 相続のオンラインサービス終了時の資料保管記事の公開（運営者指示）
 
-- 運営者が「すべて許可します」と明示指示（専門家レビューは未実施のまま。冒頭注意書き・「この記事について」に参考程度・レビュー未実施を明記済み）。
-- drafts/ から /column/inheritance-online-service-data-backup/ へ移動（相対パスは同階層のため変更なし）、noindexと下書きコメントを削除、datePublished/dateModified=2026-10-31（指示当日。告知日・出典確認日の流用ではない）、本文の公開日表示を更新。
-- 導線: トップ新着（先頭に追加し最古の負担限度額認定記事を外す）・全記事一覧、article18 の関連記事。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。sitemapへ新URL追加（lastmod 2026-10-31）。
-- プッシュ・PR・マージ: このセッションにリポジトリへの書き込み権限がなく、git proxy が403で拒否（権限付与の要求も拒否）。ローカルブランチ `claude/draft-inheritance-online-service-data-backup-20261031` のコミットのみで、本番未反映。
-- 未了: 専門家レビュー（税務・法務）、リモートへの反映。
+- 運営者が「すべて許可します」（2026-10-31）、「おすすめで進めてください」（2026-11-01）と明示指示（専門家レビューは未実施のまま。冒頭注意書き・「この記事について」に参考程度・レビュー未実施を明記済み）。
+- 2026-10-31: drafts/ から /column/inheritance-online-service-data-backup/ へ移動、noindexと下書きコメントを削除、sitemap・トップ新着（先頭に追加し最古の負担限度額認定記事を外す）・全記事一覧・article18 の関連記事へ追加。リンク追加のみのため既存ページの更新日・sitemap lastmodは据え置き。この時点ではリポジトリへの書き込み権限がなくプッシュ不可（git proxy 403）。
+- 2026-11-01: 書き込み権限の付与後、ブランチ `claude/inheritance-online-service-data-backup-20261101` でPR作成・マージ。実際の公開日に合わせ datePublished/dateModified・本文の公開日表示・トップ新着の日付・sitemap lastmod・台帳を2026-11-01に修正（10-31の下書き日・出典確認日は流用しない）。
+- 検証: node tools/check-site.js、node tools/check-click-tracking.js、git diff --check、共通ハーネス（コミット後）、Playwrightで320/375/390px。
+- 未了: 専門家レビュー（税務・法務）。
