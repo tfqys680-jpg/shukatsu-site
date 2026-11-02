@@ -855,3 +855,19 @@
 - 2026-11-01: 書き込み権限の付与後、ブランチ `claude/inheritance-online-service-data-backup-20261101` でPR作成・マージ。実際の公開日に合わせ datePublished/dateModified・本文の公開日表示・トップ新着の日付・sitemap lastmod・台帳を2026-11-01に修正（10-31の下書き日・出典確認日は流用しない）。
 - 検証: node tools/check-site.js、node tools/check-click-tracking.js、git diff --check、共通ハーネス（コミット後）、Playwrightで320/375/390px。
 - 未了: 専門家レビュー（税務・法務）。
+
+## 2026-11-02 週次実行（状況レポートのみ・月次機械チェック）
+
+- 実行日時：2026-11-02 09:09 JST（Asia/Tokyo）。ブランチ：`claude/seo-weekly-2026-11-02`（起点 main `29df8e6`）。
+- 判定：期限到来タスクはすべて未マージのオープンPRで対応済みのため、重複を避け新規記事・大幅更新は見送り。
+  - 2026-11前半「帰省前確認シート」→ PR #62（`claude/seo-weekly-2026-10-26`、draft）
+  - 2026-09-28〜10-02 article06 → PR #45、article11隔週更新 → PR #44
+  - 2026-11後半「おひとりさま」は身元保証・死後事務の専門家レビュー待ちのため期日前・下書き方針（PR #43が関連）
+- 月次レビュー（11月分・機械チェックのみ）：title重複なし／meta description重複なし／新規孤立ページなし（drafts・tools・404除く）。drafts/ に `parent-care-without-burnout` のみ（noindex、sitemap非掲載）。robots.txt（Allow、Sitemap指定）・sitemap（44 URL）に異常なし。
+- Search Console：`docs/seo/sc-data/` なし。データ不足のため分析・前月比較は未実施（数値は推測しない）。
+- 四半期（10月）エンディングノート比較の商品確認：外部確認が必要なため未実施。12月前半のarticle08更新と合わせる。半期YMYLは次回2027-01。
+- 季節需要（6〜10週後＝12月中旬〜1月中旬）：年末年始帰省は #62 で対応済み（マージ待ち）。薄い季節記事は作成しない。
+- 検証：`node tools/check-site.js` ALL CHECKS PASSED（HTML 50件・内部リンク1641件）、`node tools/check-click-tracking.js` PASSED。ビルド・lint・テストの専用設定なし。
+- YMYLレビュー待ち：既存の登録から変更なし。
+- 阻害要因：オープンPR #43/#44/#45/#47/#50/#52/#57/#58/#62 が未マージ。マージ順の判断は運営者。
+- 次回予定：#62/#44/#45のマージ後に最新mainへ追従。その後、隔週の大幅更新（article11以降）、12月前半のarticle08更新。
