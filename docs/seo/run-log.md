@@ -855,3 +855,13 @@
 - 2026-11-01: 書き込み権限の付与後、ブランチ `claude/inheritance-online-service-data-backup-20261101` でPR作成・マージ。実際の公開日に合わせ datePublished/dateModified・本文の公開日表示・トップ新着の日付・sitemap lastmod・台帳を2026-11-01に修正（10-31の下書き日・出典確認日は流用しない）。
 - 検証: node tools/check-site.js、node tools/check-click-tracking.js、git diff --check、共通ハーネス（コミット後）、Playwrightで320/375/390px。
 - 未了: 専門家レビュー（税務・法務）。
+
+## 2026-11-03 実家の古い家電の確認メモ記事の下書き作成（運営者指示・未公開）
+
+- 実行日：2026-11-03（Asia/Tokyo）。ローカル作業ブランチ：`claude/draft-parents-home-old-appliance-safety-20261103`（起点 main `67c2c1f`）。当初は運営者指示により確認待ちで停止し、同日運営者がコミット・プッシュ・PR作成と共通ハーネス実行を許可。マージ・公開は未実施（運営者判断待ち）。
+- 原稿：運営者提供ZIPの article-draft.txt（編集確認日2026-11-03）。drafts/parents-home-old-appliance-safety-checklist/ に noindex 下書きとして作成（公開予定URL /column/parents-home-old-appliance-safety-checklist/）。canonical/OGPは公開予定URL。Article JSON-LD に datePublished/dateModified を入れず、本文は「公開日：未定（下書き・公開前レビュー中）」。注意喚起日（10/29）・確認日（11/03）を公開日に流用しない。sitemap・トップ新着・全記事一覧・ハブ・既存記事の関連記事は未変更（公開時に追加）。
+- 重複確認：全HTMLを「家電／電気製品／リコール」で走査。article12（家電の処分方法）・jikka-katazuke（片付け表の家電行）・living-alone（緊急連絡機能）は処分・片付けの文脈のみで、長期使用家電の安全確認を主意図とする記事はなく新規と判断。リモートブランチ（seo-weekly-2026-11-02 等）にも同テーマなし。
+- 出典：東京都10/29更新ページ、東京くらしねっと2021年11・12月号（家電製品協会の解説）、消費者庁リコール情報サイトを2026-11-03にWebFetchで原文確認（source-policy.md）。
+- 画像：元PNG 1672×941（2,349,870 B、sha256 1ae19020…、運営者提供ZIP public/images/shukatsu/parents-home-old-appliance-safety-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-parents-home-old-appliance-safety-checklist.webp（1600×900・102,736 B）・-1200.webp（1200×675・70,134 B）・-800.webp（800×450・38,048 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。AVIF・picture要素は既存運用になく作成せず。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「生成AIで作成したイメージ。人物は架空で、実在の人物・事故・相談事例の写真ではない」。目視で文字・ロゴ・個人情報なし、扇風機は停止しコードはまとめて置かれ人から離れている、工具・分解・煙なし、手指・表情に破綻なし、メモ用紙は無地の罫線のみ。OGP想定クロップ1.91:1で両者の顔が収まることを確認（1:1では娘の顔が切れる）。
+- 検証：node tools/check-site.js（HTML51件・内部リンク1674件 全通過）、node tools/check-click-tracking.js（通過）、python3 tools/agent-harness/test_runner.py（4件OK）、git diff --check、Playwrightで1280/390/375/320px（横スクロールなし・画像/リソース404なし・JSエラーなし・CLS 0・ヒーローはファーストビュー内でloading=auto/fetchpriority=high・表は5列の見出しセル（scope=col）で320〜390pxは表内横スクロール・JSON-LD 3種パース可・パンくず/CTA/canonical/noindex確認、内部リンク17件200）。共通ハーネス run.py はコミット後に実行（結果はPR本文に記載）。
+- 未了：専門家レビュー（製品安全・法務・医療・税務の該当箇所）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
