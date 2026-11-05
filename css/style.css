@@ -318,6 +318,9 @@ table.cmp th, table.cmp td { border: 1px solid var(--line-color); padding: 10px 
 table.cmp th { background: var(--green-deep); color: var(--white); font-weight: 700; white-space: nowrap; }
 table.cmp tr:nth-child(even) td { background: var(--kinari); }
 table.cmp td.pname { font-weight: 700; color: var(--green-deep); white-space: nowrap; }
+table.cmp td.pname a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+table.cmp td.pname a:hover { opacity: .75; }
+.product-box[id^="item-"] { scroll-margin-top: 30px; }
 
 /* ---------- アフィリエイトボタン ---------- */
 .product-box {
