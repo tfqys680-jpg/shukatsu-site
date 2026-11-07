@@ -855,3 +855,22 @@
 - 2026-11-01: 書き込み権限の付与後、ブランチ `claude/inheritance-online-service-data-backup-20261101` でPR作成・マージ。実際の公開日に合わせ datePublished/dateModified・本文の公開日表示・トップ新着の日付・sitemap lastmod・台帳を2026-11-01に修正（10-31の下書き日・出典確認日は流用しない）。
 - 検証: node tools/check-site.js、node tools/check-click-tracking.js、git diff --check、共通ハーネス（コミット後）、Playwrightで320/375/390px。
 - 未了: 専門家レビュー（税務・法務）。
+
+## 2026-11-06 車売却の終活チェック記事（未公開・確認待ち）
+
+- 対象shukatsu-siteのみ。原稿全文・指定PNGを使用しdrafts/car-sale-retirement-checklist/index.htmlへ実装。新規判定（article16/12と検索意図を分離）。
+- noindex、公開日未定、一覧・カテゴリ・sitemap掲載保留。Article/BreadcrumbListと内部リンク、WebP3サイズを設定。
+- 既存検証3件はPASS。共通ハーネス総合は未コミット変更のためblocked。コミット禁止指示を優先しコミット等は実行しない。
+- PC/320/375/390px相当の表示、画像、表、FAQ、CTA、OGP想定クロップ確認。実SNS・実端末・CLS/LCP実測は未実施。
+- 詳細：car-sale-retirement-checklist-review.md。人手レビュー・公開判断待ち。
+
+## 2026-11-06 車売却記事の公開承認・公開設定
+
+- 運営者がコミット・プッシュ・PR作成・マージ・公開を明示承認。column/car-sale-retirement-checklist/へ移動、noindex解除、日付2026-11-06、トップ新着/一覧・親の終活ハブ・sitemap・台帳を同期。
+- 専門家レビュー未実施は本文・台帳に保持。原稿・画像と出典条件を保持。既存記事の日付は変更しない。
+- 前段の未公開・未コミット・停止記録は承認前の履歴。公開検証結果はPR/Actionsで確認する。
+
+## 2026-11-07 PR #80再検証
+
+- 本番404・未マージを確認。利用者の最新指示により再承認待ち。公開予定日を11月7日に同期し、原稿確認日・過去承認日は維持。翌日以降の承認なら実公開日に再同期。
+- 公開方法はREADME記載のmainマージによるGitHub Pages自動配信。詳細はcar-sale-retirement-checklist-review.md冒頭。
