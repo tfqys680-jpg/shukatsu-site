@@ -1,8 +1,8 @@
 {
   "timezone": "Asia/Tokyo",
-  "last_run": "2026-11-01（臨時：相続のオンラインサービス終了時の資料保管記事を公開。2026-10-31下書き作成）",
+  "last_run": "2026-11-09（週次：帰省前確認シートを30項目記事へ追加）",
   "last_new_article": "2026-11-01 /column/inheritance-online-service-data-backup/（運営者の明示指示によりPR・マージで公開）",
-  "last_major_update": "2026-08-10 /articles/article05.html（編集カレンダー2026-08-10〜14週タスク。親への切り出し方を拒否・NG例まで拡張）",
+  "last_major_update": "2026-11-09 /parent-shukatsu/questions/（帰省前〜年末年始の確認シート追加）",
   "last_monthly_review": "2026-10-05（10月分を機械チェックのみ実施: title/meta description重複なし・新規孤立ページなし。Search Consoleデータ未配置のためSC分析はデータ不足として未実施）",
   "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
   "last_semiannual_ymyl_review": "2026-07-20（相続/税務/遺言/専門職業務範囲/デジタルサービス/医療の該当箇所を確認。詳細は docs/seo/ymyl-review-queue.md「半期事実確認の実施記録」参照。次回: 2027-01）",
@@ -42,7 +42,8 @@
     "2026-10-27 負担限度額認定記事公開: /column/care-facility-food-housing-cost-application-checklist/。運営者原稿から作成し、トップ/ハブ/関連2記事/sitemap/台帳を更新。出典原文は作成環境から未照合。",
     "2026-10-28 臨時（運営者指示）: 運営者原稿から身寄りがない人の終活支援記事を /drafts/end-of-life-local-support-consultation-checklist/ に noindex 下書き作成（公開予定 /column/end-of-life-local-support-consultation-checklist/）。奈良市3ページ等の原文を確認しsource-policy.mdへ記録。公開は専門家レビューと運営者承認の後。",
     "2026-10-28 身寄りがない人の終活支援記事公開: /column/end-of-life-local-support-consultation-checklist/。運営者の「マージ・公開して」に基づきdraftsから移動・noindex削除・トップ/where-to-ask/sitemap/台帳を更新。専門家レビューは未実施。",
-    "2026-10-28 負担限度額認定記事の原文照合: 厚労省Vol.1550 PDF・新宿区ページを直接取得し、公開記事全体（最新mainのHTMLと一致）と照合。source-policy.mdに記述別の一致・補足事項・要専門家確認を記録し、原文未照合の状態を訂正。本文修正を要する明確な齟齬は見つからず、記事HTML・更新日は維持。専門家レビューは未実施。"
+    "2026-10-28 負担限度額認定記事の原文照合: 厚労省Vol.1550 PDF・新宿区ページを直接取得し、公開記事全体（最新mainのHTMLと一致）と照合。source-policy.mdに記述別の一致・補足事項・要専門家確認を記録し、原文未照合の状態を訂正。本文修正を要する明確な齟齬は見つからず、記事HTML・更新日は維持。専門家レビューは未実施。",
+    "2026-11-09 週次: 編集カレンダー2026-11前半タスク（帰省前確認シート）を30項目記事へ追加。check-site全通過。PR未マージ。SC未配置・四半期商品レビュー(10月分)は価格確認不可のため未実施"
   ],
   "pending_review_tasks": [
     "/column/car-sale-retirement-checklist/: 2026-11-06運営者がコミット・プッシュ・PR・マージ・公開を明示承認。公開設定・導線を実装。専門家レビュー未実施は継続。一次資料3件の照合方法はsource-policy.md。",
@@ -65,6 +66,7 @@
     "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
     "著者実名・経歴の掲載（運営者の意向確認が必要）",
     "2026-10 四半期エンディングノート比較記事(article08)の商品確認: 販売状況・価格の確認には外部サイト参照が必要で今回未実施。編集カレンダー2026-12前半の2027年版更新と合わせて実施予定",
-    "未マージPR #43/#44/#45/#47/#50/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。"
+    "未マージPR #43/#44/#45/#47/#50/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。",
+    "2026-10期 エンディングノート比較(article08)四半期確認: 価格・販売状況の一次確認が必要。12月前半の2027年版更新と合わせて実施"
   ]
 }
