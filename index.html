@@ -31,6 +31,17 @@
 /* トップページ専用（親の終活への副CTA） */
 .btn-outline{display:inline-block;margin-top:14px;padding:14px 28px;border:2px solid rgba(255,255,255,.7);border-radius:999px;color:var(--white);text-decoration:none;font-weight:700;font-size:16px;}
 .btn-outline:hover{background:rgba(255,255,255,.12);color:var(--white);}
+/* 商品欄はトップページ内に限定。既存の商品クリック計測を利用する。 */
+.home-product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+.home-products .product-box{margin:18px 0;display:flex;flex-direction:column;min-width:0;}
+.home-products .product-box h3{font-size:20px;line-height:1.6;color:var(--green-deep);}
+.home-products .product-box>p{margin-bottom:12px;}
+.home-products .product-purpose{font-weight:700;color:var(--green-deep);font-size:14px;}
+.home-products .product-source{font-size:14px;}
+.home-products .btn-row{margin-top:auto;padding-top:12px;}
+.home-products .product-disclosure,.home-products .product-note{font-size:14px;line-height:1.9;color:var(--ink-soft);}
+.home-products .product-note+.product-note{margin-top:12px;}
+@media(max-width:760px){.home-product-grid{grid-template-columns:1fr;gap:0;}}
 </style>
 <script type="application/ld+json">
 {
@@ -177,11 +188,48 @@
     <h2 class="section-title">新着記事</h2>
     <!-- 運用ルール：新しい記事を公開したら先頭に1行追加し、いちばん古い行を削除（常に最新3本・公開日の新しい順） -->
     <ul class="article-list">
-      <li><a href="cost/"><h3><span class="new-badge">NEW</span>終活にかかる費用は何にいくら？5つに分ける準備と見積もりチェックリスト</h3><p class="article-date">2026年9月14日 公開</p></a></li>
-      <li><a href="where-to-ask/"><h3><span class="new-badge">NEW</span>終活の相談先はどこ？悩み別に最初の窓口を選ぶ方法</h3><p class="article-date">2026年9月6日 公開</p></a></li>
-      <li><a href="parent-shukatsu/living-alone/"><h3><span class="new-badge">NEW</span>一人暮らしの親の終活チェックリスト｜見守り・合鍵・孤立防止</h3><p class="article-date">2026年8月24日 公開</p></a></li>
+      <li><a href="column/mimoto-hosho-keiyaku-checklist/"><h3><span class="new-badge">NEW</span>身元保証サービスの契約前チェックリスト｜預託金・解約・寄附を確認</h3><p class="article-date">2026年11月10日 公開</p></a></li>
+      <li><a href="column/parents-home-old-appliance-safety-checklist/"><h3><span class="new-badge">NEW</span>実家の古い家電、何から確認する？｜親と作る点検・相談メモ</h3><p class="article-date">2026年11月10日 公開</p></a></li>
+      <li><a href="column/guardianship-fee-assistance-checklist/"><h3><span class="new-badge">NEW</span>成年後見の費用が心配なときに｜報酬助成の確認ポイント</h3><p class="article-date">2026年11月10日 公開</p></a></li>
     </ul>
     <p class="archive-link"><a href="#all-articles">これまでの記事をすべて見る →<span>読みたいテーマがきっと見つかります</span></a></p>
+  </div>
+</section>
+
+<!-- 終活に役立つ商品（既存のもしもリンクを使用） -->
+<section class="section home-products" id="ending-note-products" aria-labelledby="products-title">
+  <div class="container">
+    <h2 class="section-title" id="products-title">終活の記録に使えるノート</h2>
+    <p class="section-sub">家族に伝えたいことを、書けるところから少しずつ。<br>市販のノートを使いたい方へ、特徴の異なる2冊をご紹介します。</p>
+    <p class="product-disclosure"><strong>広告</strong>：以下の商品リンクは、もしもアフィリエイトを利用しています。リンク先で購入されると、当サイトに報酬が入る場合があります。</p>
+    <div class="home-product-grid">
+      <div class="product-box" data-product-id="4434265792" data-product-name="一番わかりやすいエンディングノート（リベラル社）">
+        <p class="product-purpose">項目に沿って、少しずつ書きたい方へ</p>
+        <h3>一番わかりやすいエンディングノート（リベラル社）</h3>
+        <p>B5判・64ページ。家族に伝えたいことを、手書きでまとめるための1冊です。中身の見本や記入項目を確認し、自分に合うものを選んでください。</p>
+        <p class="product-source"><a href="https://liberalsya.com/一番わかりやすい-エンディングノート-2/">リベラル社の商品情報</a></p>
+    <div class="btn-row">
+      <a href="https://af.moshimo.com/af/c/click?a_id=5675374&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4434265792" class="btn-affiliate" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">Amazonで見る</a>
+      <a href="https://af.moshimo.com/af/c/click?a_id=5675373&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Ftributy%2F4434265792%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ftributy%2Fi%2F10004315%2F" class="btn-affiliate rakuten" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">楽天市場で見る</a>
+    </div>
+    <img src="https://i.moshimo.com/af/i/impression?a_id=5675373&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    <img src="https://i.moshimo.com/af/i/impression?a_id=5675374&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" loading="lazy" width="1" height="1" style="border:0;">
+      </div>
+      <div class="product-box" data-product-id="B0041O8WHO" data-product-name="エンディングノート もしもの時に役立つノート（コクヨ LES-E101）">
+        <p class="product-purpose">口座・保険などの情報を整理したい方へ</p>
+        <h3>エンディングノート もしもの時に役立つノート（コクヨ LES-E101）</h3>
+        <p>セミB5サイズ・64ページ。銀行口座・保険・クレジットカードなどの情報をまとめる欄があり、身の回りの情報を整理したい方の候補になります。</p>
+        <p class="product-source"><a href="https://www.kokuyo.com/stationery/category/notebook-paper/household-account/10098/">コクヨの商品情報</a></p>
+    <div class="btn-row">
+      <a href="https://af.moshimo.com/af/c/click?a_id=5675374&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0041O8WHO" class="btn-affiliate" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">Amazonで見る</a>
+      <a href="https://af.moshimo.com/af/c/click?a_id=5675373&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbunbougu-shibuya%2Fles-e101%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbunbougu-shibuya%2Fi%2F10025624%2F" class="btn-affiliate rakuten" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">楽天市場で見る</a>
+    </div>
+    <img src="https://i.moshimo.com/af/i/impression?a_id=5675373&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    <img src="https://i.moshimo.com/af/i/impression?a_id=5675374&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" loading="lazy" width="1" height="1" style="border:0;">
+      </div>
+    </div>
+    <p class="product-note">商品情報の確認：<time datetime="2026-11-02">2026年11月2日</time>。仕様はメーカー・出版社の公式情報を参照しています。最新の価格・在庫・送料・仕様は、各販売ページでご確認ください。</p>
+    <p class="product-note">購入は必須ではありません。手持ちのノートや自治体などの無料様式でも始められます。<a href="articles/article02.html">エンディングノートの書き方</a>を参考に、必要な項目から書いてみてください。記入した個人情報の保管場所と、誰に伝えるかも決めておきましょう。</p>
   </div>
 </section>
 
@@ -219,11 +267,28 @@
 
     <h3 id="all-articles" style="text-align:center; color:var(--green-deep); margin:40px 0 16px; font-size:19px;">全記事一覧</h3>
     <ul class="article-list">
+      <li><a href="column/mimoto-hosho-keiyaku-checklist/"><h3><span class="new-badge">NEW</span>身元保証サービスの契約前チェックリスト｜預託金・解約・寄附を確認</h3><p class="article-date">2026年11月10日 公開</p></a></li>
+      <li><a href="column/parents-home-old-appliance-safety-checklist/"><h3><span class="new-badge">NEW</span>実家の古い家電、何から確認する？｜親と作る点検・相談メモ</h3><p class="article-date">2026年11月10日 公開</p></a></li>
+      <li><a href="column/guardianship-fee-assistance-checklist/"><h3>成年後見の費用が心配なときに｜報酬助成の確認ポイント</h3></a></li>
       <li><a href="ending-note/family-story/"><h3>【体験談】親が突然亡くなった日、何もわからなかった｜エンディングノートが家族を助ける理由</h3></a></li>
       <li><a href="parent-shukatsu/questions/"><h3>親が元気なうちに聞いておくこと30項目｜会話例・印刷用シート付き</h3></a></li>
       <li><a href="where-to-ask/"><h3>終活の相談先はどこ？悩み別に最初の窓口を選ぶ方法</h3></a></li>
       <li><a href="cost/"><h3>終活にかかる費用は何にいくら？5つに分ける準備と見積もりチェックリスト</h3></a></li>
       <li><a href="parent-shukatsu/siblings/"><h3>親の終活を兄弟姉妹で分担する方法｜役割分担・費用の記録・連絡ルール</h3></a></li>
+      <li><a href="column/family-home-future-plan-checklist/"><h3>実家を空き家にしないために｜住まいの終活で家族が確認する5つのこと</h3></a></li>
+      <li><a href="parent-shukatsu/jikka-katazuke/"><h3>実家の片付けを親と喧嘩せず進める手順｜切り出し方・会話例・NG行動</h3></a></li>
+      <li><a href="column/advance-care-planning-family-checklist/"><h3>人生会議（ACP）は何を話す？家族で共有したい7つのこと</h3></a></li>
+      <li><a href="column/shukatsu-free-consultation-preparation/"><h3>終活の無料相談で何を聞く？相談前の準備と確認事項</h3></a></li>
+      <li><a href="column/car-sale-retirement-checklist/"><h3>車を手放す前の終活チェック｜査定・契約・入金を分けて確認</h3></a></li>
+      <li><a href="column/senior-housing-registration-operation-checklist/"><h3>サ高住の選び方｜登録情報・運営情報・見学で確かめる7つの質問</h3></a></li>
+      <li><a href="column/bereavement-procedures-family-checklist/"><h3>家族が亡くなった後の手続き、何から確認する？｜おくやみ窓口と家族の分担メモ</h3></a></li>
+      <li><a href="column/handwritten-will-storage-preparation/"><h3>自筆証書遺言を法務局に預ける前に｜保管と内容相談の違い・準備メモ</h3></a></li>
+      <li><a href="column/inheritance-online-service-data-backup/"><h3>相続のオンラインサービスが終了したら｜申告資料の保管と家族への引き継ぎ</h3></a></li>
+      <li><a href="column/seafood-telephone-sales-family-checklist/"><h3>高齢の親に海産物の勧誘電話が来たら｜注文・支払い・相談の確認メモ</h3></a></li>
+      <li><a href="column/end-of-life-local-support-consultation-checklist/"><h3>身寄りがない人の終活支援｜情報登録と死後事務の違い、相談前の確認事項</h3></a></li>
+      <li><a href="column/care-facility-food-housing-cost-application-checklist/"><h3>介護施設の食費・居住費を軽減できる？負担限度額認定の申請前チェック</h3></a></li>
+      <li><a href="column/home-end-of-life-care-checklist/"><h3>自宅での看取りを希望するときの確認事項｜訪問介護・訪問看護の選び方</h3></a></li>
+      <li><a href="column/housing-type-nursing-home-registration-checklist/"><h3>住宅型有料老人ホームの登録制とは？入居前に確認したい10項目</h3></a></li>
       <li><a href="parent-shukatsu/living-alone/"><h3>一人暮らしの親の終活チェックリスト｜見守り・合鍵・孤立防止</h3></a></li>
       <li><a href="column/obon-family-planning-talk/"><h3>お盆に家族で終活の話を始める方法｜決めずに整理する7つの質問</h3></a></li>
       <li><a href="articles/article01.html"><h3>エンディングノートとは？遺言書との違いを終活カウンセラーが解説</h3></a></li>
@@ -231,7 +296,7 @@
       <li><a href="articles/article03.html"><h3>エンディングノートはいつから書く？年代別の始めどき</h3></a></li>
       <li><a href="articles/article04.html"><h3>エンディングノートに書いてはいけないこと・注意点</h3></a></li>
       <li><a href="articles/article05.html"><h3>親にエンディングノートを書いてもらうには?切り出し方のコツ</h3></a></li>
-      <li><a href="articles/article06.html"><h3>デジタル遺品も忘れずに｜パスワード・サブスクの整理方法</h3></a></li>
+      <li><a href="articles/article06.html"><h3>デジタル終活チェックリスト｜パスワード・サブスク・スマホの整理手順</h3></a></li>
       <li><a href="articles/article07.html"><h3>遺言書の種類と費用｜自筆証書・公正証書どちらを選ぶ？</h3></a></li>
       <li><a href="column/will-for-ordinary-families/"><h3>遺言書はお金持ちだけのもの？一般家庭でも準備を考えたい5つのケース</h3></a></li>
       <li><a href="column/ai-shukatsu-first-step/"><h3>AIで終活を始める方法｜遺言を書く前に整理したい家族・財産・希望</h3></a></li>
@@ -243,6 +308,7 @@
       <li><a href="articles/article12.html"><h3>生前整理はどこから始める？部屋別チェックリストと8週間の進め方</h3></a></li>
       <li><a href="articles/article13.html"><h3>葬儀の生前準備｜家族葬・一日葬・直葬の違いと費用の考え方</h3></a></li>
       <li><a href="articles/article14.html"><h3>お墓はどうする？墓じまい・永代供養・樹木葬の選択肢と進め方</h3></a></li>
+      <li><a href="column/pre-need-grave-guide/"><h3>生前墓はいつ決める？費用・相続税・家族で確認したい7項目</h3></a></li>
       <li><a href="articles/article15.html"><h3>家族が亡くなったあとの相続手続き｜流れとやることリスト</h3></a></li>
       <li><a href="articles/article16.html"><h3>親の運転免許返納、いつ切り出す？「運転終活」講座に学ぶ話し合い方</h3></a></li>
       <li><a href="articles/article17.html"><h3>家族が年金を受け取らないまま亡くなったら？「死亡一時金」と「未支給年金」</h3></a></li>
