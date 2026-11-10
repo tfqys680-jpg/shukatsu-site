@@ -1,0 +1,40 @@
+name: agent-review-harness
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: agent-review-harness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run repository checks
+        run: python3 tools/agent-harness/run.py --output "$RUNNER_TEMP/agent-harness"
+      - name: Summarize evidence
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/agent-harness/summary.md" ]; then
+            cat "$RUNNER_TEMP/agent-harness/summary.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'BLOCKED: setup failed before evidence collection.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agent-harness-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/agent-harness/
+          if-no-files-found: warn
+          retention-days: 14

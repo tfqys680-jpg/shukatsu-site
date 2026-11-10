@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "id": "harness-regression",
+      "command": [
+        "python3",
+        "tools/agent-harness/test_runner.py"
+      ],
+      "timeout_seconds": 60
+    },
+    {
+      "id": "site",
+      "command": [
+        "node",
+        "tools/check-site.js"
+      ],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "click-tracking",
+      "command": [
+        "node",
+        "tools/check-click-tracking.js"
+      ],
+      "timeout_seconds": 600
+    }
+  ],
+  "manual_review": [
+    "記事本文・一次資料・専門家レビューの状態を確認。機械検証成功を事実照合済みと扱わない。",
+    "公開状態、dateModified、sitemap、content-inventory、keyword-mapの変更理由と整合性を確認。",
+    "UI変更は320px/375px/390pxで確認。"
+  ]
+}
