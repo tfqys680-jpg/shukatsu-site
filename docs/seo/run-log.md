@@ -1094,3 +1094,32 @@
 ## 2026-11-10 旧PR8件の統合・注意事項
 
 #44/#45/#47/#50/#52/#57/#62を既存#74へ統合。各履歴を保持し、古い台帳状態・更新日への巻き戻しを回避。詳細は approved-backlog-20261110.md。未実施のSC分析・商品確認・専門家レビューは完了扱いにしない。
+
+
+
+## 2026-09-19 PR #43 個別レビュー・安全な下書き修正
+
+- 対象: `codex/draft-mimoto-hosho-keiyaku-checklist`、レビュー元HEAD `f5404e27d2dad2bfcb954d37d814d5325d073ad0`、base `69aa145f6c7b57fa7eb8a5e08ea99c6904b31c68`。PR: https://github.com/tfqys680-jpg/shukatsu-site/pull/43
+- 判定: 厚労省資料との主要な整合を確認したが、専門家レビューと実表示確認が未完了のためDraft継続・マージ/公開保留。競合なしは内容の承認やCI成功を意味しない。取得時点でreview thread、レビュー投稿、commit status、check run、PR workflow runはいずれも0件。
+- 即時修正: FAQの回答に`faq-a`を付け、必須チェックの`FAQ answer count mismatch`を解消。本文とFAQPageを同時修正。預託金の区分管理と破綻時の返還を区別、入院案内の対象と理由を限定、医療同意と意思決定支援を区別。「契約を今日決める必要はありません」の一律断定を変更。専門家未確認の状態が冒頭にも分かる著者表示へ修正。表に既存CSSのクラスを適用。
+- SEO: canonical/og:url/Article/mainEntityOfPage/BreadcrumbListをdrafts/パスに同期。noindex、sitemap非掲載、トップ/ハブ未リンク、公開日未定を維持。FAQリッチリザルト終了をGoogle公式履歴で確認し、構文検証と検索結果への表示効果を区別。
+- 台帳: content-inventory/keyword-map/source-policy/ymyl-review-queueを同期。レビューキューの空行による表切れを解消し、専門家別の確認項目を具体化。automation-stateへ今回の個別レビュー結果を追記（定期実行のlast_run等は変更しない）。
+- 検証: `node tools/check-site.js` → ALL CHECKS PASSED（HTML 40件・内部リンク1235件）。追加照合でH1 1件、JSON-LD 3種、FAQ本文/構造化データ3組一致、内部リンク先8種類の実ファイル、下書きURLメタデータ4箇所、sitemap除外、公開ページからのリンク0件、両CSVの単一行/列数/下書き状態を確認。`git diff --check`通過。
+- 表示検証: ローカルHTTPサーバーは起動したがagent-browserがsocket作成不可で起動できず、Cloud Browserもlocalhostへの接続が`ERR_BLOCKED_BY_CLIENT`。PC/320px/375px、FAQ開閉、印刷の実表示はUNVERIFIED。通過扱いにしない。
+- 残作業: 専門家の確認者/対象/日付を記録し、実表示検証を完了。公開する段階で正式URLへの移動・noindex解除・日付・各URLメタデータ・sitemap・入口の内部リンク・SEO台帳を一括更新し、改めて公開可否を判断する。
+
+
+## 2026-11-03 実家の古い家電の確認メモ記事の下書き作成（運営者指示・未公開）
+
+- 実行日：2026-11-03（Asia/Tokyo）。ローカル作業ブランチ：`claude/draft-parents-home-old-appliance-safety-20261103`（起点 main `67c2c1f`）。当初は運営者指示により確認待ちで停止し、同日運営者がコミット・プッシュ・PR作成と共通ハーネス実行を許可。マージ・公開は未実施（運営者判断待ち）。
+- 原稿：運営者提供ZIPの article-draft.txt（編集確認日2026-11-03）。drafts/parents-home-old-appliance-safety-checklist/ に noindex 下書きとして作成（公開予定URL /column/parents-home-old-appliance-safety-checklist/）。canonical/OGPは公開予定URL。Article JSON-LD に datePublished/dateModified を入れず、本文は「公開日：未定（下書き・公開前レビュー中）」。注意喚起日（10/29）・確認日（11/03）を公開日に流用しない。sitemap・トップ新着・全記事一覧・ハブ・既存記事の関連記事は未変更（公開時に追加）。
+- 重複確認：全HTMLを「家電／電気製品／リコール」で走査。article12（家電の処分方法）・jikka-katazuke（片付け表の家電行）・living-alone（緊急連絡機能）は処分・片付けの文脈のみで、長期使用家電の安全確認を主意図とする記事はなく新規と判断。リモートブランチ（seo-weekly-2026-11-02 等）にも同テーマなし。
+- 出典：東京都10/29更新ページ、東京くらしねっと2021年11・12月号（家電製品協会の解説）、消費者庁リコール情報サイトを2026-11-03にWebFetchで原文確認（source-policy.md）。
+- 画像：元PNG 1672×941（2,349,870 B、sha256 1ae19020…、運営者提供ZIP public/images/shukatsu/parents-home-old-appliance-safety-hero.png）をImageOps.fitで1600×900へ中央クロップ、WebP q80（method 6）で images/column-parents-home-old-appliance-safety-checklist.webp（1600×900・102,736 B）・-1200.webp（1200×675・70,134 B）・-800.webp（800×450・38,048 B）。元PNGは既存運用どおりリポジトリに入れない（public/ は本リポジトリの配信構成にない）。AVIF・picture要素は既存運用になく作成せず。srcset/sizes、width/height＋aspect-ratio、fetchpriority="high"・lazyなし。画像下に「生成AIで作成したイメージ。人物は架空で、実在の人物・事故・相談事例の写真ではない」。目視で文字・ロゴ・個人情報なし、扇風機は停止しコードはまとめて置かれ人から離れている、工具・分解・煙なし、手指・表情に破綻なし、メモ用紙は無地の罫線のみ。OGP想定クロップ1.91:1で両者の顔が収まることを確認（1:1では娘の顔が切れる）。
+- 検証：node tools/check-site.js（HTML51件・内部リンク1674件 全通過）、node tools/check-click-tracking.js（通過）、python3 tools/agent-harness/test_runner.py（4件OK）、git diff --check、Playwrightで1280/390/375/320px（横スクロールなし・画像/リソース404なし・JSエラーなし・CLS 0・ヒーローはファーストビュー内でloading=auto/fetchpriority=high・表は5列の見出しセル（scope=col）で320〜390pxは表内横スクロール・JSON-LD 3種パース可・パンくず/CTA/canonical/noindex確認、内部リンク17件200）。共通ハーネス run.py はコミット後に実行（結果はPR本文に記載）。
+- 未了：専門家レビュー（製品安全・法務・医療・税務の該当箇所）、運営者による公開判断、公開時のsitemap・一覧・日付の確定。
+
+
+## 運営者の確認完了と公開指示（2026-11-10）
+2026-11-10：運営者が「要確認も全て確認済みです。マージして公開してください」と申告。要確認は運営者確認済みとして記録。専門家氏名・資格・確認日等の追加証跡は提出されていないため、独立した専門家監修済みという表示は新設しない。#43/#76を正式URLで公開準備。#58は指定画像が見つからず引き続き素材不足。
+過去節の未確認・下書き表記は当時の履歴。今回の確認者は運営者、確認方法は本会話での申告。

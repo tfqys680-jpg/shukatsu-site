@@ -139,3 +139,8 @@
 /where-to-ask/,/column/shukatsu-free-consultation-preparation/,記事→関連記事,無料相談の準備
 
 /,/column/guardianship-fee-assistance-checklist/,トップ→記事,報酬助成の確認ポイント
+/column/mimoto-hosho-keiyaku-checklist/,/where-to-ask/;/cost/;/parent-shukatsu/living-alone/;/articles/article10.html,記事→記事/柱,契約相談・費用整理・一人暮らし準備・専門家相談への導線。現在はdrafts/で下書き（公開時にトップ・親の終活ハブからの導線を追加）
+/column/parents-home-old-appliance-safety-checklist/,/parent-shukatsu/jikka-katazuke/;/articles/article12.html;/column/family-home-future-plan-checklist/;/parent-shukatsu/living-alone/;/parent-shukatsu/,記事→柱/記事/ハブ,本文の深掘りリンク（article12）・関連記事欄・CTA(jikka-katazuke)。現在はdrafts/で下書き（公開時にトップ新着・全記事一覧からのリンクを追加）
+
+/,/column/mimoto-hosho-keiyaku-checklist/;/column/parents-home-old-appliance-safety-checklist/,トップ→記事,2026-11-10公開・新着と全記事一覧
+/parent-shukatsu/,/column/mimoto-hosho-keiyaku-checklist/;/column/parents-home-old-appliance-safety-checklist/,ハブ→記事,2026-11-10公開
