@@ -73,9 +73,10 @@ for (const file of publicHtml) {
   }
 }
 
-assert.equal(affiliateCount, 34, "affiliate link count changed unexpectedly");
+// Homepage: two existing products, each with Amazon and Rakuten links.
+assert.equal(affiliateCount, 38, "affiliate link count changed unexpectedly");
 assert.equal(ctaCount, 13, "CTA count changed unexpectedly");
-assert.deepEqual(shopCounts, { amazon: 19, rakuten: 15 });
+assert.deepEqual(shopCounts, { amazon: 21, rakuten: 17 });
 assert.equal(products.size, 12, "canonical product count changed unexpectedly");
 
 // main.jsを依存ライブラリなしで実行し、イベントの漏れ・二重発火・例外を確認する。

@@ -13,6 +13,7 @@
 /articles/article11.html,/parent-shukatsu/,柱→ハブ,親の終活の入口
 /articles/article11.html,/parent-shukatsu/questions/,柱→柱,親に聞く30項目
 /articles/article11.html,downloads/shukatsu-checklist.pdf,柱→PDF,印刷用チェックリスト
+/articles/article11.html,/parent-shukatsu/siblings/;/parent-shukatsu/living-alone/;/cost/;/where-to-ask/,柱→記事,状況別優先順位・専門家相談セクションから（2026-09-21追加、既存の逆方向リンクと相互化）
 /ending-note/family-story/,/parent-shukatsu/,柱→ハブ,目的別ガイドに追加
 /articles/article12.html,downloads/seizen-seiri-checklist.pdf,柱→PDF,部屋別チェックリスト+8週間プランPDF
 /articles/article12.html,/parent-shukatsu/;/parent-shukatsu/questions/;/articles/article05.html,柱→ハブ/柱,親の生前整理セクションから
@@ -34,6 +35,7 @@
 /,/articles/article18.html,トップ→記事,全記事一覧
 /parent-shukatsu/,/articles/article18.html,ハブ→記事,記事一覧
 /articles/article06.html,/articles/article18.html,記事→記事,お金に関わるもの・もしもの設定・関連記事欄（相互リンク）
+/articles/article06.html,/articles/article15.html;/parent-shukatsu/;/parent-shukatsu/living-alone/;/articles/article05.html;/where-to-ask/,記事→柱/ハブ/記事,専門家へ相談すべきケース・状況別ケース・家族と共有する会話例・関連記事欄（2026-09-28デジタル終活チェックリスト化で追加）
 /articles/article15.html,/articles/article18.html,記事→記事,相続財産の調査（デジタル遺産の探し方）・関連記事欄（相互リンク）
 /articles/article18.html,/articles/article06.html;/articles/article02.html;/articles/article04.html;/articles/article07.html;/articles/article08.html;/articles/article10.html;/articles/article15.html,記事→記事,遺品整理・書き方・書いてはいけないこと・遺言種類・EN比較(CTA A)・専門家相談(CTA B)・相続手続き
 /articles/article05.html,/parent-shukatsu/questions/;/parent-shukatsu/,記事→柱/ハブ,拒否時のステップ本文（30項目）・関連記事欄（30項目・親の終活ガイド）。keyword-map.csvの内部リンク先「30項目」の未実装分を今回充足
@@ -115,3 +117,25 @@
 /column/handwritten-will-storage-preparation/,/column/will-for-ordinary-families/;/articles/article07.html;/articles/article10.html;/articles/article01.html;/articles/article15.html;/where-to-ask/,記事→記事,本文の深掘りリンク・関連記事欄・CTA(where-to-ask)
 /,/column/handwritten-will-storage-preparation/,トップ→記事,新着記事・全記事一覧（2026-11-02公開）
 /column/will-for-ordinary-families/,/column/handwritten-will-storage-preparation/,記事→記事,関連記事（保管制度を使う前の準備・内容相談との区別）
+/column/bereavement-procedures-family-checklist/,/articles/article15.html;/articles/article17.html;/articles/article02.html;/articles/article06.html;/articles/article18.html;/column/inheritance-online-service-data-backup/;/where-to-ask/,記事→記事,本文の深掘りリンク・関連記事欄・CTA(where-to-ask)
+/,/column/bereavement-procedures-family-checklist/,トップ→記事,新着記事・全記事一覧（2026-11-05公開）
+/articles/article15.html,/column/bereavement-procedures-family-checklist/,記事→記事,関連記事（おくやみ窓口と家族の分担メモ）
+/articles/article17.html,/column/bereavement-procedures-family-checklist/,記事→記事,関連記事（年金の死亡届と請求の区別・家族の分担メモ）
+/column/senior-housing-registration-operation-checklist/,/column/housing-type-nursing-home-registration-checklist/;/parent-shukatsu/living-alone/;/column/family-home-future-plan-checklist/;/column/home-end-of-life-care-checklist/;/cost/;/where-to-ask/,記事→記事,本文の深掘りリンク・関連記事欄・CTA(where-to-ask)
+/,/column/senior-housing-registration-operation-checklist/,トップ→記事,新着記事・全記事一覧（2026-11-05公開）
+/column/housing-type-nursing-home-registration-checklist/,/column/senior-housing-registration-operation-checklist/,記事→記事,関連記事（サ高住の登録情報・運営情報と見学の質問）
+/column/car-sale-retirement-checklist/,/articles/article02.html,公開記事→関連記事,終活ノートの書き方
+/column/car-sale-retirement-checklist/,/articles/article09.html,公開記事→関連記事,無料エンディングノート
+/column/car-sale-retirement-checklist/,/articles/article12.html,公開記事→関連記事,持ち物整理
+/column/car-sale-retirement-checklist/,/parent-shukatsu/,公開記事→関連記事,親の終活ハブ
+/column/car-sale-retirement-checklist/,/where-to-ask/,公開記事→関連記事,相談先
+/,/column/car-sale-retirement-checklist/,トップ→記事,新着記事・全記事一覧
+/parent-shukatsu/,/column/car-sale-retirement-checklist/,ハブ→記事,車を手放す前の終活チェック
+/column/shukatsu-free-consultation-preparation/,/where-to-ask/,記事→関連記事,無料相談の準備・相談先・本人の希望整理
+/column/shukatsu-free-consultation-preparation/,/articles/article11.html,記事→関連記事,無料相談の準備・相談先・本人の希望整理
+/column/shukatsu-free-consultation-preparation/,/parent-shukatsu/questions/,記事→関連記事,無料相談の準備・相談先・本人の希望整理
+/column/shukatsu-free-consultation-preparation/,/articles/article02.html,記事→関連記事,無料相談の準備・相談先・本人の希望整理
+/,/column/shukatsu-free-consultation-preparation/,トップ→記事,新着・全記事一覧
+/where-to-ask/,/column/shukatsu-free-consultation-preparation/,記事→関連記事,無料相談の準備
+
+/,/column/guardianship-fee-assistance-checklist/,トップ→記事,報酬助成の確認ポイント
