@@ -874,3 +874,15 @@
 
 - 本番404・未マージを確認。利用者の最新指示により再承認待ち。公開予定日を11月7日に同期し、原稿確認日・過去承認日は維持。翌日以降の承認なら実公開日に再同期。
 - 公開方法はREADME記載のmainマージによるGitHub Pages自動配信。詳細はcar-sale-retirement-checklist-review.md冒頭。
+
+
+## 2026-11-09 無料相談の準備記事（ローカル下書き）
+
+- 運営者原稿・指定画像からdrafts/shukatsu-free-consultation-preparation/を作成。noindex、公開日未設定、sitemap非掲載。
+- 本文・FAQ全文一致、原PNG一致。出典4ページ取得。検査site/click-trackingはpassed。共通ハーネスの各検査passed、総合は未コミットのためblocked。
+- PC/スマホ相当幅の表示・FAQ動作確認。CLS数値未測定。詳細はshukatsu-free-consultation-preparation-review.md。
+- ユーザー指示によりコミット・プッシュ・PR作成・マージ・公開を実施せず確認待ち。専門家レビュー未実施。
+
+## 2026-11-09 公開指示による更新
+
+運営者がコミット・プッシュ・PR作成・マージ・公開を明示指示。以下の下書き・禁止記録は前段階の履歴。column/へ移動、noindex解除、公開日/更新日・URL・台帳・sitemap・トップ新着/一覧・相談先記事からの入口を同期。専門家レビュー未実施は継続。

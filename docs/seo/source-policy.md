@@ -370,6 +370,19 @@
 - FAQは可視本文のみ。一般情報サイトで検索のFAQリッチリザルト適格性を確認できないためFAQPageは追加せず、Article/BreadcrumbListを使用。
 
 
+## 2026-11-09 無料相談の準備
+
+[1] 福津市、2026年11月6日更新「えんJOYライフ」
+https://www.city.fukutsu.lg.jp/kyoudou/lab/event_list/21327.html
+[2] 法テラス「無料法律相談・費用立替のご利用の流れ」（制度説明用。新規ニュースではない）
+https://www.houterasu.or.jp/site/soudan-tatekae/goriyounonagare.html
+[3] 国民生活センター「高齢者サポートサービスの契約トラブルに注意」（既存注意喚起）
+https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen511.html
+補助資料：消費者庁「高齢者等終身サポート事業」の利用に関する注意点
+https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_018/
+
+Web取得で福津市の11/6更新・11/22開催・会場・無料・申込なし参加可・一般社団法人えん主催を照合。法テラスの収入・資産条件と原則事前予約、国民生活センターのサービス内容・総額・解約条件・理解できなければ持ち帰る助言を照合。補助資料も取得。一次情報照合と専門家レビューは別。公開直前にイベント変更と終了を再確認。
+
 ## 2026-11-10 成年後見の報酬助成（公開承認）
 
 原文照合済み（大阪市・裁判所）。 詳細・出典・公開前確認は [実装記録](guardianship-fee-assistance-review.md) と [提供原稿全文](guardianship-fee-assistance-source.txt) を参照。2026-11-10運営者がコミット・プッシュ・PR作成・マージ・公開を明示承認。column/へ移動、noindex解除・sitemap収録。専門家レビュー未実施を維持。
