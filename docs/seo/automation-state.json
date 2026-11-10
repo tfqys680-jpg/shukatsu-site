@@ -1,9 +1,9 @@
 {
   "timezone": "Asia/Tokyo",
-  "last_run": "2026-11-09（週次：帰省前確認シートを30項目記事へ追加）",
-  "last_new_article": "2026-11-01 /column/inheritance-online-service-data-backup/（運営者の明示指示によりPR・マージで公開）",
-  "last_major_update": "2026-11-09 /parent-shukatsu/questions/（帰省前〜年末年始の確認シート追加）",
-  "last_monthly_review": "2026-10-05（10月分を機械チェックのみ実施: title/meta description重複なし・新規孤立ページなし。Search Consoleデータ未配置のためSC分析はデータ不足として未実施）",
+  "last_run": "2026-11-10（承認済み旧PR8件の競合・重複統合、PR #74で公開前検証）",
+  "last_new_article": "2026-11-10 /column/guardianship-fee-assistance-checklist/・/column/shukatsu-free-consultation-preparation/（#83・#82マージ・Pages・本番照合完了）",
+  "last_major_update": "2026-11-10 article06・article11と帰省FAQを統合準備（公開はPR #74のマージ後）",
+  "last_monthly_review": "2026-11-02 機械チェック記録をPR #74から取り込み。Search Console分析・前月比較はデータ不足のため未実施",
   "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
   "last_semiannual_ymyl_review": "2026-07-20（相続/税務/遺言/専門職業務範囲/デジタルサービス/医療の該当箇所を確認。詳細は docs/seo/ymyl-review-queue.md「半期事実確認の実施記録」参照。次回: 2027-01）",
   "completed_tasks": [
@@ -61,13 +61,15 @@
     "/column/care-facility-food-housing-cost-application-checklist/: 制度・個別適用・申請先・添付省略・適用開始/更新/提示・代理同意・所得定義の専門家レビューは未実施。出典2件（厚労省Vol.1550 PDF・新宿区ページ）と公開記事全体の原文照合は2026-10-28実施済み（source-policy.md参照）。専門家レビュー完了とは扱わない。",
     "/column/seafood-telephone-sales-family-checklist/（海産物の電話勧誘・送り付けの確認メモ）: 2026-10-30公開（運営者の明示指示）。一次資料4件は同日原文確認済み。法務（契約成立・電話勧誘販売の該当性・クーリング・オフ条件・送り付けと誤配の区別・返金請求）の専門家レビューは未実施。10/28報告書PDFは未確認。",
     "/column/inheritance-online-service-data-backup/（相続のオンラインサービス終了時の資料保管と引き継ぎ）: 2026-11-01公開（運営者の明示指示）。出典3件（PR TIMES 2026-08-31発表・公式サイト告知・国税庁No.4205）は2026-10-31原文確認済み。税務（申告要否・期限・特例・受付/納付記録の確認方法）と法務（告知・規約の最新状況、個人情報の共有、代理操作・死後のアクセス権限）の専門家レビューは未実施。",
-    "/column/shukatsu-free-consultation-preparation/: 2026-11-09運営者がコミット・プッシュ・PR・マージ・公開を明示承認。専門家レビューは未実施。"
+    "/column/shukatsu-free-consultation-preparation/: 2026-11-09運営者がコミット・プッシュ・PR・マージ・公開を明示承認。専門家レビューは未実施。",
+    "article11相続期限の法務レビューは未実施。2026-11-10一次資料照合と注意書き追加は専門家レビューとは別。",
+    "旧PR #44/#45/#47/#50/#52/#57/#62/#74をPR #74へ統合準備。最新CIとCodexレビュー後にマージ・公開を確認する。"
   ],
   "blocked_tasks": [
     "エンディングノート比較記事の実機確認・自前写真（運営者の実物確認が必要）",
     "著者実名・経歴の掲載（運営者の意向確認が必要）",
     "2026-10 四半期エンディングノート比較記事(article08)の商品確認: 販売状況・価格の確認には外部サイト参照が必要で今回未実施。編集カレンダー2026-12前半の2027年版更新と合わせて実施予定",
-    "未マージPR #43/#44/#45/#47/#50/#52は本PRへ取り込まない。共有台帳の競合・公開前確認はdocs/seo/pr48-integration-review.mdを参照。各PRを最新mainへ追従・再検証してから個別にマージ判断。",
-    "2026-10期 エンディングノート比較(article08)四半期確認: 価格・販売状況の一次確認が必要。12月前半の2027年版更新と合わせて実施"
+    "2026-10期 エンディングノート比較(article08)四半期確認: 価格・販売状況の一次確認が必要。12月前半の2027年版更新と合わせて実施",
+    "PR #43・#58・#76など今回の8件以外の公開前確認は未解消。実機・GA4受信・CLS・商品実物確認・専門家レビューは未実施のまま維持。"
   ]
 }
