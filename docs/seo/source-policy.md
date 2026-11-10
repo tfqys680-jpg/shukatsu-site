@@ -382,3 +382,7 @@ https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen511.html
 https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_018/
 
 Web取得で福津市の11/6更新・11/22開催・会場・無料・申込なし参加可・一般社団法人えん主催を照合。法テラスの収入・資産条件と原則事前予約、国民生活センターのサービス内容・総額・解約条件・理解できなければ持ち帰る助言を照合。補助資料も取得。一次情報照合と専門家レビューは別。公開直前にイベント変更と終了を再確認。
+
+## 2026-11-10 成年後見の報酬助成（公開承認）
+
+原文照合済み（大阪市・裁判所）。 詳細・出典・公開前確認は [実装記録](guardianship-fee-assistance-review.md) と [提供原稿全文](guardianship-fee-assistance-source.txt) を参照。2026-11-10運営者がコミット・プッシュ・PR作成・マージ・公開を明示承認。column/へ移動、noindex解除・sitemap収録。専門家レビュー未実施を維持。

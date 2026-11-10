@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://shukatsu-guide.jp/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://shukatsu-guide.jp/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://shukatsu-guide.jp/about.html</loc><lastmod>2026-07-06</lastmod></url>
   <url><loc>https://shukatsu-guide.jp/privacy.html</loc><lastmod>2026-07-06</lastmod></url>
   <url><loc>https://shukatsu-guide.jp/disclaimer.html</loc><lastmod>2026-07-06</lastmod></url>
@@ -47,5 +47,7 @@
   <url><loc>https://shukatsu-guide.jp/column/bereavement-procedures-family-checklist/</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://shukatsu-guide.jp/column/senior-housing-registration-operation-checklist/</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://shukatsu-guide.jp/column/car-sale-retirement-checklist/</loc><lastmod>2026-11-07</lastmod></url>
-  <url><loc>https://shukatsu-guide.jp/column/shukatsu-free-consultation-preparation/</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://shukatsu-guide.jp/column/shukatsu-free-consultation-preparation/</loc><lastmod>2026-11-10</lastmod></url>
+
+  <url><loc>https://shukatsu-guide.jp/column/guardianship-fee-assistance-checklist/</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>

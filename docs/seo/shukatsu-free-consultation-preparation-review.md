@@ -81,3 +81,7 @@ ArticleとBreadcrumbListを実装。FAQは最新記事同様に可視FAQのみ�
 - `docs/seo/run-log.md`
 - `docs/seo/source-policy.md`
 - `docs/seo/ymyl-review-queue.md`
+
+## 2026-11-10 マージ・公開指示への対応
+
+PR #83の公開済み内容を保持してmainを統合。トップ新着は成年後見・無料相談・車売却の3本。無料相談の公開日を2026-11-10へ本文・Article・sitemap・台帳・トップ新着で同期し、11月9日の原稿・出典確認日は保持。福津市の11月22日相談会案内を一次資料で再確認。check-site: HTML55・内部リンク1818、click-tracking成功。専門家レビュー・実機・CLS実測は未実施のまま。
