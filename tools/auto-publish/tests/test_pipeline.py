@@ -17,6 +17,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[3]
 SRC1 = "https://www.example.go.jp/nengajo"
 SRC2 = "https://www.example.lg.jp/contact"
+SLUG = "zz-auto-publish-test-sample"
 
 
 def sample_article():
@@ -31,8 +32,8 @@ def sample_article():
                                     {"type": "example", "label": "会話例", "lines": ["子：来年の年賀状、どうしたい？", "親：少し減らしたいね。"]},
                                     {"type": "table", "headers": ["相手", "連絡方法"], "rows": [["親戚", "電話"], ["友人", "手紙"]]}]})
     return {
-        "title": "年賀状じまいを親と進めるには？伝え方と連絡先の整理手順",
-        "breadcrumb": "年賀状じまいを親と進める",
+        "title": "自動公開パイプライン試験用のサンプル記事と確認チェックリスト",
+        "breadcrumb": "自動公開の試験用サンプル",
         "description": "年賀状じまいを親と一緒に進めるための手順を紹介。本人の希望の確かめ方、相手ごとの伝え方、連絡先の整理と引き継ぎのポイントをチェックリストで整理します。",
         "conclusion": "年賀状じまいは、親本人の希望を確かめ、相手ごとに伝え方を決めてから進めると無理がありません。",
         "can_do": ["本人の希望を確かめられる", "伝え方を選べる", "連絡先を整理できる"],
@@ -64,6 +65,11 @@ class PipelineTest(unittest.TestCase):
         site = tmp / "site"
         shutil.copytree(REPO, site, ignore=shutil.ignore_patterns(".git", "node_modules"))
         write_fixtures(tmp / "fx", verdict, ymyl)
+        # 本番キューや公開済み記事の状態に依存しないよう、テスト専用のキューに差し替える
+        (site / "docs/seo/auto-queue.csv").write_text(
+            "slug,テーマ,主キーワード,補助キーワード,想定読者,YMYL区分,状態,備考\n"
+            f"{SLUG},テスト用テーマ,自動公開テスト用キーワード,テスト,テスト読者,低,待機,テスト\n", encoding="utf-8")
+        shutil.rmtree(site / "column" / SLUG, ignore_errors=True)
         env = dict(os.environ, AUTO_PUBLISH_ROOT=str(site), AUTO_PUBLISH_MOCK=str(tmp / "fx"), AUTO_PUBLISH_DATE="2026-11-18")
         res = tmp / "result.json"
         subprocess.run([sys.executable, str(site / "tools/auto-publish/pipeline.py"), "--result", str(res)], env=env, check=True,
@@ -79,10 +85,10 @@ class PipelineTest(unittest.TestCase):
         site, r = self.run_case("PASS", "低")
         self.assertEqual(r["status"], "created", r)
         self.assertTrue(r["auto_merge"])
-        page = (site / "column/nengajo-jimai-family-guide/index.html").read_text(encoding="utf-8")
+        page = (site / f"column/{SLUG}/index.html").read_text(encoding="utf-8")
         self.assertIn("生成AI（ChatGPT）で下書き", page)
         self.assertIn('href="#source1"', page)
-        self.assertIn("column/nengajo-jimai-family-guide/", (site / "index.html").read_text(encoding="utf-8"))
+        self.assertIn(f"column/{SLUG}/", (site / "index.html").read_text(encoding="utf-8"))
         self.assertIn("公開(2026-11-18)", (site / "docs/seo/auto-queue.csv").read_text(encoding="utf-8"))
         self.checks_pass(site)
 
@@ -95,7 +101,7 @@ class PipelineTest(unittest.TestCase):
     def test_block_creates_no_page(self):
         site, r = self.run_case("BLOCK", "低")
         self.assertEqual(r["status"], "blocked")
-        self.assertFalse((site / "column/nengajo-jimai-family-guide").exists())
+        self.assertFalse((site / "column" / SLUG).exists())
         self.assertIn("保留(2026-11-18)", (site / "docs/seo/auto-queue.csv").read_text(encoding="utf-8"))
         self.checks_pass(site)
 
