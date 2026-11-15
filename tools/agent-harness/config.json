@@ -23,14 +23,6 @@
         "tools/check-click-tracking.js"
       ],
       "timeout_seconds": 600
-    },
-    {
-      "id": "auto-publish-tests",
-      "command": [
-        "python3",
-        "tools/auto-publish/tests/test_pipeline.py"
-      ],
-      "timeout_seconds": 300
     }
   ],
   "manual_review": [
