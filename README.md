@@ -38,3 +38,7 @@ mainへのpushで GitHub Pages に自動反映されます。**作業はブラ�
 ## 運用ルール
 
 docs/seo/seo-strategy.md と .claude/prompts/shukatsu-seo-routine.md を参照。
+
+## 自動記事パイプライン
+
+ChatGPT（下書き）× Claude（審査・推敲）で週1本を作成し、検証を通れば自動公開する（2026-11-15 運営者指示）。設定・安全装置・停止方法は docs/seo/auto-publish.md を参照。
