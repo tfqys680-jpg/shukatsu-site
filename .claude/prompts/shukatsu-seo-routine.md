@@ -24,7 +24,7 @@ https://shukatsu-guide.jp/index.html
 8. docs/seo/content-inventory.csvを読む
 9. docs/seo/keyword-map.csvを読む
 10. docs/seo/internal-link-map.csvを読む
-11. docs/seo/ymyl-review-queue.mdを読む
+11. docs/seo/source-policy.mdとdocs/seo/ymyl-review-queue.mdを読む
 12. docs/seo/automation-state.jsonを読む
 13. docs/seo/run-log.mdを読む
 14. 既存の自動運用ブランチと未完了PRを確認する
@@ -187,7 +187,9 @@ Search Consoleへ接続できない場合は、リポジトリ内に配置され
 
 公的機関、法令、専門団体、一次情報を優先してください。
 
-専門家レビューが必要な箇所は、docs/seo/ymyl-review-queue.mdへ登録してください。
+法務・医療・税務等の専門事項は、docs/seo/source-policy.mdの掲載ルールに従い、確認した一般情報に内容に即した注意事項を添えて掲載してください。専門家の事前確認・監修は一律の掲載条件にせず、未実施だけを理由に公開保留としないでください。
+
+注意事項・出典照合・任意の専門家レビュー状況は、docs/seo/ymyl-review-queue.mdへ記録してください。根拠不足や通常の公開条件・操作の承認範囲は別に確認してください。
 
 専門家の確認を受けていない記事に「監修済み」と表示してはいけません。
 
@@ -349,7 +351,7 @@ Search Consoleへ接続できない場合は、リポジトリ内に配置され
 ・内容がほぼ同じ季節記事
 ・本文を変えず更新日だけを変える行為
 ・既存ページと同じ検索意図の新規ページ
-・レビュー待ちYMYL記事の自動公開
+・出典確認・内容に即した注意事項・通常の公開条件を満たさない記事や、承認範囲外の記事の自動公開
 ・デフォルトブランチへの直接マージ
 
 # 13. 効果測定
@@ -453,7 +455,7 @@ docs/seo/run-log.mdにも、以下を追記してください。
 ・作成ファイル
 ・テスト結果
 ・PR
-・YMYLレビュー待ち
+・YMYLの注意事項・出典照合・任意の専門家レビュー状況
 ・阻害要因
 ・次回予定
 
@@ -488,7 +490,7 @@ docs/seo/run-log.mdにも、以下を追記してください。
 7. PDF、DOCX変更
 8. テスト結果
 9. Search Console分析
-10. YMYLレビュー待ち
+10. YMYLの注意事項・出典照合・任意の専門家レビュー状況
 11. 未解決事項
 12. 次回予定
 13. ブランチ名

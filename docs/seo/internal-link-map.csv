@@ -157,3 +157,7 @@
 
 /,/column/after-guardianship-role-checklist/,トップ→記事,新着記事・全記事一覧（2026-11-15）
 /column/after-guardianship-role-checklist/,/column/adult-guardianship-municipal-support-guide/;/column/end-of-life-local-support-consultation-checklist/;/column/mimoto-hosho-keiyaku-checklist/,記事→記事,関連記事
+/,/column/ohitorisama-shukatsu-checklist/,トップ→記事,新着・全記事一覧
+/articles/article11.html,/column/ohitorisama-shukatsu-checklist/,柱→記事,状況別のおひとりさま節から本人用シートへ
+/column/end-of-life-local-support-consultation-checklist/,/column/ohitorisama-shukatsu-checklist/,記事→記事,相談前に本人の準備を整理する
+/column/ohitorisama-shukatsu-checklist/,/articles/article11.html;/column/end-of-life-local-support-consultation-checklist/;/column/mimoto-hosho-keiyaku-checklist/;/column/after-guardianship-role-checklist/;/articles/article06.html;/column/advance-care-planning-family-checklist/,記事→柱/記事,本人用シートから相談先・契約・医療・デジタルの詳細へ
