@@ -552,6 +552,10 @@ Web取得で福津市の11/6更新・11/22開催・会場・無料・申込な�
 - 照合は公式Webページの本文。リンク先PDF・個別就業規則・制度対象者や給付額の全件精査は未実施。日数・金額・適用可否を追加していない。
 - 家族内の整理や職場へ伝える例は編集提案。法定書式・一律の申請要件ではない。専門家レビューは未実施で注意事項を本文に掲載。
 
+## 2026-11-21 冬の入浴準備（older-parent-winter-bath-checklist）
+
+新潟県公式ページ（2026-11-16更新）を2026-11-21に全文照合。温め方・41℃以下・10分まで・入浴前の声かけ・扉そばの携帯電話を確認。https://www.pref.niigata.lg.jp/sec/kenko/heatshock.html 。救急案内は厚労省公式 https://kakarikata.mhlw.go.jp/kakaritsuke/urgency.html の本文で補足照合。会話例・分担・記録方法は編集提案。ニュース日付を公開日として流用しない。
+
 ## 2026-11-21 葬儀の見積もり補足（既存article13の更新）
 
 - URL: https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen558.html （2026-11-19公表、2026-11-21原文確認）

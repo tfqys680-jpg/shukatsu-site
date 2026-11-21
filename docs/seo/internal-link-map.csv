@@ -168,7 +168,13 @@
 /column/work-care-consultation-preparation/,/articles/article11.html,記事→公開記事,全体チェックリスト
 /,/column/work-care-consultation-preparation/,トップ→記事,新着・全記事一覧
 /parent-shukatsu/,/column/work-care-consultation-preparation/,ハブ→記事,介護が始まった際の職場相談の準備
-
+/,/column/older-parent-winter-bath-checklist/,トップ→記事,新着3本・全記事一覧
+/parent-shukatsu/,/column/older-parent-winter-bath-checklist/,ハブ→記事,冬の入浴準備
+/column/older-parent-winter-bath-checklist/,/parent-shukatsu/living-alone/,記事→柱,見守り・連絡
+/column/older-parent-winter-bath-checklist/,/column/obon-family-planning-talk/,記事→関連記事,帰省の会話準備
+/column/older-parent-winter-bath-checklist/,/column/parents-home-old-appliance-safety-checklist/,記事→関連記事,家電の安全確認
+/column/older-parent-winter-bath-checklist/,/articles/article02.html,記事→CTA,本人の希望・連絡先を記録
+/column/older-parent-winter-bath-checklist/,/parent-shukatsu/,記事→ハブ,親の終活ガイド
 /articles/article13.html,/cost/,記事→関連,終活費用の全体整理と費用記録シート
 /articles/article13.html,/articles/article02.html,記事→関連,エンディングノートの書き方を見る
 /articles/article13.html,/articles/article04.html,記事→関連,希望を書くときの配慮
