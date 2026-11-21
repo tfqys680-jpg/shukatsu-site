@@ -544,6 +544,14 @@ Web取得で福津市の11/6更新・11/22開催・会場・無料・申込な�
 6分野の記入表、優先順位、会話例は編集上の提案。契約の効力・医療同意・税務の個別判断は扱わない。法務と医療の専門家レビューは未実施で、本文の該当箇所と出典欄に注意事項・相談先を記載。
 
 
+## 2026-11-21 職場への介護相談の準備（ローカル下書き）
+
+- 対象：`/drafts/work-care-consultation-preparation/`。原稿全文は `work-care-consultation-preparation/article-draft.txt`。
+- 北海道 https://www.pref.hokkaido.lg.jp/hf/khf/270093.html を2026-11-21に原文確認。人事・労務担当者向け、面談の相談チェックシート、ページ表示日2026-11-11、収録情報2026年10月時点を確認。
+- 厚生労働省 https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyoukintou/ryouritsu/model.html を2026-11-21に原文確認。企業向けガイド・両立支援プラン策定マニュアルと様式の提供を確認。新規公開日は未確認・推定しない。原稿の2026-11-19は原稿作成者の確認日として保持。
+- 照合は公式Webページの本文。リンク先PDF・個別就業規則・制度対象者や給付額の全件精査は未実施。日数・金額・適用可否を追加していない。
+- 家族内の整理や職場へ伝える例は編集提案。法定書式・一律の申請要件ではない。専門家レビューは未実施で注意事項を本文に掲載。
+
 ## 2026-11-21 冬の入浴準備（older-parent-winter-bath-checklist）
 
 新潟県公式ページ（2026-11-16更新）を2026-11-21に全文照合。温め方・41℃以下・10分まで・入浴前の声かけ・扉そばの携帯電話を確認。https://www.pref.niigata.lg.jp/sec/kenko/heatshock.html 。救急案内は厚労省公式 https://kakarikata.mhlw.go.jp/kakaritsuke/urgency.html の本文で補足照合。会話例・分担・記録方法は編集提案。ニュース日付を公開日として流用しない。
