@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "blocked",
+  "release_ready": false,
+  "started_at": "2026-11-21T01:11:08.214790+00:00",
+  "checks": [
+    {
+      "id": "harness-regression",
+      "command": [
+        "python3",
+        "tools/agent-harness/test_runner.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.149,
+      "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.074s\n\nOK\n"
+    },
+    {
+      "id": "site",
+      "command": [
+        "node",
+        "tools/check-site.js"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.143,
+      "output": "HTML files: 62, internal links checked: 2077\nALL CHECKS PASSED\n"
+    },
+    {
+      "id": "click-tracking",
+      "command": [
+        "node",
+        "tools/check-click-tracking.js"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "output": "CLICK TRACKING CHECKS PASSED (public HTML: 58, affiliate links: 38, CTAs: 13, products: 12)\n"
+    }
+  ],
+  "commit": "6b0576b1a4c7439a04e39a179d608fdd6f7697ff",
+  "dirty_before": true,
+  "manual_review": [
+    "記事本文・一次資料・専門家レビューの状態を確認。機械検証成功を事実照合済みと扱わない。",
+    "公開状態、dateModified、sitemap、content-inventory、keyword-mapの変更理由と整合性を確認。",
+    "UI変更は320px/375px/390pxで確認。"
+  ],
+  "dirty_after": true
+}
