@@ -178,3 +178,7 @@
 /articles/article13.html,/cost/,記事→関連,終活費用の全体整理と費用記録シート
 /articles/article13.html,/articles/article02.html,記事→関連,エンディングノートの書き方を見る
 /articles/article13.html,/articles/article04.html,記事→関連,希望を書くときの配慮
+/,/column/nursing-home-transfer-contract-checklist/,記事導線,老人ホームの退去・入院後の復帰・住み替え条件
+/parent-shukatsu/,/column/nursing-home-transfer-contract-checklist/,記事導線,老人ホームの退去・入院後の復帰・住み替え条件
+/column/housing-type-nursing-home-registration-checklist/,/column/nursing-home-transfer-contract-checklist/,記事導線,老人ホームの退去・入院後の復帰・住み替え条件
+/column/nursing-home-transfer-contract-checklist/,/column/housing-type-nursing-home-registration-checklist/;/column/senior-housing-registration-operation-checklist/;/column/care-facility-food-housing-cost-application-checklist/;/parent-shukatsu/questions/;/where-to-ask/,関連記事・CTA,施設制度・費用・本人の希望・相談先
