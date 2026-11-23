@@ -1203,3 +1203,42 @@
 - 変更URL: /articles/article13.html。公開日保持・更新日2026-11-21、sitemap/両台帳と内部リンク記録を同期。
 - 指定PNG原本とWebP派生を使用。原稿の公式出典を原文照合。質問例・確認手順は編集提案。法律専門家レビュー未実施、契約・請求は個別確認を案内。
 - 検証は既存check-site、click-tracking、共通ハーネスを実行し結果をPRへ記録する。ローカルUI確認はブラウザー起動の環境制限があり未実施として扱う。
+
+## 2026-11-23 週次SEO定期実行（Asia/Tokyo 09:08）
+
+- 実行日時: 2026-11-23 09:08 JST（定期実行）
+- ブランチ: claude/seo-weekly-2026-11-23（main a48598d 起点）
+- 既存の未完了PR: なし（open PR 0件）。同一タスクの重複なし
+- 判定: 公開ページの変更なし。期限到来の新規記事・大幅更新はなし（11月後半のおひとりさま記事は2026-11-17公開済み、12月前半のarticle08は未到来、前回の大幅更新2026-11-10から13日で隔週条件の14日未満）。台帳の状態ずれを是正し、2027-01記事の設計を作成
+- 処理したタスク:
+  - 週次の機械検証: `node tools/check-site.js` ALL CHECKS PASSED（HTML 64・内部リンク2152）
+  - 補助監査（スクラッチの読み取り専用スクリプト）: 公開ページのcanonical一致・意図しないnoindexなし・sitemap 58URLと公開ページ一致・drafts（parent-care-without-burnout）のsitemap混入なし/noindexあり・title/meta description重複なし・画像alt欠落なし（計測用1x1画像はalt=""）・PDF/DOCXのローカルリンク切れなし・sitemap掲載ページの孤立なし。robots.txtはAllow: /とSitemap指定のみ
+  - 台帳同期: editorial-calendar.csvの公開済み行（car-sale #80・guardianship-fee #83・家電・成年後見相談先 #58・トイレ修理 #85・職場相談 #94・article06/30項目FAQ #74・生前墓）をgit履歴に合わせて「公開」へ更新、未記載だった老人ホーム退去条件（#96）とarticle13補足（#95）の行を追加。content-inventory.csvの車売却記事の状態を「公開（PR #80マージ）」へ更新
+  - automation-state.json: PR #74統合のpendingを解消（2026-11-10マージ済み）、last_major_updateの記載を同期
+  - 2027-01「子どものいない夫婦の終活」の設計書を作成（カニバリゼーション確認：will-for-ordinary-families・ohitorisama等との役割分担）
+- 変更URL: なし（公開HTML・sitemapの変更なし。日付の変更なし）
+- 作成・変更ファイル:
+  - 作成: docs/seo/childless-couple-shukatsu-article-plan.md
+  - 変更: docs/seo/editorial-calendar.csv、docs/seo/content-inventory.csv、docs/seo/automation-state.json、docs/seo/ymyl-review-queue.md、docs/seo/run-log.md
+- テスト結果: check-site PASS（上記）。CSV列数一致（calendar 6列・inventory 7列）、automation-state.json構文OK。共通ハーネスはコミット後に実行（結果はPR本文に記載）。外部リンク先の到達性・実機表示は未確認（公開ページの変更なし）
+- 未実施・データ不足:
+  - Search Console分析: docs/seo/sc-data/ なし。数値は推測せず未実施
+  - 効果測定: 公開2〜4週の記事（11/1〜11/10公開分など）のインデックス・表示回数はSCデータがなく未確認
+  - 季節需要: 6〜10週間後（2027-01-04〜02-01）は年始・帰省後。帰省前確認は/parent-shukatsu/questions/に反映済み。春彼岸（03-20）は2027-02上旬の更新予定で対応
+  - 定期頻度: 月次は12月最初の実行で実施。四半期（article08、10月分）は外部サイトの価格・販売確認が必要で引き続き未実施、12月前半の2027年版更新と合わせて実施予定。半期YMYLは2027-01
+- YMYL: 新記事設計の法務箇所は一次情報未照合として ymyl-review-queue.md に記録。既存の専門家レビュー未実施状態は変更なし
+- 阻害要因: Search Consoleデータ未取得、article08の価格・販売状況の一次確認、2027-01記事の案A/B判断
+- PR: #97（ドラフト）https://github.com/tfqys680-jpg/shukatsu-site/pull/97
+- 次回予定（2026-11-30）: 大幅更新の隔週条件を満たすため、2026-12後半予定のarticle11（導入文・FAQ・年末年始の家族で話す案内）の前倒しを検討。12月最初の実行で月次レビュー。12月前半のarticle08 2027年版の準備（価格・販売状況の確認方法）
+
+## 2026-11-23 PR #97 本番監査後の修正（運営者承認）
+
+- 運営者が問題解決・コード変更・PR操作・マージ・本番公開を明示承認。既存PR #97のブランチを継続。main a48598d、修正前head 2551322。
+- 事前本番確認: sitemap 58 URLがすべてHTTP 200、HTMLはmainと全件バイト一致。canonical自己参照、意図しないnoindexなし、公開inventory 58件とsitemap集合一致。PR #80/#94/#58/#74/#83/#85/#95/#96のマージ済みを確認。
+- keyword-map: 車売却の公開状態と、トップ・article15・family-story・親の終活ハブ・where-to-askの最終実質更新日を本番・inventoryへ同期。
+- sitemap: article08は本文表示・Article dateModified・台帳の2026-07-07へ訂正。aboutは本文追加コミット0b87c27（2026-07-08）に基づきinventoryとsitemapを訂正。privacy/disclaimerは既存台帳と2026-07-07の計測・広告表示導入履歴に合わせる。8月のパンくず構造化データ追加は本文の実質更新に数えない。今回の日付への更新はしない。
+- automation-state: 最新新規記事を11/22・PR #96へ同期。おひとりさま記事の旧公開不可・案A/B未決を解消し、任意の専門家レビュー未実施とSCデータ不足は保持。
+- カレンダー: 公開済み記事の旧公開前レビュー待ち・公開予定・drafts/noindex記述を過去履歴として明確化。
+- 再発防止: check-siteへCSV列数・重複URL・公開状態・公開日/更新日・sitemap lastmod・Article日付の照合を追加。検証結果はコミット後のハーネスとPRの最新CIへ記録する。
+- 変更URL: 既存4 URLのsitemap lastmodのみ。記事本文・HTML・内部リンク・画像・PDF/DOCX変更、新規記事、大幅更新なし。
+- 2027-01記事設計は別タスク。本文・公開URLの追加なし。一次情報未照合・案A/B未決を保持。Search Console分析はデータ不足のまま。

@@ -208,6 +208,79 @@ for (const file of htmlFiles) {
   if (!sitemap.includes(`<loc>${url}</loc>`)) errors.push(`sitemap.xml: missing ${url}`);
 }
 
+// SEO台帳と実ページの日付・公開状態を照合する。CSVの引用符と改行を保持して読む。
+function readSeoCsv(filename) {
+  const text = fs.readFileSync(path.join(ROOT, "docs/seo", filename), "utf8");
+  const rows = [];
+  let row = [], cell = "", quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (c === '"') {
+      if (quoted && text[i + 1] === '"') { cell += '"'; i++; }
+      else quoted = !quoted;
+    } else if (!quoted && (c === "," || c === "\n")) {
+      row.push(cell); cell = "";
+      if (c === "\n") { if (row.some(Boolean)) rows.push(row); row = []; }
+    } else if (c !== "\r" || quoted) cell += c;
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  if (quoted) errors.push(`${filename}: unterminated CSV quote`);
+  const header = rows.shift();
+  if (!header) { errors.push(`${filename}: empty CSV`); return []; }
+  return rows.map((values, index) => {
+    if (values.length !== header.length) errors.push(`${filename}: row ${index + 2} column count mismatch`);
+    return Object.fromEntries(header.map((key, i) => [key, values[i]]));
+  });
+}
+const inventoryRows = readSeoCsv("content-inventory.csv");
+const keywordRows = readSeoCsv("keyword-map.csv");
+readSeoCsv("editorial-calendar.csv");
+const inventoryByUrl = new Map();
+for (const row of inventoryRows) {
+  if (inventoryByUrl.has(row.URL)) errors.push(`content-inventory.csv: duplicate URL ${row.URL}`);
+  inventoryByUrl.set(row.URL, row);
+}
+const sitemapDates = new Map([...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>\s*<\/url>/g)]
+  .map(m => [new URL(m[1]).pathname, m[2]]));
+const isPublished = value => /^公開(?:済み)?(?:[（(]|$)/.test(value || "");
+for (const [url, row] of inventoryByUrl) {
+  if (isPublished(row["状態"]) !== sitemapDates.has(url)) {
+    errors.push(`content-inventory.csv: publication status mismatch with sitemap: ${url}`);
+  }
+}
+for (const [url, lastmod] of sitemapDates) {
+  const row = inventoryByUrl.get(url);
+  if (!row) { errors.push(`content-inventory.csv: missing public URL ${url}`); continue; }
+  if (row["最終実質更新日"] !== lastmod) errors.push(`sitemap.xml: lastmod differs from inventory: ${url}`);
+  const file = path.join(ROOT, url.endsWith("/") ? `${url}index.html` : url);
+  if (!fs.existsSync(file)) { errors.push(`sitemap.xml: missing file for ${url}`); continue; }
+  const html = fs.readFileSync(file, "utf8");
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    // JSON構文のエラーは既存検査が報告する。
+    let doc;
+    try { doc = JSON.parse(m[1]); } catch { continue; }
+    function checkDates(value) {
+      if (!value || typeof value !== "object") return;
+      for (const [key, column] of [["datePublished", "公開日"], ["dateModified", "最終実質更新日"]]) {
+        if (key in value && String(value[key]).slice(0, 10) !== row[column]) errors.push(`${url}: ${key} differs from inventory`);
+      }
+      Object.values(value).forEach(checkDates);
+    }
+    checkDates(doc);
+  }
+}
+const keywordUrls = new Set();
+for (const row of keywordRows) {
+  if (keywordUrls.has(row.URL)) errors.push(`keyword-map.csv: duplicate URL ${row.URL}`);
+  keywordUrls.add(row.URL);
+  const inventory = inventoryByUrl.get(row.URL);
+  if (!inventory) { errors.push(`keyword-map.csv: URL absent from inventory: ${row.URL}`); continue; }
+  if (isPublished(row["公開状態"]) !== isPublished(inventory["状態"])) errors.push(`keyword-map.csv: publication status differs from inventory: ${row.URL}`);
+  for (const column of ["公開日", "最終実質更新日"]) {
+    if (row[column] !== inventory[column]) errors.push(`keyword-map.csv: ${column} differs from inventory: ${row.URL}`);
+  }
+}
+
 console.log(`HTML files: ${htmlFiles.length}, internal links checked: ${checkedLinks}`);
 if (errors.length) {
   console.log("ERRORS:");
