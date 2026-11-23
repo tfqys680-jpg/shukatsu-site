@@ -1230,3 +1230,15 @@
 - 阻害要因: Search Consoleデータ未取得、article08の価格・販売状況の一次確認、2027-01記事の案A/B判断
 - PR: #97（ドラフト）https://github.com/tfqys680-jpg/shukatsu-site/pull/97
 - 次回予定（2026-11-30）: 大幅更新の隔週条件を満たすため、2026-12後半予定のarticle11（導入文・FAQ・年末年始の家族で話す案内）の前倒しを検討。12月最初の実行で月次レビュー。12月前半のarticle08 2027年版の準備（価格・販売状況の確認方法）
+
+## 2026-11-23 PR #97 本番監査後の修正（運営者承認）
+
+- 運営者が問題解決・コード変更・PR操作・マージ・本番公開を明示承認。既存PR #97のブランチを継続。main a48598d、修正前head 2551322。
+- 事前本番確認: sitemap 58 URLがすべてHTTP 200、HTMLはmainと全件バイト一致。canonical自己参照、意図しないnoindexなし、公開inventory 58件とsitemap集合一致。PR #80/#94/#58/#74/#83/#85/#95/#96のマージ済みを確認。
+- keyword-map: 車売却の公開状態と、トップ・article15・family-story・親の終活ハブ・where-to-askの最終実質更新日を本番・inventoryへ同期。
+- sitemap: article08は本文表示・Article dateModified・台帳の2026-07-07へ訂正。aboutは本文追加コミット0b87c27（2026-07-08）に基づきinventoryとsitemapを訂正。privacy/disclaimerは既存台帳と2026-07-07の計測・広告表示導入履歴に合わせる。8月のパンくず構造化データ追加は本文の実質更新に数えない。今回の日付への更新はしない。
+- automation-state: 最新新規記事を11/22・PR #96へ同期。おひとりさま記事の旧公開不可・案A/B未決を解消し、任意の専門家レビュー未実施とSCデータ不足は保持。
+- カレンダー: 公開済み記事の旧公開前レビュー待ち・公開予定・drafts/noindex記述を過去履歴として明確化。
+- 再発防止: check-siteへCSV列数・重複URL・公開状態・公開日/更新日・sitemap lastmod・Article日付の照合を追加。検証結果はコミット後のハーネスとPRの最新CIへ記録する。
+- 変更URL: 既存4 URLのsitemap lastmodのみ。記事本文・HTML・内部リンク・画像・PDF/DOCX変更、新規記事、大幅更新なし。
+- 2027-01記事設計は別タスク。本文・公開URLの追加なし。一次情報未照合・案A/B未決を保持。Search Console分析はデータ不足のまま。
