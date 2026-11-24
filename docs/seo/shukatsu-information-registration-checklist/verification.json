@@ -1,0 +1,59 @@
+{
+  "draft_noindex": true,
+  "sitemap_excludes_slug": true,
+  "h1_count": 1,
+  "faq_count": 3,
+  "original_draft_sha256": "e71cd3810e417990406153ccd85be6f44bf769ab8c8ce4276d65cd8f3ef462bb",
+  "original_image_sha256": "c5b9d7b035a6db21a471a27f70b5caebeeeb351627555263baee19eba1440260",
+  "ui_status": "blocked: Chromium socket() Operation not permitted",
+  "harness": {
+    "schema_version": 1,
+    "status": "blocked",
+    "release_ready": false,
+    "started_at": "2026-11-24T00:59:11.150578+00:00",
+    "checks": [
+      {
+        "id": "harness-regression",
+        "command": [
+          "python3",
+          "tools/agent-harness/test_runner.py"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "seconds": 0.123,
+        "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.068s\n\nOK\n"
+      },
+      {
+        "id": "site",
+        "command": [
+          "node",
+          "tools/check-site.js"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "seconds": 0.104,
+        "output": "HTML files: 65, internal links checked: 2193\nALL CHECKS PASSED\n"
+      },
+      {
+        "id": "click-tracking",
+        "command": [
+          "node",
+          "tools/check-click-tracking.js"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "seconds": 0.087,
+        "output": "CLICK TRACKING CHECKS PASSED (public HTML: 61, affiliate links: 38, CTAs: 13, products: 12)\n"
+      }
+    ],
+    "commit": "fd7d484806d0415495a442c1782cbc244193a348",
+    "dirty_before": true,
+    "manual_review": [
+      "記事本文・一次資料・専門家レビューの状態を確認。機械検証成功を事実照合済みと扱わない。",
+      "公開状態、dateModified、sitemap、content-inventory、keyword-mapの変更理由と整合性を確認。",
+      "UI変更は320px/375px/390pxで確認。"
+    ],
+    "dirty_after": true
+  },
+  "snapshot_stage": "historical draft implementation before publication approval"
+}

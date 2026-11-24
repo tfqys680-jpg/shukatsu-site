@@ -1,5 +1,5 @@
 URL,ページ種別,カテゴリ,主検索意図,主キーワード,補助キーワード,想定読者,検索時の悩み,提供する解決策,内部リンク元,内部リンク先,公開状態,YMYL区分,専門家レビュー要否,公開日,最終実質更新日
-/,トップ,全体,サイト認知,終活 ガイド,終活カウンセラー,40-60代,どこから読むか,カテゴリ導線,-,全ハブ・柱;/column/ohitorisama-shukatsu-checklist/,公開,低,不要,2026-07-06,2026-11-22
+/,トップ,全体,サイト認知,終活 ガイド,終活カウンセラー,40-60代,どこから読むか,カテゴリ導線,-,全ハブ・柱;/column/ohitorisama-shukatsu-checklist/,公開,低,不要,2026-07-06,2026-11-24
 /articles/article01.html,記事,エンディングノート,違いを知る,エンディングノート とは,遺言書 違い,初心者,何を書くもの?,定義と使い分け,LP;11,08;02;LP,公開,中(相続に言及),将来推奨,2026-07-06,2026-08-12
 /articles/article02.html,柱記事,エンディングノート,書き方を知る,エンディングノート 書き方,記入例,実行段階,手が止まる,項目別記入例,LP;01;03;05;06;08;11;13;14;15;30項目,08;06,公開,低,不要,2026-07-06,2026-08-12
 /articles/article03.html,記事,エンディングノート,時期を知る,エンディングノート いつから,年代別,迷い層,まだ早い?,年代別始めどき,01,02;08,公開,低,不要,2026-07-06,2026-07-06
@@ -55,3 +55,4 @@ URL,ページ種別,カテゴリ,主検索意図,主キーワード,補助キー
 /column/work-care-consultation-preparation/,記事,親の終活/介護,親の介護が始まった際の職場相談の準備,親の介護 職場 相談,介護離職 退職前;仕事と介護 両立;相談準備;家族情報 共有範囲,働く子世代(40-60代),職場へ何を伝え何を確認すればよいか,必要時間・勤務への影響・希望・制度の確認質問・情報共有範囲を整理,/;/parent-shukatsu/,article02;where-to-ask;siblings;questions;article11,公開（運営者承認・注意事項掲載）,中(労務・介護・個人情報),未実施（注意事項掲載・個別判断は専門職へ）,2026-11-21,2026-11-21
 /column/older-parent-winter-bath-checklist/,記事,親の終活/暮らしの安全,親の冬の入浴に備える家庭内の準備,高齢の親 冬 入浴,湯温;入浴時間;脱衣所;声かけ;連絡,子世代・親本人,冬の入浴が心配,公的助言と編集提案を区別した環境・声かけ・連絡のチェックリスト,トップ;hub,living-alone;obon-family-planning-talk;parents-home-old-appliance-safety-checklist;02;hub,公開,医療・安全,未実施（注意事項併記・運営者公開承認）,2026-11-21,2026-11-21
 /column/nursing-home-transfer-contract-checklist/,記事,親の終活/住まい,入居前に退去・入院後の復帰・住み替え条件を確認,老人ホーム 退去条件,入院中の費用;前払金 返還;契約解除;居室変更,入居前の本人と家族,最後まで住めるか・戻れるか・精算はどうなるか,5つの質問と書面確認・連絡順のチェックリスト,トップ;親の終活ハブ;住宅型有料老人ホーム登録制記事,housing-type-nursing-home-registration-checklist;senior-housing-registration-operation-checklist;care-facility-food-housing-cost-application-checklist;where-to-ask;questions,公開（運営者承認・注意事項掲載）,法務・医療・税務,未実施（注意事項記載・出典照合済み）,2026-11-22,2026-11-22
+/column/shukatsu-information-registration-checklist/,記事,終活/自治体情報登録,川崎市の終活情報登録の対象・申請・照会・更新を確認する,川崎市 終活情報登録,終活情報登録 申請;川崎市 終活 登録 条件,川崎市内居住者と家族,対象条件・同意・照会の方法が分からない,地域固有の申請条件・編集部の準備チェック,トップ,/articles/article02.html;/column/will-for-ordinary-families/;/column/mimoto-hosho-keiyaku-checklist/;/column/advance-care-planning-family-checklist/;/column/end-of-life-local-support-consultation-checklist/,公開（2026-11-24・運営者承認）,法務・医療,未実施（注意事項あり）,2026-11-24,2026-11-24
