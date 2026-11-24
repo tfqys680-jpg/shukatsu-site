@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Tokyo",
   "last_run": "2026-11-23 JST（週次SEOと運営者承認によるPR #97監査修正。台帳・sitemapの日付訂正。記事HTMLの変更なし）",
-  "last_new_article": "2026-11-22 /column/nursing-home-transfer-contract-checklist/（PR #96マージ。2026-11-23に本番HTTP 200とmain一致を確認）",
+  "last_new_article": "2026-11-24 /column/shukatsu-information-registration-checklist/（運営者の明示承認による公開準備）",
   "last_major_update": "2026-11-10 article06・article11と帰省FAQを統合（PR #74は2026-11-10にマージ・公開済み。2026-11-23に記録を同期）",
   "last_monthly_review": "2026-11-02 機械チェック記録をPR #74から取り込み。Search Console分析・前月比較はデータ不足のため未実施",
   "last_quarterly_product_review": "2026-07-07 article08 実在10商品へ差し替え（次回: 2026-10）",
@@ -49,7 +49,8 @@
     "2026-11-16 週次: 起点確認・check-site全通過（HTML 60・内部リンク2020）・おひとりさま記事の設計書作成（docs/seo/ohitorisama-shukatsu-article-plan.md）・編集カレンダー状態更新。公開・本文作成なし",
     "2026-11-21 運営者依頼: 職場への介護相談準備記事の公開準備。公式出典・注意事項・提供生成画像を保持、正式URL・日付・sitemap・公開導線・台帳を同期。実行証跡はPR参照",
     "2026-11-23 週次: check-site全通過（HTML 64・内部リンク2152）・補助監査（canonical/noindex/sitemap/drafts混入/title・description重複/画像alt/PDF・DOCXリンク/孤立ページ）異常なし。編集カレンダー・content-inventoryの公開状態をgit履歴（PR #58/#74/#80/#83/#85/#94/#95/#96）と同期。PR #74統合（旧PR #44/#45/#47/#50/#52/#57/#62）は2026-11-10マージ済みを確認しpendingから解消。2027-01「子どものいない夫婦の終活」の設計書を作成（本文・公開なし）",
-    "2026-11-23 PR #97監査修正: 本番58 URLすべてHTTP 200・HTMLがmain a48598dと一致。公開inventoryとsitemapの集合一致。keyword-map車売却の公開状態と更新日5件を同期、about本文追加（0b87c27・2026-07-08）を台帳へ反映、sitemap 4件のlastmod訂正。おひとりさま記事の旧公開不可・案A/B待ちを解消。2027-01記事は設計のみを維持。"
+    "2026-11-23 PR #97監査修正: 本番58 URLすべてHTTP 200・HTMLがmain a48598dと一致。公開inventoryとsitemapの集合一致。keyword-map車売却の公開状態と更新日5件を同期、about本文追加（0b87c27・2026-07-08）を台帳へ反映、sitemap 4件のlastmod訂正。おひとりさま記事の旧公開不可・案A/B待ちを解消。2027-01記事は設計のみを維持。",
+    "2026-11-24 運営者が川崎市終活情報登録記事の公開・デプロイ・コミット・プッシュ・PR作成・マージを承認。正式URL・日付・sitemap・台帳・公開導線を同期。専門家レビュー未実施と受付時間の資料間不一致の注意を保持。"
   ],
   "pending_review_tasks": [
     "/column/car-sale-retirement-checklist/: 2026-11-06運営者がコミット・プッシュ・PR・マージ・公開を明示承認。公開設定・導線を実装。専門家レビュー未実施は継続。一次資料3件の照合方法はsource-policy.md。",

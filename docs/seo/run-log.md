@@ -1242,3 +1242,21 @@
 - 再発防止: check-siteへCSV列数・重複URL・公開状態・公開日/更新日・sitemap lastmod・Article日付の照合を追加。検証結果はコミット後のハーネスとPRの最新CIへ記録する。
 - 変更URL: 既存4 URLのsitemap lastmodのみ。記事本文・HTML・内部リンク・画像・PDF/DOCX変更、新規記事、大幅更新なし。
 - 2027-01記事設計は別タスク。本文・公開URLの追加なし。一次情報未照合・案A/B未決を保持。Search Console分析はデータ不足のまま。
+
+
+## 2026-11-24 運営者依頼：川崎市終活情報登録のローカル下書き
+
+- 最新main `fd7d484806d0415495a442c1782cbc244193a348` を新規チェックアウト。開始時git statusは空。他セッションの作業ツリーは変更せず保護。同題のopen PRなし。
+- `/drafts/shukatsu-information-registration-checklist/` をnoindexで実装。本文・FAQ3・CTA・出典は添付原稿から取り込み、公式確認による申請条件と注意事項を補足。
+- 指定画像原本1672×941を保存、WebP幅640/1200/1600、人物を切らない余白付きOGP1200×630。
+- sitemap・公開一覧・既存記事本文は変更せず、台帳に未公開として追記。公開日・更新日は空欄。
+- 最終のsite、click-tracking、harness-regressionは通過。共通ハーネス全体は未コミットのためblocked。ブラウザは環境のsocket制限で起動不可、モバイル・フォーカスの実表示は未確認。
+- 公開・デプロイ・コミット・プッシュ・PR作成・マージなし。詳細：`shukatsu-information-registration-checklist/implementation-review.md`。
+
+## 2026-11-24 川崎市終活情報登録：公開承認後の反映
+
+- ユーザーが公開・デプロイ・コミット・プッシュ・PR作成・マージを明示指示。最新origin/mainはfd7d484で変更なし。作業ブランチcodex/publish-shukatsu-registration-20261124。同題open PRなし。
+- 下書きを `/column/shukatsu-information-registration-checklist/` へ移動しnoindex解除。初回公開日とdateModifiedを実際の公開作業日の2026-11-24に設定。ニュース日付を流用しない。
+- トップ新着3件・全記事一覧、sitemap、content-inventory、keyword-map、リンク台帳、編集カレンダー、最新記事記録を同期。指定画像原本・WebP派生・OGPと一般情報の注意事項を維持。
+- 公式Webの受付時間の表記不一致は公式窓口への確認を案内する注記を保持。専門家監修済みと表示しない。
+- ローカル検査後にコミットし共通ハーネスを実行。公開後のHTTP・HTML・画像の検証結果とPR/CIはPR本文・作業報告へ記録する。
