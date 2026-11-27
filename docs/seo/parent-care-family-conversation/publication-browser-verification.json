@@ -1,0 +1,82 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "overflow": false,
+      "imageLoaded": true,
+      "currentSrc": "http://127.0.0.1:8765/public/images/shukatsu/parent-care-family-conversation-hero-640.webp",
+      "alt": "自宅の食卓で、これからの暮らしについて話す母親と娘",
+      "widthAttr": "1672",
+      "heightAttr": "941",
+      "imageRect": {
+        "width": 284,
+        "height": 160
+      },
+      "cls": 0,
+      "robots": "index, follow",
+      "datesCorrect": true,
+      "faqCount": 3,
+      "faqOpens": true,
+      "jsErrors": []
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "imageLoaded": true,
+      "currentSrc": "http://127.0.0.1:8765/public/images/shukatsu/parent-care-family-conversation-hero-640.webp",
+      "alt": "自宅の食卓で、これからの暮らしについて話す母親と娘",
+      "widthAttr": "1672",
+      "heightAttr": "941",
+      "imageRect": {
+        "width": 339,
+        "height": 191
+      },
+      "cls": 0,
+      "robots": "index, follow",
+      "datesCorrect": true,
+      "faqCount": 3,
+      "faqOpens": true,
+      "jsErrors": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "imageLoaded": true,
+      "currentSrc": "http://127.0.0.1:8765/public/images/shukatsu/parent-care-family-conversation-hero-640.webp",
+      "alt": "自宅の食卓で、これからの暮らしについて話す母親と娘",
+      "widthAttr": "1672",
+      "heightAttr": "941",
+      "imageRect": {
+        "width": 354,
+        "height": 199
+      },
+      "cls": 0,
+      "robots": "index, follow",
+      "datesCorrect": true,
+      "faqCount": 3,
+      "faqOpens": true,
+      "jsErrors": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "imageLoaded": true,
+      "currentSrc": "http://127.0.0.1:8765/public/images/shukatsu/parent-care-family-conversation-hero-960.webp",
+      "alt": "自宅の食卓で、これからの暮らしについて話す母親と娘",
+      "widthAttr": "1672",
+      "heightAttr": "941",
+      "imageRect": {
+        "width": 724,
+        "height": 407
+      },
+      "cls": 0,
+      "robots": "index, follow",
+      "datesCorrect": true,
+      "faqCount": 3,
+      "faqOpens": true,
+      "jsErrors": []
+    }
+  ],
+  "internalLinkCount": 18,
+  "broken": []
+}

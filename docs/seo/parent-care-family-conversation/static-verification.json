@@ -1,0 +1,76 @@
+{
+  "checks": {
+    "noindex": true,
+    "no_publication_dates": true,
+    "no_public_route": true,
+    "absent_from_sitemap": true,
+    "absent_from_public_lists": true,
+    "same_source_png": true,
+    "stats": true,
+    "faq_count": true,
+    "no_banned_phrase": true,
+    "image_reservation": true,
+    "eager_hero": true,
+    "responsive": true,
+    "draft_http_200": true,
+    "images_http_200": true
+  },
+  "images": [
+    {
+      "path": "public/images/shukatsu/parent-care-family-conversation-hero-1672.webp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 90262,
+      "http": 200
+    },
+    {
+      "path": "public/images/shukatsu/parent-care-family-conversation-hero-640.webp",
+      "dimensions": [
+        640,
+        360
+      ],
+      "bytes": 22840,
+      "http": 200
+    },
+    {
+      "path": "public/images/shukatsu/parent-care-family-conversation-hero-960.webp",
+      "dimensions": [
+        960,
+        540
+      ],
+      "bytes": 39846,
+      "http": 200
+    },
+    {
+      "path": "public/images/shukatsu/parent-care-family-conversation-hero.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 2086158,
+      "http": 200
+    },
+    {
+      "path": "public/images/shukatsu/parent-care-family-conversation-ogp.webp",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 60684,
+      "http": 200
+    }
+  ],
+  "browser_rendering": "unverified: Chromium executable unavailable; browser downloads returned HTTP 403",
+  "source_urls": [
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000223.000159136.html",
+      "http": 200
+    },
+    {
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/index.html",
+      "http": 200
+    }
+  ]
+}
